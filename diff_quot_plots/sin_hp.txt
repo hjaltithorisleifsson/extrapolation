@@ -1,3 +1,0 @@
-seq: Romberg, problem: $d/dx|_{x=0}\sin x$. $h=1/2$, b=-5.366327265, c=0.5106714697, q=1.806572882
-seq: Bulirsch, problem: $d/dx|_{x=0}\sin x$. $h=1/2$, b=-5.189887519, c=0.6412446996, q=1.651021685
-seq: Harmonic, problem: $d/dx|_{x=0}\sin x$. $h=1/2$, b=3.912005295, c=1.987575605, q=1.287786782

@@ -1,3 +1,0 @@
-seq: Romberg, problem: $d/dx|_{x=0}e^x$, b=-2.407962005, c=0.4110615224, q=1.847897139
-seq: Bulirsch, problem: $d/dx|_{x=0}e^x$, b=-2.906791069, c=0.4813699091, q=1.702994332
-seq: Harmonic, problem: $d/dx|_{x=0}e^x$, b=4.717502177, c=1.550912881, q=1.321193605

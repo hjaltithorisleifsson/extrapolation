@@ -20,9 +20,11 @@ $y' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$ & Romberg & \(0.13652\) & \(1.2653\) & \
 $y' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$ & Harmonic & \(2.2343\) & \(3.3206\) & \(0.091009\) \\
 $y'' + sin(y) = 0$ & Romberg & \(22.275\) & \(19.017\) & \(0.20078\) \\
 $y'' + sin(y) = 0$ & Harmonic & \(4.7064\) & \(3.6116\) & \(0.50678\) \\
+Federpendel, estimate after 1 time unit. & Romberg & \(17.532\) & \(15.778\) & \(0.20624\) \\
+Federpendel, estimate after 1 time unit. & Harmonic & \(0.30737\) & \(2.706\) & \(0.49211\) \\
 Federpendel, estimate after 2 time units. & Romberg & \(14.66\) & \(11.217\) & \(0.22272\) \\
 Federpendel, estimate after 2 time units. & Harmonic & \(0.79006\) & \(1.789\) & \(0.48379\) \\
 Lorenz, estimate after 0.1 time steps. & Romberg & \(18.654\) & \(12.939\) & \(0.2354\) \\
 Lorenz, estimate after 0.1 time steps. & Harmonic & \(12.615\) & \(4.0068\) & \(0.5111\) \\
-Lorenz, estimate after 0.2 time steps. & Romberg & \(137.02\) & \(134.62\) & \(3.0766e-05\) \\
-Lorenz, estimate after 0.2 time steps. & Harmonic & \(62.03\) & \(59.646\) & \(2.7725e-05\) \\
+Lorenz, estimate after 0.2 time steps. & Romberg & \(14.264\) & \(7.2173\) & \(0.27063\) \\
+Lorenz, estimate after 0.2 time steps. & Harmonic & \(13.212\) & \(2.7376\) & \(0.50732\) \\

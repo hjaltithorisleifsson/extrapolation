@@ -1,6 +1,6 @@
 import explicit_midpoint_rule
-import extrapolation
 import romberg
+import symm_diff
 
 explicit_midpoint_rule.main()
 romberg.main()

@@ -45,14 +45,14 @@ def define_examples():
     results_bulirsch = analyze(integrand, tr, bulirsch, False)
     results_int_seq.append([results_harmonic, results_romberg, results_bulirsch])
 
-    integrand = Integration(lambda x: 1 / (0.0001 + x**2), lambda x: 100 * math.atan(100 * x), -1, 1, '$g_{10^{-2}}$', 'g_tenthousandth')
+    integrand = Integration(lambda x: 1 / (0.0001 + x**2), lambda x: 100 * math.atan(100 * x), -1, 1, '$g_{10^{-2}}$', 'g_hundredth')
     integrands.append(integrand)
     results_harmonic = analyze(integrand, tr, harmonic, False)
     results_romberg = analyze(integrand, tr, romberg, False)
     results_bulirsch = analyze(integrand, tr, bulirsch, False)
     results_int_seq.append([results_harmonic, results_romberg, results_bulirsch])
 
-    integrand = Integration(lambda x: 1 / (0.01 + x**2), lambda x: 10 * math.atan(10 * x), -1, 1, '$g_{10^{-1}}$','g_hundredth')
+    integrand = Integration(lambda x: 1 / (0.01 + x**2), lambda x: 10 * math.atan(10 * x), -1, 1, '$g_{10^{-1}}$','g_tenth')
     integrands.append(integrand)
     results_harmonic = analyze(integrand, tr, harmonic, False)
     results_romberg = analyze(integrand, tr, romberg, False)
@@ -190,16 +190,21 @@ def plot_basic_hp(results_int_seq_hp, integrands_hp):
         ref = integrand_hp.ref.lower()
         plot_eval_error(results_seq_hp, title, ref, True, folder)
         plot_trend(results_seq_hp, title, ref, True, folder)
+        plot_steps_error(results_seq_hp, 'Integral: %s' % integrand_hp.tex, integrand_hp.ref, True, 20, folder)
 
     #Write out all results as latex table
-    file = open(folder + 'all_results.txt', 'w')
+    file1 = open(folder + 'all_results_evals_error.txt', 'w')
+    file2 = open(folder + 'all_results_steps_error.txt', 'w')
     for results_seq_hp in results_int_seq_hp:
         for result_hp in results_seq_hp: 
             ln_e = result_hp.ln_e
             p = opt.curve_fit(fit_func, result_hp.evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-            file.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p[0], p[1], p[2]))
+            q = opt.curve_fit(fit_func, np.array([i+1 for i in range(len(ln_e))]), ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
+            file1.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p[0], p[1], p[2]))
+            file2.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, q[0], q[1], q[2]))
 
-    file.close()
+    file1.close()
+    file2.close()
 
 def plot_strange_results(results, integrands):
     for (results_seq, integrand) in zip(results, integrands):
@@ -237,3 +242,4 @@ def main():
     plot_q_g()
     plot_q_h()
 
+main()

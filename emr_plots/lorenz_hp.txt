@@ -1,2 +1,0 @@
-seq: Romberg, problem: Lorenz, estimate after 0.1 time steps., b=18.65403845, c=12.93860018, q=0.2354038502
-seq: Harmonic, problem: Lorenz, estimate after 0.1 time steps., b=12.614624, c=4.006815477, q=0.5111007075

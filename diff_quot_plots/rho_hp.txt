@@ -1,3 +1,0 @@
-seq: Romberg, problem: $d/dx|_{x=0}r(x)$, b=-0.9998180814, c=0.06070258548, q=2.188990738
-seq: Bulirsch, problem: $d/dx|_{x=0}r(x)$, b=-3.338393079, c=0.01796204137, q=2.273493517
-seq: Harmonic, problem: $d/dx|_{x=0}r(x)$, b=-1.870536283, c=0.425549338, q=1.069531708

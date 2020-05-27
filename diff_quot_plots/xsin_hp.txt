@@ -1,3 +1,0 @@
-seq: Romberg, problem: $d/dx|_{x=0} x^2 \sin(1/x)$. $h=1$, b=1.59250657, c=0.5986328039, q=0.8805359753
-seq: Bulirsch, problem: $d/dx|_{x=0} x^2 \sin(1/x)$. $h=1$, b=0.3397566018, c=0.08395554191, q=1.175125701
-seq: Harmonic, problem: $d/dx|_{x=0} x^2 \sin(1/x)$. $h=1$, b=-1.43604376, c=-0.03473261386, q=1.420359798

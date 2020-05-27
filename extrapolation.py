@@ -149,7 +149,7 @@ def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 		plt.plot(steps, ln_e[0:N], '.', label = my_label)
 		plt.legend()
 		x = np.linspace(1, N, min(100 * N, 1000))
-		p = opt.curve_fit(fit_func, steps, ln_e[0:N], [0, 1.0, 1.0], maxfev = 10000)[0]
+		p = opt.curve_fit(fit_func, np.array([i+1 for i in range(len(ln_e))]), ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
 		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
 		plt.legend()
 
@@ -164,7 +164,6 @@ def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 #does a curve fitting on the results. 
 #The plot will be saved as a png file named ref_trend under folder.
 def plot_trend(results, title, ref, by_seq, folder):
-	file = open(folder + ref + '.txt', 'w')
 	for result in results:
 		my_label = result.seq_ref if by_seq else result.prob_ref
 		evals = result.evals
@@ -174,9 +173,7 @@ def plot_trend(results, title, ref, by_seq, folder):
 		p = opt.curve_fit(fit_func, evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
 		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
 		plt.legend()
-		file.write('seq: %s, problem: %s, b=%.10g, c=%.10g, q=%.10g\n' % (result.seq_ref, result.prob_ref, p[0], p[1], p[2]))
     
-	file.close()
 	plt.xlabel('Number of function evaluations, $N$')
 	plt.ylabel('Natural logarithm of absolute error, $\ln \epsilon $')
 	plt.title(title)
@@ -237,6 +234,7 @@ def plot_by_param(param_prob, scheme, ps, title, seqs, ref, folder):
 		for p in ps:
 			prob = param_prob(p)
 			result = analyze(prob, scheme, seq, True)
+			plt.clf()
 			q = opt.curve_fit(fit_func, result.evals, result.ln_e, [0, 1.0, 1.0], maxfev = 10000)[0][-1]
 			qs.append(q)
 

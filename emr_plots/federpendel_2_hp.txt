@@ -1,2 +1,0 @@
-seq: Romberg, problem: Federpendel, estimate after 2 time units., b=14.65979825, c=11.21684038, q=0.2227183213
-seq: Harmonic, problem: Federpendel, estimate after 2 time units., b=0.7900626757, c=1.788962937, q=0.4837935767
