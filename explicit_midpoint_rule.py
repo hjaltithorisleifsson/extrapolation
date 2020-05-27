@@ -177,7 +177,7 @@ def plot_basic():
 	result_harmonic = analyze(ivp, emr, harmonic_short, False)
 	results_ivp_seq.append([result_rom, result_harmonic])
 
-	ivp = InitialValueProblem(lambda t,y: np.array([10.0 * (y[1] - y[0]), y[0] * (28.0 - y[2]) - y[1], y[0] * y[1] - 8.0/3.0 * y[2]]), np.array([1.0, 1.0, 1.0]), 0.0, 0.1, lorenz_solution_02, 'Lorenz, estimate after 0.2 time steps.', 'lorenz_02')
+	ivp = InitialValueProblem(lambda t,y: np.array([10.0 * (y[1] - y[0]), y[0] * (28.0 - y[2]) - y[1], y[0] * y[1] - 8.0/3.0 * y[2]]), np.array([1.0, 1.0, 1.0]), 0.0, 0.2, lorenz_solution_02, 'Lorenz, estimate after 0.2 time steps.', 'lorenz_02')
 	ivps.append(ivp)
 	result_rom = analyze(ivp, emr, romberg_short, False)
 	result_harmonic = analyze(ivp, emr, harmonic_short, False)
