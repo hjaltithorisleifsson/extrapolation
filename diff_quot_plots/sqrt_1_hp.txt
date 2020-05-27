@@ -1,0 +1,3 @@
+seq: Romberg, problem: $d/dx|_{x=0} \sqrt{x + 1}$. $h=1/2$, b=-5.706282215, c=0.2129896833, q=1.95824132
+seq: Bulirsch, problem: $d/dx|_{x=0} \sqrt{x + 1}$. $h=1/2$, b=-7.315042574, c=0.1969104456, q=1.83792691
+seq: Harmonic, problem: $d/dx|_{x=0} \sqrt{x + 1}$. $h=1/2$, b=-0.8632294042, c=1.09505434, q=1.268187731

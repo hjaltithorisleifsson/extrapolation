@@ -1,0 +1,3 @@
+seq: Harmonic, problem: $i$, b=54098.83599, c=54098.69845, q=2.275598784e-05
+seq: Romberg, problem: $i$, b=55367.73218, c=55366.65256, q=2.862146109e-05
+seq: Bulirsch, problem: $i$, b=58074.03178, c=58072.9492, q=2.653841224e-05
