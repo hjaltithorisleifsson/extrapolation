@@ -60,13 +60,6 @@ def plot_basic():
 	hp_quotients.append(Quotient(lambda x: mp.sqrt(mpf(x) + mpf(10)**(-16)), 0.0, mpf('0.5') * mpf(10)**(-16), mpf('50000000.0'), '$d/dx|_{x=0}\sqrt{x + 10^{-16}}$ $h=1/2\cdot 10^{-16}$', 'sqrt_em16_hp'))
 	hp_quotients.append(Quotient(lambda x: mp.exp(x), 0.0, mpf(1.0), mpf(1.0), '$d/dx|_{x=0}e^x$', 'exp_0_hp'))
 
-	seqs = []
-	seqs.append(romberg_seq(35))
-	seqs.append(bulirsch_seq(35))
-	seqs.append(harmonic_seq(35))
-
-	sdq = SymmetricDifference()
-
 	results_quot_seq = []
 	hp_results_quot_seq = []
 
@@ -101,7 +94,28 @@ def plot_basic():
 
 	file.close()
 
+def plot_q_h():
+	param_quot = lambda q: Quotient(lambda x: mp.log(mpf(x) + q), mpf(0.0), q/2, 1 / q, '', '')
+	ps = np.array([mpf(0.5) ** i for i in range(30)])
+	title = 'Quotient: $d/dx|_{x=0}\ln(x+a)$'
+	plot_by_param(param_quot, sdq, ps, title, seqs, 'h_a_by_param', folder)
+
+def plot_q_k():
+	param_quot = lambda q: Quotient(lambda x: mp.sqrt(mpf(x) + q), mpf(0.0), q/2, mpf('0.5') / mp.sqrt(q), '', '')
+	ps = np.array([mpf(0.5) ** i for i in range(30)])
+	title = 'Quotient: $d/dx|_{x=0}\sqrt{x+a}$'
+	plot_by_param(param_quot, sdq, ps, title, seqs, 'k_a_by_param', folder)
+
+seqs = []
+seqs.append(romberg_seq(35))
+seqs.append(bulirsch_seq(35))
+seqs.append(harmonic_seq(35))
+
+sdq = SymmetricDifference()
+
 def main():
 	plot_basic()
-	
+	plot_q_h()
+	plot_q_k()
+
 main()
