@@ -81,9 +81,13 @@ def extrapolate(sc, prob, seq, hp):
 	n = len(seq)
 	X = [[0 for j in range(i + 1)] for i in range(n)]
 
+	#X[i][j] = T_ij
 	for i in range(n):
 		X[i][0] = sc.apply(prob, seq[i])
 		for j in range(1, i + 1):
+			#r = h_{i-j} / h_i = seq[i] / seq[i-j]
+			#rp = r^p.
+			#Must cast the elements of seq to hp numbers if in hp mode.
 			rp = ((mpf('1') * seq[i]) / (mpf('1') * seq[i-j]) if hp else seq[i] / seq[i-j]) ** sc.p
 			X[i][j] = (rp * X[i][j-1] - X[i-1][j-1]) / (rp - 1)
 
