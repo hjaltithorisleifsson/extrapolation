@@ -191,27 +191,44 @@ def plot_basic_hp(results_int_seq_hp, integrands_hp):
         plot_eval_error(results_seq_hp, title, ref, True, folder)
         plot_trend(results_seq_hp, title, ref, True, folder)
         plot_steps_error(results_seq_hp, 'Integral: %s' % integrand_hp.tex, integrand_hp.ref, True, 20, folder)
+        plot_log_log_power_trend(results_seq_hp, 'Integral: %s' % integrand_hp.tex, '%s_log_log_pow_fit' % integrand_hp.ref, True, folder)
 
     #Write out all results as latex table
-    file1 = open(folder + 'all_results_evals_error.txt', 'w')
-    file2 = open(folder + 'all_results_steps_error.txt', 'w')
+    file1 = open(folder + 'all_results_evals_error_exp_conv.txt', 'w')
+    file2 = open(folder + 'all_results_steps_error_exp_conv.txt', 'w')
+    file3 = open(folder + 'all_results_evals_error_log_log_pow_fit.txt', 'w')
     for results_seq_hp in results_int_seq_hp:
         for result_hp in results_seq_hp: 
+            print("Integrand " + result_hp.prob_ref)
             ln_e = result_hp.ln_e
-            p = opt.curve_fit(fit_func, result_hp.evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-            q = opt.curve_fit(fit_func, np.array([i+1 for i in range(len(ln_e))]), ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-            file1.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p[0], p[1], p[2]))
-            file2.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, q[0], q[1], q[2]))
+            ln_evals = np.log(result_hp.evals)
+            steps = np.array([i+1 for i in range(len(ln_e))])
+            p1 = opt.curve_fit(fit_func, result_hp.evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
+            e1 = get_least_square_error(fit_func, p1, result_hp.evals, ln_e)
+            print(p1)
+            print(e1)
+            p2 = opt.curve_fit(fit_func, steps, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
+            e2 = get_least_square_error(fit_func, p2, steps, ln_e)
+            print(p2)
+            print(e2)
+            p3 = opt.curve_fit(fit_func, ln_evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
+            e3 = get_least_square_error(fit_func, p3, ln_evals, ln_e)
+            print(p3)
+            print(e3)
+            file1.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p1[0], p1[1], p1[2], e1))
+            file2.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p2[0], p2[1], p2[2], e2))
+            file3.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p3[0], p3[1], p3[2], e3))
 
     file1.close()
     file2.close()
+    file3.close()
 
 def plot_strange_results(results, integrands):
     for (results_seq, integrand) in zip(results, integrands):
         title = "Integrand: %s" % integrand.tex
-        ref = "log_log_%s" % integrand.ref.lower()
+        ref = "%s_log_log" % integrand.ref.lower()
         plot_log_log(results_seq, title, ref, True, folder)
-        plot_log_log_trend(results_seq, title, ref, True, folder)
+        plot_log_log_lin_trend(results_seq, title, ref, True, folder)
 
 def plot_q_g():
     param_integrand = lambda q: Integration(lambda x: mpf('1') / (q**2 + x**2), lambda x: 1 / q * mp.atan(1 / q * x), mpf('-1'), mpf('1'), 'g_%.5g' % q, 'g_%.5g' % q)
@@ -224,6 +241,7 @@ def plot_q_h():
     ps = np.array([mpf(0.5) ** i for i in range(15)])
     title = 'Integrand: $h_a$'
     plot_by_param(param_integrand, tr, ps, title, seqs, 'h_a_by_param', folder)
+
 
 harmonic = harmonic_seq(120)
 romberg = romberg_seq(14)
@@ -242,8 +260,8 @@ def main():
     (results_int_seq_hp, integrands_hp, strange_results, strange_integrands) = define_hp_examples()
     plot_basic(results_int_seq, integrands)
     plot_basic_hp(results_int_seq_hp, integrands_hp)
-    plot_strange_results(strange_results, strange_integrands)
-    plot_q_g()
-    plot_q_h()
+    #plot_strange_results(strange_results, strange_integrands)
+    #plot_q_g()
+    #plot_q_h()
 
 main()

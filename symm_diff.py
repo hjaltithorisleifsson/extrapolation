@@ -90,7 +90,8 @@ def plot_basic():
 		for hp_result in hp_results_seq: 
 			ln_e = hp_result.ln_e
 			p = opt.curve_fit(fit_func, hp_result.evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-			file.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (hp_result.prob_ref, hp_result.seq_ref, p[0], p[1], p[2]))
+			error = get_least_square_error(f, p, hp_result.evals, ln_e)
+			file.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (hp_result.prob_ref, hp_result.seq_ref, p[0], p[1], p[2], error))
 
 	file.close()
 

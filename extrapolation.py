@@ -210,7 +210,7 @@ def plot_log_log(results, title, ref, by_seq, folder):
 #Does the same as plot_log_log except it also does curve fitting.
 #
 #The plot will be saved as a png file named ref_trend under folder.
-def plot_log_log_trend(results, title, ref, by_seq, folder):
+def plot_log_log_lin_trend(results, title, ref, by_seq, folder):
 	file = open(folder + ref + '.txt', 'w')
 	for result in results:
 		my_label = result.seq_ref if by_seq else result.prob_ref
@@ -224,6 +224,28 @@ def plot_log_log_trend(results, title, ref, by_seq, folder):
 		file.write('seq: %s, problem: %s, m=%.10g, b=%.10g\n' % (result.seq_ref, result.prob_ref, m, b))
     
 	file.close()
+	plt.xlabel('Number of function evaluations, $N$')
+	plt.ylabel('Natural logarithm of absolute error, $\ln \epsilon $')
+	plt.title(title)
+	#plt.show()
+	plt.savefig(folder + ref + '_trend.png')
+	plt.clf()
+
+#Does the same as plot_log_log except it also does curve fitting.
+#
+#The plot will be saved as a png file named ref_trend under folder.
+def plot_log_log_power_trend(results, title, ref, by_seq, folder):
+	for result in results:
+		my_label = result.seq_ref if by_seq else result.prob_ref
+		ln_evals = np.log(result.evals)
+		ln_e = result.ln_e
+		plt.plot(ln_evals, ln_e, '.', label = my_label)
+		x = np.linspace(ln_evals[0], ln_evals[-1])
+		p = opt.curve_fit(fit_func, ln_evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
+		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
+		plt.legend()
+		error = get_least_square_error(fit_func, p, ln_evals, ln_e)
+    
 	plt.xlabel('Number of function evaluations, $N$')
 	plt.ylabel('Natural logarithm of absolute error, $\ln \epsilon $')
 	plt.title(title)
@@ -257,15 +279,35 @@ def plot_by_param(param_prob, scheme, ps, title, seqs, ref, folder):
 	plt.savefig(folder + 'log_p_vs_q_%s.png' % ref)
 	plt.clf()
 
-	for (qs, seq) in zip(qs_seq, seqs):
-		plt.plot(ps, qs, '.', label = seq.ref)
+	qs_seq = []
+	for seq in seqs:
+		qs = []
+		for p in ps:
+			prob = param_prob(p)
+			result = analyze(prob, scheme, seq, True)
+			plt.clf()
+			ln_e = result.ln_e
+			ln_evals = np.log(result.evals)
+			q = opt.curve_fit(fit_func, result.evals, result.ln_e, [0, 1.0, 1.0], maxfev = 10000)[0][-1]
+			qs.append(q)
 
-	plt.legend()
-	plt.xlabel('$a$')
+		qs_seq.append(qs)
+	
+	qs_seq = np.array(qs_seq)
+	mln_ps = np.array([-float(mp.log(p)) for p in ps])
+
+	for (qs, seq) in zip(qs_seq, seqs):
+		plt.plot(mln_ps, qs, '.', label = seq.ref)
+		plt.legend()
+
+	plt.xlabel('Minus the natural logarithm of $a$')
 	plt.ylabel('Optimal parameter $q$')
 	plt.title(title)
-	plt.savefig(folder + 'p_vs_q_%s.png' % ref)
+	plt.savefig(folder + 'log_p_vs_q_%s_log_log.png' % ref)
 	plt.clf()
+
+def get_least_square_error(f, p, x, y):
+	return np.sum((y - f(x, *p))**2) / len(x)
 
 def fit_func(x, b, c, q):
 	return b - c * (x**q)

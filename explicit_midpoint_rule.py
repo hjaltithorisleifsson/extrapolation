@@ -284,27 +284,38 @@ def plot_basic():
 	results_ivp_seq_hp.append([result_rom_hp, result_harmonic_hp])
 
 	for (results_seq, ivp) in zip(results_ivp_seq, ivps):
+		plot_log_log(results_seq, 'Equation: %s Double precision' % ivp.tex, '%s_log_log' % ivp.ref, True, folder)
 		plot_eval_error(results_seq, 'Equation: %s Double precision' % ivp.tex, ivp.ref, True, folder)
 
 	for (results_seq, ivp) in zip(results_ivp_seq_hp, ivps_hp):
 		plot_eval_error(results_seq, 'Equation: %s' % ivp.tex, ivp.ref, True, folder)
 		plot_trend(results_seq, 'Equation: %s' % ivp.tex, ivp.ref, True, folder)
+		plot_log_log_power_trend(results_seq, 'Equation: %s' % ivp.tex, '%s_log_log_pow_fit' % ivp.ref, True, folder)
 
 	for (results_seq, ivp) in zip(results_ivp_seq_hp, ivps_hp):
 		plot_steps_error(results_seq, 'Equation: %s' % ivp.tex, ivp.ref, True, 30, folder)
 
 	file1 = open(folder + 'all_results_evals_error.txt', 'w')
 	file2 = open(folder + 'all_results_steps_error.txt', 'w')
+	file3 = open(folder + 'all_results_evals_error_log_log_pow_fit.txt', 'w')
 	for results_seq in results_ivp_seq_hp:
 		for result in results_seq:
 			ln_e = result.ln_e
-			p = opt.curve_fit(fit_func, result.evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-			q = opt.curve_fit(fit_func, np.array([i+1 for i in range(len(ln_e))]), ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-			file1.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, p[0], p[1], p[2]))
-			file2.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, q[0], q[1], q[2]))
+			ln_evals = np.log(result.evals)
+			steps = np.array([i+1 for i in range(len(ln_e))])
+			p1 = opt.curve_fit(fit_func, result.evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
+			e1 = get_least_square_error(fit_func, p1, result.evals, ln_e)
+			p2 = opt.curve_fit(fit_func, steps, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
+			e2 = get_least_square_error(fit_func, p2, steps, ln_e)
+			p3 = opt.curve_fit(fit_func, ln_evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
+			e3 = get_least_square_error(fit_func, p3, ln_evals, ln_e)
+			file1.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, p1[0], p1[1], p1[2], e1))
+			file2.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, p2[0], p2[1], p2[2], e2))
+			file3.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, p3[0], p3[1], p3[2], e3))
 
 	file1.close()
 	file2.close()
+	file3.close()
 
 def plot_q_sing():
 	param_ivp = lambda q: InitialValueProblem(lambda t,y: mpf(y) * mpf(y), 1.0 / (1.0 + q), mpf('0'), mpf('1'), 1 / q, '', '')
@@ -319,6 +330,7 @@ def plot_q_quad_sing():
 	title = 'IVP: $y\' = -1/2y$, $y(0) = \sqrt{1 + a}$'
 	ref = "quad_sing"
 	plot_by_param(param_ivp, emr, ps, title, seqs, ref, folder)
+
 
 romberg = Sequence([2 ** i for i in range(13)], 'Romberg')
 harmonic = Sequence([i + 1 for i in range(110)], 'Harmonic')
