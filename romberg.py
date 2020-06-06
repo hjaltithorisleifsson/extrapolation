@@ -3,11 +3,13 @@ import numpy as np
 import scipy.optimize as opt 
 from mpmath import *
 import math
+import os
 from extrapolation import *
 
 mp.dps = 500
 
 folder = '/Users/hjaltithorisleifsson/Documents/extrapolation/romberg_plots/' #The folder to which results are written.
+cache_folder = os.path.join(folder, 'cache')
 
 class TrapezoidalRule(Scheme):
     def __init__(self):
@@ -111,67 +113,67 @@ def define_hp_examples():
 
     integrand_hp = Integration(lambda x: mp.cos(x)**2, lambda x: mp.sin(2*x) / 4 + x / 2, mpf('0'), mp.pi, '$f$', 'cos_squared_hp')
     integrands_hp.append(integrand_hp)
-    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True)
-    results_romberg_hp = analyze(integrand_hp, tr, romberg, True)
-    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True)
+    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True, integrand_hp.ref + "_" + harmonic.ref.lower(), cache_folder)
+    results_romberg_hp = analyze(integrand_hp, tr, romberg, True, integrand_hp.ref + "_" + romberg.ref.lower(), cache_folder)
+    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True, integrand_hp.ref + "_" + bulirsch.ref.lower(), cache_folder)
     results_int_seq_hp.append([results_harmonic_hp, results_romberg_hp, results_bulirsch_hp])
 
     integrand_hp = Integration(lambda x: 1 / (mpf('0.0001') + mpf(x)**2), lambda x: 100 * mp.atan(mpf(100) * x), mpf('-1'), mpf('1'), '$g_{10^{-2}}$', 'g_hundredth_hp')
     integrands_hp.append(integrand_hp)
-    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True)
-    results_romberg_hp = analyze(integrand_hp, tr, romberg, True)
-    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True)
+    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True, integrand_hp.ref + "_" + harmonic.ref.lower(), cache_folder)
+    results_romberg_hp = analyze(integrand_hp, tr, romberg, True, integrand_hp.ref + "_" + romberg.ref.lower(), cache_folder)
+    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True, integrand_hp.ref + "_" + bulirsch.ref.lower(), cache_folder)
     results_int_seq_hp.append([results_harmonic_hp, results_romberg_hp, results_bulirsch_hp])
 
     integrand_hp = Integration(lambda x: 1 / (mpf('0.01') + mpf(x)**2), lambda x: 10 * mp.atan(10 * mpf(x)), mpf('-1'), mpf('1'), '$g_{10^{-1}}$','g_tenth_hp')
     integrands_hp.append(integrand_hp)
-    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True)
-    results_romberg_hp = analyze(integrand_hp, tr, romberg, True)
-    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True)
+    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True, integrand_hp.ref + "_" + harmonic.ref.lower(), cache_folder)
+    results_romberg_hp = analyze(integrand_hp, tr, romberg, True, integrand_hp.ref + "_" + romberg.ref.lower(), cache_folder)
+    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True, integrand_hp.ref + "_" + bulirsch.ref.lower(), cache_folder)
     results_int_seq_hp.append([results_harmonic_hp, results_romberg_hp, results_bulirsch_hp])
 
     integrand_hp = Integration(lambda x: 1 / (1 + mpf(x)**2), lambda x: mp.atan(x), mpf('-1'), mpf('1'), '$g_1$', 'g_one_hp')
     integrands_hp.append(integrand_hp)
-    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True)
-    results_romberg_hp = analyze(integrand_hp, tr, romberg, True)
-    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True)
+    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True, integrand_hp.ref + "_" + harmonic.ref.lower(), cache_folder)
+    results_romberg_hp = analyze(integrand_hp, tr, romberg, True, integrand_hp.ref + "_" + romberg.ref.lower(), cache_folder)
+    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True, integrand_hp.ref + "_" + bulirsch.ref.lower(), cache_folder)
     results_int_seq_hp.append([results_harmonic_hp, results_romberg_hp, results_bulirsch_hp])
 
     integrand_hp = Integration(lambda x: mp.log(mpf(x) + mpf('0.0001')), lambda x: (mpf(x) + mpf('0.0001')) * mp.log(mpf(x) + mpf('0.0001')) - mpf(x), mpf('0'), mpf('1'), '$h_{10^{-4}}$','h_tenthousandth_hp')
     integrands_hp.append(integrand_hp)
-    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True)
-    results_romberg_hp = analyze(integrand_hp, tr, romberg, True)
-    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True)
+    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True, integrand_hp.ref + "_" + harmonic.ref.lower(), cache_folder)
+    results_romberg_hp = analyze(integrand_hp, tr, romberg, True, integrand_hp.ref + "_" + romberg.ref.lower(), cache_folder)
+    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True, integrand_hp.ref + "_" + bulirsch.ref.lower(), cache_folder)
     results_int_seq_hp.append([results_harmonic_hp, results_romberg_hp, results_bulirsch_hp])
 
     integrand_hp = Integration(lambda x: mp.log(mpf(x) + mpf('0.01')), lambda x: (mpf(x) + mpf('0.01')) * mp.log(mpf(x) + mpf('0.01')) - mpf(x), mpf('0'), mpf('1'), '$h_{10^{-2}}$', 'h_hundredth_hp')
     integrands_hp.append(integrand_hp)
-    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True)
-    results_romberg_hp = analyze(integrand_hp, tr, romberg, True)
-    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True)
+    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True, integrand_hp.ref + "_" + harmonic.ref.lower(), cache_folder)
+    results_romberg_hp = analyze(integrand_hp, tr, romberg, True, integrand_hp.ref + "_" + romberg.ref.lower(), cache_folder)
+    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True, integrand_hp.ref + "_" + bulirsch.ref.lower(), cache_folder)
     results_int_seq_hp.append([results_harmonic_hp, results_romberg_hp, results_bulirsch_hp])
 
     integrand_hp = Integration(lambda x: mp.log(mpf(x) + 1), lambda x: (mpf(x) + 1) * mp.log(mpf(x) + 1) - mpf(x), mpf('0'), mpf('1'), '$h_1$', 'h_one_hp')
     integrands_hp.append(integrand_hp)
-    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True)
-    results_romberg_hp = analyze(integrand_hp, tr, romberg, True)
-    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True)
+    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True, integrand_hp.ref + "_" + harmonic.ref.lower(), cache_folder)
+    results_romberg_hp = analyze(integrand_hp, tr, romberg, True, integrand_hp.ref + "_" + romberg.ref.lower(), cache_folder)
+    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True, integrand_hp.ref + "_" + bulirsch.ref.lower(), cache_folder)
     results_int_seq_hp.append([results_harmonic_hp, results_romberg_hp, results_bulirsch_hp])
 
     integrand_hp = Integration(lambda x: mp.sqrt(1 - mpf(x)**2), lambda x: (x * mp.sqrt(1 - mpf(x)**2) + mp.asin(x)) / 2, mpf('-1'), mpf('1'), '$i$', 'circle_area_hp')
     integrands_hp.append(integrand_hp)
     strange_integrands.append(integrand_hp)
-    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True)
-    results_romberg_hp = analyze(integrand_hp, tr, romberg, True)
-    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True)
+    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True, integrand_hp.ref + "_" + harmonic.ref.lower(), cache_folder)
+    results_romberg_hp = analyze(integrand_hp, tr, romberg, True, integrand_hp.ref + "_" + romberg.ref.lower(), cache_folder)
+    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True, integrand_hp.ref + "_" + bulirsch.ref.lower(), cache_folder)
     strange_results.append([results_harmonic_hp, results_romberg_hp, results_bulirsch_hp])
     results_int_seq_hp.append([results_harmonic_hp, results_romberg_hp, results_bulirsch_hp])
 
     integrand_hp = Integration(lambda x: 2 * mp.exp(-(mpf(x)**2)) / mp.sqrt(mp.pi), lambda x: mp.erf(x), mpf('0'), mpf('1'), '$j$', 'gaussian_hp')
     integrands_hp.append(integrand_hp)
-    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True)
-    results_romberg_hp = analyze(integrand_hp, tr, romberg, True)
-    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True)
+    results_harmonic_hp = analyze(integrand_hp, tr, harmonic, True, integrand_hp.ref + "_" + harmonic.ref.lower(), cache_folder)
+    results_romberg_hp = analyze(integrand_hp, tr, romberg, True, integrand_hp.ref + "_" + romberg.ref.lower(), cache_folder)
+    results_bulirsch_hp = analyze(integrand_hp, tr, bulirsch, True, integrand_hp.ref + "_" + bulirsch.ref.lower(), cache_folder)
     results_int_seq_hp.append([results_harmonic_hp, results_romberg_hp, results_bulirsch_hp])
 
     return (results_int_seq_hp, integrands_hp, strange_results, strange_integrands)
@@ -199,22 +201,15 @@ def plot_basic_hp(results_int_seq_hp, integrands_hp):
     file3 = open(folder + 'all_results_evals_error_log_log_pow_fit.txt', 'w')
     for results_seq_hp in results_int_seq_hp:
         for result_hp in results_seq_hp: 
-            print("Integrand " + result_hp.prob_ref)
             ln_e = result_hp.ln_e
             ln_evals = np.log(result_hp.evals)
             steps = np.array([i+1 for i in range(len(ln_e))])
             p1 = opt.curve_fit(fit_func, result_hp.evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
             e1 = get_least_square_error(fit_func, p1, result_hp.evals, ln_e)
-            print(p1)
-            print(e1)
             p2 = opt.curve_fit(fit_func, steps, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
             e2 = get_least_square_error(fit_func, p2, steps, ln_e)
-            print(p2)
-            print(e2)
             p3 = opt.curve_fit(fit_func, ln_evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
             e3 = get_least_square_error(fit_func, p3, ln_evals, ln_e)
-            print(p3)
-            print(e3)
             file1.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p1[0], p1[1], p1[2], e1))
             file2.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p2[0], p2[1], p2[2], e2))
             file3.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p3[0], p3[1], p3[2], e3))
@@ -234,17 +229,17 @@ def plot_q_g():
     param_integrand = lambda q: Integration(lambda x: mpf('1') / (q**2 + x**2), lambda x: 1 / q * mp.atan(1 / q * x), mpf('-1'), mpf('1'), 'g_%.5g' % q, 'g_%.5g' % q)
     ps = np.array([mpf(0.5) ** i for i in range(15)])
     title = 'Integrand: $g_a$'
-    plot_by_param(param_integrand, tr, ps, title, seqs, 'g_a_by_param', folder)
+    plot_by_param(param_integrand, tr, ps, title, seqs, 'g_a_by_param', folder, cache_folder)
 
 def plot_q_h():
     param_integrand = lambda q: Integration(lambda x: mp.log(x + q), lambda x: (x + q) * mp.log(x + q) - x, mpf('0'), mpf('1'), 'h_%.5g' % q, 'h_%.5g' % q)
     ps = np.array([mpf(0.5) ** i for i in range(15)])
     title = 'Integrand: $h_a$'
-    plot_by_param(param_integrand, tr, ps, title, seqs, 'h_a_by_param', folder)
+    plot_by_param(param_integrand, tr, ps, title, seqs, 'h_a_by_param', folder, cache_folder)
 
 
-harmonic = harmonic_seq(120)
-romberg = romberg_seq(14)
+harmonic = harmonic_seq(120) #120
+romberg = romberg_seq(14) #14
 bulirsch = bulirsch_seq(25)
 
 harmonic_short = harmonic_seq(100)
@@ -260,8 +255,8 @@ def main():
     (results_int_seq_hp, integrands_hp, strange_results, strange_integrands) = define_hp_examples()
     plot_basic(results_int_seq, integrands)
     plot_basic_hp(results_int_seq_hp, integrands_hp)
-    #plot_strange_results(strange_results, strange_integrands)
-    #plot_q_g()
-    #plot_q_h()
+    plot_strange_results(strange_results, strange_integrands)
+    plot_q_g()
+    plot_q_h()
 
 main()

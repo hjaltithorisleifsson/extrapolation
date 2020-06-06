@@ -8,6 +8,7 @@ from extrapolation import *
 mp.dps = 500
 
 folder = '/Users/hjaltithorisleifsson/Documents/extrapolation/diff_quot_plots/'
+cache_folder = '/Users/hjaltithorisleifsson/Documents/extrapolation/diff_quot_plots/cache'
 
 class SymmetricDifference(Scheme):
 
@@ -73,7 +74,7 @@ def plot_basic():
 	for hp_quotient in hp_quotients:
 		hp_results_seq = []
 		for seq in seqs:
-			hp_results_seq.append(analyze(hp_quotient, sdq, seq, True))
+			hp_results_seq.append(analyze(hp_quotient, sdq, seq, True, hp_quotient.ref + "_" + seq.ref.lower(), cache_folder))
 
 		hp_results_quot_seq.append(hp_results_seq)
 
@@ -83,14 +84,15 @@ def plot_basic():
 	for (results_seq, quotient) in zip(hp_results_quot_seq, hp_quotients):
 		plot_eval_error(results_seq, 'Quotient: %s' % quotient.tex, quotient.ref, True, folder)
 		plot_trend(results_seq, 'Quotient: %s' % quotient.tex, quotient.ref, True, folder)
+		plot_log_log_power_trend(results_seq, 'Quotient: %s' % quotient.tex, quotient.ref + "_log_log_pow_fit", True, folder)
 
-	file = open(folder + 'all_results.txt', 'w')	
+	file = open(folder + 'all_results.txt', 'w')
 
 	for hp_results_seq in hp_results_quot_seq:
 		for hp_result in hp_results_seq: 
 			ln_e = hp_result.ln_e
 			p = opt.curve_fit(fit_func, hp_result.evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-			error = get_least_square_error(f, p, hp_result.evals, ln_e)
+			error = get_least_square_error(fit_func, p, hp_result.evals, ln_e)
 			file.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (hp_result.prob_ref, hp_result.seq_ref, p[0], p[1], p[2], error))
 
 	file.close()
@@ -99,13 +101,13 @@ def plot_q_h():
 	param_quot = lambda q: Quotient(lambda x: mp.log(mpf(x) + q), mpf(0.0), q/2, 1 / q, '', '')
 	ps = np.array([mpf(0.5) ** i for i in range(30)])
 	title = 'Quotient: $d/dx|_{x=0}\ln(x+a)$'
-	plot_by_param(param_quot, sdq, ps, title, seqs, 'h_a_by_param', folder)
+	plot_by_param(param_quot, sdq, ps, title, seqs, 'h_a_by_param', folder, cache_folder)
 
 def plot_q_k():
 	param_quot = lambda q: Quotient(lambda x: mp.sqrt(mpf(x) + q), mpf(0.0), q/2, mpf('0.5') / mp.sqrt(q), '', '')
 	ps = np.array([mpf(0.5) ** i for i in range(30)])
 	title = 'Quotient: $d/dx|_{x=0}\sqrt{x+a}$'
-	plot_by_param(param_quot, sdq, ps, title, seqs, 'k_a_by_param', folder)
+	plot_by_param(param_quot, sdq, ps, title, seqs, 'k_a_by_param', folder, cache_folder)
 
 seqs = []
 seqs.append(romberg_seq(35))
