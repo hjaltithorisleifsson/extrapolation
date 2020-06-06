@@ -1,0 +1,97 @@
+\chapter{Extrapolation to zero}
+
+In this short chapter we will describe shortly the concept of {\it extrapolation to zero} and how we can apply it.\\
+
+\section{Motivation}
+
+Let \(T: ]0, \varepsilon[ \rightarrow \R\) be function and assume that we have
+\begin{equation}\label{basic}
+T(h) = T_0 + a h^n + O(h^{n+1}).
+\end{equation}
+for \(h\rightarrow 0\). We are interested in computing \(T_0 = \lim_{h\rightarrow 0}T(h)\) up to some desired accurracy. In order to do that we might have to compute \(T(h)\) for very small \(h\). That might not be feasible since \(T(h)\) might be very expensive to compute for small \(h\) or even impossible due to numerical instabilities. Hence we would like to somehow accelerate the convergence of \(T\) to \(0\). A nice way to do that is the {\it Richardson extrapolation scheme} which goes as follows: Let \(0 < r < 1\). Plug \(rh\) into (\ref{basic}). Then we get
+\begin{equation}\label{rbasic}
+T(rh) = T_0 + a r^nh^n + O(h^{n+1}).
+\end{equation}
+Now multiply (\ref{basic}) by \(r^n\), subtract it from (\ref{rbasic}) and divide the result by \(1 - r^n\). Then we get:
+\[
+R(h) = T_0 + O(h^{n+1})
+\]
+where 
+\[
+R(h) \coloneqq \frac{T(rh) - r^nT(h)}{1 - r^n}.
+\]
+Note that \(R(h)\) has \(O(h^{n+1})\) convergence to \(T_0\) while \(T(h)\) has \(O(h^n)\), i.e. \(R(h)\) converges asymptotically faster. But what did we actually do? We took the linear polynomial in \(t^n\) which goes through \((rh, T(rh))\) and \((h, T(h))\) and let \(R(h)\) be its value at \(0\), i.e. we interpolated the points and then evaluated the interpolation polynomial outside the interval; hence the term {\it extrapolation}. This should serve as a motivation for the sequel.
+
+\section{The extrapolation table}
+
+We always think of \(T\) as arising from some numerical scheme e.g. the trapezoidal rule and then \(T_0\) is the integral of some function. Thus we do not require that \(T\) is necessarily defined for all values near \(0\), but only on set which has \(0\) as an accumulation point. In what follows, we will thus refer to \(T\) as a {\it method} for computing \(T_0\).
+
+\begin{definition}
+Let \(T\) be a method for computing \(T_0\). We say that \(T\) has an asymptotic expansion in \(h^p\) up to order \(pm\) if there exist constants \(\tau_p,\tau_{2p},\ldots,\tau_{mp} \in \R\) such that 
+\begin{equation}\label{expansion}
+T(h) = T_0 + \tau_ph^p + \tau_{2p}h^{2p} + \cdots \tau_{mp}h^{mp} + O(h^{(m+1)p})
+\end{equation}
+for \(h\rightarrow 0\).
+\end{definition}
+
+Let \((x_1,y_1),\,\ldots,\,(x_k,y_k)\) be a collection of points such that \(x_1,\ldots,x_k\) are distinct. Then there exists a polynomial \(P\) which interpolates the points, i.e. \(P(x_i) = y_i\) for all \(i\). We say that \(P\) is {\it the interpolation polynomial} for the points if \(P\) has the lowest degree among all polynomials which interpolate them. The interpolation polynomial is unique. Let \(p > 0\) be an integer and points \((x_1^p,y_1),\,\ldots,\,(x_n^p,y_n)\) such that \(x_i^p\) are distinct, be given. Let \(P\) be the interpolation polynomial for the points. We then call \(P(h^p)\) the {\it interpolation polynomial in \(p\)} for the points.\\
+
+Let \(T\) be a method with asymptotic expansion in \(p\) up to \(pm\). The extrapolation process works as follows: We compute \(T(h)\) for some points \(h_1,h_2,\ldots,h_k\) where \(k \leq m\). Then we compute the interpolation polynomial \(P\) in \(h^p\) which goes through \((h_1,T(h_1)),\ldots,(h_k,T(h_k))\). We then hope that \(P(0)\) gives a good approximation \(T_0\).\\
+
+In order to compute \(P(0)\) we use the {\it Neville scheme}. Let \(P_{ij}(h^p) \coloneqq P(h^p; h_{i-j+1}^p, h_i^p)\) be the interpolation polynomial in \(h^p\) which interpolates \((h_{i-j+1}^p, T(h_{i-j+1}),\ldots,(h_i^p, T(h_i^p))\) and set \(T_{ij}\coloneqq P_{ij}(0)\). Then according to the Neville scheme we can compute \(T_{ij}\), \(j\leq i\), in the following recursive way:
+
+\begin{enumerate}
+    \item \(T_{i1}\coloneqq T(h_i)\) for \(i=1,\ldots,k\).
+    \item \(T_{ij}\coloneqq T_{i,j-1} + \dfrac{T_{i,j-1} - T_{i-1,j-1}}{r^p - 1} = \dfrac{r^pT_{i,j-1} - T_{i-1,j-1}}{r^p-1}\) for \(1 < j \leq i\) where \(r\coloneqq h_{i-j+1}/h_i\). 
+\end{enumerate}
+
+If we align \(T_{ij}\) to a triangular table, we call that the {\it extrapolation table}.\\
+
+\section{Convergence}
+
+If we have a numerical method or scheme that has an asymptotic expansion as (\ref{expansion}), then the error decays polynomially as \(h\rightarrow 0\). It is known (see e.g. theorem 9.22 in \cite{dh}) that \(T_{ij}\) has faster polynomial decay of higher degree, as \(h\rightarrow 0\), then \(T\). Let \(\varepsilon_k \coloneqq |T_{kk} - T|\). We want to analyze how \(\varepsilon_k\) behaves as \(k\rightarrow +\infty\), i.e. how \(\varepsilon_k\) behaves when we increse the number of extrapolation steps. Let \(N_nk\) be some measure of the effort needed to compute \(T_{kk}\). In what follows we will test numerically the qualitative hypothesis that the error converges exponentially with the computational effort i.e.
+\begin{equation}
+\varepsilon_k \sim A \exp(-cN_k^q)
+\end{equation}
+for constants \(A, c, q\). Note that if \(\varepsilon_k = A\exp(-c N_k^q)\) then \(\ln\varepsilon_k = b - cN_k^q\) so in order to test the hypothesis we will do the following: Assume that we have the error \(\varepsilon_k\) for \(k=1,\ldots,n\). Then we will compute
+\begin{equation}
+(b,c,q) \coloneqq \arg\min \left\{\sum_{k=1}^n|\ln \varepsilon_k - (b - cN_k^q)|^2\right\}
+\end{equation}
+and see whether the points \((N_k,\ln\varepsilon_k)\) fit well to the graph of \(t\mapsto b - ct^q\).\\
+
+We will also test the hypothesis that the error converges exponentially with the number of extrapolation steps, i.e. whether
+\begin{equation}
+\varepsilon_k \sim A \exp(-ck^q)
+\end{equation}
+for constants \(A,c,q\).\\
+
+In order to validate the estimated parameters \(b,c,q\) we will do a simple "cross validation" by fitting the model to subsets of the data and see whether the parameters vary a lot. If they vary a lot, we conclude that the fitting is unstable. If they are almost the same we will be more confident in that the model is actually appropriate.
+
+\section{Code}
+
+The following Python mehtod computes the extrapolation table for some scheme which has an asymptotic expansion in \(h^p\).
+
+\begin{minted}[tabsize=2, fontsize=\footnotesize]{python}
+#sc (Scheme): The scheme to extrapolate	
+#prob: The problem to apply the scheme to. We assume that sch is an 
+#      implementation of Scheme which can be applied to prob.
+#seq (Sequence): The sequence to use in the extrapolation
+#hp (bool): Indicates whether to use high precision arithmetic (true) 
+#           or standard double precision (false).
+#returns: The extrapolation table as a list of lists. 
+def extrapolate(sc, prob, seq, hp):
+	n = len(seq)
+	X = [[0 for j in range(i + 1)] for i in range(n)]
+
+	#X[i][j] = T_ij
+	for i in range(n):
+		X[i][0] = sc.apply(prob, seq[i])
+		for j in range(1, i + 1):
+			#r = h_{i-j} / h_i = seq[i] / seq[i-j]
+			#rp = r^p.
+			#Must cast the elements of seq to hp numbers if in hp mode.
+			rp = ((mpf('1') * seq[i]) / (mpf('1') * seq[i-j]) if hp else seq[i] / seq[i-j]) ** sc.p
+			X[i][j] = (rp * X[i][j-1] - X[i-1][j-1]) / (rp - 1)
+
+	return X
+\end{minted}

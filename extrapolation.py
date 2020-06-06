@@ -321,6 +321,7 @@ def plot_by_param(param_prob, scheme, ps, title, seqs, ref, folder, cache_folder
 			qs_log_log.append(q_log_log)
 
 		qs_seq.append(qs)
+		qs_seq_log_log.append(qs_log_log)
 	
 	qs_seq = np.array(qs_seq)
 	mln_ps = np.array([-float(mp.log(p)) for p in ps])
