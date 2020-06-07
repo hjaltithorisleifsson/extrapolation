@@ -89,6 +89,8 @@ so if we consider the ln-ln plot of the error against the number of function eva
 
 For the model fitting we will thus plot the logarithm of the error agains the number of function evaluations, the number of extrapolation steps and the logarithm of the number of extrapolation steps. We will also consider the plot of the base \(10\) logarithm of the error against the number of function evaluations.\\
 
+In order to validate the fitting, we will do "cross validation" in the following way: We will estimate the parameters in the models where we only consider every other point, every third point and then when we only consider a consecutive sequence of half of the points, though never fewer than \(10\).\\ 
+
 We conduct the experiments in Python 3 and use the high precision arithmetic library mpmath for all the computations. The precision will be set to \(500\) significant digits so will not have to worry about numerical instabilities.\\
 
 Now we will consider the results of the experiments.
@@ -125,9 +127,31 @@ which is entire.
 \end{minipage}
 \end{figure}
 
-When considering the number of function evaluations against the error we seem to have exponential convergence for the Harmonic sequence. We reject the fitting for the fitting of the exponential convergence model, for Romberg and Bulirsch, since the \(b\) parameter is unreasonably large for an exponent. However, we seem to have exponential convergence in all cases when considering the number of extrapolation steps against the error.\\
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([14.692, 49.344]\) & \([9.7974,  34.02]\) & \([0.1698, 0.29773]\)\\
+Bulirsch & Evaluations-\(\ln\) error & \([9.2911, 125.02]\) & \([4.6048, 77.443]\) & \([0.15232, 0.47689]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([9.4476, 36.526]\) & \([2.4126, 4.0395]\) & \([0.6132, 0.67316]\)\\
+Romberg & Steps-\(\ln\) error & \([1.1996, 2.1495]\) & \([0.46449, 0.54686]\) & \([2.0661, 2.1321]\)\\
+Bulirsch & Steps-\(\ln\) error & \([0.092626, 0.99513]\) & \([0.40011, 0.44146]\) & \([1.9345, 1.9672]\)\\
+Harmonic & Steps-\(\ln\) error  & \([5.8841, 27.924]\) & \([1.7359, 2.7092]\) & \([1.2223, 1.3183]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([1.542, 4.1562]\) & \([0.90375, 1.3033]\) & \([2.0235, 2.1961]\)\\
+Bulirsch & \(\ln\) evaluations-\(\ln\) error & \([1.4524, 12.996]\) & \([0.52462, 1.7456]\) & \([2.1418,  2.7366]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-67.84, -5.6251]\) & \([0.0014442, 0.022123]\) & \([4.808, 6.0733]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
 
-The Harmonic sequence performes best, then Bulirsch and then Romberg. In standard double precision floating point arithmetic, we get down to maching level error using any sequence. Regarding convergence with the number of extrapolation, then it looks as we have exponential convergence for the Romberg and Bulirsch sequences.
+We see that the harmonic sequence performes best, then Bulirsch and then Romberg. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch, but we are like \(2\) digits from there, using the harmonic sequence.\\
+
+For the Romberg and Bulirsch sequence, we can not say that the error converges exponentially with the number of function evaluations since the parameters we get in the cross validation vary a lot. In the case of the harmonic sequence, we seem to have exponential convergence in the number of function evaluations, though that must be verified better, since the \(b\) and \(c\) parameters vary quite much.\\
+
+For all sequences the error seems to converge exponentially with the number of extrapolation steps, but again we there is a lot of variance in the \(b\) parameter.\\
+
+As we expect, since the error seems to converge exponentially with the number of extrapolation steps, \(\ln\)-\(\ln\) plot for the Romberg and Bulirsch sequence seem to fit quit well on the graph of a function of the form \(t \mapsto b - c t^q\). On the other hand, that is not the case for the harmonic sequnce, as we expect.
 
 \subsection{Function with poles}
 
@@ -151,7 +175,7 @@ g_a: [-1, 1] \rightarrow \R, \quad g_a(x) \coloneqq \frac{1}{a^2 + x^2},\, a > 0
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/g_one_hp.png}
+\includegraphics[scale=0.45]{romberg_plots/g_one_hp_log_log_pow_fit_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -159,7 +183,31 @@ g_a: [-1, 1] \rightarrow \R, \quad g_a(x) \coloneqq \frac{1}{a^2 + x^2},\, a > 0
 \end{minipage}
 \end{figure}
 
-The error seems to converge exponentally with the number of function evaluations for the harmonic sequence but again the \(b\) parameters are unreasonably big for the other two sequences. For the number of extrapolation steps against the error, we seem to have exponential convergence in all cases. In standard floating point arithmetic, we get down to machine level precision for the Romberg and Bulirsch sequences but not for the Harmonic sequence. At first the sequences perform simarly but in the long run the harmonic sequence results in the fastest convergence.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([12.705, 30.873]\) & \([9.9282, 22.522]\) & \([0.18051, 0.26414]\)\\
+Bulirsch & Evaluations-\(\ln\) error & \([2.9951, 54.73]\) & \([2.0887, 32.043]\) & \([0.18813, 0.52789]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([1.0885, 1.8162]\) & \([1.7682, 1.8759]\) & \([0.4911, 0.49775]\)\\
+Romberg & Steps-\(\ln\) error & \([-1.8909, -0.085606]\) & \([0.27802, 0.51661]\) & \([1.973, 2.2418]\)\\
+Bulirsch & Steps-\(\ln\) error & \([-5.9913, 1.4258]\) & \([0.1226, 0.30552]\) & \([1.9169, 2.1995]\)\\
+Harmonic & Steps-\(\ln\) error  & \([-0.69756, 0.33482]\) & \([1.2538, 1.3834]\) & \([0.97437, 0.99528]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([ -0.75639, 0.56835]\) & \([0.66952, 0.95647]\) & \([2.0362, 2.2212]\)\\
+Bulirsch & \(\ln\) evaluations-\(\ln\) error & \([-1.0318, 7.8812]\) & \([0.2124, 1.0718]\) & \([2.1646, 2.9803]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-19.812,  -3.5777]\) & \([0.0017816, 0.047929]\) & \([3.6047, 5.1133]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+We see that the harmonic sequence performes best, then Bulirsch and then Romberg. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch, but we are like \(5\) digits from there, using the harmonic sequence.\\
+
+For the Romberg and Bulirsch sequence, we can not say that the error converges exponentially with the number of function evaluations since the parameters we get in the cross validation vary a lot, especially since the exponent \(q\) varies a lot. In the case of the harmonic sequence, the model seems to fit very well, since we have very little variance in the parameters.\\
+
+For all sequences the error seems to converge exponentially with the number of extrapolation steps, but again we there is quit a lot of variance in the \(b\) parameter. Note that the exponent from the fitting for the Harmonic sequence is twice the parameter we got when considering the number of function evaluations agains the error, as expected.\\
+
+The model fits quite well to the \(\ln\)-\(\ln\) plot in the case of the Romberg sequence. It clearly does not fit for the Harmonic sequnce but fits moderately well for the Bulirsch sequence.
 
 \begin{figure}[H]
 \centering
@@ -177,13 +225,35 @@ The error seems to converge exponentally with the number of function evaluations
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/g_tenth_hp.png}
+\includegraphics[scale=0.45]{romberg_plots/g_tenth_hp_log_log_pow_fit_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{romberg_plots/g_tenth_hp_trend.png}
 \end{minipage}
 \end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([6.4567, 12.424]\) & \([1.8146, 4.7549]\) & \([0.27262, 0.38421]\)\\
+Bulirsch & Evaluations-\(\ln\) error & \([6.1694, 20.486]\) & \([0.63299, 5.6396]\) & \([0.2892, 0.56441]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([1.3176, 2.6723]\) & \([-0.74985, -0.56414]\) & \([0.50539, 0.53813]\)\\
+Romberg & Steps-\(\ln\) error & \([1.8371, 4.5792]\) & \([0.022759, 0.062746]\) & \([2.5591, 2.9758]\)\\
+Bulirsch & Steps-\(\ln\) error & \([1.4847, 6.1776]\) & \([0.0047064, 0.14183]\) & \([1.8485, 3.0359]\)\\
+Harmonic & Steps-\(\ln\) error  & \([2.1122, 3.2239]\) & \([-0.52978, -0.40971]\) & \([1.0103, 1.0655]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([ 2.1229, 4.8385]\) & \([0.069809, 0.14873]\) & \([2.6062, 2.9726]\)\\
+Bulirsch & \(\ln\) evaluations-\(\ln\) error & \([2.6345, 6.9668]\) & \([0.02388, 0.26151]\) & \([2.3756, 3.5658]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([6.1241, 4.7106 \cdot 10^5]\) & \([-0.0042976, 4.711\cdot 10^5]\) & \([-0.00043518, 5.0691]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+Here we get divergence for the harmonic sequence, but convergence for the other sequences, fastest for Bulirsch. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch.\\
+
+For the models, in case of convergence, they do not fit very well in any case. The best fitting is when we consider the logarithm of the error against the number of extrapolation steps and the logarithm of number of function evaluations, for the Romberg sequence. There is though quite a lot of variance in the \(b\) and \(c\) parameters.
 
 \begin{figure}[H]
 \centering
@@ -201,7 +271,7 @@ The error seems to converge exponentally with the number of function evaluations
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/g_hundredth_hp.png}
+\includegraphics[scale=0.45]{romberg_plots/g_hundredth_hp_log_log_pow_fit_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -209,17 +279,25 @@ The error seems to converge exponentally with the number of function evaluations
 \end{minipage}
 \end{figure}
 
-For \(a = 10^{-1}, 10^{-2}\) we get divergence for the harmonic sequence, Bulirsch performes best for \(a = 10^{-1}\) and Romberg for \(a = 10^{-2}\). The parameters in the fitting of the exponential convergence model to the number of function evaluations against the error, are reasonable. On the contrary, the \(c\) is suspiciously small in the fitting of the extrapolation steps to the error.\\
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([7.0628, 12.937]\) & \([0.50144, 2.2485]\) & \([0.2832, 0.41879]\)\\
+Bulirsch & Evaluations-\(\ln\) error & \([5.0824, 22138]\) & \([0.043726, 22123]\) & \([9.9561\cdot 10^{-5}, 0.70054]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([3.645, 6.8096]\) & \([-1.0541, -0.66194]\) & \([0.50566, 0.55886]\)\\
+Romberg & Steps-\(\ln\) error & \([6.1009, 9.0624]\) & \([0.0042075, 0.061717]\) & \([2.183, 3.3148]\)\\
+Bulirsch & Steps-\(\ln\) error & \([4.1363, 28.074]\) & \([4.3826\cdot 10^{-6}, 12.165]\) & \([0.29636, 4.9689]\)\\
+Harmonic & Steps-\(\ln\) error  & \([4.7641, 7.5054]\) & \([-0.74467, -0.47951]\) & \([1.0108, 1.1046]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([6.1259, 9.1965]\) & \([0.0132, 0.13674]\) & \([2.2997, 3.3481]\)\\
+Bulirsch & \(\ln\) evaluations-\(\ln\) error & \([4.3246, 80.389]\) & \([5.6755\cdot 10^{-5}, 62.153]\) & \([0.13165, 5.8643]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-\infty, +\infty]\) & \([-\infty, +\infty]\) & \([-\infty, +\infty]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
 
-If we plot the value of the optimal parameter \(q\) in the model fitting for the error against number of function evaluations, against \(a\), the resulting graph looks as follows: 
-
-\begin{figure}[H]
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{romberg_plots/log_p_vs_q_g_a_by_param.png}
-\end{minipage}
-\end{figure}
+Here the same comments apply as for \(a = 10^{-1}\), except that now the Romberg sequence performes better than the Bulirsch sequence and the model fitting is worse.
 
 \subsection{Logarithm}
 
@@ -245,7 +323,7 @@ This function is analytic on neighbourhood about the interval but we have a sing
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/h_one_hp.png}
+\includegraphics[scale=0.45]{romberg_plots/h_one_hp_log_log_pow_fit_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -253,7 +331,29 @@ This function is analytic on neighbourhood about the interval but we have a sing
 \end{minipage}
 \end{figure}
 
-For \(a = 1\) the error seems to converge exponentially with the number of extrapolation steps for the harmonic sequence but the \(b\) parameters are suspicuously large for the other sequences. The error seems to converge exponentially with the number of extrapolation steps. The harmonic sequence results in the fastest convergence in the long run, then Bulirsch and then Romberg. In standard floating point arithmetic, we get down to machine level precision using Romberg and Bulirsch but not by using the Harmonic sequence.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([22.516, 41.875]\) & \([21.932, 37.187]\) & \([0.15286, 0.20118]\)\\
+Bulirsch & Evaluations-\(\ln\) error & \([12.11, 74.009]\) & \([11.911, 53.34]\) & \([0.1608, 0.31525]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([0.25975, 2.7845]\) & \([4.4658, 4.8523]\) & \([0.4879, 0.49727]\)\\
+Romberg & Steps-\(\ln\) error & \([-7.2497, -3.0112]\) & \([0.64418, 1.2678]\) & \([1.6898, 1.9588]\)\\
+Bulirsch & Steps-\(\ln\) error & \([-15.196, -3.292]\) & \([0.25945, 1.4983]\) & \([1.4193, 2.0199]\)\\
+Harmonic & Steps-\(\ln\) error  & \([-4.2377, -1.0094]\) & \([3.1674, 3.5792]\) & \([0.96834, 0.99435]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-5.2342, -2.5359]\) & \([1.4889, 2.1254]\) & \([1.7485, 1.9132]\)\\
+Bulirsch & \(\ln\) evaluations-\(\ln\) error & \([-6.0382, -3.0879]\) & \([1.1338, 1.5746]\) & \([2.0532, 2.2136]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-52.362, -11]\) & \([0.0045186, 0.126]\) & \([3.5843, 5.1093]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+We see that the harmonic sequence performes best, then Bulirsch and then Romberg. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch, but we are like \(2\) digits from there, using the harmonic sequence.\\
+
+For the Romberg and Bulirsch sequence, we can not say that the error converges exponentially with the number of function evaluations. In the case of the harmonic sequence, the model seems to fit very well, since we have very little variance in the parameters.\\
+
+For the harmonic sequence the error clearly seems to converge exponentally with the number of extrapolation steps, as we expect, since it seems to converge exponentially with the number of function evaluations. The exponent is approximately two the one from the former fitting as expected. The model, on the other hand, the fitting is rather unstable for the Romberg and Bulirsch sequence though, and hence also when considering the logarithm of the error against the logarithm of the number of function evaluations.
 
 \begin{figure}[H]
 \centering
@@ -271,13 +371,35 @@ For \(a = 1\) the error seems to converge exponentially with the number of extra
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/h_hundredth_hp.png}
+\includegraphics[scale=0.45]{romberg_plots/h_hundredth_hp_log_log_pow_fit_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{romberg_plots/h_hundredth_hp_trend.png}
 \end{minipage}
 \end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([3.1557, 4.72]\) & \([2.9556, 3.9213]\) & \([0.25717, 0.28874]\)\\
+Bulirsch & Evaluations-\(\ln\) error & \([0.5241, 4.5227]\) & \([1.3712, 3.7758]\) & \([0.25454, 0.38445]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([-3.7524, 2.235]\) & \([0.47056, 2.3586]\) & \([0.2888, 0.46015]\)\\
+Romberg & Steps-\(\ln\) error & \([-2.8258, -0.25896]\) & \([0.026789, 0.21419]\) & \([1.9255, 2.7785]\)\\
+Bulirsch & Steps-\(\ln\) error & \([-5.4449, 0.13131]\) & \([0.0021276, 0.50716]\) & \([1.2262, 3.1395]\)\\
+Harmonic & Steps-\(\ln\) error  & \([-4.1291, 1.0806]\) & \([0.33966, 1.695]\) & \([0.59894, 0.92135]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-2.5316, -0.078471]\) & \([0.078664, 0.40111]\) & \([1.9718, 2.7556]\)\\
+Bulirsch & \(\ln\) evaluations-\(\ln\) error & \([-4.3032,  0.1439]\) & \([0.014952, 0.51561]\) & \([1.7888, 3.5646]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-8.0946, -1.2215]\) & \([0.00066158, 0.14669]\) & \([2.3564, 4.801]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+We see that we can not attain high precision using the harmonic sequence and standard double precision. It is hard to tell which sequence performes best in the long run, though we can say that Bulirsch performes better than Romberg.\\
+
+Here, none of our models seems to fit well. 
 
 \begin{figure}[H]
 \centering
@@ -295,7 +417,7 @@ For \(a = 1\) the error seems to converge exponentially with the number of extra
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/h_tenthousandth_hp.png}
+\includegraphics[scale=0.45]{romberg_plots/h_tenthousandth_hp_log_log_pow_fit_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -303,17 +425,25 @@ For \(a = 1\) the error seems to converge exponentially with the number of extra
 \end{minipage}
 \end{figure}
 
-For \(a = 10^{-2},\, 10^{-4}\) the parameters in the fitting of the number of function evaluations against the error seem more reasonable then the ones the fitting of the number of extrapolation steps against the error. The harmonic sequence performes not as well as the other two and in standard floating point precision we do not get down to the same level of accurracy using that.\\
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([6.5685, 38.866]\) & \([5.7521, 36.785]\) & \([0.033457, 0.13087]\)\\
+Bulirsch & Evaluations-\(\ln\) error & \([0.6216, 45.776]\) & \([1.659, 43.753]\) & \([0.02693, 0.22318]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([2.3199,  15715]\) & \([3.198, 15713]\) & \([7.156\cdot 10^{-5}, 0.13761]\)\\
+Romberg & Steps-\(\ln\) error & \([-0.53913, 1.9827]\) & \([0.11323, 0.88976]\) & \([1.0246, 1.8012]\)\\
+Bulirsch & Steps-\(\ln\) error & \([-3.0504, 2.6683]\) & \([0.0049624, 1.61]\) & \([0.61995, 2.4049]\)\\
+Harmonic & Steps-\(\ln\) error  & \([1.7409, 19.907]\) & \([2.6073, 18.73]\) & \([0.085519, 0.28726]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-0.26214, 1.9672]\) & \([0.24941, 1.1283]\) & \([1.0981, 1.7528]\)\\
+Bulirsch & \(\ln\) evaluations-\(\ln\) error & \([-2.6227, 1.9762]\) & \([0.025171, 1.1351]\) & \([1.061, 2.6824]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-2.3301, 2.0141]\) & \([0.058898, 1.245]\) & \([0.95971, 2.1326]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
 
-If we plot the value of the optimal parameter \(q\) against \(a\), the resulting graph looks as follows: 
-
-\begin{figure}[H]
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{romberg_plots/log_p_vs_q_h_a_by_param.png}
-\end{minipage}
-\end{figure}
+Here again, we do not attain high precision when using the Harmonic sequence in double precision arithmetic. It is hard to say which sequence performes best. None of our models fits.
 
 \subsection{Area of half circle}
 
@@ -347,17 +477,27 @@ This function is analytic inside the interval of definition but not at the endpo
 \end{minipage}
 \end{figure}
 
-Here the fit seems to be very unstable since we are getting very small values \(q\). Thus we shall try to plot a log-log plot of the number of evaluation agains the error. It looks as follows: 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([30009, 55368]\) & \([30008, 55367]\) & \([2.8621\cdot 10^{-5}, 5.2031\cdot 10^{-5}]\)\\
+Bulirsch & Evaluations-\(\ln\) error & \([412.72, 58074]\) & \([411.77, 58073]\) & \([2.6538\cdot 10^{-5},0.0036685]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([-\infty,  +\infty]\) & \([-\infty,  +\infty]\) & \([-\infty,  +\infty]\)\\
+Romberg & Steps-\(\ln\) error & \([ 0.50725, 2.4031]\) & \([1.063, 2.13]\) & \([0.7594, 0.99329]\)\\
+Bulirsch & Steps-\(\ln\) error & \([-1.1947, 3.9156]\) & \([0.50506, 3.728]\) & \([0.44237, 1.0076]\)\\
+Harmonic & Steps-\(\ln\) error  & \([-\infty,  +\infty]\) & \([-\infty,  +\infty]\) & \([-\infty,  +\infty]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([1.5801, 2.1418]\) & \([1.9816, 2.3514]\) & \([0.84451, 0.90978]\)\\
+Bulirsch & \(\ln\) evaluations-\(\ln\) error & \([0.90015, 1.9806]\) & \([1.4722, 2.1948]\) & \([0.85266, 1.0171]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([0.2027, 2.4628]\) & \([1.4369, 2.7261]\) & \([0.71666, 0.92783]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
 
-\begin{figure}[H]
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{romberg_plots/circle_area_hp_log_log_pow_fit_trend.png}
-\end{minipage}
-\end{figure}
+We see that we do not get high precision using double precision arithmetic, independent of sequence. The Romberg and Bulirsch sequence seem to perform similarly well but the harmonic sequence seems to be slowest.\\
 
-We see that the values seem to fit on a line. Thus the relation seems to be rather \(\ln \varepsilon_i \sim a\ln N_i + b \) i.e. \(\varepsilon_i \sim C N_i^a\) which we call algebraic convergence.\\
+For the harmonic sequence, the error neither converges exponentally with the number of function evaluations nor the number of extrapolation steps. For the Bulirsch none of the models fits well, but for Romberg, model seems to fit moderately well when considering the logarithm of the error against the number of extrapolation steps or the logarithm of the number of function evaluations.
 
 \subsection{Gaussian}
 
@@ -389,7 +529,27 @@ j: [0,1]\rightarrow \R, \quad k(x) \coloneqq \frac{2}{\sqrt{\pi}} e^{-x^2}.
 \end{minipage}
 \end{figure}
 
-Here the error seems to converge exponentially with the number of function evaluations for the harmonic sequence. For the other sequences the \(b\) parameters are unreasonably large. The error seems to converge exponentially with the number of extrapolation steps, in all cases. The harmonic sequence performes best, then Bulirsch an then Romberg. Using standard double precision, we get almost down to machine level precision using Romberg or Bulirsch, but are approximately \(2\) digits from there, using the Harmonic sequence.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([18.135, 48.964]\) & \([17.296, 40.429]\) & \([0.15701, 0.23818]\)\\
+Bulirsch & Evaluations-\(\ln\) error & \([9.1771, 119.93]\) & \([8.5851, 82.042]\) & \([0.14647, 0.38966]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([-19.149, 22.985]\) & \([3.0528, 5.1761]\) & \([0.55933, 0.61308]\)\\
+Romberg & Steps-\(\ln\) error & \([-5.4664, -2.361\) &  \([0.66161, 0.93688]\) & \([1.86, 1.9993]\)\\
+Bulirsch & Steps-\(\ln\) error & \([-11.683, -3.7656]\) & \([0.36738, 0.95018]\) & \([1.6616, 1.9869]\)\\
+Harmonic & Steps-\(\ln\) error  & \([-25.648, 15.647]\) & \([2.0474, 3.5836]\)  & \([1.1153, 1.2221]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-3.9028, -1.9698]\) & \([1.4487, 1.7275]\) & \([1.9094, 1.9844]\)\\
+Bulirsch & \(\ln\) evaluations-\(\ln\) error & \([-4.1831, 3.3647]\) & \([0.95753, 1.8526]\) & \([2.1078, 2.4241]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-97.975, -12.402]\) & \([0.0010919, 0.051125]\) & \([4.314, 6.0725]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+In double precision arithmetic we get down to machine level precision using Romberg or Bulirsch, but we get down to like \(2\) digits from there, using the harmonic sequence. The harmonic sequence performes best, then Bulirsch and then Romberg.\\
+
+For the harmonic sequence, the error seems to converge exponentially with the number of extrapolation steps (and hence also with the number of extrapolation steps), but we though must note that there is quite a lot of variance in the \(b\) parameter and the \(c\) parameter. For the Romberg sequence, model fits moderately well when considering the logarithm of the error agains the number of extrapolation steps or the logarithm of the number of function evaluations. For the Bulirsch seqeunce, none of the models fits.
 
 The values of the optimal parameters in the curve fitting of evaluations against the logarithm of the error are:
 

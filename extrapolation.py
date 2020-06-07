@@ -147,13 +147,8 @@ def parse_from_file(prob_ref, seq_ref, folder, ref):
 	
 	my_folder = os.path.join(folder, ref)
 	if os.path.isdir(my_folder):
-		print("##############################")
-		print("PARSING FROM FILE")
 		evals_path = os.path.join(my_folder, 'evals')
-		print(evals_path)
 		ln_e_path = os.path.join(my_folder, 'ln_e')
-		print(ln_e_path)
-		print("###############################")
 		evals = np.fromfile(evals_path, 'int64')
 		ln_e = np.fromfile(ln_e_path, 'float')
 		log_e = ln_e / math.log(10)
@@ -197,10 +192,12 @@ def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 		ln_e = result.ln_e
 		N = min(len(ln_e), max_points)
 		steps = np.array([n+1 for n in range(N)])
+		steps_all = np.array([i+1 for i in range(len(ln_e))])
 		plt.plot(steps, ln_e[0:N], '.', label = my_label)
 		plt.legend()
 		x = np.linspace(1, N, min(100 * N, 1000))
-		p = opt.curve_fit(fit_func, np.array([i+1 for i in range(len(ln_e))]), ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
+		p = opt.curve_fit(fit_func, steps_all, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
+		validate_parameters(steps_all, ln_e, ref + "_" + result.seq_ref.lower() + "_steps", folder)
 		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
 		plt.legend()
 
@@ -293,7 +290,6 @@ def plot_log_log_power_trend(results, title, ref, by_seq, folder):
 		validate_parameters(ln_evals, ln_e, ref + "_" + result.seq_ref.lower(), folder)
 		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
 		plt.legend()
-		error = get_least_square_error(fit_func, p, ln_evals, ln_e)
     
 	plt.xlabel('Natural logarithm of number of function evaluations, $\ln N$')
 	plt.ylabel('Natural logarithm of absolute error, $\ln \epsilon $')

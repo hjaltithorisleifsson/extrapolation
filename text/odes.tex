@@ -76,6 +76,21 @@ whose solution is the analytic function \(y(x) = e^x\).
 \end{minipage}
 \end{figure}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([15.663, 37.862]\) & \([12.964, 28.184]\) & \([0.18404, 0.26009]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([4.9224, 23.463]\) & \([2.6047, 3.5926]\) & \([0.59809, 0.63306]\)\\
+Romberg & Steps-\(\ln\) error & \([-1.5262, -0.77009]\) & \([0.91311, 1.0186]\) & \([1.8759, 1.9202]\)\\
+Harmonic & Steps-\(\ln\) error  & \([3.0712, 19.967]\) & \([2.7096, 3.6208]\) & \([1.1949, 1.2579]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-1.0132, -0.42235]\) & \([1.0155, 1.1062]\) & \([2.0885, 2.128]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-83.717, -11.513]\) & \([0.00074221, 0.017266]\) & \([4.8223, 6.2444]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
 Here we have exponential convergence in all cases. The harmonic sequence performes better than Romberg. In standard floating point arithmetic, we get down to maching level error using either sequence.
 
 \subsection{Logistic curve}
@@ -114,6 +129,21 @@ which is analytic.
 \includegraphics[scale=0.45]{emr_plots/logistic_hp_trend.png}
 \end{minipage}
 \end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([10.331, 18.639]\) & \([13.472, 19.46]\) & \([0.20377, 0.24246]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([-1.1113, 10.644]\) & \([3.7866, 4.7324]\) & \([0.49683, 0.51996]\)\\
+Romberg & Steps-\(\ln\) error & \([-10.904, -5.6786]\) & \([0.55089, 1.1039]\) & \([1.7891, 2.0633]\)\\
+Harmonic & Steps-\(\ln\) error  & \([-3.1705, 8.3574]\) & \([3.8076, 4.7325]\) & \([0.99366, 1.0373]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-10.257, -5.7477]\) & \([0.66251, 1.1044]\) & \([2.0277, 2.2516]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-62.512, -13.571]\) & \([0.0021404, 0.053864]\) & \([4.011, 5.4522]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
 
 Here the model also fits very well, the Harmonic sequence performes better and we get down to machine level precision using either sequence in standard floating point arithmetic.
 
@@ -154,6 +184,21 @@ which is meromorphic and we are quite far from singularites.
 \end{minipage}
 \end{figure}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([5.7344, 15.721]\) & \([4.7874, 10.652]\) & \([0.23153, 0.31651]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([2.0981, 6.8309]\) & \([1.6222, 2.1306]\) & \([0.50705, 0.53654]\)\\
+Romberg & Steps-\(\ln\) error & \([-1.5056, -1.0203]\) & \([0.28895, 0.32015]\) & \([2.1561, 2.1978]\)\\
+Harmonic & Steps-\(\ln\) error  & \([1.2824, 5.7278]\) & \([1.6496, 2.1323]\) & \([1.014, 1.0696]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-1.2513, -0.95335]\) & \([0.33067, 0.36384]\) & \([2.3822, 2.4288]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-26.027, -4.3207]\) & \([0.0010993, 0.020728]\), \([4.1281, 5.4423]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
 Here we also have exponential convergence in all cases. The harmonic sequence performes better than Romberg. In standard floating point arithmetic, we get down to maching level error using either sequence.
 
 \subsection{Equation with singularity}
@@ -192,6 +237,21 @@ The solution is meromorphic with a pole at \(1+a\).
 \end{minipage}
 \end{figure}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([7.7232, 20.471]\) & \([7.2562, 15.363]\) & \([0.20931, 0.28612]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([2.3083, 7.0001]\) & \([2.3294, 2.8569]\) & \([0.50522, 0.52733]\)\\
+Romberg & Steps-\(\ln\) error & \([-2.6775, -1.95]\) & \([0.45682, 0.53376]\) & \([2.0027, 2.0662]\)\\
+Harmonic & Steps-\(\ln\) error  & \([1.1731, 5.5391]\) & \([2.3631, 2.8587]\) & \([1.0103, 1.0516]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-2.1848, -1.93]\) & \([0.53633, 0.56757]\) & \([2.241, 2.2668]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-36.486, -6.53]\) & \([0.0015012, 0.031606]\) & \([4.0628, 5.4262]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -216,6 +276,21 @@ The solution is meromorphic with a pole at \(1+a\).
 \end{minipage}
 \end{figure}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([4.7442, 5.4302]\) & \([0.040172, 0.19803]\) & \([0.49633, 0.70183]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([4.6363, 5.7282]\) & \([0.021437, 0.061568]\) & \([0.59648, 0.70863]\)\\
+Romberg & Steps-\(\ln\) error & \([4.53, 4.6284]\) & \([0.0003223, 0.00077853]\) & \([4.0232, 4.4038]\)\\
+Harmonic & Steps-\(\ln\) error  & \([4.6155, 5.669]\) & \([0.02263, 0.062043]\) & \([1.1917, 1.406]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([4.5391, 4.66]\) & \([0.00039591, 0.0011325]\) & \([4.3769, 4.8919]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([3.9121, 4.4358]\) & \([1.291\cdot 10^{-5}, 8.2534\cdot 10^{-5}]\), \([5.3783, 6.2309]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -239,6 +314,21 @@ The solution is meromorphic with a pole at \(1+a\).
 \includegraphics[scale=0.45]{emr_plots/singularity_4_hp_trend.png}
 \end{minipage}
 \end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([9.2102, 9.212]\) & \([8.3524\cdot 10^{-5}, 0.00012308]\) & \([0.94461, 0.99141]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([9.2103, 9.2106]\) & \([0.00016667, 0.00017207]\) & \([0.7481, 0.7516]\)\\
+Romberg & Steps-\(\ln\) error & \([-2667.1, 9.206]\) & \([-2676.6, 6.2263\cdot 10^{-9}]\) & \([-0.0001809, 7.4056]\)\\
+Harmonic & Steps-\(\ln\) error  & \([9.2101, 9.2101]\) & \([0.00017456, 0.00017733]\) & \([1.4903, 1.494]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-2664.3, 9.2071]\) & \([-2673.7, 1.9046\cdot 10^{-8}]\) & \([0.00021368, 7.8632]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-1378.4, 9.2066]\) & \([-1387.8, 1.8114\cdot 10^{-7}]\) & \([-0.0011515, 7.5689]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
 
 The model fits well for large \(a\), and then the Harmonic sequence works better. But for small \(a\) we get a very poor fitting, and extremely slow convergence towards the solution. For \(a = 10^{-4}\), when considering the number of function evaluations agains the error, we can not say that we have exponential convergence because the values on the vertical axis are on much smaller scale then the ones on the horizontal axis. The fitting fails entirely when considering the number of extrapolation steps against the error with the Romberg sequence and \(a = 10^{-4}\).\\
 
@@ -286,6 +376,21 @@ y(t) = \sqrt{1 - (t-a)}
 \end{minipage}
 \end{figure}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([9.9295, 22.25]\) & \([11.637, 20.204]\) & \([0.18991, 0.24372]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([-1.0501, -0.24343]\) & \([3.0934, 3.1914]\) & \([0.49566, 0.49899]\)\\
+Romberg & Steps-\(\ln\) error & \([-6.4468, -4.3568]\) & \([0.64569, 0.95202]\) & \([1.795, 1.9521]\)\\
+Harmonic & Steps-\(\ln\) error  & \([-2.5667, -1.6423]\) & \([3.0939, 3.2113]\) & \([0.98991, 0.99795]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-5.624, -4.4394]\) & \([0.78362, 0.94358]\) & \([2.0389, 2.1236]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-46.089, -10.801]\) & \([0.0017299, 0.052709]\) & \([3.8429, 5.3713]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -309,6 +414,21 @@ y(t) = \sqrt{1 - (t-a)}
 \includegraphics[scale=0.45]{emr_plots/quad_sing_2_hp_trend.png}
 \end{minipage}
 \end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([-0.57589, 0.099684]\) & \([0.72863, 1.0737]\) & \([0.35345, 0.40031]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([-2.5929, -1.1937]\) & \([0.24115, 0.50496]\) & \([0.40724, 0.48672]\)\\
+Romberg & Steps-\(\ln\) error & \([-2.6418, -1.8798]\) & \([0.011309, 0.034504]\) & \([2.6041, 3.0746]\)\\
+Harmonic & Steps-\(\ln\) error  & \([-2.7017, -1.362]\) & \([0.24095, 0.49557]\) & \([0.8178, 0.97357]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-2.539, -1.8486]\) & \([0.014785, 0.037787]\) & \([2.9088, 3.3559]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-5.811, -2.3634]\) & \([0.0001524, 0.013985]\) & \([3.2405, 5.2633]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
 
 \begin{figure}[H]
 \centering
@@ -334,7 +454,20 @@ y(t) = \sqrt{1 - (t-a)}
 \end{minipage}
 \end{figure}
 
-Here the model seems to fit in all cases. The Harmonic sequence works better for large \(a\) but the Romberg better for small \(a\).\\
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([-0.11329, 2.1866]\) & \([1.1803, 3.0903]\) & \([0.11536, 0.19585]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([-1.79, 6.3506]\) & \([0.49042, 7.2803]\) & \([0.050901, 0.21886]\)\\
+Romberg & Steps-\(\ln\) error & \([-1.7965, -0.9637]\) & \([0.039687, 0.26045]\) & \([1.2112, 1.9586]\)\\
+Harmonic & Steps-\(\ln\) error  & \([-1.8373, 3.22]\) & \([0.47743, 4.3856]\) & \([0.14475, 0.44123]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-1.7454, -1.0531]\) & \([0.048136, 0.23165]\) & \([1.4225, 2.1312]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-2.9265, -1.016]\) & \([0.003966, 0.29486]\) & \([1.198, 2.9114]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
 
 The plot of \(q\) against \(a\) is as follows:
 
@@ -382,7 +515,22 @@ which is entire.
 \end{minipage}
 \end{figure}
 
-Here the model fits very well. The harmonic sequence works better then Romberg and we get down to machine level precision using either sequence when using standard floating point arithmetic.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([12.562, 32.048]\) & \([9.2655, 21.875]\) & \([0.19875, 0.28572]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([5.5122, 25.529]\) & \([1.9785, 2.962]\) & \([0.60766, 0.65176]\)\\
+Romberg & Steps-\(\ln\) error & \([0.116, 0.1776]\) & \([0.67445, 0.6817]\) & \([2.0013, 2.0056]\)\\
+Harmonic & Steps-\(\ln\) error  & \([3.9971, 22.445]\) & \([2.066, 2.9874]\) & \([1.2139, 1.2946]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([0.044133, 1.0504]\) & \([0.68974, 0.82067]\) & \([2.1827, 2.2634]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-69.289, -8.1881]\) & \([0.00055542, 0.011524]\) & \([4.9576, 6.3289]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+The harmonic sequence works better then Romberg and we get down to machine level precision using either sequence when using standard floating point arithmetic.
 
 \subsection{Mathematical pendulum}
 
@@ -414,6 +562,21 @@ y''(t) + \sin y(t) = 0,\quad y(0) = 0,\, y'(0) = 1, \quad t\in [0,1].
 \includegraphics[scale=0.45]{emr_plots/oscillation_hp_trend.png}
 \end{minipage}
 \end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([14.607, 28.136]\) & \([12.916, 22.296]\) & \([0.18931, 0.24217]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([3.8718, 7.004]\) & \([3.433, 3.797]\) & \([0.50196, 0.51282]\)\\
+Romberg & Steps-\(\ln\) error & \([-3.447, -1.1683]\) & \([0.71787, 1.0676]\) & \([1.7846, 1.9465]\)\\
+Harmonic & Steps-\(\ln\) error  & \([2.2793, 5.1045]\) & \([3.47, 3.7985]\) & \([1.0039, 1.0234]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-2.5362, -1.4428]\) & \([0.87139, 1.0518]\) & \([2.03, 2.1172]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-49.468, -8.3563]\) & \([0.0020608, 0.050991]\) & \([3.962, 5.3976]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
 
 Here the model also fits very well, the harmonic sequence works better and we get down to machine level precision in standard floating point arithmetic, using either sequence.
 
@@ -449,6 +612,21 @@ where \(\bfp\) and \(\bfq\) are two dimensional vectors. We will consider it wit
 \end{minipage}
 \end{figure}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([10.607, 23.391]\) & \([10.329, 19.099]\) & \([0.19189, 0.25241]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([-1.4627, 1.0424]\) &  \([2.5516, 2.8806]\) & \([0.4847, 0.49777]\)\\
+Romberg & Steps-\(\ln\) error & \([-3.8871, -2.2582]\) & \([0.60761, 0.83563]\) & \([1.8337, 1.9627]\)\\
+Harmonic & Steps-\(\ln\) error  & \([-2.7033, -0.17582]\) & \([2.5519, 2.8902]\) & \([0.96857, 0.99552]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-3.0956, -2.4604]\) & \([0.73825, 0.82917]\) & \([2.0823, 2.1351]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-38.09, -8.0506]\) & \([0.0014676, 0.050919]\) & \([3.7668, 5.3537]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -472,6 +650,21 @@ where \(\bfp\) and \(\bfq\) are two dimensional vectors. We will consider it wit
 \includegraphics[scale=0.45]{emr_plots/federpendel_2_hp_trend.png}
 \end{minipage}
 \end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([9.896, 19.206]\) & \([7.608, 13.599]\) & \([0.20768,  0.26568]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([-1.4225, 1.9595]\) & \([1.5814, 2.0865]\) & \([0.46562, 0.4957]\)\\
+Romberg & Steps-\(\ln\) error & \([-1.7646, 0.30345]\) & \([0.36538, 0.6033]\) & \([1.8931, 2.0983]\)\\
+Harmonic & Steps-\(\ln\) error  & \([-2.1808, 1.1314]\) & \([1.5813, 2.0831]\) & \([0.93135, 0.99141]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([-1.1627, 0.36721\) & \([0.44804, 0.60348]\) & \([2.146, 2.2837]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-23.881, -4.1342]\) & \([0.00091872, 0.041264]\) & \([3.6368, 5.3401]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
 
 The model fits very well in all cases, the harmonic sequence works better. In standard floating point arithmetic, we obtain higher accurracy using the Romberg sequence, though we get high accurracy in both cases.
 
@@ -507,6 +700,21 @@ where \(\sigma,\,\rho\) and \(\beta\) are constants. In our experiment, the cons
 \end{minipage}
 \end{figure}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([9.9505, 26.51]\) & \([6.6827, 16.725]\) & \([0.21593, 0.31176]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([10.569, 19.579]\) & \([3.5822, 4.6087]\) & \([0.49626, 0.52458]\)\\
+Romberg & Steps-\(\ln\) error & \([0.46466, 0.76617]\) & \([0.45377, 0.48297]\) & \([2.1065, 2.1323]\)\\
+Harmonic & Steps-\(\ln\) error  & \([8.5114, 17.354]\) & \([3.6279, 4.6156]\) & \([0.9922, 1.0465]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([0.42027, 1.554]\) & \([0.46623, 0.59087]\) & \([2.2939, 2.4047]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-47.509, -2.6398]\) & \([0.002428, 0.050464]\) & \([4.0342, 5.3911]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -530,6 +738,21 @@ where \(\sigma,\,\rho\) and \(\beta\) are constants. In our experiment, the cons
 \includegraphics[scale=0.45]{emr_plots/lorenz_02_hp_trend.png}
 \end{minipage}
 \end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & Plot & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline
+Romberg & Evaluations-\(\ln\) error &\([7.7473, 20.35]\) & \([3.039, 9.6038]\) & \([0.24858, 0.37522]\)\\
+Harmonic & Evaluations-\(\ln\) error  & \([9.5566, 23]\) & \([2.3126, 4.0806]\) & \([0.46514, 0.52793]\)\\
+Romberg & Steps-\(\ln\) error & \([2.715, 3.8992]\) & \([0.16344, 0.23971]\) & \([2.3023, 2.4619]\)\\
+Harmonic & Steps-\(\ln\) error  & \([8.2227, 21.335]\) & \([2.3407, 4.0624]\) & \([0.93104, 1.0534]\)\\
+Romberg & \(\ln\) evaluations-\(\ln\) error & \([2.7276, 4.4393]\) & \([0.17299, 0.29654]\) & \([2.5095, 2.7641]\)\\
+Harmonic & \(\ln\) evaluations-\(\ln\) error & \([-30.107, 2.9066]\) & \([0.0013441, 0.032077]\) & \([4.0552, 5.4637]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
 
 The model fits very well in both cases when we consider the number of evaluations against error. The harmonic sequence works better. The fitting is not as nice when considering the number of extrapolation seps against the error. In standard floating point arithmetic, we obtain higher accurracy using the Romberg sequence, though we get high accurracy in both cases.\\
 

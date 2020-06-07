@@ -33,7 +33,7 @@ class Quotient:
 
 def plot_basic():
 	quotients = []
-	quotients.append(Quotient(lambda x: 0 if x < 0 else math.exp(-1/x), 0.0, 0.5, 0.0, '$d/dx|_{x=0}r(x)$', 'rho'))
+	quotients.append(Quotient(lambda x: 0.0 if x < 0 else math.exp(-1.0 / x)), 0.0, 0.5, 0.0, '$d/dx|_{x=0}r(x)$', 'rho'))
 	quotients.append(Quotient(lambda x: x * math.exp(-1.0/x**2), 0.0, 0.5, 0.0, '$d/dx|_{x=0}xe^{-1/x^2}$. $h=1/2$', 'xemxm2'))
 	quotients.append(Quotient(lambda x: math.sin(x), 0.0, 0.5, 1.0, '$d/dx|_{x=0}\sin x$. $h=1/2$', 'sin'))
 	quotients.append(Quotient(lambda x: math.log(x + 0.0001), 0.0, 0.00005, 10000.0, '$d/dx|_{x = 0} \ln (x + 0.0001)$. $h=1/2\cdot 10^{-4}$', 'h_tenthousandth'))

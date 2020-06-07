@@ -51,7 +51,19 @@ We begin by considering the derivative of the exponential function at zero.
 \end{minipage}
 \end{figure}
 
-Here the model fits remarkably well. In standard floating point arithmetic, we get down to machine level precision using any sequence. Romberg results in the fastest convergence, then Bulirsch and then the harmonic sequence.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
+Romberg &\([-9.8643, -0.48952]\) & \([0.36423, 0.47594]\) & \([1.8085, 1.875]\)\\
+Bulirsch & \([-12.468, -0.41311]\) & \([0.38492, 0.61338]\) & \([1.638, 1.7528]\)\\
+Harmonic & \([2.367, 13.509]\) & \([1.2466, 1.943]\) & \([1.2723, 1.3797]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+In standard floating point arithmetic, we get down to machine level precision using any sequence. The Romberg sequence works best, then Bulirsch and then the harmonic. The model fits moderately well for the Bulirsch and harmonic sequence but quite well for the Romberg sequence.
 
 \subsection{Logarithm}
 
@@ -72,6 +84,20 @@ g_a(x) \coloneqq \ln(x+a), \quad a > 0.
 \end{minipage}
 \end{figure}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
+Romberg &\([-6.7596, -2.2394]\) & \([0.19482, 0.24195]\) & \([1.9227, 1.9783]\)\\
+Bulirsch & \([-12.115, -2.5904]\) & \([0.14757, 0.29277]\) & \([1.7291, 1.9026]\)\\
+Harmonic & \([0.19404, 4.5359]\) & \([0.92273, 1.2225]\) & \([1.2439, 1.3111]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+We get down to machine level precision using any sequence, Romberg performes best, then Bulirsch and then the Harmonic one. The model fits quite well for the Romberg sequence and the Harmonic one, but not so well for Bulirsch.
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -83,6 +109,20 @@ g_a(x) \coloneqq \ln(x+a), \quad a > 0.
 \includegraphics[scale=0.45]{diff_quot_plots/h_hundredth_hp_trend.png}
 \end{minipage}
 \end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
+Romberg &\([-2.1544, 2.3657]\) & \([0.19482, 0.24195]\) & \([1.9227, 1.9783]\)\\
+Bulirsch & \([-7.5095, 2.0148]\) & \([0.14757, 0.29277]\) & \([1.7291, 1.9026]\)\\
+Harmonic & \([4.7992, 9.1411]\) & \([0.92273, 1.2225]\) & \([1.2439, 1.3111]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+Here the same comments apply as for \(a = 1\).
 
 \begin{figure}[H]
 \centering
@@ -96,7 +136,21 @@ g_a(x) \coloneqq \ln(x+a), \quad a > 0.
 \end{minipage}
 \end{figure}
 
-Here the model also fits remarkably well. In standard floating point arithmetic, we get down to machine level precision using any sequence.  Romberg results in the fastest convergence, then Bulirsch and then the harmonic sequence. Note that the \(q\) parameter is independent of \(a\).
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
+Romberg &\([2.4507, 6.9709]\) & \([0.19482, 0.24195]\) & \([1.9227, 1.9783]\)\\
+Bulirsch & \([-2.9043, 6.6199]\) & \([0.14757, 0.29277]\) & \([1.7291, 1.9026]\)\\
+Harmonic & \([9.4044, 13.746]\) & \([0.92273, 1.2225]\) & \([1.2439, 1.3111]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+Here the same comments apply as for \(a= 1,10^{-2}\).\\
+
+Note that the \(c\) and \(q\) parameters are independent of \(a\).
 
 \subsection{Square root}
 
@@ -117,6 +171,20 @@ h_a(x) \coloneqq \sqrt{a + x}, \quad a > 0.
 \end{minipage}
 \end{figure}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
+Romberg &\([-9.4809, -4.1952]\) & \([0.19588, 0.25329]\) & \([1.9111, 1.9772]\)\\
+Bulirsch & \([-14.818, -4.4796]\) & \([0.14902, 0.31392]\) & \([1.7117, 1.9006]\)\\
+Harmonic & \([-1.5187, 2.1013]\) & \([0.99678, 1.2436]\) & \([1.2408, 1.2931]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+In standard double precision floating point arithmetic we get down to machine level precision using any sequence. The model fits quite well for the Romberg and the Harmonic sequence but not as well for the Bulirsch sequence.
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -129,6 +197,19 @@ h_a(x) \coloneqq \sqrt{a + x}, \quad a > 0.
 \end{minipage}
 \end{figure}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
+Romberg &\([-7.1783, -1.8927]\) & \([0.19588, 0.25329]\) & \([1.9111, 1.9772]\)\\
+Bulirsch & \([-12.515, -2.177]\) & \([0.14902, 0.31392]\) & \([1.7117, 1.9006]\)\\
+Harmonic & \([0.78386, 4.4039]\) & \([0.99678, 1.2436]\) & \([1.2408, 1.2931]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+Here the same comments apply as for \(a = 1\). 
 
 \begin{figure}[H]
 \centering
@@ -142,6 +223,19 @@ h_a(x) \coloneqq \sqrt{a + x}, \quad a > 0.
 \end{minipage}
 \end{figure}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
+Romberg &\([-4.8758, 0.40992]\) & \([0.19588, 0.25329]\) & \([1.9111, 1.9772]\)\\
+Bulirsch & \([-10.213, 0.1256]\) & \([0.14902, 0.31392]\) & \([1.7117, 1.9006]\)\\
+Harmonic & \([3.0864, 6.7065]\) & \([0.99678, 1.2436]\) & \([1.2408, 1.2931]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+Here also the same comments apply.
 
 \begin{figure}[H]
 \centering
@@ -155,8 +249,21 @@ h_a(x) \coloneqq \sqrt{a + x}, \quad a > 0.
 \end{minipage}
 \end{figure}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
+Romberg &\([8.9398, 14.225]\) & \([0.19588, 0.25329]\) & \([1.9111, 1.9772]\)\\
+Bulirsch & \([3.6029, 13.941]\) & \([0.14902, 0.31392]\) & \([1.7117, 1.9006]\)\\
+Harmonic & \([16.902, 20.522]\) & \([0.99678, 1.2436]\) & \([1.2408, 1.2931]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
 
-The model fits remarkably well. In standard floating point arithmetic, we get down to machine level precision using any sequence. Romberg results in the fastest convergence, then Bulirsch and then the harmonic sequence. The parameter \(q\) is also independent of \(a\).
+And they also apply here.\\
+
+Note that the \(c\) and \(q\) parameters are independent of \(a\).
 
 \subsection{Smooth but not analytic function}
 
@@ -181,7 +288,19 @@ which is smooth but not analytic.
 \end{minipage}
 \end{figure}
 
-The model fits very well. Romberg results in the fastest convergence, then Bulirsch and then the harmonic sequence.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
+Romberg &\([-2.4369, 11.519]\) & \([0.047291, 0.085789]\) & \([2.1113, 2.2562]\)\\
+Bulirsch & \([-4.432, 0.72925]\) & \([0.013621, 0.024083]\) & \([2.2071, 2.3464]\)\\
+Harmonic & \([-4.6314, 7.7903]\) & \([0.22694, 1.8383]\) & \([0.77185, 1.2114]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+Here the model fits moderately well in the case of the Romberg sequence and the Bulirsch sequence but not in the case of the harmonic sequence. 
 
 \subsection{Another smooth but not analytic function}
 
@@ -205,7 +324,19 @@ which is smooth but not analytic.
 \end{minipage}
 \end{figure}
 
-The model fits very well. Romberg results in the fastest convergence, then Bulirsch and then the harmonic sequence.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
+Romberg &\([-8.6583, -2.4345]\) & \([0.1043, 0.15705]\) & \([1.9961, 2.1025]\)\\
+Bulirsch & \([-14.691, 1.3703]\) & \([0.03942, 0.17247]\) & \([1.7901, 2.1726]\)\\
+Harmonic & \([-12.887, 40.198]\) & \([0.17035, 4.935]\) & \([0.84929, 1.5909]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
+
+Here the model fits fine in the case of the Romberg sequence but not in the other cases.
 
 \subsection{Only once differentiable function}
 
@@ -229,9 +360,21 @@ x^2\sin\frac{1}{x} & \text{if } x \neq 0\\
 \end{minipage}
 \end{figure}
 
-Here the model does not fit very well and we do not have nice convergence in all cases; for the harmonic sequence we get divergence. Note that we do not have the asymptotic expansion for the derivate here, since the function is only once differentiable.\\
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c||c|c|c}
+Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
+Romberg &\([-9.0645, 65.569]\) & \([0.0033936, 45.783]\) & \([0.15045, 1.9766]\)\\
+Bulirsch & \([-2.9496, 12585]\) & \([0.00030229, 12557]\) & \([0.00072049, 2.5062]\)\\
+Harmonic & \([\infty, +\infty]\) & \([-\infty, +\infty]\) & \([-\infty, +\infty]\)\\
+    \end{tabular}
+    \caption{Intervals from cross validation for the parameters}
+    \label{tab:my_label}
+\end{table}
 
-The parameters from the fitting are: 
+Here the model simply does not fit. Note that we do not have the asymptotic expansion for the derivate here, since the function is only once differentiable.\\
+
+The parameters from the fitting are:
 
 \begin{table}[H]
     \centering
