@@ -1,28 +1,18 @@
-b = -3.8846,c = 0.067908,q = 4.365,step = 1,offset = 0
-b = -3.2053,c = 0.085363,q = 4.2215,step = 2,offset = 0
-b = -4.6594,c = 0.051925,q = 4.5334,step = 2,offset = 1
-b = -2.7869,c = 0.12834,q = 3.9264,step = 3,offset = 0
-b = -5.307,c = 0.029925,q = 4.922,step = 3,offset = 1
-b = -3.4995,c = 0.078062,q = 4.2757,step = 3,offset = 2
-################################################################################
-################################################################################
-b = -3.186,c = 0.1502,q = 3.7588,offset = 0,len = 18
-b = -4.0371,c = 0.08753,q = 4.1485,offset = 1,len = 18
-b = -2.9038,c = 0.16112,q = 3.72,offset = 2,len = 18
-b = -3.3145,c = 0.13397,q = 3.8462,offset = 3,len = 18
-b = -3.232,c = 0.12039,q = 3.9423,offset = 4,len = 18
-b = -3.3442,c = 0.11962,q = 3.9405,offset = 5,len = 18
-b = -5.2811,c = 0.036668,q = 4.7831,offset = 6,len = 18
-b = -5.0835,c = 0.046729,q = 4.6007,offset = 7,len = 18
-b = -6.5241,c = 0.022853,q = 5.0856,offset = 8,len = 18
-b = -5.9976,c = 0.033301,q = 4.8194,offset = 9,len = 18
-b = -7.8471,c = 0.014815,q = 5.3522,offset = 10,len = 18
-b = -5.7848,c = 0.03823,q = 4.7221,offset = 11,len = 18
-b = -7.8342,c = 0.017958,q = 5.2074,offset = 12,len = 18
-b = -1.4974,c = 0.12985,q = 3.9482,offset = 13,len = 18
-b = -2.039,c = 0.11711,q = 4.0092,offset = 14,len = 18
-b = -2.0676,c = 0.098447,q = 4.1367,offset = 15,len = 18
-b = -1.3161,c = 0.12311,q = 3.9927,offset = 16,len = 18
-################################################################################
-################################################################################
-bmin = -7.8471, bmax = -1.3161, cmin = 0.014815, cmax = 0.16112, qmin = 3.72, qmax = 5.3522
+b = -5.1941,c = 0.0064799,q = 6.4555,offset = 3,len = 6
+b = 0.50322,c = 0.99404,q = 2.3055,offset = 4,len = 6
+b = -6.6164,c = 0.00058302,q = 8.3996,offset = 5,len = 6
+b = 5.3189,c = 2.1626,q = 1.9167,offset = 6,len = 6
+b = -7.9547,c = 0.00013468,q = 9.4282,offset = 7,len = 6
+b = 110.1,c = 84.31,q = 0.34165,offset = 8,len = 6
+b = 6710.1,c = 6669.3,q = 0.0072116,offset = 9,len = 6
+b = 15.168,c = 6.5806,q = 1.3237,offset = 10,len = 6
+b = 7078.6,c = 7034.8,q = 0.0071807,offset = 11,len = 6
+b = -16.353,c = 1.2426e-11,q = 20.953,offset = 12,len = 6
+WARNING: OPTIMAL PARAMETERS NOT FOUND!!!b = -15.87,c = 4.8029e-08,q = 14.514,offset = 14,len = 6
+WARNING: OPTIMAL PARAMETERS NOT FOUND!!!b = -17.709,c = 7.6549e-10,q = 17.44,offset = 16,len = 6
+WARNING: OPTIMAL PARAMETERS NOT FOUND!!!b = -20.211,c = 5.8151e-13,q = 22.517,offset = 18,len = 6
+WARNING: OPTIMAL PARAMETERS NOT FOUND!!!b = 8093.2,c = 7969.4,q = 0.014027,offset = 20,len = 6
+WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!b = -29.244,c = 9.8982e-25,q = 40.598,offset = 23,len = 6
+WARNING: OPTIMAL PARAMETERS NOT FOUND!!!b = -28.016,c = 3.4468e-14,q = 23.4,offset = 25,len = 6
+WARNING: OPTIMAL PARAMETERS NOT FOUND!!!b = -29.805,c = 2.7027e-16,q = 26.622,offset = 27,len = 6
+WARNING: OPTIMAL PARAMETERS NOT FOUND!!!

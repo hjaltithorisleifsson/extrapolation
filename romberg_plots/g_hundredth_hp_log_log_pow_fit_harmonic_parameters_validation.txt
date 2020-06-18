@@ -1,69 +1,36 @@
-b = 10.304,c = -0.0046377,q = 4.5029,step = 1,offset = 0
-b = 5.4114e+05,c = 5.4118e+05,q = -8.9206e-05,step = 2,offset = 0
-b = 5.4829e+05,c = 5.4837e+05,q = -0.00012442,step = 2,offset = 1
-b = 4.9164e+05,c = 4.9167e+05,q = -8.6919e-05,step = 3,offset = 0
-b = 4.9615e+05,c = 4.9622e+05,q = -0.00012777,step = 3,offset = 1
-b = 5.1839e+05,c = 5.1849e+05,q = -0.00014768,step = 3,offset = 2
-################################################################################
-################################################################################
-b = 9.0068,c = -0.013459,q = 3.9815,offset = 0,len = 60
-b = 2.6651e+05,c = 2.6654e+05,q = -0.0001289,offset = 1,len = 60
-b = 2.1015e+05,c = 2.1019e+05,q = -0.00019796,offset = 2,len = 60
-b = 2.7223e+05,c = 2.7228e+05,q = -0.00017503,offset = 3,len = 60
-b = 2.6476e+05,c = 2.6482e+05,q = -0.00020082,offset = 4,len = 60
-b = 2.5037e+05,c = 2.5044e+05,q = -0.00023296,offset = 5,len = 60
-b = 2.3793e+05,c = 2.3802e+05,q = -0.00026586,offset = 6,len = 60
-b = 10.341,c = -0.0068826,q = 4.3028,offset = 7,len = 60
-b = 2.6565e+05,c = 2.6575e+05,q = -0.00027346,offset = 8,len = 60
-b = 2.3682e+05,c = 2.3692e+05,q = -0.00032591,offset = 9,len = 60
-b = 10.751,c = -0.0057423,q = 4.3881,offset = 10,len = 60
-b = 10.886,c = -0.0054262,q = 4.4147,offset = 11,len = 60
-b = 11.02,c = -0.0051363,q = 4.4403,offset = 12,len = 60
-b = 11.152,c = -0.0048698,q = 4.4651,offset = 13,len = 60
-b = 11.284,c = -0.0046242,q = 4.4892,offset = 14,len = 60
-b = 11.415,c = -0.0043973,q = 4.5125,offset = 15,len = 60
-b = 11.546,c = -0.0041871,q = 4.5352,offset = 16,len = 60
-b = 11.675,c = -0.0039919,q = 4.5572,offset = 17,len = 60
-b = 11.804,c = -0.0038104,q = 4.5786,offset = 18,len = 60
-b = 11.932,c = -0.0036412,q = 4.5994,offset = 19,len = 60
-b = 12.059,c = -0.0034832,q = 4.6197,offset = 20,len = 60
-b = 12.186,c = -0.0033354,q = 4.6396,offset = 21,len = 60
-b = 12.312,c = -0.0031968,q = 4.6589,offset = 22,len = 60
-b = 12.438,c = -0.0030668,q = 4.6778,offset = 23,len = 60
-b = 12.563,c = -0.0029445,q = 4.6963,offset = 24,len = 60
-b = 12.688,c = -0.0028293,q = 4.7144,offset = 25,len = 60
-b = 12.812,c = -0.0027208,q = 4.7321,offset = 26,len = 60
-b = 12.936,c = -0.0026183,q = 4.7494,offset = 27,len = 60
-b = 13.059,c = -0.0025215,q = 4.7664,offset = 28,len = 60
-b = 13.182,c = -0.0024298,q = 4.7831,offset = 29,len = 60
-b = 13.305,c = -0.002343,q = 4.7995,offset = 30,len = 60
-b = 2.2601e+05,c = 2.263e+05,q = -0.00075003,offset = 31,len = 60
-b = 2.518e+05,c = 2.521e+05,q = -0.00068956,offset = 32,len = 60
-b = 2.336e+05,c = 2.3391e+05,q = -0.00076095,offset = 33,len = 60
-b = 1.8783e+05,c = 1.8814e+05,q = -0.00096846,offset = 34,len = 60
-b = 2.1635e+05,c = 2.1667e+05,q = -0.00085984,offset = 35,len = 60
-b = 2.0661e+05,c = 2.0694e+05,q = -0.00092041,offset = 36,len = 60
-b = 2.1184e+05,c = 2.1218e+05,q = -0.00091721,offset = 37,len = 60
-b = 2.0359e+05,c = 2.0394e+05,q = -0.00097473,offset = 38,len = 60
-b = 2.1813e+05,c = 2.1848e+05,q = -0.00092875,offset = 39,len = 60
-WARNING: OPTIMAL PARAMETERS NOT FOUND!!!b = 1.8553e+05,c = 1.859e+05,q = -0.0011368,offset = 41,len = 60
-b = 1.978e+05,c = 1.9819e+05,q = -0.0010872,offset = 42,len = 60
-WARNING: OPTIMAL PARAMETERS NOT FOUND!!!b = 14.998,c = -0.0014863,q = 5.0017,offset = 44,len = 60
-b = 15.117,c = -0.0014433,q = 5.0146,offset = 45,len = 60
-b = 15.237,c = -0.0014021,q = 5.0273,offset = 46,len = 60
-b = 15.356,c = -0.0013626,q = 5.0399,offset = 47,len = 60
-b = 15.475,c = -0.0013246,q = 5.0523,offset = 48,len = 60
-b = 15.594,c = -0.0012881,q = 5.0645,offset = 49,len = 60
-b = 15.713,c = -0.001253,q = 5.0766,offset = 50,len = 60
-b = 15.832,c = -0.0012192,q = 5.0885,offset = 51,len = 60
-b = 15.951,c = -0.0011867,q = 5.1003,offset = 52,len = 60
-b = 16.069,c = -0.0011554,q = 5.1119,offset = 53,len = 60
-b = 16.188,c = -0.0011252,q = 5.1235,offset = 54,len = 60
-b = 16.306,c = -0.0010961,q = 5.1348,offset = 55,len = 60
-b = 16.425,c = -0.0010681,q = 5.1461,offset = 56,len = 60
-b = 16.543,c = -0.001041,q = 5.1572,offset = 57,len = 60
-b = 16.661,c = -0.0010149,q = 5.1682,offset = 58,len = 60
-b = 16.779,c = -0.00098976,q = 5.1791,offset = 59,len = 60
-################################################################################
-################################################################################
-bmin = 9.0068, bmax = 5.4829e+05, cmin = -0.013459, cmax = 5.4837e+05, qmin = -0.0011368, qmax = 5.1791
+b = 9572.7,c = 9569.8,q = -0.00071646,offset = 3,len = 6
+b = 10715,c = 10715,q = -0.00086146,offset = 4,len = 6
+b = 10189,c = 10192,q = -0.0011304,offset = 5,len = 6
+b = 9023.4,c = 9029.9,q = -0.0015477,offset = 6,len = 6
+b = 9051.4,c = 9061.3,q = -0.0018173,offset = 7,len = 6
+b = 12051,c = 12064,q = -0.0015773,offset = 8,len = 6
+b = 8893.2,c = 8910.9,q = -0.0024332,offset = 9,len = 6
+b = 11862,c = 11884,q = -0.0020494,offset = 10,len = 6
+b = 8838.4,c = 8864.5,q = -0.0030615,offset = 11,len = 6
+b = 9151.3,c = 9181.8,q = -0.0032613,offset = 12,len = 6
+b = 8380.2,c = 8415.3,q = -0.0039006,offset = 13,len = 6
+WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!b = 10.66,c = -0.0070563,q = 4.2807,offset = 26,len = 6
+b = 10.761,c = -0.0067005,q = 4.3058,offset = 27,len = 6
+b = 10.864,c = -0.0063695,q = 4.3303,offset = 28,len = 6
+b = 10.967,c = -0.0060611,q = 4.3543,offset = 29,len = 6
+b = 11.07,c = -0.0057734,q = 4.3776,offset = 30,len = 6
+b = 11.174,c = -0.0055046,q = 4.4004,offset = 31,len = 6
+b = 11.279,c = -0.0052531,q = 4.4227,offset = 32,len = 6
+b = 11.384,c = -0.0050176,q = 4.4445,offset = 33,len = 6
+b = 11.489,c = -0.0047968,q = 4.4658,offset = 34,len = 6
+b = 11.595,c = -0.0045894,q = 4.4866,offset = 35,len = 6
+b = 11.701,c = -0.0043945,q = 4.5071,offset = 36,len = 6
+b = 11.808,c = -0.004211,q = 4.5271,offset = 37,len = 6
+b = 11.915,c = -0.0040382,q = 4.5467,offset = 38,len = 6
+b = 12.022,c = -0.0038752,q = 4.5659,offset = 39,len = 6
+b = 12.129,c = -0.0037214,q = 4.5847,offset = 40,len = 6
+b = 12.237,c = -0.003576,q = 4.6032,offset = 41,len = 6
+b = 12.345,c = -0.0034385,q = 4.6214,offset = 42,len = 6
+b = 12.453,c = -0.0033083,q = 4.6392,offset = 43,len = 6
+WARNING: OPTIMAL PARAMETERS NOT FOUND!!!b = 12.67,c = -0.0030678,q = 4.6739,offset = 45,len = 6
+b = 12.778,c = -0.0029568,q = 4.6908,offset = 46,len = 6
+b = 12.887,c = -0.0028512,q = 4.7074,offset = 47,len = 6
+b = 12.996,c = -0.0027509,q = 4.7238,offset = 48,len = 6
+b = 13.106,c = -0.0026554,q = 4.7399,offset = 49,len = 6
+b = 13.215,c = -0.0025645,q = 4.7557,offset = 50,len = 6
+WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!WARNING: OPTIMAL PARAMETERS NOT FOUND!!!

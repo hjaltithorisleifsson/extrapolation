@@ -4,6 +4,7 @@ import scipy.optimize as opt
 import math
 from mpmath import *
 import os
+from mpl_toolkits import mplot3d
 
 mp.dps = 500
 
@@ -175,7 +176,7 @@ def plot_eval_error(results, title, ref, by_seq, folder):
 	plt.title(title)
 	#plt.show()
 	plt.savefig(folder + ref + '.png')
-	plt.clf()
+	plt.close()
 
 
 #results (list<Results>): The results from the extrapolation.
@@ -206,7 +207,7 @@ def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 	plt.title(title)
 	#plt.show()
 	plt.savefig(folder + ref + '_steps.png')
-	plt.clf()
+	plt.close()
 
 #Does the same as plot_evals_error except it plots evals against ln of error and
 #does a curve fitting on the results. 
@@ -228,7 +229,7 @@ def plot_trend(results, title, ref, by_seq, folder):
 	plt.title(title)
 	#plt.show()
 	plt.savefig(folder + ref + '_trend.png')
-	plt.clf()
+	plt.close()
 
 #Plots log-log plot of evals against error.
 #
@@ -250,7 +251,7 @@ def plot_log_log(results, title, ref, by_seq, folder):
 	plt.title(title)
 	#plt.show()
 	plt.savefig(folder + ref + '.png')
-	plt.clf()
+	plt.close()
 
 #Does the same as plot_log_log except it also does curve fitting.
 #
@@ -274,7 +275,7 @@ def plot_log_log_lin_trend(results, title, ref, by_seq, folder):
 	plt.title(title)
 	#plt.show()
 	plt.savefig(folder + ref + '_trend.png')
-	plt.clf()
+	plt.close()
 
 #Does the same as plot_log_log except it also does curve fitting.
 #
@@ -296,7 +297,7 @@ def plot_log_log_power_trend(results, title, ref, by_seq, folder):
 	plt.title(title)
 	#plt.show()
 	plt.savefig(folder + ref + '_trend.png')
-	plt.clf()
+	plt.close()
 
 def plot_by_param(param_prob, scheme, ps, title, seqs, ref, folder, cache_folder):
 	qs_seq = []
@@ -342,32 +343,17 @@ def plot_by_param(param_prob, scheme, ps, title, seqs, ref, folder, cache_folder
 	plt.ylabel('Optimal parameter $q$')
 	plt.title(title)
 	plt.savefig(folder + 'log_p_vs_q_%s_log_log.png' % ref)
-	plt.clf()
+	plt.close()
 
 def validate_parameters(x, y, ref, folder):
 	outfile = open(os.path.join(folder, ref + "_parameters_validation.txt"), 'w')
 	bs = []
 	cs = []
 	qs = []
-	for step in range(1, 4):
-		for offset in range(step):
-			xp = x[offset::step]
-			yp = y[offset::step]
-			try:
-				p = opt.curve_fit(fit_func, xp, yp, [0, 1.0, 1.0], maxfev = 10000)[0]
-				bs.append(p[0])
-				cs.append(p[1])
-				qs.append(p[2])
-				outfile.write("b = %.5g,c = %.5g,q = %.5g,step = %d,offset = %d\n" % (p[0], p[1], p[2], step, offset))
-			except:
-				outfile.write("WARNING: OPTIMAL PARAMETERS NOT FOUND!!!\tstep = %d\toffset = %d\n" % (step, offset))
 
-	outfile.write("################################################################################\n")
-	outfile.write("################################################################################\n")
-
-	new_len = max((len(x) + 1) // 2, 10)
-
-	for offset in range(len(x) - new_len):
+	new_len = 6
+	success = True
+	for offset in range(3, len(x) - new_len):
 		xp = x[offset:(offset + new_len)]
 		yp = y[offset:(offset + new_len)]
 		try:
@@ -378,20 +364,52 @@ def validate_parameters(x, y, ref, folder):
 			outfile.write("b = %.5g,c = %.5g,q = %.5g,offset = %d,len = %d\n" % (p[0], p[1], p[2], offset, new_len))
 		except: 
 			outfile.write("WARNING: OPTIMAL PARAMETERS NOT FOUND!!!")
+			success = False
 
-	bs = np.array(bs)
-	cs = np.array(cs)
-	qs = np.array(qs)
-	bmin = np.min(bs)
-	bmax = np.max(bs)
-	cmin = np.min(cs)
-	cmax = np.max(cs)
-	qmin = np.min(qs)
-	qmax = np.max(qs)
-	outfile.write("################################################################################\n")
-	outfile.write("################################################################################\n")
-	outfile.write("bmin = %.5g, bmax = %.5g, cmin = %.5g, cmax = %.5g, qmin = %.5g, qmax = %.5g\n" % (bmin, bmax, cmin, cmax, qmin, qmax))
+	##Plot 
+	if success: 
+		bs = np.array(bs)
+		cs = np.array(cs)
+		qs = np.array(qs)
+		bmin = np.min(bs)
+		bmax = np.max(bs)
+		cmin = np.min(cs)
+		cmax = np.max(cs)
+		qmin = np.min(qs)
+		qmax = np.max(qs)
+		outfile.write("################################################################################\n")
+		outfile.write("################################################################################\n")
+		outfile.write("bmin = %.5g, bmax = %.5g, cmin = %.5g, cmax = %.5g, qmin = %.5g, qmax = %.5g\n" % (bmin, bmax, cmin, cmax, qmin, qmax))
+		fig = plt.figure()
+		ax = plt.axes(projection="3d")
+		ax.scatter3D(bs, cs, qs, '.')
+		ax.set_xlabel('b')
+		ax.set_ylabel('c')
+		ax.set_zlabel('q')
+		ax.set_title('Point cloud for %s' % ref)
+		plt.savefig(os.path.join(folder, ref + "_3d_cloud.png"))
+		plt.clf()
+		plt.plot(bs, cs, '.')
+		plt.xlabel('b')
+		plt.ylabel('c')
+		plt.title('Point cloud for %s' % ref)
+		plt.savefig(os.path.join(folder, ref + "_b_c_cloud.png"))
+		plt.clf()
+		plt.plot(bs, qs, '.')
+		plt.xlabel('b')
+		plt.ylabel('q')
+		plt.title('Point cloud for %s' % ref)
+		plt.savefig(os.path.join(folder, ref + "_b_q_cloud.png"))
+		plt.clf()
+		plt.plot(cs, qs, '.')
+		plt.xlabel('c')
+		plt.ylabel('q')
+		plt.title('Point cloud for %s' % ref)
+		plt.savefig(os.path.join(folder, ref + "_c_q_cloud.png"))
+		plt.close()
+
 	outfile.close()
+
 
 def get_least_square_error(f, p, x, y):
 	return np.sum((y - f(x, *p))**2) / len(x)
