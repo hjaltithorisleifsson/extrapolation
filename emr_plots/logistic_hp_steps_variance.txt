@@ -1,0 +1,2 @@
+$y' = y(1-y)$ & Romberg & lin-ln steps-error & \(0.10654\) & \(0.0019686\) & \(7.2672e-05\) \\
+$y' = y(1-y)$ & Harmonic & lin-ln steps-error & . & . & . \\

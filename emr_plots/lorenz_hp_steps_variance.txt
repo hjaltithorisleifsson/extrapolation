@@ -1,0 +1,2 @@
+Lorenz, estimate after 0.1 time steps. & Romberg & lin-ln steps-error & \(0.040351\) & \(0.00096717\) & \(3.4986e-05\) \\
+Lorenz, estimate after 0.1 time steps. & Harmonic & lin-ln steps-error & . & . & . \\

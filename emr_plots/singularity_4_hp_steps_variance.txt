@@ -1,0 +1,2 @@
+$y'=y^2$, $y(0) = 1/(1+10^{-4})$ & Romberg & lin-ln steps-error & \(0.33335\) & \(3\) & \(0.3392\) \\
+$y'=y^2$, $y(0) = 1/(1+10^{-4})$ & Harmonic & lin-ln steps-error & . & . & . \\

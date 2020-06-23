@@ -1,0 +1,3 @@
+$f$ & Harmonic & lin-ln evals-error & \(15.892\) & \(0.052543\) & \(0.0037803\) \\
+$f$ & Romberg & lin-ln evals-error & \(3.9999\) & \(0.10449\) & \(0.029386\) \\
+$f$ & Bulirsch & lin-ln evals-error & \(14.911\) & \(0.43183\) & \(0.20258\) \\

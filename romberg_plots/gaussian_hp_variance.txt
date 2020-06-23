@@ -1,0 +1,3 @@
+$j$ & Harmonic & lin-ln evals-error & . & . & . \\
+$j$ & Romberg & lin-ln evals-error & \(3.9999\) & \(0.075546\) & \(0.02295\) \\
+$j$ & Bulirsch & lin-ln evals-error & \(nan\) & \(2.7536\) & \(0.17572\) \\

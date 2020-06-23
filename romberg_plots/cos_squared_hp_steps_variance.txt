@@ -1,0 +1,3 @@
+$f$ & Harmonic & lin-ln steps-error & \(14.477\) & \(0.03992\) & \(0.0021086\) \\
+$f$ & Romberg & lin-ln steps-error & \(0.066039\) & \(0.0010865\) & \(3.8422e-05\) \\
+$f$ & Bulirsch & lin-ln steps-error & \(0.18524\) & \(0.0019423\) & \(5.5812e-05\) \\

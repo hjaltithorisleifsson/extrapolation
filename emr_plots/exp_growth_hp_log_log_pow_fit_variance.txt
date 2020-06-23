@@ -1,0 +1,2 @@
+$y'=y$, $y(0) = 0$ & Romberg & ln-ln evals-error & \(0.18082\) & \(0.0019753\) & \(8.8653e-05\) \\
+$y'=y$, $y(0) = 0$ & Harmonic & ln-ln evals-error & . & . & . \\

@@ -291,7 +291,7 @@ def plot_basic():
 	for (results_seq, ivp) in zip(results_ivp_seq_hp, ivps_hp):
 		plot_eval_error(results_seq, 'Equation: %s' % ivp.tex, ivp.ref, True, folder)
 		plot_trend(results_seq, 'Equation: %s' % ivp.tex, ivp.ref, True, folder)
-		plot_log_log_power_trend(results_seq, 'Equation: %s' % ivp.tex, '%s_log_log_pow_fit' % ivp.ref, True, folder)
+		plot_log_log_trend(results_seq, 'Equation: %s' % ivp.tex, '%s_log_log_pow_fit' % ivp.ref, True, folder)
 
 	for (results_seq, ivp) in zip(results_ivp_seq_hp, ivps_hp):
 		plot_steps_error(results_seq, 'Equation: %s' % ivp.tex, ivp.ref, True, 30, folder)

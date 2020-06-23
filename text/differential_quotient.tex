@@ -54,12 +54,11 @@ We begin by considering the derivative of the exponential function at zero.
 \begin{table}[H]
     \centering
     \begin{tabular}{c|c||c|c|c}
-Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
-Romberg &\([-9.8643, -0.48952]\) & \([0.36423, 0.47594]\) & \([1.8085, 1.875]\)\\
-Bulirsch & \([-12.468, -0.41311]\) & \([0.38492, 0.61338]\) & \([1.638, 1.7528]\)\\
-Harmonic & \([2.367, 13.509]\) & \([1.2466, 1.943]\) & \([1.2723, 1.3797]\)\\
+Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
+Romberg & lin-ln evals-error & \(3.5085\) & \(0.01413\) & \(0.00024927\) \\
+Bulirsch & lin-ln evals-error & \(4.7628\) & \(0.041094\) & \(0.00080863\) \\
+Harmonic & lin-ln evals-error & \(6.4992\) & \(0.022905\) & \(0.00090196\) \\ 
     \end{tabular}
-    \caption{Intervals from cross validation for the parameters}
     \label{tab:my_label}
 \end{table}
 
@@ -87,12 +86,11 @@ g_a(x) \coloneqq \ln(x+a), \quad a > 0.
 \begin{table}[H]
     \centering
     \begin{tabular}{c|c||c|c|c}
-Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
-Romberg &\([-6.7596, -2.2394]\) & \([0.19482, 0.24195]\) & \([1.9227, 1.9783]\)\\
-Bulirsch & \([-12.115, -2.5904]\) & \([0.14757, 0.29277]\) & \([1.7291, 1.9026]\)\\
-Harmonic & \([0.19404, 4.5359]\) & \([0.92273, 1.2225]\) & \([1.2439, 1.3111]\)\\
+Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
+Romberg & lin-ln evals-error & \(2.4426\) & \(0.0072424\) & \(0.00012303\) \\
+Bulirsch & lin-ln evals-error & \(6.2746\) & \(0.083792\) & \(0.0013152\) \\
+Harmonic & lin-ln evals-error & \(2.3311\) & \(0.010922\) & \(0.00041763\) \\
     \end{tabular}
-    \caption{Intervals from cross validation for the parameters}
     \label{tab:my_label}
 \end{table}
 
@@ -113,12 +111,11 @@ We get down to machine level precision using any sequence, Romberg performes bes
 \begin{table}[H]
     \centering
     \begin{tabular}{c|c||c|c|c}
-Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
-Romberg &\([-2.1544, 2.3657]\) & \([0.19482, 0.24195]\) & \([1.9227, 1.9783]\)\\
-Bulirsch & \([-7.5095, 2.0148]\) & \([0.14757, 0.29277]\) & \([1.7291, 1.9026]\)\\
-Harmonic & \([4.7992, 9.1411]\) & \([0.92273, 1.2225]\) & \([1.2439, 1.3111]\)\\
+Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
+Romberg & lin-ln evals-error & \(2.4426\) & \(0.0072424\) & \(0.00012303\) \\
+Bulirsch & lin-ln evals-error & \(6.2746\) & \(0.083792\) & \(0.0013152\) \\
+Harmonic & lin-ln evals-error & \(2.3311\) & \(0.010922\) & \(0.00041763\) \\
     \end{tabular}
-    \caption{Intervals from cross validation for the parameters}
     \label{tab:my_label}
 \end{table}
 
@@ -139,12 +136,11 @@ Here the same comments apply as for \(a = 1\).
 \begin{table}[H]
     \centering
     \begin{tabular}{c|c||c|c|c}
-Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
-Romberg &\([2.4507, 6.9709]\) & \([0.19482, 0.24195]\) & \([1.9227, 1.9783]\)\\
-Bulirsch & \([-2.9043, 6.6199]\) & \([0.14757, 0.29277]\) & \([1.7291, 1.9026]\)\\
-Harmonic & \([9.4044, 13.746]\) & \([0.92273, 1.2225]\) & \([1.2439, 1.3111]\)\\
+Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
+Romberg & lin-ln evals-error & \(2.4426\) & \(0.0072424\) & \(0.00012303\) \\
+Bulirsch & lin-ln evals-error & \(6.2746\) & \(0.083792\) & \(0.0013152\) \\
+Harmonic & lin-ln evals-error & \(2.3311\) & \(0.010922\) & \(0.00041763\) \\
     \end{tabular}
-    \caption{Intervals from cross validation for the parameters}
     \label{tab:my_label}
 \end{table}
 
@@ -174,12 +170,11 @@ h_a(x) \coloneqq \sqrt{a + x}, \quad a > 0.
 \begin{table}[H]
     \centering
     \begin{tabular}{c|c||c|c|c}
-Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
-Romberg &\([-9.4809, -4.1952]\) & \([0.19588, 0.25329]\) & \([1.9111, 1.9772]\)\\
-Bulirsch & \([-14.818, -4.4796]\) & \([0.14902, 0.31392]\) & \([1.7117, 1.9006]\)\\
-Harmonic & \([-1.5187, 2.1013]\) & \([0.99678, 1.2436]\) & \([1.2408, 1.2931]\)\\
+Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
+Romberg & lin-ln evals-error & \(3.1845\) & \(0.0098756\) & \(0.00016602\) \\
+Bulirsch & lin-ln evals-error & \(7.1859\) & \(0.098014\) & \(0.0015128\) \\
+Harmonic & lin-ln evals-error & \(2.1015\) & \(0.0081581\) & \(0.0003023\) \\
     \end{tabular}
-    \caption{Intervals from cross validation for the parameters}
     \label{tab:my_label}
 \end{table}
 
@@ -200,12 +195,11 @@ In standard double precision floating point arithmetic we get down to machine le
 \begin{table}[H]
     \centering
     \begin{tabular}{c|c||c|c|c}
-Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
-Romberg &\([-7.1783, -1.8927]\) & \([0.19588, 0.25329]\) & \([1.9111, 1.9772]\)\\
-Bulirsch & \([-12.515, -2.177]\) & \([0.14902, 0.31392]\) & \([1.7117, 1.9006]\)\\
-Harmonic & \([0.78386, 4.4039]\) & \([0.99678, 1.2436]\) & \([1.2408, 1.2931]\)\\
+Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
+Romberg & lin-ln evals-error & \(3.1845\) & \(0.0098756\) & \(0.00016602\) \\
+Bulirsch & lin-ln evals-error & \(7.1859\) & \(0.098014\) & \(0.0015128\) \\
+Harmonic & lin-ln evals-error & \(2.1015\) & \(0.0081581\) & \(0.0003023\) \\
     \end{tabular}
-    \caption{Intervals from cross validation for the parameters}
     \label{tab:my_label}
 \end{table}
 
@@ -226,12 +220,11 @@ Here the same comments apply as for \(a = 1\).
 \begin{table}[H]
     \centering
     \begin{tabular}{c|c||c|c|c}
-Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
-Romberg &\([-4.8758, 0.40992]\) & \([0.19588, 0.25329]\) & \([1.9111, 1.9772]\)\\
-Bulirsch & \([-10.213, 0.1256]\) & \([0.14902, 0.31392]\) & \([1.7117, 1.9006]\)\\
-Harmonic & \([3.0864, 6.7065]\) & \([0.99678, 1.2436]\) & \([1.2408, 1.2931]\)\\
+Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
+Romberg & lin-ln evals-error & \(3.1845\) & \(0.0098756\) & \(0.00016602\) \\
+Bulirsch & lin-ln evals-error & \(7.1859\) & \(0.098014\) & \(0.0015128\) \\
+Harmonic & lin-ln evals-error & \(2.1015\) & \(0.0081581\) & \(0.0003023\) \\
     \end{tabular}
-    \caption{Intervals from cross validation for the parameters}
     \label{tab:my_label}
 \end{table}
 
@@ -252,12 +245,11 @@ Here also the same comments apply.
 \begin{table}[H]
     \centering
     \begin{tabular}{c|c||c|c|c}
-Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
-Romberg &\([8.9398, 14.225]\) & \([0.19588, 0.25329]\) & \([1.9111, 1.9772]\)\\
-Bulirsch & \([3.6029, 13.941]\) & \([0.14902, 0.31392]\) & \([1.7117, 1.9006]\)\\
-Harmonic & \([16.902, 20.522]\) & \([0.99678, 1.2436]\) & \([1.2408, 1.2931]\)\\
+Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
+Romberg & lin-ln evals-error & \(3.1845\) & \(0.0098756\) & \(0.00016602\) \\
+Bulirsch & lin-ln evals-error & \(7.1859\) & \(0.098014\) & \(0.0015128\) \\
+Harmonic & lin-ln evals-error & \(2.1015\) & \(0.0081581\) & \(0.0003023\) \\
     \end{tabular}
-    \caption{Intervals from cross validation for the parameters}
     \label{tab:my_label}
 \end{table}
 
@@ -291,12 +283,11 @@ which is smooth but not analytic.
 \begin{table}[H]
     \centering
     \begin{tabular}{c|c||c|c|c}
-Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
-Romberg &\([-2.4369, 11.519]\) & \([0.047291, 0.085789]\) & \([2.1113, 2.2562]\)\\
-Bulirsch & \([-4.432, 0.72925]\) & \([0.013621, 0.024083]\) & \([2.2071, 2.3464]\)\\
-Harmonic & \([-4.6314, 7.7903]\) & \([0.22694, 1.8383]\) & \([0.77185, 1.2114]\)\\
+Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
+Romberg & lin-ln evals-error & \(25\) & \(2.6439\) & \(0.027089\) \\
+Bulirsch & lin-ln evals-error & \(25\) & \(5.9135\) & \(0.075286\) \\
+Harmonic & lin-ln evals-error & . & . & . \\
     \end{tabular}
-    \caption{Intervals from cross validation for the parameters}
     \label{tab:my_label}
 \end{table}
 
@@ -327,12 +318,11 @@ which is smooth but not analytic.
 \begin{table}[H]
     \centering
     \begin{tabular}{c|c||c|c|c}
-Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
-Romberg &\([-8.6583, -2.4345]\) & \([0.1043, 0.15705]\) & \([1.9961, 2.1025]\)\\
-Bulirsch & \([-14.691, 1.3703]\) & \([0.03942, 0.17247]\) & \([1.7901, 2.1726]\)\\
-Harmonic & \([-12.887, 40.198]\) & \([0.17035, 4.935]\) & \([0.84929, 1.5909]\)\\
+Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
+Romberg & lin-ln evals-error & \(24.394\) & \(0.62692\) & \(0.0044816\) \\
+Bulirsch & lin-ln evals-error & \(25\) & \(7.8984\) & \(0.082446\) \\
+Harmonic & lin-ln evals-error & . & . & . \\
     \end{tabular}
-    \caption{Intervals from cross validation for the parameters}
     \label{tab:my_label}
 \end{table}
 
@@ -363,12 +353,11 @@ x^2\sin\frac{1}{x} & \text{if } x \neq 0\\
 \begin{table}[H]
     \centering
     \begin{tabular}{c|c||c|c|c}
-Sequence & \(b\)-interval & \(c\)-interval & \(q\)-interval\\\hline\hline
-Romberg &\([-9.0645, 65.569]\) & \([0.0033936, 45.783]\) & \([0.15045, 1.9766]\)\\
-Bulirsch & \([-2.9496, 12585]\) & \([0.00030229, 12557]\) & \([0.00072049, 2.5062]\)\\
-Harmonic & \([\infty, +\infty]\) & \([-\infty, +\infty]\) & \([-\infty, +\infty]\)\\
+Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
+Romberg & lin-ln evals-error & \(nan\) & \(2.2825\) & \(3.9235\) \\
+Bulirsch & lin-ln evals-error & . & . & . \\
+Harmonic & lin-ln evals-error & . & . & . \\
     \end{tabular}
-    \caption{Intervals from cross validation for the parameters}
     \label{tab:my_label}
 \end{table}
 

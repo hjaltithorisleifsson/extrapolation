@@ -193,7 +193,7 @@ def plot_basic_hp(results_int_seq_hp, integrands_hp):
         plot_eval_error(results_seq_hp, title, ref, True, folder)
         plot_trend(results_seq_hp, title, ref, True, folder)
         plot_steps_error(results_seq_hp, 'Integral: %s' % integrand_hp.tex, integrand_hp.ref, True, 20, folder)
-        plot_log_log_power_trend(results_seq_hp, 'Integral: %s' % integrand_hp.tex, '%s_log_log_pow_fit' % integrand_hp.ref, True, folder)
+        plot_log_log_trend(results_seq_hp, 'Integral: %s' % integrand_hp.tex, '%s_log_log_pow_fit' % integrand_hp.ref, True, folder)
 
     #Write out all results as latex table
     file1 = open(folder + 'all_results_evals_error_exp_conv.txt', 'w')
@@ -222,8 +222,7 @@ def plot_strange_results(results, integrands):
     for (results_seq, integrand) in zip(results, integrands):
         title = "Integrand: %s" % integrand.tex
         ref = "%s_log_log" % integrand.ref.lower()
-        plot_log_log(results_seq, title, ref, True, folder)
-        plot_log_log_lin_trend(results_seq, title, ref, True, folder)
+        plot_log_log_trend(results_seq, title, ref, True, folder)
 
 def plot_q_g():
     param_integrand = lambda q: Integration(lambda x: mpf('1') / (q**2 + x**2), lambda x: 1 / q * mp.atan(1 / q * x), mpf('-1'), mpf('1'), 'g_%.5g' % q, 'g_%.5g' % q)

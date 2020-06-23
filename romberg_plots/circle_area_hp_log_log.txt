@@ -1,3 +1,0 @@
-seq: Harmonic, problem: $i$, m=-1.231237012, b=0.1379784149
-seq: Romberg, problem: $i$, m=-1.584916558, b=1.080097775
-seq: Bulirsch, problem: $i$, m=-1.541393065, b=1.08308415

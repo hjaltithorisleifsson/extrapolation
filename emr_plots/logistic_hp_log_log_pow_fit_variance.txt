@@ -1,0 +1,2 @@
+$y' = y(1-y)$ & Romberg & ln-ln evals-error & \(0.10079\) & \(0.002435\) & \(0.00011182\) \\
+$y' = y(1-y)$ & Harmonic & ln-ln evals-error & . & . & . \\

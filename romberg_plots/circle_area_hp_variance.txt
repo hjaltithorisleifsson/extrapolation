@@ -1,0 +1,3 @@
+$i$ & Harmonic & lin-ln evals-error & . & . & . \\
+$i$ & Romberg & lin-ln evals-error & \(nan\) & \(0.00074987\) & \(0.0010457\) \\
+$i$ & Bulirsch & lin-ln evals-error & . & . & . \\

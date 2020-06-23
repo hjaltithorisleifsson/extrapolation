@@ -4,7 +4,6 @@ import scipy.optimize as opt
 import math
 from mpmath import *
 import os
-from mpl_toolkits import mplot3d
 
 mp.dps = 500
 
@@ -188,6 +187,7 @@ def plot_eval_error(results, title, ref, by_seq, folder):
 #
 #Will save the plot as a png file named ref_steps in the folder given.
 def plot_steps_error(results, title, ref, by_seq, max_points, folder):
+	file = open(os.path.join(folder, ref + '_steps_variance.txt'), 'w')
 	for result in results:
 		my_label = result.seq_ref if by_seq else result.prob_ref
 		ln_e = result.ln_e
@@ -198,10 +198,17 @@ def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 		plt.legend()
 		x = np.linspace(1, N, min(100 * N, 1000))
 		p = opt.curve_fit(fit_func, steps_all, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-		validate_parameters(steps_all, ln_e, ref + "_" + result.seq_ref.lower() + "_steps", folder)
+		acq_vars = get_fit_variance(steps_all, ln_e)
+		if acq_vars != None:
+			(a_var, c_var, q_var) = acq_vars
+			file.write('%s & %s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, "lin-ln steps-error", a_var, c_var, q_var))
+		else:
+			file.write('%s & %s & %s & . & . & . \\\\\n' % (result.prob_ref, result.seq_ref, "lin-ln steps-error"))
+
 		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
 		plt.legend()
 
+	file.close()
 	plt.xlabel('Extrapolation steps')
 	plt.ylabel('Base $10$ logarithm of absolute error, $\log \epsilon $')
 	plt.title(title)
@@ -213,6 +220,7 @@ def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 #does a curve fitting on the results. 
 #The plot will be saved as a png file named ref_trend under folder.
 def plot_trend(results, title, ref, by_seq, folder):
+	file = open(os.path.join(folder, ref + '_variance.txt'), 'w')
 	for result in results:
 		my_label = result.seq_ref if by_seq else result.prob_ref
 		evals = result.evals
@@ -220,10 +228,17 @@ def plot_trend(results, title, ref, by_seq, folder):
 		plt.plot(evals, ln_e, '.', label = my_label)
 		x = np.linspace(1, evals[-1], min(10 * evals[-1], 1000))
 		p = opt.curve_fit(fit_func, evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-		validate_parameters(evals, ln_e, ref + "_" + result.seq_ref.lower(), folder)
+		acq_vars = get_fit_variance(evals, ln_e)
+		if acq_vars != None:
+			(a_var, c_var, q_var) = acq_vars
+			file.write('%s & %s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, "lin-ln evals-error", a_var, c_var, q_var))
+		else:
+			file.write('%s & %s & %s & . & . & . \\\\\n' % (result.prob_ref, result.seq_ref, "lin-ln evals-error"))
+
 		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
 		plt.legend()
-    
+
+	file.close()
 	plt.xlabel('Number of function evaluations, $N$')
 	plt.ylabel('Natural logarithm of absolute error, $\ln \epsilon $')
 	plt.title(title)
@@ -256,31 +271,8 @@ def plot_log_log(results, title, ref, by_seq, folder):
 #Does the same as plot_log_log except it also does curve fitting.
 #
 #The plot will be saved as a png file named ref_trend under folder.
-def plot_log_log_lin_trend(results, title, ref, by_seq, folder):
-	file = open(folder + ref + '.txt', 'w')
-	for result in results:
-		my_label = result.seq_ref if by_seq else result.prob_ref
-		ln_evals = np.log(result.evals)
-		ln_e = result.ln_e
-		plt.plot(ln_evals, ln_e, '.', label = my_label)
-		x = np.linspace(ln_evals[0], ln_evals[-1])
-		m,b = np.polyfit(ln_evals, ln_e, 1)
-		plt.plot(x, m * x + b, label = 'm = %.4g, b = %.4g' % (m, b))
-		plt.legend()
-		file.write('seq: %s, problem: %s, m=%.10g, b=%.10g\n' % (result.seq_ref, result.prob_ref, m, b))
-    
-	file.close()
-	plt.xlabel('Number of function evaluations, $N$')
-	plt.ylabel('Natural logarithm of absolute error, $\ln \epsilon $')
-	plt.title(title)
-	#plt.show()
-	plt.savefig(folder + ref + '_trend.png')
-	plt.close()
-
-#Does the same as plot_log_log except it also does curve fitting.
-#
-#The plot will be saved as a png file named ref_trend under folder.
-def plot_log_log_power_trend(results, title, ref, by_seq, folder):
+def plot_log_log_trend(results, title, ref, by_seq, folder):
+	file = open(os.path.join(folder, ref + '_variance.txt'), 'w')
 	for result in results:
 		my_label = result.seq_ref if by_seq else result.prob_ref
 		ln_evals = np.log(result.evals)
@@ -288,10 +280,17 @@ def plot_log_log_power_trend(results, title, ref, by_seq, folder):
 		plt.plot(ln_evals, ln_e, '.', label = my_label)
 		x = np.linspace(ln_evals[0], ln_evals[-1])
 		p = opt.curve_fit(fit_func, ln_evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-		validate_parameters(ln_evals, ln_e, ref + "_" + result.seq_ref.lower(), folder)
+		acq_vars = get_fit_variance(ln_evals, ln_e)
+		if acq_vars != None:
+			(a_var, c_var, q_var) = acq_vars
+			file.write('%s & %s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, "ln-ln evals-error", a_var, c_var, q_var))
+		else:
+			file.write('%s & %s & %s & . & . & . \\\\\n' % (result.prob_ref, result.seq_ref, "ln-ln evals-error"))
+
 		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
 		plt.legend()
-    
+
+	file.close()
 	plt.xlabel('Natural logarithm of number of function evaluations, $\ln N$')
 	plt.ylabel('Natural logarithm of absolute error, $\ln \epsilon $')
 	plt.title(title)
@@ -345,8 +344,7 @@ def plot_by_param(param_prob, scheme, ps, title, seqs, ref, folder, cache_folder
 	plt.savefig(folder + 'log_p_vs_q_%s_log_log.png' % ref)
 	plt.close()
 
-def validate_parameters(x, y, ref, folder):
-	outfile = open(os.path.join(folder, ref + "_parameters_validation.txt"), 'w')
+def get_fit_variance(x, y):
 	bs = []
 	cs = []
 	qs = []
@@ -361,54 +359,25 @@ def validate_parameters(x, y, ref, folder):
 			bs.append(p[0])
 			cs.append(p[1])
 			qs.append(p[2])
-			outfile.write("b = %.5g,c = %.5g,q = %.5g,offset = %d,len = %d\n" % (p[0], p[1], p[2], offset, new_len))
 		except: 
-			outfile.write("WARNING: OPTIMAL PARAMETERS NOT FOUND!!!")
-			success = False
+			return None
 
-	##Plot 
-	if success: 
-		bs = np.array(bs)
-		cs = np.array(cs)
-		qs = np.array(qs)
-		bmin = np.min(bs)
-		bmax = np.max(bs)
-		cmin = np.min(cs)
-		cmax = np.max(cs)
-		qmin = np.min(qs)
-		qmax = np.max(qs)
-		outfile.write("################################################################################\n")
-		outfile.write("################################################################################\n")
-		outfile.write("bmin = %.5g, bmax = %.5g, cmin = %.5g, cmax = %.5g, qmin = %.5g, qmax = %.5g\n" % (bmin, bmax, cmin, cmax, qmin, qmax))
-		fig = plt.figure()
-		ax = plt.axes(projection="3d")
-		ax.scatter3D(bs, cs, qs, '.')
-		ax.set_xlabel('b')
-		ax.set_ylabel('c')
-		ax.set_zlabel('q')
-		ax.set_title('Point cloud for %s' % ref)
-		plt.savefig(os.path.join(folder, ref + "_3d_cloud.png"))
-		plt.clf()
-		plt.plot(bs, cs, '.')
-		plt.xlabel('b')
-		plt.ylabel('c')
-		plt.title('Point cloud for %s' % ref)
-		plt.savefig(os.path.join(folder, ref + "_b_c_cloud.png"))
-		plt.clf()
-		plt.plot(bs, qs, '.')
-		plt.xlabel('b')
-		plt.ylabel('q')
-		plt.title('Point cloud for %s' % ref)
-		plt.savefig(os.path.join(folder, ref + "_b_q_cloud.png"))
-		plt.clf()
-		plt.plot(cs, qs, '.')
-		plt.xlabel('c')
-		plt.ylabel('q')
-		plt.title('Point cloud for %s' % ref)
-		plt.savefig(os.path.join(folder, ref + "_c_q_cloud.png"))
-		plt.close()
+	##Write out summary
+	bs = np.array(bs)
+	cs = np.array(cs)
+	qs = np.array(qs)
 
-	outfile.close()
+	a = np.exp(bs)
+	a_mean = np.mean(a)
+	a_variance = np.sum((a - a_mean) ** 2) / (len(a) * (a_mean ** 2))
+
+	c_mean = np.mean(cs)
+	c_variance = np.sum((cs - c_mean) ** 2) / (len(cs) * (c_mean ** 2))
+
+	q_mean = np.mean(qs)
+	q_variance = np.sum((qs - q_mean) ** 2) / (len(qs) * (q_mean ** 2))
+
+	return (a_variance, c_variance, q_variance)
 
 
 def get_least_square_error(f, p, x, y):

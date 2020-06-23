@@ -84,7 +84,7 @@ def plot_basic():
 	for (results_seq, quotient) in zip(hp_results_quot_seq, hp_quotients):
 		plot_eval_error(results_seq, 'Quotient: %s' % quotient.tex, quotient.ref, True, folder)
 		plot_trend(results_seq, 'Quotient: %s' % quotient.tex, quotient.ref, True, folder)
-		plot_log_log_power_trend(results_seq, 'Quotient: %s' % quotient.tex, quotient.ref + "_log_log_pow_fit", True, folder)
+		plot_log_log_trend(results_seq, 'Quotient: %s' % quotient.tex, quotient.ref + "_log_log_pow_fit", True, folder)
 
 	file = open(folder + 'all_results.txt', 'w')
 

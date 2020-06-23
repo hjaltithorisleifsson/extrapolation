@@ -1,0 +1,2 @@
+$y'' + sin(y) = 0$ & Romberg & lin-ln steps-error & \(1.6709\) & \(0.035263\) & \(0.001162\) \\
+$y'' + sin(y) = 0$ & Harmonic & lin-ln steps-error & . & . & . \\

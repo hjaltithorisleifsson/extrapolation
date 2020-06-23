@@ -1,0 +1,3 @@
+$d/dx|_{x=0} x^2 \sin(1/x)$. $h=1$ & Romberg & lin-ln evals-error & \(nan\) & \(2.2825\) & \(3.9235\) \\
+$d/dx|_{x=0} x^2 \sin(1/x)$. $h=1$ & Bulirsch & lin-ln evals-error & . & . & . \\
+$d/dx|_{x=0} x^2 \sin(1/x)$. $h=1$ & Harmonic & lin-ln evals-error & . & . & . \\

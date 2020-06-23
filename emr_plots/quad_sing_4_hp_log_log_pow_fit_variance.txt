@@ -1,0 +1,2 @@
+$y' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$ & Romberg & ln-ln evals-error & \(0.19211\) & \(0.75886\) & \(0.052841\) \\
+$y' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$ & Harmonic & ln-ln evals-error & . & . & . \\
