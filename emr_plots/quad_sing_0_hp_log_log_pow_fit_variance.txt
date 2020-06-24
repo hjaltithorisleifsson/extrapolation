@@ -1,2 +1,2 @@
-$y' = -1/2y$, $y(0) = \sqrt{2}$ & Romberg & ln-ln evals-error & \(0.019547\) & \(0.0003673\) & \(1.5503e-05\) \\
-$y' = -1/2y$, $y(0) = \sqrt{2}$ & Harmonic & ln-ln evals-error & . & . & . \\
+Romberg & ln-ln evals-error & \(0.002924\) & \(0.01955\) & \(0.7671\) & \(0.0003673\) & \(2.132\) & \(1.55e-05\) \\
+Harmonic & ln-ln evals-error & . & . & . & . & . & . \\

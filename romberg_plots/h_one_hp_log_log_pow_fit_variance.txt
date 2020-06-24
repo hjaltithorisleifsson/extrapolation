@@ -1,3 +1,3 @@
-$h_1$ & Harmonic & ln-ln evals-error & . & . & . \\
-$h_1$ & Romberg & ln-ln evals-error & \(1.1892\) & \(0.019677\) & \(0.0010134\) \\
-$h_1$ & Bulirsch & ln-ln evals-error & \(0.36829\) & \(0.0038072\) & \(0.00015789\) \\
+Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & ln-ln evals-error & \(0.006917\) & \(1.189\) & \(1.488\) & \(0.01968\) & \(1.912\) & \(0.001013\) \\
+Bulirsch & ln-ln evals-error & \(0.007191\) & \(0.3683\) & \(1.209\) & \(0.003807\) & \(2.187\) & \(0.0001579\) \\

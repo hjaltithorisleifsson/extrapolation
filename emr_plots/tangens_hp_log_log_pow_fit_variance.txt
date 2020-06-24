@@ -1,2 +1,2 @@
-$y' = 1 + y^2$, $y(0) = 0$ & Romberg & ln-ln evals-error & \(0.2211\) & \(0.0081118\) & \(0.0002882\) \\
-$y' = 1 + y^2$, $y(0) = 0$ & Harmonic & ln-ln evals-error & . & . & . \\
+Romberg & ln-ln evals-error & \(0.6649\) & \(0.2211\) & \(0.373\) & \(0.008112\) & \(2.379\) & \(0.0002882\) \\
+Harmonic & ln-ln evals-error & . & . & . & . & . & . \\

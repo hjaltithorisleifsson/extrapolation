@@ -65,7 +65,10 @@ We will also test the hypothesis that the error converges exponentially with the
 \end{equation}
 for constants \(A,c,q\).\\
 
-In order to validate the estimated parameters \(b,c,q\) we will do a simple "cross validation" by fitting the model to subsets of the data and see whether the parameters vary a lot. If they vary a lot, we conclude that the fitting is unstable. If they are almost the same we will be more confident in that the model is actually appropriate.
+In order to validate the estimated parameters \(b,c,q\) we will do a simple "cross validation" by fitting the model to subsets of the data and see whether the parameters vary a lot. If they vary a lot, we conclude that the fitting is unstable. If they are almost the same we will be more confident in that the model is actually appropriate. The cross validation strategy we will use goes as follows: Suppose that we have done a curve fitting on \((x_k,y_k)\) for \(k=0,1,\ldots,n\). Then we will do the curve fitting for \((x_{k+3},y_{k+3}), \ldots, (x_{k+9},x_{k+9})\) for \(k=0,\ldots,n-6\) and compute the relative variance of the parameters. Let \(a_k\), \(k=1,\ldots, m\) be numbers. Then we define their mean value by \(\overline{a} \coloneqq \frac{1}{m}\sum_{k=1}^m a_k\), and the relative variance by 
+\[
+\frac{1}{m\overline{a}^2}\sum_{k=1}^m (a_k - \overline{a})^2. 
+\]
 
 \section{Code}
 

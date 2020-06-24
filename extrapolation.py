@@ -200,10 +200,10 @@ def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 		p = opt.curve_fit(fit_func, steps_all, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
 		acq_vars = get_fit_variance(steps_all, ln_e)
 		if acq_vars != None:
-			(a_var, c_var, q_var) = acq_vars
-			file.write('%s & %s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, "lin-ln steps-error", a_var, c_var, q_var))
+			(a_mean, a_var, c_mean, c_var, q_mean, q_var) = acq_vars
+			file.write('%s & %s & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) \\\\\n' % (result.seq_ref, "lin-ln steps-error", a_mean, a_var, c_mean, c_var, q_mean, q_var))
 		else:
-			file.write('%s & %s & %s & . & . & . \\\\\n' % (result.prob_ref, result.seq_ref, "lin-ln steps-error"))
+			file.write('%s & %s & . & . & . & . & . & . \\\\\n' % (result.seq_ref, "lin-ln steps-error"))
 
 		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
 		plt.legend()
@@ -230,10 +230,10 @@ def plot_trend(results, title, ref, by_seq, folder):
 		p = opt.curve_fit(fit_func, evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
 		acq_vars = get_fit_variance(evals, ln_e)
 		if acq_vars != None:
-			(a_var, c_var, q_var) = acq_vars
-			file.write('%s & %s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, "lin-ln evals-error", a_var, c_var, q_var))
+			(a_mean, a_var, c_mean, c_var, q_mean, q_var) = acq_vars
+			file.write('%s & %s & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) \\\\\n' % (result.seq_ref, "lin-ln evals-error", a_mean, a_var, c_mean, c_var, q_mean, q_var))
 		else:
-			file.write('%s & %s & %s & . & . & . \\\\\n' % (result.prob_ref, result.seq_ref, "lin-ln evals-error"))
+			file.write('%s & %s & . & . & . & . & . & . \\\\\n' % (result.seq_ref, "lin-ln evals-error"))
 
 		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
 		plt.legend()
@@ -282,10 +282,10 @@ def plot_log_log_trend(results, title, ref, by_seq, folder):
 		p = opt.curve_fit(fit_func, ln_evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
 		acq_vars = get_fit_variance(ln_evals, ln_e)
 		if acq_vars != None:
-			(a_var, c_var, q_var) = acq_vars
-			file.write('%s & %s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, "ln-ln evals-error", a_var, c_var, q_var))
+			(a_mean, a_var, c_mean, c_var, q_mean, q_var) = acq_vars
+			file.write('%s & %s & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) \\\\\n' % (result.seq_ref, "ln-ln evals-error", a_mean, a_var, c_mean, c_var, q_mean, q_var))
 		else:
-			file.write('%s & %s & %s & . & . & . \\\\\n' % (result.prob_ref, result.seq_ref, "ln-ln evals-error"))
+			file.write('%s & %s & . & . & . & . & . & . \\\\\n' % (result.seq_ref, "ln-ln evals-error"))
 
 		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
 		plt.legend()
@@ -377,7 +377,7 @@ def get_fit_variance(x, y):
 	q_mean = np.mean(qs)
 	q_variance = np.sum((qs - q_mean) ** 2) / (len(qs) * (q_mean ** 2))
 
-	return (a_variance, c_variance, q_variance)
+	return (a_mean, a_variance, c_mean, c_variance, q_mean, q_variance)
 
 
 def get_least_square_error(f, p, x, y):

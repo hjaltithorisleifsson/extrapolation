@@ -53,11 +53,12 @@ We begin by considering the derivative of the exponential function at zero.
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{c|c||c|c|c}
-Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
-Romberg & lin-ln evals-error & \(3.5085\) & \(0.01413\) & \(0.00024927\) \\
-Bulirsch & lin-ln evals-error & \(4.7628\) & \(0.041094\) & \(0.00080863\) \\
-Harmonic & lin-ln evals-error & \(6.4992\) & \(0.022905\) & \(0.00090196\) \\ 
+    \small
+    \begin{tabular}{c|c||c|c|c|c|c|c}
+Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+Romberg & lin-ln evals-error & \(0.1079\) & \(3.508\) & \(0.4046\) & \(0.01413\) & \(1.85\) & \(0.0002493\) \\
+Bulirsch & lin-ln evals-error & \(0.08951\) & \(4.763\) & \(0.463\) & \(0.04109\) & \(1.712\) & \(0.0008086\) \\
+Harmonic & lin-ln evals-error & \(4.149\cdot 10^{6}\) & \(6.499\) & \(1.734\) & \(0.02291\) & \(1.303\) & \(0.000902\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -85,11 +86,12 @@ g_a(x) \coloneqq \ln(x+a), \quad a > 0.
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{c|c||c|c|c}
-Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
-Romberg & lin-ln evals-error & \(2.4426\) & \(0.0072424\) & \(0.00012303\) \\
-Bulirsch & lin-ln evals-error & \(6.2746\) & \(0.083792\) & \(0.0013152\) \\
-Harmonic & lin-ln evals-error & \(2.3311\) & \(0.010922\) & \(0.00041763\) \\
+    \small
+    \begin{tabular}{c|c||c|c|c|c|c|c}
+Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+Romberg & lin-ln evals-error & \(0.01503\) & \(2.443\) & \(0.2078\) & \(0.007242\) & \(1.962\) & \(0.000123\) \\
+Bulirsch & lin-ln evals-error & \(0.005981\) & \(6.275\) & \(0.1873\) & \(0.08379\) & \(1.851\) & \(0.001315\) \\
+Harmonic & lin-ln evals-error & \(96.18\) & \(2.331\) & \(1.128\) & \(0.01092\) & \(1.264\) & \(0.0004176\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -110,11 +112,12 @@ We get down to machine level precision using any sequence, Romberg performes bes
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{c|c||c|c|c}
-Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
-Romberg & lin-ln evals-error & \(2.4426\) & \(0.0072424\) & \(0.00012303\) \\
-Bulirsch & lin-ln evals-error & \(6.2746\) & \(0.083792\) & \(0.0013152\) \\
-Harmonic & lin-ln evals-error & \(2.3311\) & \(0.010922\) & \(0.00041763\) \\
+    \small
+    \begin{tabular}{c|c||c|c|c|c|c|c}
+Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+Romberg & lin-ln evals-error & \(1.503\) & \(2.443\) & \(0.2078\) & \(0.007242\) & \(1.962\) & \(0.000123\) \\
+Bulirsch & lin-ln evals-error & \(0.5981\) & \(6.275\) & \(0.1873\) & \(0.08379\) & \(1.851\) & \(0.001315\) \\
+Harmonic & lin-ln evals-error & \(9618\) & \(2.331\) & \(1.128\) & \(0.01092\) & \(1.264\) & \(0.0004176\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -135,11 +138,12 @@ Here the same comments apply as for \(a = 1\).
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{c|c||c|c|c}
-Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
-Romberg & lin-ln evals-error & \(2.4426\) & \(0.0072424\) & \(0.00012303\) \\
-Bulirsch & lin-ln evals-error & \(6.2746\) & \(0.083792\) & \(0.0013152\) \\
-Harmonic & lin-ln evals-error & \(2.3311\) & \(0.010922\) & \(0.00041763\) \\
+    \small
+    \begin{tabular}{c|c||c|c|c|c|c|c}
+Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+Romberg & lin-ln evals-error & \(150.3\) & \(2.443\) & \(0.2078\) & \(0.007242\) & \(1.962\) & \(0.000123\) \\
+Bulirsch & lin-ln evals-error & \(59.81\) & \(6.275\) & \(0.1873\) & \(0.08379\) & \(1.851\) & \(0.001315\) \\
+Harmonic & lin-ln evals-error & \(9.618\cdot 10^{5}\) & \(2.331\) & \(1.128\) & \(0.01092\) & \(1.264\) & \(0.0004176\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -169,11 +173,12 @@ h_a(x) \coloneqq \sqrt{a + x}, \quad a > 0.
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{c|c||c|c|c}
-Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
-Romberg & lin-ln evals-error & \(3.1845\) & \(0.0098756\) & \(0.00016602\) \\
-Bulirsch & lin-ln evals-error & \(7.1859\) & \(0.098014\) & \(0.0015128\) \\
-Harmonic & lin-ln evals-error & \(2.1015\) & \(0.0081581\) & \(0.0003023\) \\
+    \small
+    \begin{tabular}{c|c||c|c|c|c|c|c}
+Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+Romberg & lin-ln evals-error & \(0.00163\) & \(3.185\) & \(0.2109\) & \(0.009876\) & \(1.959\) & \(0.000166\) \\
+Bulirsch & lin-ln evals-error & \(0.0007538\) & \(7.186\) & \(0.1925\) & \(0.09801\) & \(1.846\) & \(0.001513\) \\
+Harmonic & lin-ln evals-error & \(7.958\) & \(2.102\) & \(1.159\) & \(0.008158\) & \(1.259\) & \(0.0003023\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -194,11 +199,12 @@ In standard double precision floating point arithmetic we get down to machine le
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{c|c||c|c|c}
-Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
-Romberg & lin-ln evals-error & \(3.1845\) & \(0.0098756\) & \(0.00016602\) \\
-Bulirsch & lin-ln evals-error & \(7.1859\) & \(0.098014\) & \(0.0015128\) \\
-Harmonic & lin-ln evals-error & \(2.1015\) & \(0.0081581\) & \(0.0003023\) \\
+    \small
+    \begin{tabular}{c|c||c|c|c|c|c|c}
+Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+Romberg & lin-ln evals-error & \(0.0163\) & \(3.185\) & \(0.2109\) & \(0.009876\) & \(1.959\) & \(0.000166\) \\
+Bulirsch & lin-ln evals-error & \(0.007538\) & \(7.186\) & \(0.1925\) & \(0.09801\) & \(1.846\) & \(0.001513\) \\
+Harmonic & lin-ln evals-error & \(79.58\) & \(2.102\) & \(1.159\) & \(0.008158\) & \(1.259\) & \(0.0003023\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -219,11 +225,12 @@ Here the same comments apply as for \(a = 1\).
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{c|c||c|c|c}
-Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
-Romberg & lin-ln evals-error & \(3.1845\) & \(0.0098756\) & \(0.00016602\) \\
-Bulirsch & lin-ln evals-error & \(7.1859\) & \(0.098014\) & \(0.0015128\) \\
-Harmonic & lin-ln evals-error & \(2.1015\) & \(0.0081581\) & \(0.0003023\) \\
+    \small
+    \begin{tabular}{c|c||c|c|c|c|c|c}
+Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+Romberg & lin-ln evals-error & \(0.163\) & \(3.185\) & \(0.2109\) & \(0.009876\) & \(1.959\) & \(0.000166\) \\
+Bulirsch & lin-ln evals-error & \(0.07538\) & \(7.186\) & \(0.1925\) & \(0.09801\) & \(1.846\) & \(0.001513\) \\
+Harmonic & lin-ln evals-error & \(795.8\) & \(2.102\) & \(1.159\) & \(0.008158\) & \(1.259\) & \(0.0003023\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -244,11 +251,12 @@ Here also the same comments apply.
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{c|c||c|c|c}
-Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
-Romberg & lin-ln evals-error & \(3.1845\) & \(0.0098756\) & \(0.00016602\) \\
-Bulirsch & lin-ln evals-error & \(7.1859\) & \(0.098014\) & \(0.0015128\) \\
-Harmonic & lin-ln evals-error & \(2.1015\) & \(0.0081581\) & \(0.0003023\) \\
+    \small
+    \begin{tabular}{c|c||c|c|c|c|c|c}
+Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+Romberg & lin-ln evals-error & \(1.63\cdot 10^{5}\) & \(3.185\) & \(0.2109\) & \(0.009876\) & \(1.959\) & \(0.000166\) \\
+Bulirsch & lin-ln evals-error & \(7.538\cdot 10^{4}\) & \(7.186\) & \(0.1925\) & \(0.09801\) & \(1.846\) & \(0.001513\) \\
+Harmonic & lin-ln evals-error & \(7.958\cdot 10^{8}\) & \(2.102\) & \(1.159\) & \(0.008158\) & \(1.259\) & \(0.0003023\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -282,11 +290,12 @@ which is smooth but not analytic.
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{c|c||c|c|c}
-Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
-Romberg & lin-ln evals-error & \(25\) & \(2.6439\) & \(0.027089\) \\
-Bulirsch & lin-ln evals-error & \(25\) & \(5.9135\) & \(0.075286\) \\
-Harmonic & lin-ln evals-error & . & . & . \\
+    \small
+    \begin{tabular}{c|c||c|c|c|c|c|c}
+Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+Romberg & lin-ln evals-error & \(6.865\cdot 10^{52}\) & \(25\) & \(0.177\) & \(2.644\) & \(2.181\) & \(0.02709\) \\
+Bulirsch & lin-ln evals-error & \(4.186\cdot 10^{60}\) & \(25\) & \(0.2329\) & \(5.914\) & \(2.282\) & \(0.07529\) \\
+Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -317,11 +326,12 @@ which is smooth but not analytic.
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{c|c||c|c|c}
-Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
-Romberg & lin-ln evals-error & \(24.394\) & \(0.62692\) & \(0.0044816\) \\
-Bulirsch & lin-ln evals-error & \(25\) & \(7.8984\) & \(0.082446\) \\
-Harmonic & lin-ln evals-error & . & . & . \\
+    \small
+    \begin{tabular}{c|c||c|c|c|c|c|c}
+Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+Romberg & lin-ln evals-error & \(1228\) & \(24.39\) & \(0.1549\) & \(0.6269\) & \(2.043\) & \(0.004482\) \\
+Bulirsch & lin-ln evals-error & \(1.706\cdot 10^{65}\) & \(25\) & \(1.496\) & \(7.898\) & \(1.948\) & \(0.08245\) \\
+Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -352,11 +362,13 @@ x^2\sin\frac{1}{x} & \text{if } x \neq 0\\
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{c|c||c|c|c}
-Sequence & Plot & \(A\)-variance & \(c\)-variance & \(q\)-variance\\\hline
-Romberg & lin-ln evals-error & \(nan\) & \(2.2825\) & \(3.9235\) \\
-Bulirsch & lin-ln evals-error & . & . & . \\
-Harmonic & lin-ln evals-error & . & . & . \\
+    \small
+    \small
+    \begin{tabular}{c|c||c|c|c|c|c|c}
+Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+Romberg & lin-ln evals-error & . & . & \(2607\) & \(2.282\) & \(4.553\) & \(3.923\) \\
+Bulirsch & lin-ln evals-error & . & . & . & . & . & . \\
+Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}

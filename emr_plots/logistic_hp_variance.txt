@@ -1,2 +1,2 @@
-$y' = y(1-y)$ & Romberg & lin-ln evals-error & \(2.9992\) & \(0.083333\) & \(0.020783\) \\
-$y' = y(1-y)$ & Harmonic & lin-ln evals-error & . & . & . \\
+Romberg & lin-ln evals-error & \(7.183e+18\) & \(2.999\) & \(26.25\) & \(0.08333\) & \(0.1874\) & \(0.02078\) \\
+Harmonic & lin-ln evals-error & . & . & . & . & . & . \\

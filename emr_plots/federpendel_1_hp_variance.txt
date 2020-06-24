@@ -1,2 +1,2 @@
-Federpendel, estimate after 1 time unit. & Romberg & lin-ln evals-error & \(2.8972\) & \(0.073866\) & \(0.017293\) \\
-Federpendel, estimate after 1 time unit. & Harmonic & lin-ln evals-error & . & . & . \\
+Romberg & lin-ln evals-error & \(2.325e+15\) & \(2.897\) & \(20.8\) & \(0.07387\) & \(0.1913\) & \(0.01729\) \\
+Harmonic & lin-ln evals-error & . & . & . & . & . & . \\

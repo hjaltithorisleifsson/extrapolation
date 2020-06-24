@@ -1,2 +1,2 @@
-$y'' + sin(y) = 0$ & Romberg & lin-ln evals-error & \(3\) & \(0.062258\) & \(0.011024\) \\
-$y'' + sin(y) = 0$ & Harmonic & lin-ln evals-error & . & . & . \\
+Romberg & lin-ln evals-error & \(4.852e+18\) & \(3\) & \(23.49\) & \(0.06226\) & \(0.1898\) & \(0.01102\) \\
+Harmonic & lin-ln evals-error & . & . & . & . & . & . \\

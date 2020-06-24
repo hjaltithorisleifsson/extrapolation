@@ -1,3 +1,3 @@
-$h_{10^{-4}}$ & Harmonic & lin-ln evals-error & . & . & . \\
-$h_{10^{-4}}$ & Romberg & lin-ln evals-error & \(3.9998\) & \(0.58702\) & \(0.20654\) \\
-$h_{10^{-4}}$ & Bulirsch & lin-ln evals-error & \(3.8706\) & \(0.53846\) & \(0.31338\) \\
+Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(1.218e+10\) & \(4\) & \(9.792\) & \(0.587\) & \(0.119\) & \(0.2065\) \\
+Bulirsch & lin-ln evals-error & \(4.389e+06\) & \(3.871\) & \(7.595\) & \(0.5385\) & \(0.1447\) & \(0.3134\) \\
