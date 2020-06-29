@@ -1,3 +1,3 @@
-Romberg & lin-ln evals-error & \(inf\) & \(nan\) & \(2607\) & \(2.282\) & \(4.553\) & \(3.923\) \\
+Romberg & lin-ln evals-error & . & . & . & . & . & . \\
 Bulirsch & lin-ln evals-error & . & . & . & . & . & . \\
 Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
