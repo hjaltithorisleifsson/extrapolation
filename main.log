@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  24 JUN 2020 22:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  1 JUL 2020 23:28
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1356,21 +1356,6 @@ LaTeX Warning: Label `tab:my_label' multiply defined.
 
 LaTeX Warning: Label `tab:my_label' multiply defined.
 
-
-LaTeX Warning: Label `tab:my_label' multiply defined.
-
-
-LaTeX Warning: Label `tab:my_label' multiply defined.
-
-
-LaTeX Warning: Label `tab:my_label' multiply defined.
-
-
-LaTeX Warning: Label `tab:my_label' multiply defined.
-
-
-LaTeX Warning: Label `tab:my_label' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
@@ -1640,21 +1625,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 148--149
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \vbox (badness 1033) has occurred while \output is active []
 
- []
-
-[8 <./romberg_plots/cos_squared.png> <./romberg_plots/cos_squared_hp_steps.png>
- <./romberg_plots/cos_squared_hp_log_log_pow_fit_trend.png> <./romberg_plots/co
-s_squared_hp_trend.png>]
-<romberg_plots/g_one.png, id=64, 462.528pt x 346.896pt>
+ [8 <./romberg_plots/cos_squared.png> <./romberg_plots/cos_squared_hp_steps.png
+> <./romberg_plots/cos_squared_hp_log_log_pow_fit_trend.png> <./romberg_plots/c
+os_squared_hp_trend.png>] <romberg_plots/g_one.png, id=64, 462.528pt x 346.896p
+t>
 File: romberg_plots/g_one.png Graphic file (type png)
 
 <use romberg_plots/g_one.png>
-Package pdftex.def Info: romberg_plots/g_one.png used on input line 164.
+Package pdftex.def Info: romberg_plots/g_one.png used on input line 162.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 164--165
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 162--163
  [][] 
  []
 
@@ -1663,10 +1646,10 @@ File: romberg_plots/g_one_hp_steps.png Graphic file (type png)
 
 <use romberg_plots/g_one_hp_steps.png>
 Package pdftex.def Info: romberg_plots/g_one_hp_steps.png used on input line 16
-8.
+6.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 168--169
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 166--167
  [][] 
  []
 
@@ -1676,10 +1659,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 168--169
 File: romberg_plots/g_one_hp_log_log_pow_fit_trend.png Graphic file (type png)
  <use romberg_plots/g_one_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: romberg_plots/g_one_hp_log_log_pow_fit_trend.png used 
-on input line 176.
+on input line 174.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 176--177
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 174--175
  [][] 
  []
 
@@ -1687,17 +1670,22 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 176--177
 File: romberg_plots/g_one_hp_trend.png Graphic file (type png)
 
 <use romberg_plots/g_one_hp_trend.png>
-Package pdftex.def Info: romberg_plots/g_one_hp_trend.png used on input line 18
-0.
+Package pdftex.def Info: romberg_plots/g_one_hp_trend.png used on input line 17
+8.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 180--181
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 178--179
  [][] 
  []
 
 
-Overfull \hbox (24.08356pt too wide) in paragraph at lines 187--200
+Overfull \hbox (24.08356pt too wide) in paragraph at lines 185--198
  [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+
  []
 
 
@@ -1705,41 +1693,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
-
- []
-
-[9 <./romberg_plots/g_one.png> <./romberg_plots/g_one_hp_steps.png> <./romberg_
-plots/g_one_hp_log_log_pow_fit_trend.png> <./romberg_plots/g_one_hp_trend.png>]
-
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
-
- []
-
-<romberg_plots/g_tenth.png, id=75, 462.528pt x 346.896pt>
+<romberg_plots/g_tenth.png, id=68, 462.528pt x 346.896pt>
 File: romberg_plots/g_tenth.png Graphic file (type png)
 
 <use romberg_plots/g_tenth.png>
-Package pdftex.def Info: romberg_plots/g_tenth.png used on input line 214.
+Package pdftex.def Info: romberg_plots/g_tenth.png used on input line 208.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 214--215
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 208--209
  [][] 
  []
 
-<romberg_plots/g_tenth_hp_steps.png, id=76, 462.528pt x 346.896pt>
+<romberg_plots/g_tenth_hp_steps.png, id=69, 462.528pt x 346.896pt>
 File: romberg_plots/g_tenth_hp_steps.png Graphic file (type png)
 
 <use romberg_plots/g_tenth_hp_steps.png>
 Package pdftex.def Info: romberg_plots/g_tenth_hp_steps.png used on input line 
-218.
+212.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 218--219
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 212--213
  [][] 
  []
 
+[9 <./romberg_plots/g_one.png> <./romberg_plots/g_one_hp_steps.png> <./romberg_
+plots/g_one_hp_log_log_pow_fit_trend.png> <./romberg_plots/g_one_hp_trend.png>]
 
 <romberg_plots/g_tenth_hp_log_log_pow_fit_trend.png, id=77, 462.528pt x 346.896
 pt>
@@ -1747,10 +1725,10 @@ File: romberg_plots/g_tenth_hp_log_log_pow_fit_trend.png Graphic file (type png
 )
  <use romberg_plots/g_tenth_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: romberg_plots/g_tenth_hp_log_log_pow_fit_trend.png use
-d on input line 226.
+d on input line 220.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 226--227
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 220--221
  [][] 
  []
 
@@ -1759,363 +1737,384 @@ File: romberg_plots/g_tenth_hp_trend.png Graphic file (type png)
 
 <use romberg_plots/g_tenth_hp_trend.png>
 Package pdftex.def Info: romberg_plots/g_tenth_hp_trend.png used on input line 
-230.
+224.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 230--231
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 224--225
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--253
-
+Overfull \hbox (19.96149pt too wide) in paragraph at lines 231--244
+ [][] 
  []
 
-[10 <./romberg_plots/g_tenth.png> <./romberg_plots/g_tenth_hp_steps.png> <./rom
-berg_plots/g_tenth_hp_log_log_pow_fit_trend.png> <./romberg_plots/g_tenth_hp_tr
-end.png>] <romberg_plots/g_hundredth.png, id=86, 462.528pt x 346.896pt>
+<romberg_plots/g_hundredth.png, id=79, 462.528pt x 346.896pt>
 File: romberg_plots/g_hundredth.png Graphic file (type png)
 
 <use romberg_plots/g_hundredth.png>
-Package pdftex.def Info: romberg_plots/g_hundredth.png used on input line 260.
+Package pdftex.def Info: romberg_plots/g_hundredth.png used on input line 252.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 260--261
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 252--253
  [][] 
  []
 
-<romberg_plots/g_hundredth_hp_steps.png, id=87, 462.528pt x 346.896pt>
+<romberg_plots/g_hundredth_hp_steps.png, id=80, 462.528pt x 346.896pt>
 File: romberg_plots/g_hundredth_hp_steps.png Graphic file (type png)
 
 <use romberg_plots/g_hundredth_hp_steps.png>
 Package pdftex.def Info: romberg_plots/g_hundredth_hp_steps.png used on input l
-ine 264.
+ine 256.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 256--257
+ [][] 
+ []
+
+
+<romberg_plots/g_hundredth_hp_log_log_pow_fit_trend.png, id=81, 462.528pt x 346
+.896pt>
+File: romberg_plots/g_hundredth_hp_log_log_pow_fit_trend.png Graphic file (type
+ png)
+ <use romberg_plots/g_hundredth_hp_log_log_pow_fit_trend.png>
+Package pdftex.def Info: romberg_plots/g_hundredth_hp_log_log_pow_fit_trend.png
+ used on input line 264.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 264--265
  [][] 
  []
 
-
-<romberg_plots/g_hundredth_hp_log_log_pow_fit_trend.png, id=88, 462.528pt x 346
-.896pt>
-File: romberg_plots/g_hundredth_hp_log_log_pow_fit_trend.png Graphic file (type
- png)
- <use romberg_plots/g_hundredth_hp_log_log_pow_fit_trend.png>
-Package pdftex.def Info: romberg_plots/g_hundredth_hp_log_log_pow_fit_trend.png
- used on input line 272.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 272--273
- [][] 
- []
-
-<romberg_plots/g_hundredth_hp_trend.png, id=89, 462.528pt x 346.896pt>
+<romberg_plots/g_hundredth_hp_trend.png, id=82, 462.528pt x 346.896pt>
 File: romberg_plots/g_hundredth_hp_trend.png Graphic file (type png)
 
 <use romberg_plots/g_hundredth_hp_trend.png>
 Package pdftex.def Info: romberg_plots/g_hundredth_hp_trend.png used on input l
-ine 276.
+ine 268.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 276--277
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 268--269
  [][] 
  []
 
-[11 <./romberg_plots/g_hundredth.png> <./romberg_plots/g_hundredth_hp_steps.png
-> <./romberg_plots/g_hundredth_hp_log_log_pow_fit_trend.png> <./romberg_plots/g
-_hundredth_hp_trend.png>]
-<romberg_plots/h_one.png, id=97, 462.528pt x 346.896pt>
+[10 <./romberg_plots/g_tenth.png> <./romberg_plots/g_tenth_hp_steps.png> <./rom
+berg_plots/g_tenth_hp_log_log_pow_fit_trend.png> <./romberg_plots/g_tenth_hp_tr
+end.png> <./romberg_plots/g_hundredth.png> <./romberg_plots/g_hundredth_hp_step
+s.png>] <romberg_plots/h_one.png, id=92, 462.528pt x 346.896pt>
 File: romberg_plots/h_one.png Graphic file (type png)
 
 <use romberg_plots/h_one.png>
-Package pdftex.def Info: romberg_plots/h_one.png used on input line 312.
+Package pdftex.def Info: romberg_plots/h_one.png used on input line 304.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 312--313
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 304--305
  [][] 
  []
 
-<romberg_plots/h_one_hp_steps.png, id=98, 462.528pt x 346.896pt>
+<romberg_plots/h_one_hp_steps.png, id=93, 462.528pt x 346.896pt>
 File: romberg_plots/h_one_hp_steps.png Graphic file (type png)
 
 <use romberg_plots/h_one_hp_steps.png>
-Package pdftex.def Info: romberg_plots/h_one_hp_steps.png used on input line 31
-6.
+Package pdftex.def Info: romberg_plots/h_one_hp_steps.png used on input line 30
+8.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 308--309
+ [][] 
+ []
+
+
+<romberg_plots/h_one_hp_log_log_pow_fit_trend.png, id=94, 462.528pt x 346.896pt
+>
+File: romberg_plots/h_one_hp_log_log_pow_fit_trend.png Graphic file (type png)
+ <use romberg_plots/h_one_hp_log_log_pow_fit_trend.png>
+Package pdftex.def Info: romberg_plots/h_one_hp_log_log_pow_fit_trend.png used 
+on input line 316.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 316--317
  [][] 
  []
 
-
-<romberg_plots/h_one_hp_log_log_pow_fit_trend.png, id=99, 462.528pt x 346.896pt
->
-File: romberg_plots/h_one_hp_log_log_pow_fit_trend.png Graphic file (type png)
- <use romberg_plots/h_one_hp_log_log_pow_fit_trend.png>
-Package pdftex.def Info: romberg_plots/h_one_hp_log_log_pow_fit_trend.png used 
-on input line 324.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 324--325
- [][] 
- []
-
-<romberg_plots/h_one_hp_trend.png, id=100, 462.528pt x 346.896pt>
+<romberg_plots/h_one_hp_trend.png, id=95, 462.528pt x 346.896pt>
 File: romberg_plots/h_one_hp_trend.png Graphic file (type png)
 
 <use romberg_plots/h_one_hp_trend.png>
 Package pdftex.def Info: romberg_plots/h_one_hp_trend.png used on input line 32
-8.
+0.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 328--329
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 320--321
  [][] 
  []
 
 
-Overfull \hbox (13.13354pt too wide) in paragraph at lines 335--348
+Underfull \vbox (badness 1067) has occurred while \output is active []
+
+ [11 <./romberg_plots/g_hundredth_hp_log_log_pow_fit_trend.png> <./romberg_plot
+s/g_hundredth_hp_trend.png> <./romberg_plots/h_one.png> <./romberg_plots/h_one_
+hp_steps.png>]
+Overfull \hbox (13.13354pt too wide) in paragraph at lines 327--340
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--351
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--353
+Underfull \hbox (badness 10000) in paragraph at lines 344--345
 
  []
 
-[12 <./romberg_plots/h_one.png> <./romberg_plots/h_one_hp_steps.png> <./romberg
-_plots/h_one_hp_log_log_pow_fit_trend.png> <./romberg_plots/h_one_hp_trend.png>
-] <romberg_plots/h_hundredth.png, id=108, 462.528pt x 346.896pt>
+<romberg_plots/h_hundredth.png, id=103, 462.528pt x 346.896pt>
 File: romberg_plots/h_hundredth.png Graphic file (type png)
 
 <use romberg_plots/h_hundredth.png>
-Package pdftex.def Info: romberg_plots/h_hundredth.png used on input line 360.
+Package pdftex.def Info: romberg_plots/h_hundredth.png used on input line 350.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 360--361
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 350--351
  [][] 
  []
 
-<romberg_plots/h_hundredth_hp_steps.png, id=109, 462.528pt x 346.896pt>
+<romberg_plots/h_hundredth_hp_steps.png, id=104, 462.528pt x 346.896pt>
 File: romberg_plots/h_hundredth_hp_steps.png Graphic file (type png)
 
 <use romberg_plots/h_hundredth_hp_steps.png>
 Package pdftex.def Info: romberg_plots/h_hundredth_hp_steps.png used on input l
-ine 364.
+ine 354.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 364--365
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 354--355
  [][] 
  []
 
 
-<romberg_plots/h_hundredth_hp_log_log_pow_fit_trend.png, id=110, 462.528pt x 34
+<romberg_plots/h_hundredth_hp_log_log_pow_fit_trend.png, id=105, 462.528pt x 34
 6.896pt>
 File: romberg_plots/h_hundredth_hp_log_log_pow_fit_trend.png Graphic file (type
  png)
  <use romberg_plots/h_hundredth_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: romberg_plots/h_hundredth_hp_log_log_pow_fit_trend.png
- used on input line 372.
+ used on input line 362.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 372--373
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 362--363
  [][] 
  []
 
-<romberg_plots/h_hundredth_hp_trend.png, id=111, 462.528pt x 346.896pt>
+<romberg_plots/h_hundredth_hp_trend.png, id=106, 462.528pt x 346.896pt>
 File: romberg_plots/h_hundredth_hp_trend.png Graphic file (type png)
 
 <use romberg_plots/h_hundredth_hp_trend.png>
 Package pdftex.def Info: romberg_plots/h_hundredth_hp_trend.png used on input l
-ine 376.
+ine 366.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 376--377
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 366--367
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--399
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <./romberg_plots/h_one_hp_log_log_pow_fit_trend.png> <./romberg_plots/h_on
+e_hp_trend.png> <./romberg_plots/h_hundredth.png> <./romberg_plots/h_hundredth_
+hp_steps.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
-<romberg_plots/h_tenthousandth.png, id=112, 462.528pt x 346.896pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
+
+ []
+
+<romberg_plots/h_tenthousandth.png, id=114, 462.528pt x 346.896pt>
 File: romberg_plots/h_tenthousandth.png Graphic file (type png)
 
 <use romberg_plots/h_tenthousandth.png>
-Package pdftex.def Info: romberg_plots/h_tenthousandth.png used on input line 4
-06.
+Package pdftex.def Info: romberg_plots/h_tenthousandth.png used on input line 3
+98.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 406--407
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 398--399
  [][] 
  []
 
-<romberg_plots/h_tenthousandth_hp_steps.png, id=113, 462.528pt x 346.896pt>
+<romberg_plots/h_tenthousandth_hp_steps.png, id=115, 462.528pt x 346.896pt>
 File: romberg_plots/h_tenthousandth_hp_steps.png Graphic file (type png)
 
 <use romberg_plots/h_tenthousandth_hp_steps.png>
 Package pdftex.def Info: romberg_plots/h_tenthousandth_hp_steps.png used on inp
-ut line 410.
+ut line 402.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 402--403
+ [][] 
+ []
+
+
+<romberg_plots/h_tenthousandth_hp_log_log_pow_fit_trend.png, id=116, 462.528pt 
+x 346.896pt>
+File: romberg_plots/h_tenthousandth_hp_log_log_pow_fit_trend.png Graphic file (
+type png)
+ <use romberg_plots/h_tenthousandth_hp_log_log_pow_fit_trend.png>
+Package pdftex.def Info: romberg_plots/h_tenthousandth_hp_log_log_pow_fit_trend
+.png used on input line 410.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 410--411
  [][] 
  []
 
-[13 <./romberg_plots/h_hundredth.png> <./romberg_plots/h_hundredth_hp_steps.png
-> <./romberg_plots/h_hundredth_hp_log_log_pow_fit_trend.png> <./romberg_plots/h
-_hundredth_hp_trend.png>]
-<romberg_plots/h_tenthousandth_hp_log_log_pow_fit_trend.png, id=122, 462.528pt 
-x 346.896pt>
-File: romberg_plots/h_tenthousandth_hp_log_log_pow_fit_trend.png Graphic file (
-type png)
- <use romberg_plots/h_tenthousandth_hp_log_log_pow_fit_trend.png>
-Package pdftex.def Info: romberg_plots/h_tenthousandth_hp_log_log_pow_fit_trend
-.png used on input line 418.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 418--419
- [][] 
- []
-
-<romberg_plots/h_tenthousandth_hp_trend.png, id=123, 462.528pt x 346.896pt>
+<romberg_plots/h_tenthousandth_hp_trend.png, id=117, 462.528pt x 346.896pt>
 File: romberg_plots/h_tenthousandth_hp_trend.png Graphic file (type png)
 
 <use romberg_plots/h_tenthousandth_hp_trend.png>
 Package pdftex.def Info: romberg_plots/h_tenthousandth_hp_trend.png used on inp
-ut line 422.
+ut line 414.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 422--423
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 414--415
  [][] 
  []
 
-<romberg_plots/circle_area.png, id=124, 462.528pt x 346.896pt>
+
+Underfull \vbox (badness 4024) has occurred while \output is active []
+
+ [13 <./romberg_plots/h_hundredth_hp_log_log_pow_fit_trend.png> <./romberg_plot
+s/h_hundredth_hp_trend.png> <./romberg_plots/h_tenthousandth.png> <./romberg_pl
+ots/h_tenthousandth_hp_steps.png>]
+<romberg_plots/circle_area.png, id=126, 462.528pt x 346.896pt>
 File: romberg_plots/circle_area.png Graphic file (type png)
 
 <use romberg_plots/circle_area.png>
-Package pdftex.def Info: romberg_plots/circle_area.png used on input line 458.
+Package pdftex.def Info: romberg_plots/circle_area.png used on input line 450.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 458--459
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 450--451
  [][] 
  []
 
-<romberg_plots/circle_area_hp_steps.png, id=125, 462.528pt x 346.896pt>
+<romberg_plots/circle_area_hp_steps.png, id=127, 462.528pt x 346.896pt>
 File: romberg_plots/circle_area_hp_steps.png Graphic file (type png)
 
 <use romberg_plots/circle_area_hp_steps.png>
 Package pdftex.def Info: romberg_plots/circle_area_hp_steps.png used on input l
-ine 462.
+ine 454.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 454--455
+ [][] 
+ []
+
+<romberg_plots/circle_area_hp.png, id=128, 462.528pt x 346.896pt>
+File: romberg_plots/circle_area_hp.png Graphic file (type png)
+
+<use romberg_plots/circle_area_hp.png>
+Package pdftex.def Info: romberg_plots/circle_area_hp.png used on input line 46
+2.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 462--463
  [][] 
  []
 
-[14 <./romberg_plots/h_tenthousandth.png> <./romberg_plots/h_tenthousandth_hp_s
-teps.png> <./romberg_plots/h_tenthousandth_hp_log_log_pow_fit_trend.png> <./rom
-berg_plots/h_tenthousandth_hp_trend.png>]
-<romberg_plots/circle_area_hp.png, id=133, 462.528pt x 346.896pt>
-File: romberg_plots/circle_area_hp.png Graphic file (type png)
-
-<use romberg_plots/circle_area_hp.png>
-Package pdftex.def Info: romberg_plots/circle_area_hp.png used on input line 47
-0.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 470--471
- [][] 
- []
-
-<romberg_plots/circle_area_hp_trend.png, id=134, 462.528pt x 346.896pt>
+<romberg_plots/circle_area_hp_trend.png, id=129, 462.528pt x 346.896pt>
 File: romberg_plots/circle_area_hp_trend.png Graphic file (type png)
 
 <use romberg_plots/circle_area_hp_trend.png>
 Package pdftex.def Info: romberg_plots/circle_area_hp_trend.png used on input l
-ine 474.
+ine 466.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 474--475
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 466--467
+ [][] 
+ []
+
+[14 <./romberg_plots/h_tenthousandth_hp_log_log_pow_fit_trend.png> <./romberg_p
+lots/h_tenthousandth_hp_trend.png> <./romberg_plots/circle_area.png> <./romberg
+_plots/circle_area_hp_steps.png>]
+Overfull \hbox (49.6294pt too wide) in paragraph at lines 473--486
  [][] 
  []
 
 
-Overfull \hbox (49.6294pt too wide) in paragraph at lines 481--494
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 496--497
+Underfull \hbox (badness 10000) in paragraph at lines 488--489
 
  []
 
-<romberg_plots/gaussian.png, id=135, 462.528pt x 346.896pt>
+<romberg_plots/gaussian.png, id=137, 462.528pt x 346.896pt>
 File: romberg_plots/gaussian.png Graphic file (type png)
 
 <use romberg_plots/gaussian.png>
-Package pdftex.def Info: romberg_plots/gaussian.png used on input line 510.
+Package pdftex.def Info: romberg_plots/gaussian.png used on input line 502.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 510--511
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 502--503
  [][] 
  []
 
-<romberg_plots/gaussian_hp_steps.png, id=136, 462.528pt x 346.896pt>
+<romberg_plots/gaussian_hp_steps.png, id=138, 462.528pt x 346.896pt>
 File: romberg_plots/gaussian_hp_steps.png Graphic file (type png)
 
 <use romberg_plots/gaussian_hp_steps.png>
 Package pdftex.def Info: romberg_plots/gaussian_hp_steps.png used on input line
- 514.
+ 506.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 506--507
+ [][] 
+ []
+
+<romberg_plots/gaussian_hp.png, id=139, 462.528pt x 346.896pt>
+File: romberg_plots/gaussian_hp.png Graphic file (type png)
+
+<use romberg_plots/gaussian_hp.png>
+Package pdftex.def Info: romberg_plots/gaussian_hp.png used on input line 514.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 514--515
  [][] 
  []
 
-[15 <./romberg_plots/circle_area.png> <./romberg_plots/circle_area_hp_steps.png
-> <./romberg_plots/circle_area_hp.png> <./romberg_plots/circle_area_hp_trend.pn
-g>] <romberg_plots/gaussian_hp.png, id=144, 462.528pt x 346.896pt>
-File: romberg_plots/gaussian_hp.png Graphic file (type png)
-
-<use romberg_plots/gaussian_hp.png>
-Package pdftex.def Info: romberg_plots/gaussian_hp.png used on input line 522.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 522--523
- [][] 
- []
-
-<romberg_plots/gaussian_hp_trend.png, id=145, 462.528pt x 346.896pt>
+<romberg_plots/gaussian_hp_trend.png, id=140, 462.528pt x 346.896pt>
 File: romberg_plots/gaussian_hp_trend.png Graphic file (type png)
 
 <use romberg_plots/gaussian_hp_trend.png>
 Package pdftex.def Info: romberg_plots/gaussian_hp_trend.png used on input line
- 526.
+ 518.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 526--527
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 518--519
+ [][] 
+ []
+
+[15 <./romberg_plots/circle_area_hp.png> <./romberg_plots/circle_area_hp_trend.
+png> <./romberg_plots/gaussian.png> <./romberg_plots/gaussian_hp_steps.png>]
+Overfull \hbox (24.08356pt too wide) in paragraph at lines 525--538
  [][] 
  []
 
 
-Overfull \hbox (24.08356pt too wide) in paragraph at lines 533--546
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
+Underfull \hbox (badness 10000) in paragraph at lines 540--541
 
  []
 
-[16 <./romberg_plots/gaussian.png> <./romberg_plots/gaussian_hp_steps.png> <./r
-omberg_plots/gaussian_hp.png> <./romberg_plots/gaussian_hp_trend.png>])
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16 <./romberg_plots/gaussian_hp.png> <./romberg_plots/gaussian_hp_trend.png>]
+)
 (./text/differential_quotient.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2175,250 +2174,126 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 83--84
  [][] 
  []
 
-[20 <./diff_quot_plots/exp_0.png> <./diff_quot_plots/exp_0_hp_trend.png>]
-<diff_quot_plots/h_hundredth.png, id=172, 462.528pt x 346.896pt>
-File: diff_quot_plots/h_hundredth.png Graphic file (type png)
 
-<use diff_quot_plots/h_hundredth.png>
-Package pdftex.def Info: diff_quot_plots/h_hundredth.png used on input line 105
-.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+Underfull \vbox (badness 1292) has occurred while \output is active []
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 105--106
- [][] 
- []
-
-<diff_quot_plots/h_hundredth_hp_trend.png, id=173, 462.528pt x 346.896pt>
-File: diff_quot_plots/h_hundredth_hp_trend.png Graphic file (type png)
-
-<use diff_quot_plots/h_hundredth_hp_trend.png>
-Package pdftex.def Info: diff_quot_plots/h_hundredth_hp_trend.png used on input
- line 109.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 109--110
- [][] 
- []
-
-<diff_quot_plots/h_tenthousandth.png, id=174, 462.528pt x 346.896pt>
-File: diff_quot_plots/h_tenthousandth.png Graphic file (type png)
-
-<use diff_quot_plots/h_tenthousandth.png>
-Package pdftex.def Info: diff_quot_plots/h_tenthousandth.png used on input line
- 131.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 131--132
- [][] 
- []
-
-<diff_quot_plots/h_tenthousandth_hp_trend.png, id=175, 462.528pt x 346.896pt>
-File: diff_quot_plots/h_tenthousandth_hp_trend.png Graphic file (type png)
-
-<use diff_quot_plots/h_tenthousandth_hp_trend.png>
-Package pdftex.def Info: diff_quot_plots/h_tenthousandth_hp_trend.png used on i
-nput line 135.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 135--136
- [][] 
- []
-
-[21 <./diff_quot_plots/h_one.png> <./diff_quot_plots/h_one_hp_trend.png> <./dif
-f_quot_plots/h_hundredth.png> <./diff_quot_plots/h_hundredth_hp_trend.png> <./d
-iff_quot_plots/h_tenthousandth.png> <./diff_quot_plots/h_tenthousandth_hp_trend
-.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-
- []
-
-<diff_quot_plots/sqrt_1.png, id=185, 462.528pt x 346.896pt>
+ [20 <./diff_quot_plots/exp_0.png> <./diff_quot_plots/exp_0_hp_trend.png>]
+<diff_quot_plots/sqrt_1.png, id=172, 462.528pt x 346.896pt>
 File: diff_quot_plots/sqrt_1.png Graphic file (type png)
 
 <use diff_quot_plots/sqrt_1.png>
-Package pdftex.def Info: diff_quot_plots/sqrt_1.png used on input line 166.
+Package pdftex.def Info: diff_quot_plots/sqrt_1.png used on input line 112.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 166--167
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 112--113
  [][] 
  []
 
-<diff_quot_plots/sqrt_1_hp_trend.png, id=186, 462.528pt x 346.896pt>
+<diff_quot_plots/sqrt_1_hp_trend.png, id=173, 462.528pt x 346.896pt>
 File: diff_quot_plots/sqrt_1_hp_trend.png Graphic file (type png)
 
 <use diff_quot_plots/sqrt_1_hp_trend.png>
 Package pdftex.def Info: diff_quot_plots/sqrt_1_hp_trend.png used on input line
- 170.
+ 116.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 170--171
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 116--117
  [][] 
  []
 
-<diff_quot_plots/sqrt_em2.png, id=187, 462.528pt x 346.896pt>
-File: diff_quot_plots/sqrt_em2.png Graphic file (type png)
-
-<use diff_quot_plots/sqrt_em2.png>
-Package pdftex.def Info: diff_quot_plots/sqrt_em2.png used on input line 192.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 192--193
- [][] 
- []
-
-<diff_quot_plots/sqrt_em2_hp_trend.png, id=188, 462.528pt x 346.896pt>
-File: diff_quot_plots/sqrt_em2_hp_trend.png Graphic file (type png)
-
-<use diff_quot_plots/sqrt_em2_hp_trend.png>
-Package pdftex.def Info: diff_quot_plots/sqrt_em2_hp_trend.png used on input li
-ne 196.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 196--197
- [][] 
- []
-
-[22 <./diff_quot_plots/sqrt_1.png> <./diff_quot_plots/sqrt_1_hp_trend.png> <./d
-iff_quot_plots/sqrt_em2.png> <./diff_quot_plots/sqrt_em2_hp_trend.png>]
-<diff_quot_plots/sqrt_em4.png, id=196, 462.528pt x 346.896pt>
-File: diff_quot_plots/sqrt_em4.png Graphic file (type png)
-
-<use diff_quot_plots/sqrt_em4.png>
-Package pdftex.def Info: diff_quot_plots/sqrt_em4.png used on input line 218.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 218--219
- [][] 
- []
-
-<diff_quot_plots/sqrt_em4_hp_trend.png, id=197, 462.528pt x 346.896pt>
-File: diff_quot_plots/sqrt_em4_hp_trend.png Graphic file (type png)
-
-<use diff_quot_plots/sqrt_em4_hp_trend.png>
-Package pdftex.def Info: diff_quot_plots/sqrt_em4_hp_trend.png used on input li
-ne 222.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 222--223
- [][] 
- []
-
-<diff_quot_plots/sqrt_em16.png, id=198, 462.528pt x 346.896pt>
-File: diff_quot_plots/sqrt_em16.png Graphic file (type png)
-
-<use diff_quot_plots/sqrt_em16.png>
-Package pdftex.def Info: diff_quot_plots/sqrt_em16.png used on input line 244.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 244--245
- [][] 
- []
-
-<diff_quot_plots/sqrt_em16_hp_trend.png, id=199, 462.528pt x 346.896pt>
-File: diff_quot_plots/sqrt_em16_hp_trend.png Graphic file (type png)
-
-<use diff_quot_plots/sqrt_em16_hp_trend.png>
-Package pdftex.def Info: diff_quot_plots/sqrt_em16_hp_trend.png used on input l
-ine 248.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 248--249
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
-
- []
-
-[23 <./diff_quot_plots/sqrt_em4.png> <./diff_quot_plots/sqrt_em4_hp_trend.png> 
-<./diff_quot_plots/sqrt_em16.png> <./diff_quot_plots/sqrt_em16_hp_trend.png>]
-<diff_quot_plots/rho.png, id=207, 462.528pt x 346.896pt>
+[21 <./diff_quot_plots/h_one.png> <./diff_quot_plots/h_one_hp_trend.png> <./dif
+f_quot_plots/sqrt_1.png> <./diff_quot_plots/sqrt_1_hp_trend.png>]
+<diff_quot_plots/rho.png, id=181, 462.528pt x 346.896pt>
 File: diff_quot_plots/rho.png Graphic file (type png)
 
 <use diff_quot_plots/rho.png>
-Package pdftex.def Info: diff_quot_plots/rho.png used on input line 283.
+Package pdftex.def Info: diff_quot_plots/rho.png used on input line 149.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 283--284
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 149--150
  [][] 
  []
 
-<diff_quot_plots/rho_hp_trend.png, id=208, 462.528pt x 346.896pt>
+<diff_quot_plots/rho_hp_trend.png, id=182, 462.528pt x 346.896pt>
 File: diff_quot_plots/rho_hp_trend.png Graphic file (type png)
 
 <use diff_quot_plots/rho_hp_trend.png>
-Package pdftex.def Info: diff_quot_plots/rho_hp_trend.png used on input line 28
-7.
+Package pdftex.def Info: diff_quot_plots/rho_hp_trend.png used on input line 15
+3.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 287--288
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 153--154
  [][] 
  []
 
-<diff_quot_plots/xemxm2.png, id=209, 462.528pt x 346.896pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+
+ []
+
+<diff_quot_plots/xemxm2.png, id=183, 462.528pt x 346.896pt>
 File: diff_quot_plots/xemxm2.png Graphic file (type png)
 
 <use diff_quot_plots/xemxm2.png>
-Package pdftex.def Info: diff_quot_plots/xemxm2.png used on input line 319.
+Package pdftex.def Info: diff_quot_plots/xemxm2.png used on input line 185.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 319--320
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 185--186
  [][] 
  []
 
-<diff_quot_plots/xemxm2_hp_trend.png, id=210, 462.528pt x 346.896pt>
+<diff_quot_plots/xemxm2_hp_trend.png, id=184, 462.528pt x 346.896pt>
 File: diff_quot_plots/xemxm2_hp_trend.png Graphic file (type png)
 
 <use diff_quot_plots/xemxm2_hp_trend.png>
 Package pdftex.def Info: diff_quot_plots/xemxm2_hp_trend.png used on input line
- 323.
+ 189.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 323--324
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 189--190
  [][] 
  []
 
-[24 <./diff_quot_plots/rho.png> <./diff_quot_plots/rho_hp_trend.png> <./diff_qu
+[22 <./diff_quot_plots/rho.png> <./diff_quot_plots/rho_hp_trend.png> <./diff_qu
 ot_plots/xemxm2.png> <./diff_quot_plots/xemxm2_hp_trend.png>]
-<diff_quot_plots/xsin.png, id=218, 462.528pt x 346.896pt>
+<diff_quot_plots/xsin.png, id=192, 462.528pt x 346.896pt>
 File: diff_quot_plots/xsin.png Graphic file (type png)
 
 <use diff_quot_plots/xsin.png>
-Package pdftex.def Info: diff_quot_plots/xsin.png used on input line 355.
+Package pdftex.def Info: diff_quot_plots/xsin.png used on input line 221.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 355--356
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 221--222
  [][] 
  []
 
-<diff_quot_plots/xsin_hp_trend.png, id=219, 462.528pt x 346.896pt>
+<diff_quot_plots/xsin_hp_trend.png, id=193, 462.528pt x 346.896pt>
 File: diff_quot_plots/xsin_hp_trend.png Graphic file (type png)
 
 <use diff_quot_plots/xsin_hp_trend.png>
-Package pdftex.def Info: diff_quot_plots/xsin_hp_trend.png used on input line 3
-59.
+Package pdftex.def Info: diff_quot_plots/xsin_hp_trend.png used on input line 2
+25.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 359--360
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 225--226
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25 <./diff_quot_plots/xsin.png> <./diff_quot_plots/xsin_hp_trend.png>]) (./te
+ [23 <./diff_quot_plots/xsin.png> <./diff_quot_plots/xsin_hp_trend.png>]) (./te
 xt/odes.tex
-Underfull \hbox (badness 10000) in paragraph at lines 425--1
+Underfull \hbox (badness 10000) in paragraph at lines 276--1
 
  []
 
-[26]
+[24]
 Chapter 4.
 \openout3 = `main.pyg'.
 
@@ -2429,14 +2304,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-[27
+[25
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-<emr_plots/exp_growth.png, id=232, 462.528pt x 346.896pt>
+<emr_plots/exp_growth.png, id=206, 462.528pt x 346.896pt>
 File: emr_plots/exp_growth.png Graphic file (type png)
 
 <use emr_plots/exp_growth.png>
@@ -2447,7 +2322,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 59--60
  [][] 
  []
 
-<emr_plots/exp_growth_hp_steps.png, id=233, 462.528pt x 346.896pt>
+<emr_plots/exp_growth_hp_steps.png, id=207, 462.528pt x 346.896pt>
 File: emr_plots/exp_growth_hp_steps.png Graphic file (type png)
 
 <use emr_plots/exp_growth_hp_steps.png>
@@ -2460,7 +2335,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 63--64
  []
 
 
-<emr_plots/exp_growth_hp_log_log_pow_fit_trend.png, id=234, 462.528pt x 346.896
+<emr_plots/exp_growth_hp_log_log_pow_fit_trend.png, id=208, 462.528pt x 346.896
 pt>
 File: emr_plots/exp_growth_hp_log_log_pow_fit_trend.png Graphic file (type png)
 
@@ -2473,7 +2348,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 71--72
  [][] 
  []
 
-<emr_plots/exp_growth_hp_trend.png, id=235, 462.528pt x 346.896pt>
+<emr_plots/exp_growth_hp_trend.png, id=209, 462.528pt x 346.896pt>
 File: emr_plots/exp_growth_hp_trend.png Graphic file (type png)
 
 <use emr_plots/exp_growth_hp_trend.png>
@@ -2493,10 +2368,10 @@ Overfull \hbox (24.08356pt too wide) in paragraph at lines 82--92
 
 Underfull \vbox (badness 1953) has occurred while \output is active []
 
- [28 <./emr_plots/exp_growth.png> <./emr_plots/exp_growth_hp_steps.png> <./emr_
+ [26 <./emr_plots/exp_growth.png> <./emr_plots/exp_growth_hp_steps.png> <./emr_
 plots/exp_growth_hp_log_log_pow_fit_trend.png> <./emr_plots/exp_growth_hp_trend
 .png>]
-<emr_plots/logistic.png, id=243, 462.528pt x 346.896pt>
+<emr_plots/logistic.png, id=217, 462.528pt x 346.896pt>
 File: emr_plots/logistic.png Graphic file (type png)
 
 <use emr_plots/logistic.png>
@@ -2507,7 +2382,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 113--114
  [][] 
  []
 
-<emr_plots/logistic_hp_steps.png, id=244, 462.528pt x 346.896pt>
+<emr_plots/logistic_hp_steps.png, id=218, 462.528pt x 346.896pt>
 File: emr_plots/logistic_hp_steps.png Graphic file (type png)
 
 <use emr_plots/logistic_hp_steps.png>
@@ -2520,7 +2395,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 117--118
  []
 
 
-<emr_plots/logistic_hp_log_log_pow_fit_trend.png, id=245, 462.528pt x 346.896pt
+<emr_plots/logistic_hp_log_log_pow_fit_trend.png, id=219, 462.528pt x 346.896pt
 >
 File: emr_plots/logistic_hp_log_log_pow_fit_trend.png Graphic file (type png)
  <use emr_plots/logistic_hp_log_log_pow_fit_trend.png>
@@ -2532,7 +2407,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 125--126
  [][] 
  []
 
-<emr_plots/logistic_hp_trend.png, id=246, 462.528pt x 346.896pt>
+<emr_plots/logistic_hp_trend.png, id=220, 462.528pt x 346.896pt>
 File: emr_plots/logistic_hp_trend.png Graphic file (type png)
 
 <use emr_plots/logistic_hp_trend.png>
@@ -2549,9 +2424,9 @@ Overfull \hbox (15.49469pt too wide) in paragraph at lines 136--146
  [][] 
  []
 
-[29 <./emr_plots/logistic.png> <./emr_plots/logistic_hp_steps.png> <./emr_plots
+[27 <./emr_plots/logistic.png> <./emr_plots/logistic_hp_steps.png> <./emr_plots
 /logistic_hp_log_log_pow_fit_trend.png> <./emr_plots/logistic_hp_trend.png>]
-<emr_plots/tangens.png, id=254, 462.528pt x 346.896pt>
+<emr_plots/tangens.png, id=228, 462.528pt x 346.896pt>
 File: emr_plots/tangens.png Graphic file (type png)
 
 <use emr_plots/tangens.png>
@@ -2562,7 +2437,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 167--168
  [][] 
  []
 
-<emr_plots/tangens_hp_steps.png, id=255, 462.528pt x 346.896pt>
+<emr_plots/tangens_hp_steps.png, id=229, 462.528pt x 346.896pt>
 File: emr_plots/tangens_hp_steps.png Graphic file (type png)
 
 <use emr_plots/tangens_hp_steps.png>
@@ -2575,7 +2450,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 171--172
  []
 
 
-<emr_plots/tangens_hp_log_log_pow_fit_trend.png, id=256, 462.528pt x 346.896pt>
+<emr_plots/tangens_hp_log_log_pow_fit_trend.png, id=230, 462.528pt x 346.896pt>
 File: emr_plots/tangens_hp_log_log_pow_fit_trend.png Graphic file (type png)
 <use emr_plots/tangens_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: emr_plots/tangens_hp_log_log_pow_fit_trend.png used on
@@ -2586,7 +2461,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 179--180
  [][] 
  []
 
-<emr_plots/tangens_hp_trend.png, id=257, 462.528pt x 346.896pt>
+<emr_plots/tangens_hp_trend.png, id=231, 462.528pt x 346.896pt>
 File: emr_plots/tangens_hp_trend.png Graphic file (type png)
 
 <use emr_plots/tangens_hp_trend.png>
@@ -2603,9 +2478,9 @@ Overfull \hbox (24.08356pt too wide) in paragraph at lines 190--200
  [][] 
  []
 
-[30 <./emr_plots/tangens.png> <./emr_plots/tangens_hp_steps.png> <./emr_plots/t
+[28 <./emr_plots/tangens.png> <./emr_plots/tangens_hp_steps.png> <./emr_plots/t
 angens_hp_log_log_pow_fit_trend.png> <./emr_plots/tangens_hp_trend.png>]
-<emr_plots/singularity_0.png, id=265, 462.528pt x 346.896pt>
+<emr_plots/singularity_0.png, id=239, 462.528pt x 346.896pt>
 File: emr_plots/singularity_0.png Graphic file (type png)
 
 <use emr_plots/singularity_0.png>
@@ -2616,7 +2491,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 220--221
  [][] 
  []
 
-<emr_plots/singularity_0_hp_steps.png, id=266, 462.528pt x 346.896pt>
+<emr_plots/singularity_0_hp_steps.png, id=240, 462.528pt x 346.896pt>
 File: emr_plots/singularity_0_hp_steps.png Graphic file (type png)
 
 <use emr_plots/singularity_0_hp_steps.png>
@@ -2629,7 +2504,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 224--225
  []
 
 
-<emr_plots/singularity_0_hp_log_log_pow_fit_trend.png, id=267, 462.528pt x 346.
+<emr_plots/singularity_0_hp_log_log_pow_fit_trend.png, id=241, 462.528pt x 346.
 896pt>
 File: emr_plots/singularity_0_hp_log_log_pow_fit_trend.png Graphic file (type p
 ng)
@@ -2642,7 +2517,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 232--233
  [][] 
  []
 
-<emr_plots/singularity_0_hp_trend.png, id=268, 462.528pt x 346.896pt>
+<emr_plots/singularity_0_hp_trend.png, id=242, 462.528pt x 346.896pt>
 File: emr_plots/singularity_0_hp_trend.png Graphic file (type png)
 
 <use emr_plots/singularity_0_hp_trend.png>
@@ -2659,353 +2534,325 @@ Overfull \hbox (24.08356pt too wide) in paragraph at lines 243--253
  [][] 
  []
 
-<emr_plots/singularity_2.png, id=269, 462.528pt x 346.896pt>
+<emr_plots/singularity_2.png, id=243, 462.528pt x 346.896pt>
 File: emr_plots/singularity_2.png Graphic file (type png)
 
 <use emr_plots/singularity_2.png>
-Package pdftex.def Info: emr_plots/singularity_2.png used on input line 259.
+Package pdftex.def Info: emr_plots/singularity_2.png used on input line 261.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 259--260
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 261--262
  [][] 
  []
 
-<emr_plots/singularity_2_hp_steps.png, id=270, 462.528pt x 346.896pt>
+<emr_plots/singularity_2_hp_steps.png, id=244, 462.528pt x 346.896pt>
 File: emr_plots/singularity_2_hp_steps.png Graphic file (type png)
 
 <use emr_plots/singularity_2_hp_steps.png>
 Package pdftex.def Info: emr_plots/singularity_2_hp_steps.png used on input lin
-e 263.
+e 265.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 263--264
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 265--266
  [][] 
  []
 
-[31 <./emr_plots/singularity_0.png> <./emr_plots/singularity_0_hp_steps.png> <.
+[29 <./emr_plots/singularity_0.png> <./emr_plots/singularity_0_hp_steps.png> <.
 /emr_plots/singularity_0_hp_log_log_pow_fit_trend.png> <./emr_plots/singularity
 _0_hp_trend.png>]
-<emr_plots/singularity_2_hp_log_log_pow_fit_trend.png, id=279, 462.528pt x 346.
+<emr_plots/singularity_2_hp_log_log_pow_fit_trend.png, id=252, 462.528pt x 346.
 896pt>
 File: emr_plots/singularity_2_hp_log_log_pow_fit_trend.png Graphic file (type p
 ng)
  <use emr_plots/singularity_2_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: emr_plots/singularity_2_hp_log_log_pow_fit_trend.png u
-sed on input line 271.
+sed on input line 273.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 271--272
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 273--274
  [][] 
  []
 
-<emr_plots/singularity_2_hp_trend.png, id=280, 462.528pt x 346.896pt>
+<emr_plots/singularity_2_hp_trend.png, id=253, 462.528pt x 346.896pt>
 File: emr_plots/singularity_2_hp_trend.png Graphic file (type png)
 
 <use emr_plots/singularity_2_hp_trend.png>
 Package pdftex.def Info: emr_plots/singularity_2_hp_trend.png used on input lin
-e 275.
+e 277.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 275--276
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 277--278
  [][] 
  []
 
-<emr_plots/singularity_4.png, id=281, 462.528pt x 346.896pt>
+<emr_plots/singularity_4.png, id=254, 462.528pt x 346.896pt>
 File: emr_plots/singularity_4.png Graphic file (type png)
 
 <use emr_plots/singularity_4.png>
-Package pdftex.def Info: emr_plots/singularity_4.png used on input line 298.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 298--299
- [][] 
- []
-
-<emr_plots/singularity_4_hp_steps.png, id=282, 462.528pt x 346.896pt>
-File: emr_plots/singularity_4_hp_steps.png Graphic file (type png)
-
-<use emr_plots/singularity_4_hp_steps.png>
-Package pdftex.def Info: emr_plots/singularity_4_hp_steps.png used on input lin
-e 302.
+Package pdftex.def Info: emr_plots/singularity_4.png used on input line 302.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 302--303
  [][] 
  []
 
+<emr_plots/singularity_4_hp_steps.png, id=255, 462.528pt x 346.896pt>
+File: emr_plots/singularity_4_hp_steps.png Graphic file (type png)
 
-<emr_plots/singularity_4_hp_log_log_pow_fit_trend.png, id=283, 462.528pt x 346.
+<use emr_plots/singularity_4_hp_steps.png>
+Package pdftex.def Info: emr_plots/singularity_4_hp_steps.png used on input lin
+e 306.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 306--307
+ [][] 
+ []
+
+
+<emr_plots/singularity_4_hp_log_log_pow_fit_trend.png, id=256, 462.528pt x 346.
 896pt>
 File: emr_plots/singularity_4_hp_log_log_pow_fit_trend.png Graphic file (type p
 ng)
  <use emr_plots/singularity_4_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: emr_plots/singularity_4_hp_log_log_pow_fit_trend.png u
-sed on input line 310.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 310--311
- [][] 
- []
-
-<emr_plots/singularity_4_hp_trend.png, id=284, 462.528pt x 346.896pt>
-File: emr_plots/singularity_4_hp_trend.png Graphic file (type png)
-
-<use emr_plots/singularity_4_hp_trend.png>
-Package pdftex.def Info: emr_plots/singularity_4_hp_trend.png used on input lin
-e 314.
+sed on input line 314.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 314--315
  [][] 
  []
 
+<emr_plots/singularity_4_hp_trend.png, id=257, 462.528pt x 346.896pt>
+File: emr_plots/singularity_4_hp_trend.png Graphic file (type png)
 
-Underfull \vbox (badness 3746) has occurred while \output is active []
+<use emr_plots/singularity_4_hp_trend.png>
+Package pdftex.def Info: emr_plots/singularity_4_hp_trend.png used on input lin
+e 318.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
- [32 <./emr_plots/singularity_2.png> <./emr_plots/singularity_2_hp_steps.png> <
-./emr_plots/singularity_2_hp_log_log_pow_fit_trend.png> <./emr_plots/singularit
-y_2_hp_trend.png> <./emr_plots/singularity_4.png> <./emr_plots/singularity_4_hp
-_steps.png>]
-Overfull \hbox (55.01749pt too wide) in paragraph at lines 321--331
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 318--319
+ [][] 
+ []
+
+[30 <./emr_plots/singularity_2.png> <./emr_plots/singularity_2_hp_steps.png> <.
+/emr_plots/singularity_2_hp_log_log_pow_fit_trend.png> <./emr_plots/singularity
+_2_hp_trend.png> <./emr_plots/singularity_4.png> <./emr_plots/singularity_4_hp_
+steps.png>]
+Overfull \hbox (55.01749pt too wide) in paragraph at lines 325--335
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--334
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
-<emr_plots/log_p_vs_q_sing.png, id=294, 462.528pt x 346.896pt>
+<emr_plots/log_p_vs_q_sing.png, id=267, 462.528pt x 346.896pt>
 File: emr_plots/log_p_vs_q_sing.png Graphic file (type png)
 
 <use emr_plots/log_p_vs_q_sing.png>
-Package pdftex.def Info: emr_plots/log_p_vs_q_sing.png used on input line 341.
+Package pdftex.def Info: emr_plots/log_p_vs_q_sing.png used on input line 345.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 341--342
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 345--346
  [][] 
  []
 
-<emr_plots/quad_sing_0.png, id=295, 462.528pt x 346.896pt>
+<emr_plots/quad_sing_0.png, id=268, 462.528pt x 346.896pt>
 File: emr_plots/quad_sing_0.png Graphic file (type png)
 
 <use emr_plots/quad_sing_0.png>
-Package pdftex.def Info: emr_plots/quad_sing_0.png used on input line 359.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 359--360
- [][] 
- []
-
-<emr_plots/quad_sing_0_hp_steps.png, id=296, 462.528pt x 346.896pt>
-File: emr_plots/quad_sing_0_hp_steps.png Graphic file (type png)
-
-<use emr_plots/quad_sing_0_hp_steps.png>
-Package pdftex.def Info: emr_plots/quad_sing_0_hp_steps.png used on input line 
-363.
+Package pdftex.def Info: emr_plots/quad_sing_0.png used on input line 363.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 363--364
  [][] 
  []
 
-[33 <./emr_plots/singularity_4_hp_log_log_pow_fit_trend.png> <./emr_plots/singu
-larity_4_hp_trend.png> <./emr_plots/log_p_vs_q_sing.png>]
-<emr_plots/quad_sing_0_hp_log_log_pow_fit_trend.png, id=303, 462.528pt x 346.89
+<emr_plots/quad_sing_0_hp_steps.png, id=269, 462.528pt x 346.896pt>
+File: emr_plots/quad_sing_0_hp_steps.png Graphic file (type png)
+
+<use emr_plots/quad_sing_0_hp_steps.png>
+Package pdftex.def Info: emr_plots/quad_sing_0_hp_steps.png used on input line 
+367.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 367--368
+ [][] 
+ []
+
+
+Underfull \vbox (badness 1360) has occurred while \output is active []
+
+ [31 <./emr_plots/singularity_4_hp_log_log_pow_fit_trend.png> <./emr_plots/sing
+ularity_4_hp_trend.png> <./emr_plots/log_p_vs_q_sing.png>]
+<emr_plots/quad_sing_0_hp_log_log_pow_fit_trend.png, id=277, 462.528pt x 346.89
 6pt>
 File: emr_plots/quad_sing_0_hp_log_log_pow_fit_trend.png Graphic file (type png
 )
  <use emr_plots/quad_sing_0_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: emr_plots/quad_sing_0_hp_log_log_pow_fit_trend.png use
-d on input line 371.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 371--372
- [][] 
- []
-
-<emr_plots/quad_sing_0_hp_trend.png, id=304, 462.528pt x 346.896pt>
-File: emr_plots/quad_sing_0_hp_trend.png Graphic file (type png)
-
-<use emr_plots/quad_sing_0_hp_trend.png>
-Package pdftex.def Info: emr_plots/quad_sing_0_hp_trend.png used on input line 
-375.
+d on input line 375.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 375--376
  [][] 
  []
 
+<emr_plots/quad_sing_0_hp_trend.png, id=278, 462.528pt x 346.896pt>
+File: emr_plots/quad_sing_0_hp_trend.png Graphic file (type png)
 
-Overfull \hbox (24.08356pt too wide) in paragraph at lines 382--392
+<use emr_plots/quad_sing_0_hp_trend.png>
+Package pdftex.def Info: emr_plots/quad_sing_0_hp_trend.png used on input line 
+379.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 379--380
  [][] 
  []
 
-<emr_plots/quad_sing_2.png, id=305, 462.528pt x 346.896pt>
+
+Overfull \hbox (24.08356pt too wide) in paragraph at lines 386--396
+ [][] 
+ []
+
+<emr_plots/quad_sing_2.png, id=279, 462.528pt x 346.896pt>
 File: emr_plots/quad_sing_2.png Graphic file (type png)
 
 <use emr_plots/quad_sing_2.png>
-Package pdftex.def Info: emr_plots/quad_sing_2.png used on input line 398.
+Package pdftex.def Info: emr_plots/quad_sing_2.png used on input line 404.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 398--399
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 404--405
  [][] 
  []
 
-<emr_plots/quad_sing_2_hp_steps.png, id=306, 462.528pt x 346.896pt>
+<emr_plots/quad_sing_2_hp_steps.png, id=280, 462.528pt x 346.896pt>
 File: emr_plots/quad_sing_2_hp_steps.png Graphic file (type png)
 
 <use emr_plots/quad_sing_2_hp_steps.png>
 Package pdftex.def Info: emr_plots/quad_sing_2_hp_steps.png used on input line 
-402.
+408.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 402--403
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 408--409
  [][] 
  []
 
 
-<emr_plots/quad_sing_2_hp_log_log_pow_fit_trend.png, id=307, 462.528pt x 346.89
+<emr_plots/quad_sing_2_hp_log_log_pow_fit_trend.png, id=281, 462.528pt x 346.89
 6pt>
 File: emr_plots/quad_sing_2_hp_log_log_pow_fit_trend.png Graphic file (type png
 )
  <use emr_plots/quad_sing_2_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: emr_plots/quad_sing_2_hp_log_log_pow_fit_trend.png use
-d on input line 410.
+d on input line 416.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 410--411
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 416--417
  [][] 
  []
 
-<emr_plots/quad_sing_2_hp_trend.png, id=308, 462.528pt x 346.896pt>
+<emr_plots/quad_sing_2_hp_trend.png, id=282, 462.528pt x 346.896pt>
 File: emr_plots/quad_sing_2_hp_trend.png Graphic file (type png)
 
 <use emr_plots/quad_sing_2_hp_trend.png>
 Package pdftex.def Info: emr_plots/quad_sing_2_hp_trend.png used on input line 
-414.
+420.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 414--415
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 420--421
  [][] 
  []
 
+[32 <./emr_plots/quad_sing_0.png> <./emr_plots/quad_sing_0_hp_steps.png> <./emr
+_plots/quad_sing_0_hp_log_log_pow_fit_trend.png> <./emr_plots/quad_sing_0_hp_tr
+end.png> <./emr_plots/quad_sing_2.png> <./emr_plots/quad_sing_2_hp_steps.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
-Underfull \vbox (badness 3601) has occurred while \output is active []
+ []
 
- [34 <./emr_plots/quad_sing_0.png> <./emr_plots/quad_sing_0_hp_steps.png> <./em
-r_plots/quad_sing_0_hp_log_log_pow_fit_trend.png> <./emr_plots/quad_sing_0_hp_t
-rend.png> <./emr_plots/quad_sing_2.png> <./emr_plots/quad_sing_2_hp_steps.png>]
-
-<emr_plots/quad_sing_4.png, id=318, 462.528pt x 346.896pt>
+<emr_plots/quad_sing_4.png, id=292, 462.528pt x 346.896pt>
 File: emr_plots/quad_sing_4.png Graphic file (type png)
 
 <use emr_plots/quad_sing_4.png>
-Package pdftex.def Info: emr_plots/quad_sing_4.png used on input line 437.
+Package pdftex.def Info: emr_plots/quad_sing_4.png used on input line 447.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 437--438
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 447--448
  [][] 
  []
 
-<emr_plots/quad_sing_4_hp_steps.png, id=319, 462.528pt x 346.896pt>
+<emr_plots/quad_sing_4_hp_steps.png, id=293, 462.528pt x 346.896pt>
 File: emr_plots/quad_sing_4_hp_steps.png Graphic file (type png)
 
 <use emr_plots/quad_sing_4_hp_steps.png>
 Package pdftex.def Info: emr_plots/quad_sing_4_hp_steps.png used on input line 
-441.
+451.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 441--442
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 451--452
  [][] 
  []
 
 
-<emr_plots/quad_sing_4_hp_log_log_pow_fit_trend.png, id=320, 462.528pt x 346.89
+<emr_plots/quad_sing_4_hp_log_log_pow_fit_trend.png, id=294, 462.528pt x 346.89
 6pt>
 File: emr_plots/quad_sing_4_hp_log_log_pow_fit_trend.png Graphic file (type png
 )
  <use emr_plots/quad_sing_4_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: emr_plots/quad_sing_4_hp_log_log_pow_fit_trend.png use
-d on input line 449.
+d on input line 459.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 449--450
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 459--460
  [][] 
  []
 
-<emr_plots/quad_sing_4_hp_trend.png, id=321, 462.528pt x 346.896pt>
+<emr_plots/quad_sing_4_hp_trend.png, id=295, 462.528pt x 346.896pt>
 File: emr_plots/quad_sing_4_hp_trend.png Graphic file (type png)
 
 <use emr_plots/quad_sing_4_hp_trend.png>
 Package pdftex.def Info: emr_plots/quad_sing_4_hp_trend.png used on input line 
-453.
+463.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 453--454
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 463--464
  [][] 
  []
 
-
-Underfull \vbox (badness 3601) has occurred while \output is active []
-
- [35 <./emr_plots/quad_sing_2_hp_log_log_pow_fit_trend.png> <./emr_plots/quad_s
-ing_2_hp_trend.png> <./emr_plots/quad_sing_4.png> <./emr_plots/quad_sing_4_hp_s
-teps.png> <./emr_plots/quad_sing_4_hp_log_log_pow_fit_trend.png> <./emr_plots/q
-uad_sing_4_hp_trend.png>]
-<emr_plots/log_p_vs_q_quad_sing.png, id=331, 462.528pt x 346.896pt>
+[33 <./emr_plots/quad_sing_2_hp_log_log_pow_fit_trend.png> <./emr_plots/quad_si
+ng_2_hp_trend.png> <./emr_plots/quad_sing_4.png> <./emr_plots/quad_sing_4_hp_st
+eps.png> <./emr_plots/quad_sing_4_hp_log_log_pow_fit_trend.png> <./emr_plots/qu
+ad_sing_4_hp_trend.png>]
+<emr_plots/log_p_vs_q_quad_sing.png, id=305, 462.528pt x 346.896pt>
 File: emr_plots/log_p_vs_q_quad_sing.png Graphic file (type png)
 
 <use emr_plots/log_p_vs_q_quad_sing.png>
 Package pdftex.def Info: emr_plots/log_p_vs_q_quad_sing.png used on input line 
-478.
+490.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 478--479
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 490--491
  [][] 
  []
 
-<emr_plots/rotation.png, id=332, 462.528pt x 346.896pt>
+<emr_plots/rotation.png, id=306, 462.528pt x 346.896pt>
 File: emr_plots/rotation.png Graphic file (type png)
 
 <use emr_plots/rotation.png>
-Package pdftex.def Info: emr_plots/rotation.png used on input line 498.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 498--499
- [][] 
- []
-
-<emr_plots/rotation_hp_steps.png, id=333, 462.528pt x 346.896pt>
-File: emr_plots/rotation_hp_steps.png Graphic file (type png)
-
-<use emr_plots/rotation_hp_steps.png>
-Package pdftex.def Info: emr_plots/rotation_hp_steps.png used on input line 502
-.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 502--503
- [][] 
- []
-
-
-<emr_plots/rotation_hp_log_log_pow_fit_trend.png, id=334, 462.528pt x 346.896pt
->
-File: emr_plots/rotation_hp_log_log_pow_fit_trend.png Graphic file (type png)
- <use emr_plots/rotation_hp_log_log_pow_fit_trend.png>
-Package pdftex.def Info: emr_plots/rotation_hp_log_log_pow_fit_trend.png used o
-n input line 510.
+Package pdftex.def Info: emr_plots/rotation.png used on input line 510.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 510--511
  [][] 
  []
 
-<emr_plots/rotation_hp_trend.png, id=335, 462.528pt x 346.896pt>
-File: emr_plots/rotation_hp_trend.png Graphic file (type png)
+<emr_plots/rotation_hp_steps.png, id=307, 462.528pt x 346.896pt>
+File: emr_plots/rotation_hp_steps.png Graphic file (type png)
 
-<use emr_plots/rotation_hp_trend.png>
-Package pdftex.def Info: emr_plots/rotation_hp_trend.png used on input line 514
+<use emr_plots/rotation_hp_steps.png>
+Package pdftex.def Info: emr_plots/rotation_hp_steps.png used on input line 514
 .
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
@@ -3014,332 +2861,371 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 514--515
  []
 
 
-Underfull \vbox (badness 4181) has occurred while \output is active []
+<emr_plots/rotation_hp_log_log_pow_fit_trend.png, id=308, 462.528pt x 346.896pt
+>
+File: emr_plots/rotation_hp_log_log_pow_fit_trend.png Graphic file (type png)
+ <use emr_plots/rotation_hp_log_log_pow_fit_trend.png>
+Package pdftex.def Info: emr_plots/rotation_hp_log_log_pow_fit_trend.png used o
+n input line 522.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
- [36 <./emr_plots/log_p_vs_q_quad_sing.png> <./emr_plots/rotation.png> <./emr_p
-lots/rotation_hp_steps.png>]
-Overfull \hbox (35.03357pt too wide) in paragraph at lines 521--531
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 522--523
  [][] 
  []
 
-<emr_plots/oscillation.png, id=342, 462.528pt x 346.896pt>
+<emr_plots/rotation_hp_trend.png, id=309, 462.528pt x 346.896pt>
+File: emr_plots/rotation_hp_trend.png Graphic file (type png)
+
+<use emr_plots/rotation_hp_trend.png>
+Package pdftex.def Info: emr_plots/rotation_hp_trend.png used on input line 526
+.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 526--527
+ [][] 
+ []
+
+
+Underfull \vbox (badness 2573) has occurred while \output is active []
+
+ [34 <./emr_plots/log_p_vs_q_quad_sing.png> <./emr_plots/rotation.png> <./emr_p
+lots/rotation_hp_steps.png>]
+Overfull \hbox (43.35307pt too wide) in paragraph at lines 533--543
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--546
+
+ []
+
+<emr_plots/oscillation.png, id=316, 462.528pt x 346.896pt>
 File: emr_plots/oscillation.png Graphic file (type png)
 
 <use emr_plots/oscillation.png>
-Package pdftex.def Info: emr_plots/oscillation.png used on input line 546.
+Package pdftex.def Info: emr_plots/oscillation.png used on input line 560.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 546--547
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 560--561
  [][] 
  []
 
-<emr_plots/oscillation_hp_steps.png, id=343, 462.528pt x 346.896pt>
+<emr_plots/oscillation_hp_steps.png, id=317, 462.528pt x 346.896pt>
 File: emr_plots/oscillation_hp_steps.png Graphic file (type png)
 
 <use emr_plots/oscillation_hp_steps.png>
 Package pdftex.def Info: emr_plots/oscillation_hp_steps.png used on input line 
-550.
+564.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 550--551
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 564--565
  [][] 
  []
 
 
-<emr_plots/oscillation_hp_log_log_pow_fit_trend.png, id=344, 462.528pt x 346.89
+<emr_plots/oscillation_hp_log_log_pow_fit_trend.png, id=318, 462.528pt x 346.89
 6pt>
 File: emr_plots/oscillation_hp_log_log_pow_fit_trend.png Graphic file (type png
 )
  <use emr_plots/oscillation_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: emr_plots/oscillation_hp_log_log_pow_fit_trend.png use
-d on input line 558.
+d on input line 572.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 558--559
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 572--573
  [][] 
  []
 
-<emr_plots/oscillation_hp_trend.png, id=345, 462.528pt x 346.896pt>
+<emr_plots/oscillation_hp_trend.png, id=319, 462.528pt x 346.896pt>
 File: emr_plots/oscillation_hp_trend.png Graphic file (type png)
 
 <use emr_plots/oscillation_hp_trend.png>
 Package pdftex.def Info: emr_plots/oscillation_hp_trend.png used on input line 
-562.
+576.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 562--563
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 576--577
  [][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2435) has occurred while \output is active []
 
- [37 <./emr_plots/rotation_hp_log_log_pow_fit_trend.png> <./emr_plots/rotation_
+ [35 <./emr_plots/rotation_hp_log_log_pow_fit_trend.png> <./emr_plots/rotation_
 hp_trend.png> <./emr_plots/oscillation.png> <./emr_plots/oscillation_hp_steps.p
 ng>]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 587.
+(amsmath)                 on input line 601.
 
-<emr_plots/federpendel.png, id=354, 462.528pt x 346.896pt>
+<emr_plots/federpendel.png, id=327, 462.528pt x 346.896pt>
 File: emr_plots/federpendel.png Graphic file (type png)
 
 <use emr_plots/federpendel.png>
-Package pdftex.def Info: emr_plots/federpendel.png used on input line 595.
+Package pdftex.def Info: emr_plots/federpendel.png used on input line 609.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 595--596
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 609--610
  [][] 
  []
 
-<emr_plots/federpendel_1_hp_steps.png, id=355, 462.528pt x 346.896pt>
+<emr_plots/federpendel_1_hp_steps.png, id=328, 462.528pt x 346.896pt>
 File: emr_plots/federpendel_1_hp_steps.png Graphic file (type png)
 
 <use emr_plots/federpendel_1_hp_steps.png>
 Package pdftex.def Info: emr_plots/federpendel_1_hp_steps.png used on input lin
-e 599.
+e 613.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 599--600
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 613--614
  [][] 
  []
 
 
-<emr_plots/federpendel_1_hp_log_log_pow_fit_trend.png, id=356, 462.528pt x 346.
+<emr_plots/federpendel_1_hp_log_log_pow_fit_trend.png, id=329, 462.528pt x 346.
 896pt>
 File: emr_plots/federpendel_1_hp_log_log_pow_fit_trend.png Graphic file (type p
 ng)
  <use emr_plots/federpendel_1_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: emr_plots/federpendel_1_hp_log_log_pow_fit_trend.png u
-sed on input line 607.
+sed on input line 621.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 607--608
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 621--622
  [][] 
  []
 
-<emr_plots/federpendel_1_hp_trend.png, id=357, 462.528pt x 346.896pt>
+<emr_plots/federpendel_1_hp_trend.png, id=330, 462.528pt x 346.896pt>
 File: emr_plots/federpendel_1_hp_trend.png Graphic file (type png)
 
 <use emr_plots/federpendel_1_hp_trend.png>
 Package pdftex.def Info: emr_plots/federpendel_1_hp_trend.png used on input lin
-e 611.
+e 625.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 611--612
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 625--626
  [][] 
  []
 
 
-Underfull \vbox (badness 1946) has occurred while \output is active []
+Underfull \vbox (badness 1102) has occurred while \output is active []
 
- [38 <./emr_plots/oscillation_hp_log_log_pow_fit_trend.png> <./emr_plots/oscill
+ [36 <./emr_plots/oscillation_hp_log_log_pow_fit_trend.png> <./emr_plots/oscill
 ation_hp_trend.png> <./emr_plots/federpendel.png> <./emr_plots/federpendel_1_hp
-_steps.png>] <emr_plots/federpendel_2.png, id=366, 462.528pt x 346.896pt>
+_steps.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 644--645
+
+ []
+
+<emr_plots/federpendel_2.png, id=339, 462.528pt x 346.896pt>
 File: emr_plots/federpendel_2.png Graphic file (type png)
 
 <use emr_plots/federpendel_2.png>
-Package pdftex.def Info: emr_plots/federpendel_2.png used on input line 635.
+Package pdftex.def Info: emr_plots/federpendel_2.png used on input line 652.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 635--636
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 652--653
  [][] 
  []
 
-<emr_plots/federpendel_2_hp_steps.png, id=367, 462.528pt x 346.896pt>
+<emr_plots/federpendel_2_hp_steps.png, id=340, 462.528pt x 346.896pt>
 File: emr_plots/federpendel_2_hp_steps.png Graphic file (type png)
 
 <use emr_plots/federpendel_2_hp_steps.png>
 Package pdftex.def Info: emr_plots/federpendel_2_hp_steps.png used on input lin
-e 639.
+e 656.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 639--640
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 656--657
  [][] 
  []
 
 
-<emr_plots/federpendel_2_hp_log_log_pow_fit_trend.png, id=368, 462.528pt x 346.
+<emr_plots/federpendel_2_hp_log_log_pow_fit_trend.png, id=341, 462.528pt x 346.
 896pt>
 File: emr_plots/federpendel_2_hp_log_log_pow_fit_trend.png Graphic file (type p
 ng)
  <use emr_plots/federpendel_2_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: emr_plots/federpendel_2_hp_log_log_pow_fit_trend.png u
-sed on input line 647.
+sed on input line 664.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 647--648
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 664--665
  [][] 
  []
 
-<emr_plots/federpendel_2_hp_trend.png, id=369, 462.528pt x 346.896pt>
+<emr_plots/federpendel_2_hp_trend.png, id=342, 462.528pt x 346.896pt>
 File: emr_plots/federpendel_2_hp_trend.png Graphic file (type png)
 
 <use emr_plots/federpendel_2_hp_trend.png>
 Package pdftex.def Info: emr_plots/federpendel_2_hp_trend.png used on input lin
-e 651.
+e 668.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 651--652
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 668--669
  [][] 
  []
 
-
-Underfull \vbox (badness 3746) has occurred while \output is active []
-
- [39 <./emr_plots/federpendel_1_hp_log_log_pow_fit_trend.png> <./emr_plots/fede
-rpendel_1_hp_trend.png> <./emr_plots/federpendel_2.png> <./emr_plots/federpende
-l_2_hp_steps.png> <./emr_plots/federpendel_2_hp_log_log_pow_fit_trend.png> <./e
-mr_plots/federpendel_2_hp_trend.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 675--677
+[37 <./emr_plots/federpendel_1_hp_log_log_pow_fit_trend.png> <./emr_plots/feder
+pendel_1_hp_trend.png> <./emr_plots/federpendel_2.png> <./emr_plots/federpendel
+_2_hp_steps.png> <./emr_plots/federpendel_2_hp_log_log_pow_fit_trend.png> <./em
+r_plots/federpendel_2_hp_trend.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 687--688
 
  []
 
-<emr_plots/lorenz.png, id=379, 462.528pt x 346.896pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 696--698
+
+ []
+
+<emr_plots/lorenz.png, id=353, 462.528pt x 346.896pt>
 File: emr_plots/lorenz.png Graphic file (type png)
 
 <use emr_plots/lorenz.png>
-Package pdftex.def Info: emr_plots/lorenz.png used on input line 682.
+Package pdftex.def Info: emr_plots/lorenz.png used on input line 703.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 682--683
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 703--704
  [][] 
  []
 
-<emr_plots/lorenz_hp_steps.png, id=380, 462.528pt x 346.896pt>
+<emr_plots/lorenz_hp_steps.png, id=354, 462.528pt x 346.896pt>
 File: emr_plots/lorenz_hp_steps.png Graphic file (type png)
 
 <use emr_plots/lorenz_hp_steps.png>
-Package pdftex.def Info: emr_plots/lorenz_hp_steps.png used on input line 686.
+Package pdftex.def Info: emr_plots/lorenz_hp_steps.png used on input line 707.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 686--687
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 707--708
  [][] 
  []
 
 
-<emr_plots/lorenz_hp_log_log_pow_fit_trend.png, id=381, 462.528pt x 346.896pt>
+<emr_plots/lorenz_hp_log_log_pow_fit_trend.png, id=355, 462.528pt x 346.896pt>
 File: emr_plots/lorenz_hp_log_log_pow_fit_trend.png Graphic file (type png)
 
 <use emr_plots/lorenz_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: emr_plots/lorenz_hp_log_log_pow_fit_trend.png used on 
-input line 694.
+input line 715.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 694--695
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 715--716
  [][] 
  []
 
-<emr_plots/lorenz_hp_trend.png, id=382, 462.528pt x 346.896pt>
+<emr_plots/lorenz_hp_trend.png, id=356, 462.528pt x 346.896pt>
 File: emr_plots/lorenz_hp_trend.png Graphic file (type png)
 
 <use emr_plots/lorenz_hp_trend.png>
-Package pdftex.def Info: emr_plots/lorenz_hp_trend.png used on input line 698.
+Package pdftex.def Info: emr_plots/lorenz_hp_trend.png used on input line 719.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 698--699
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 719--720
  [][] 
  []
 
 
-Overfull \hbox (24.08356pt too wide) in paragraph at lines 704--714
+Overfull \hbox (24.08356pt too wide) in paragraph at lines 725--735
  [][] 
  []
 
-<emr_plots/lorenz_02.png, id=383, 462.528pt x 346.896pt>
+[38 <./emr_plots/lorenz.png> <./emr_plots/lorenz_hp_steps.png> <./emr_plots/lor
+enz_hp_log_log_pow_fit_trend.png> <./emr_plots/lorenz_hp_trend.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 737--738
+
+ []
+
+<emr_plots/lorenz_02.png, id=364, 462.528pt x 346.896pt>
 File: emr_plots/lorenz_02.png Graphic file (type png)
 
 <use emr_plots/lorenz_02.png>
-Package pdftex.def Info: emr_plots/lorenz_02.png used on input line 720.
+Package pdftex.def Info: emr_plots/lorenz_02.png used on input line 745.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 720--721
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 745--746
  [][] 
  []
 
-<emr_plots/lorenz_02_hp_steps.png, id=384, 462.528pt x 346.896pt>
+<emr_plots/lorenz_02_hp_steps.png, id=365, 462.528pt x 346.896pt>
 File: emr_plots/lorenz_02_hp_steps.png Graphic file (type png)
 
 <use emr_plots/lorenz_02_hp_steps.png>
-Package pdftex.def Info: emr_plots/lorenz_02_hp_steps.png used on input line 72
-4.
+Package pdftex.def Info: emr_plots/lorenz_02_hp_steps.png used on input line 74
+9.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 724--725
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 749--750
  [][] 
  []
 
-[40 <./emr_plots/lorenz.png> <./emr_plots/lorenz_hp_steps.png> <./emr_plots/lor
-enz_hp_log_log_pow_fit_trend.png> <./emr_plots/lorenz_hp_trend.png>]
-<emr_plots/lorenz_02_hp_log_log_pow_fit_trend.png, id=392, 462.528pt x 346.896p
+
+<emr_plots/lorenz_02_hp_log_log_pow_fit_trend.png, id=366, 462.528pt x 346.896p
 t>
 File: emr_plots/lorenz_02_hp_log_log_pow_fit_trend.png Graphic file (type png)
  <use emr_plots/lorenz_02_hp_log_log_pow_fit_trend.png>
 Package pdftex.def Info: emr_plots/lorenz_02_hp_log_log_pow_fit_trend.png used 
-on input line 732.
+on input line 757.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 732--733
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 757--758
  [][] 
  []
 
-<emr_plots/lorenz_02_hp_trend.png, id=393, 462.528pt x 346.896pt>
+<emr_plots/lorenz_02_hp_trend.png, id=367, 462.528pt x 346.896pt>
 File: emr_plots/lorenz_02_hp_trend.png Graphic file (type png)
 
 <use emr_plots/lorenz_02_hp_trend.png>
-Package pdftex.def Info: emr_plots/lorenz_02_hp_trend.png used on input line 73
-6.
+Package pdftex.def Info: emr_plots/lorenz_02_hp_trend.png used on input line 76
+1.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 736--737
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 761--762
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 755--756
+Underfull \hbox (badness 10000) in paragraph at lines 781--782
 
  []
 
-
-Overfull \hbox (10.48955pt too wide) in paragraph at lines 761--794
+[39 <./emr_plots/lorenz_02.png> <./emr_plots/lorenz_02_hp_steps.png> <./emr_plo
+ts/lorenz_02_hp_log_log_pow_fit_trend.png> <./emr_plots/lorenz_02_hp_trend.png>
+]
+Overfull \hbox (10.48955pt too wide) in paragraph at lines 789--822
  [][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [41 <./emr_plots/lorenz_02.png> <./emr_plots/lorenz_02_hp_steps.png> <./emr_pl
-ots/lorenz_02_hp_log_log_pow_fit_trend.png> <./emr_plots/lorenz_02_hp_trend.png
->]
-Underfull \hbox (badness 10000) in paragraph at lines 798--799
+Underfull \hbox (badness 10000) in paragraph at lines 826--827
 
  []
 
 
-Overfull \hbox (31.57278pt too wide) in paragraph at lines 804--837
+Overfull \hbox (31.57278pt too wide) in paragraph at lines 832--865
  [][] 
  []
 
 ) (./text/bibliography.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42]
-[43] [44
+ [40]
+[41] [42
 
 ])
 runsystem(rm "main.pyg")...executed.
 
- [45] (./main.aux)
+ [43] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 23695 strings out of 493014
- 451983 string characters out of 6133351
- 575212 words of memory out of 5000000
- 26619 multiletter control sequences out of 15000+600000
+ 23649 strings out of 493014
+ 450288 string characters out of 6133351
+ 576212 words of memory out of 5000000
+ 26579 multiletter control sequences out of 15000+600000
  22751 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,11n,82p,1028b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3369,10 +3255,10 @@ mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf
 -dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dis
 t/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (45 pages, 4006163 bytes).
+Output written on main.pdf (43 pages, 3698251 bytes).
 PDF statistics:
- 496 PDF objects out of 1000 (max. 8388607)
- 182 compressed objects within 2 object streams
+ 470 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 613 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 563 words of extra memory for PDF output out of 10000 (max. 10000000)
 

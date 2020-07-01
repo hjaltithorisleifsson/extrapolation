@@ -63,13 +63,13 @@ Harmonic & lin-ln evals-error & \(4.149\cdot 10^{6}\) & \(6.499\) & \(1.734\) & 
     \label{tab:my_label}
 \end{table}
 
-In standard floating point arithmetic, we get down to machine level precision using any sequence. The Romberg sequence works best, then Bulirsch and then the harmonic. The model fits moderately well for the Bulirsch and harmonic sequence but quite well for the Romberg sequence.
+In standard floating point arithmetic, we get down to machine level precision using any sequence. The Romberg sequence works best, then Bulirsch and then the harmonic. The model seems to fit moderately well in all cases.
 
 \subsection{Logarithm}
 
 Now we will consider the dervative at zero of the function 
 \[
-g_a(x) \coloneqq \ln(x+a), \quad a > 0.
+g(x) \coloneqq \ln(x+1).
 \]
 
 \begin{figure}[H]
@@ -96,67 +96,13 @@ Harmonic & lin-ln evals-error & \(96.18\) & \(2.331\) & \(1.128\) & \(0.01092\) 
     \label{tab:my_label}
 \end{table}
 
-We get down to machine level precision using any sequence, Romberg performes best, then Bulirsch and then the Harmonic one. The model fits quite well for the Romberg sequence and the Harmonic one, but not so well for Bulirsch.
-
-\begin{figure}[H]
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{diff_quot_plots/h_hundredth.png}
-\end{minipage}
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{diff_quot_plots/h_hundredth_hp_trend.png}
-\end{minipage}
-\end{figure}
-
-\begin{table}[H]
-    \centering
-    \small
-    \begin{tabular}{c|c||c|c|c|c|c|c}
-Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(1.503\) & \(2.443\) & \(0.2078\) & \(0.007242\) & \(1.962\) & \(0.000123\) \\
-Bulirsch & lin-ln evals-error & \(0.5981\) & \(6.275\) & \(0.1873\) & \(0.08379\) & \(1.851\) & \(0.001315\) \\
-Harmonic & lin-ln evals-error & \(9618\) & \(2.331\) & \(1.128\) & \(0.01092\) & \(1.264\) & \(0.0004176\) \\
-    \end{tabular}
-    \label{tab:my_label}
-\end{table}
-
-Here the same comments apply as for \(a = 1\).
-
-\begin{figure}[H]
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{diff_quot_plots/h_tenthousandth.png}
-\end{minipage}
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{diff_quot_plots/h_tenthousandth_hp_trend.png}
-\end{minipage}
-\end{figure}
-
-\begin{table}[H]
-    \centering
-    \small
-    \begin{tabular}{c|c||c|c|c|c|c|c}
-Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(150.3\) & \(2.443\) & \(0.2078\) & \(0.007242\) & \(1.962\) & \(0.000123\) \\
-Bulirsch & lin-ln evals-error & \(59.81\) & \(6.275\) & \(0.1873\) & \(0.08379\) & \(1.851\) & \(0.001315\) \\
-Harmonic & lin-ln evals-error & \(9.618\cdot 10^{5}\) & \(2.331\) & \(1.128\) & \(0.01092\) & \(1.264\) & \(0.0004176\) \\
-    \end{tabular}
-    \label{tab:my_label}
-\end{table}
-
-Here the same comments apply as for \(a= 1,10^{-2}\).\\
-
-Note that the \(c\) and \(q\) parameters are independent of \(a\).
+We get down to machine level precision using any sequence, Romberg performes best, then Bulirsch and then the Harmonic one. The model fits quite well in all cases.
 
 \subsection{Square root}
 
 Now we shall consider the derivative at zero of the following function:
 \[
-h_a(x) \coloneqq \sqrt{a + x}, \quad a > 0.
+h(x) \coloneqq \sqrt{1 + x}
 \]
 
 \begin{figure}[H]
@@ -183,87 +129,7 @@ Harmonic & lin-ln evals-error & \(7.958\) & \(2.102\) & \(1.159\) & \(0.008158\)
     \label{tab:my_label}
 \end{table}
 
-In standard double precision floating point arithmetic we get down to machine level precision using any sequence. The model fits quite well for the Romberg and the Harmonic sequence but not as well for the Bulirsch sequence.
-
-\begin{figure}[H]
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{diff_quot_plots/sqrt_em2.png}
-\end{minipage}
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{diff_quot_plots/sqrt_em2_hp_trend.png}
-\end{minipage}
-\end{figure}
-
-\begin{table}[H]
-    \centering
-    \small
-    \begin{tabular}{c|c||c|c|c|c|c|c}
-Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(0.0163\) & \(3.185\) & \(0.2109\) & \(0.009876\) & \(1.959\) & \(0.000166\) \\
-Bulirsch & lin-ln evals-error & \(0.007538\) & \(7.186\) & \(0.1925\) & \(0.09801\) & \(1.846\) & \(0.001513\) \\
-Harmonic & lin-ln evals-error & \(79.58\) & \(2.102\) & \(1.159\) & \(0.008158\) & \(1.259\) & \(0.0003023\) \\
-    \end{tabular}
-    \label{tab:my_label}
-\end{table}
-
-Here the same comments apply as for \(a = 1\). 
-
-\begin{figure}[H]
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{diff_quot_plots/sqrt_em4.png}
-\end{minipage}
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{diff_quot_plots/sqrt_em4_hp_trend.png}
-\end{minipage}
-\end{figure}
-
-\begin{table}[H]
-    \centering
-    \small
-    \begin{tabular}{c|c||c|c|c|c|c|c}
-Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(0.163\) & \(3.185\) & \(0.2109\) & \(0.009876\) & \(1.959\) & \(0.000166\) \\
-Bulirsch & lin-ln evals-error & \(0.07538\) & \(7.186\) & \(0.1925\) & \(0.09801\) & \(1.846\) & \(0.001513\) \\
-Harmonic & lin-ln evals-error & \(795.8\) & \(2.102\) & \(1.159\) & \(0.008158\) & \(1.259\) & \(0.0003023\) \\
-    \end{tabular}
-    \label{tab:my_label}
-\end{table}
-
-Here also the same comments apply.
-
-\begin{figure}[H]
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{diff_quot_plots/sqrt_em16.png}
-\end{minipage}
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{diff_quot_plots/sqrt_em16_hp_trend.png}
-\end{minipage}
-\end{figure}
-
-\begin{table}[H]
-    \centering
-    \small
-    \begin{tabular}{c|c||c|c|c|c|c|c}
-Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(1.63\cdot 10^{5}\) & \(3.185\) & \(0.2109\) & \(0.009876\) & \(1.959\) & \(0.000166\) \\
-Bulirsch & lin-ln evals-error & \(7.538\cdot 10^{4}\) & \(7.186\) & \(0.1925\) & \(0.09801\) & \(1.846\) & \(0.001513\) \\
-Harmonic & lin-ln evals-error & \(7.958\cdot 10^{8}\) & \(2.102\) & \(1.159\) & \(0.008158\) & \(1.259\) & \(0.0003023\) \\
-    \end{tabular}
-    \label{tab:my_label}
-\end{table}
-
-And they also apply here.\\
-
-Note that the \(c\) and \(q\) parameters are independent of \(a\).
+In standard double precision floating point arithmetic we get down to machine level precision using any sequence. The model fits quite well for the Romberg and the Harmonic sequence and moderately well for the Bulirsch sequence.
 
 \subsection{Smooth but not analytic function}
 
@@ -300,7 +166,7 @@ Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
     \label{tab:my_label}
 \end{table}
 
-Here the model fits moderately well in the case of the Romberg sequence and the Bulirsch sequence but not in the case of the harmonic sequence. 
+Here the model does not fit in any case.\\
 
 \subsection{Another smooth but not analytic function}
 
@@ -336,7 +202,7 @@ Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
     \label{tab:my_label}
 \end{table}
 
-Here the model fits fine in the case of the Romberg sequence but not in the other cases.
+Here the model does not fit in any case.
 
 \subsection{Only once differentiable function}
 
@@ -390,12 +256,6 @@ $d/dx|_{x=0}xe^{-1/x^2}$. $h=1/2$ & Harmonic & \(-0.55045\) & \(0.81216\) & \(1.
 $d/dx|_{x=0}\sin x$. $h=1/2$ & Romberg & \(-5.3663\) & \(0.51067\) & \(1.8066\) \\
 $d/dx|_{x=0}\sin x$. $h=1/2$ & Bulirsch & \(-5.1899\) & \(0.64124\) & \(1.651\) \\
 $d/dx|_{x=0}\sin x$. $h=1/2$ & Harmonic & \(3.912\) & \(1.9876\) & \(1.2878\) \\
-$d/dx|_{x = 0} \ln (x + 0.0001)$. $h=1/2\cdot 10^{-4}$ & Romberg & \(5.7177\) & \(0.20942\) & \(1.9619\) \\
-$d/dx|_{x = 0} \ln (x + 0.0001)$. $h=1/2\cdot 10^{-4}$ & Bulirsch & \(4.0682\) & \(0.19126\) & \(1.8443\) \\
-$d/dx|_{x = 0} \ln (x + 0.0001)$. $h=1/2\cdot 10^{-4}$ & Harmonic & \(10.266\) & \(1.0494\) & \(1.2768\) \\
-$d/dx|_{x=0} \ln (x + 0.01)$. $h=1/2\cdot 10^{-2}$ & Romberg & \(1.1125\) & \(0.20942\) & \(1.9619\) \\
-$d/dx|_{x=0} \ln (x + 0.01)$. $h=1/2\cdot 10^{-2}$ & Bulirsch & \(-0.53694\) & \(0.19126\) & \(1.8443\) \\
-$d/dx|_{x=0} \ln (x + 0.01)$. $h=1/2\cdot 10^{-2}$ & Harmonic & \(5.6607\) & \(1.0494\) & \(1.2768\) \\
 $d/dx|_{x=0} \ln(x + 1)$. $h=1/2$ & Romberg & \(-3.4927\) & \(0.20942\) & \(1.9619\) \\
 $d/dx|_{x=0} \ln(x + 1)$. $h=1/2$ & Bulirsch & \(-5.1421\) & \(0.19126\) & \(1.8443\) \\
 $d/dx|_{x=0} \ln(x + 1)$. $h=1/2$ & Harmonic & \(1.0555\) & \(1.0494\) & \(1.2768\) \\
@@ -405,15 +265,6 @@ $d/dx|_{x=0} x^2 \sin(1/x)$. $h=1$ & Harmonic & \(-1.436\) & \(-0.034733\) & \(1
 $d/dx|_{x=0} \sqrt{x + 1}$. $h=1/2$ & Romberg & \(-5.7063\) & \(0.21299\) & \(1.9582\) \\
 $d/dx|_{x=0} \sqrt{x + 1}$. $h=1/2$ & Bulirsch & \(-7.315\) & \(0.19691\) & \(1.8379\) \\
 $d/dx|_{x=0} \sqrt{x + 1}$. $h=1/2$ & Harmonic & \(-0.86323\) & \(1.0951\) & \(1.2682\) \\
-$d/dx|_{x=0}\sqrt{x + 10^{-2}}$. $h=1/2\cdot 10^{-2}$ & Romberg & \(-3.4037\) & \(0.21299\) & \(1.9582\) \\
-$d/dx|_{x=0}\sqrt{x + 10^{-2}}$. $h=1/2\cdot 10^{-2}$ & Bulirsch & \(-5.0125\) & \(0.19691\) & \(1.8379\) \\
-$d/dx|_{x=0}\sqrt{x + 10^{-2}}$. $h=1/2\cdot 10^{-2}$ & Harmonic & \(1.4394\) & \(1.0951\) & \(1.2682\) \\
-$d/dx|_{x=0}\sqrt{x + 10^{-4}}$ $h=1/2\cdot 10^{-4}$ & Romberg & \(-1.1011\) & \(0.21299\) & \(1.9582\) \\
-$d/dx|_{x=0}\sqrt{x + 10^{-4}}$ $h=1/2\cdot 10^{-4}$ & Bulirsch & \(-2.7099\) & \(0.19691\) & \(1.8379\) \\
-$d/dx|_{x=0}\sqrt{x + 10^{-4}}$ $h=1/2\cdot 10^{-4}$ & Harmonic & \(3.7419\) & \(1.0951\) & \(1.2682\) \\
-$d/dx|_{x=0}\sqrt{x + 10^{-16}}$ $h=1/2\cdot 10^{-16}$ & Romberg & \(12.714\) & \(0.21299\) & \(1.9582\) \\
-$d/dx|_{x=0}\sqrt{x + 10^{-16}}$ $h=1/2\cdot 10^{-16}$ & Bulirsch & \(11.106\) & \(0.19691\) & \(1.8379\) \\
-$d/dx|_{x=0}\sqrt{x + 10^{-16}}$ $h=1/2\cdot 10^{-16}$ & Harmonic & \(17.557\) & \(1.0951\) & \(1.2682\) \\
 $d/dx|_{x=0}e^x$ & Romberg & \(-2.408\) & \(0.41106\) & \(1.8479\) \\
 $d/dx|_{x=0}e^x$ & Bulirsch & \(-2.9068\) & \(0.48137\) & \(1.703\) \\
 $d/dx|_{x=0}e^x$ & Harmonic & \(4.7175\) & \(1.5509\) & \(1.3212\) \\

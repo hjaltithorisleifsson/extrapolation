@@ -145,11 +145,9 @@ Bulirsch & ln-ln evals-error & \(4.442\cdot 10^5\) & \(2.965\) & \(1.416\) & \(0
 
 We see that the harmonic sequence performes best, then Bulirsch and then Romberg. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch, but we are like \(2\) digits from there, using the harmonic sequence.\\
 
-For the Romberg and Bulirsch sequence, we can not say that the error converges exponentially with the number of function evaluations since the parameters we get in the cross validation vary a lot. In the case of the harmonic sequence, we seem to have exponential convergence in the number of function evaluations, though that must be verified better, since the \(b\) and \(c\) parameters vary quite much.\\
+For the Romberg sequence we clearly have exponential convergence in the number of extrapolation steps and thus we also get a good fitting for the \(\ln\)-\(\ln\) graph. We also have exponential convergence in the number of steps for the Bulirsch sequence.\\
 
-For all sequences the error seems to converge exponentially with the number of extrapolation steps, but again we there is a lot of variance in the \(b\) parameter.\\
-
-As we expect, since the error seems to converge exponentially with the number of extrapolation steps, \(\ln\)-\(\ln\) plot for the Romberg and Bulirsch sequence seem to fit quit well on the graph of a function of the form \(t \mapsto b - c t^q\). On the other hand, that is not the case for the harmonic sequnce, as we expect.
+The model does not seem to fit well in any case for the Harmonic sequence since since we unreasonably big values for \(A\) in the first two cases and the curve fitting does not even converge in all cases for the last plot.
 
 \subsection{Function with poles}
 
@@ -201,11 +199,7 @@ Bulirsch & ln-ln evals-error & \(2.619\cdot 10^{36}\) & \(15\) & \(2.987\) & \(1
 
 We see that the harmonic sequence performes best, then Bulirsch and then Romberg. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch, but we are like \(5\) digits from there, using the harmonic sequence.\\
 
-For the Romberg and Bulirsch sequence, we can not say that the error converges exponentially with the number of function evaluations since the parameters we get in the cross validation vary a lot, especially since the exponent \(q\) varies a lot. In the case of the harmonic sequence, the model seems to fit very well, since we have very little variance in the parameters.\\
-
-For all sequences the error seems to converge exponentially with the number of extrapolation steps, but again we there is quit a lot of variance in the \(b\) parameter. Note that the exponent from the fitting for the Harmonic sequence is twice the parameter we got when considering the number of function evaluations agains the error, as expected.\\
-
-The model fits quite well to the \(\ln\)-\(\ln\) plot in the case of the Romberg sequence. It clearly does not fit for the Harmonic sequnce but fits moderately well for the Bulirsch sequence.
+Here we clearly have exponential convergence in the number of evaluations for the Harmonic sequence and hence also in the number of steps. The models do not seem to fit very nicely in the other cases.\\
 
 \begin{figure}[H]
 \centering
@@ -237,21 +231,19 @@ The model fits quite well to the \(\ln\)-\(\ln\) plot in the case of the Romberg
     \begin{tabular}{c|c||c|c|c|c|c	|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
 Harmonic & lin-ln evals-error & \(6.15\) & \(0.6637\) & \(-0.6969\) & \(0.01918\) & \(0.5172\) & \(0.003167\) \\
-Romberg & lin-ln evals-error & \(3.02\cdot 10^{7}\) & \(3.985\) & \(3.897\) & \(0.3031\) & \(0.3265\) & \(0.07301\) \\
-Bulirsch & lin-ln evals-error & \(.\) & \(.\) & \(1286\) & \(14.62\) & \(0.3275\) & \(0.744\) \\
+Romberg & lin-ln evals-error & \(3.02\cdot 10^7\) & \(3.985\) & \(3.897\) & \(0.3031\) & \(0.3265\) & \(0.07301\) \\
+Bulirsch & lin-ln evals-error & \(.\) & \(.\) & \(1123\) & \(14.56\) & \(0.3275\) & \(0.744\) \\
 Harmonic & lin-ln steps-error & \(11.9\) & \(0.2941\) & \(-0.496\) & \(0.01497\) & \(1.029\) & \(0.00189\) \\
 Romberg & lin-ln steps-error & \(35.64\) & \(1.539\) & \(0.03496\) & \(0.4962\) & \(2.934\) & \(0.01283\) \\
 Bulirsch & lin-ln steps-error & \(.\) & \(.\) & \(844.6\) & \(14.99\) & \(2.519\) & \(0.2989\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Harmonic & ln-ln evals-error & \(.\) & \(.\) & \(4.863\cdot 10^5\) & \(0.03858\) & \(-0.0002903\) & \(0.3799\) \\
 Romberg & ln-ln evals-error & \(59.88\) & \(1.575\) & \(0.1019\) & \(0.4164\) & \(2.915\) & \(0.0144\) \\
-Bulirsch & ln-ln evals-error & \(.\) & \(.\) & \(806.3\) & \(14.98\) & \(2.965\) & \(0.3358\) \\
+Bulirsch & ln-ln evals-error & \(.\) & \(.\) & \(1069\) & \(14.99\) & \(2.965\) & \(0.3358\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-Here we get divergence for the harmonic sequence, but convergence for the other sequences, fastest for Bulirsch. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch.\\
-
-For the models, in case of convergence, they do not fit very well in any case. The best fitting is when we consider the logarithm of the error against the number of extrapolation steps and the logarithm of number of function evaluations, for the Romberg sequence. There is though quite a lot of variance in the \(b\) and \(c\) parameters.
+Here we get divergence for the harmonic sequence, but convergence for the other sequences, fastest for Bulirsch. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch. None of the models fits.
 
 \begin{figure}[H]
 \centering
@@ -283,14 +275,14 @@ For the models, in case of convergence, they do not fit very well in any case. T
     \begin{tabular}{c|c||c|c|c|c|c	|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
 Harmonic & lin-ln evals-error & \(268\) & \(5.059\) & \(-0.9277\) & \(0.0424\) & \(0.5267\) & \(0.007106\) \\
-Romberg & lin-ln evals-error & \(.\) & \(.\) & \(3052\) & \(2.8\) & \(0.3352\) & \(1.082\) \\
-Bulirsch & lin-ln evals-error & \(.\) & \(.\) & \(2156\) & \(6.319\) & \(0.3451\) & \(1.194\) \\
-Harmonic & lin-ln steps-error & \(.\) & \(.\) & \(75.7\) & \(111.9\) & \(1.033\) & \(0.01205\) \\
-Romberg & lin-ln steps-error & \(9.397\cdot 10^{14}\) & \(4\) & \(4.47\) & \(3.191\) & \(3.087\) & \(0.6264\) \\
-Bulirsch & lin-ln steps-error & \(.\) & \(.\) & \(1572\) & \(3.496\) & \(4.057\) & \(1.73\) \\
+Romberg & lin-ln evals-error & \(.\) & \(.\) & \(3150\) & \(2.785\) & \(0.3352\) & \(1.082\) \\
+Bulirsch & lin-ln evals-error & \(.\) & \(.\) & \(2763\) & \(2.795\) & \(0.6219\) & \(2.844\) \\
+Harmonic & lin-ln steps-error & \(519.6\) & \(2.663\) & \(-0.659\) & \(0.03722\) & \(1.047\) & \(0.004672\) \\
+Romberg & lin-ln steps-error & \(9.388\cdot 10^{14}\) & \(4\) & \(4.469\) & \(3.191\) & \(3.087\) & \(0.6264\) \\
+Bulirsch & lin-ln steps-error & \(.\) & \(.\) & \(1615\) & \(3.548\) & \(4.057\) & \(1.73\) \\
 Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(2.215\cdot 10^{56}\) & \(4\) & \(23.81\) & \(3.7\) & \(3.032\) & \(0.6855\) \\
-Bulirsch & ln-ln evals-error & \(.\) & \(.\) & \(1668\) & \(3.656\) & \(4.841\) & \(1.87\) \\
+Romberg & ln-ln evals-error & \(2.102\cdot 10^{56}\) & \(4\) & \(23.8\) & \(3.7\) & \(3.032\) & \(0.6855\) \\
+Bulirsch & ln-ln evals-error & \(.\) & \(.\) & \(1824\) & \(3.52\) & \(4.841\) & \(1.87\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -334,7 +326,7 @@ This function is analytic on neighbourhood about the interval but we have a sing
     \small
     \begin{tabular}{c|c||c|c|c|c|c	|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Harmonic & lin-ln evals-error & \(4.303\) & \(1.627\) & \(4.576\) & \(0.001334\) & \(0.4944\) & \(8.453\cdot 10^{-5}\) \\
+Harmonic & lin-ln evals-error & \(4.305\) & \(1.625\) & \(4.577\) & \(0.001332\) & \(0.4944\) & \(8.445\cdot 10^{-5}\) \\
 Romberg & lin-ln evals-error & \(4.448\cdot 10^{23}\) & \(3.996\) & \(37.1\) & \(0.03467\) & \(0.1563\) & \(0.009509\) \\
 Bulirsch & lin-ln evals-error & \(1.085\cdot 10^{43}\) & \(13.73\) & \(38.32\) & \(0.2396\) & \(0.2067\) & \(0.06998\) \\
 Harmonic & lin-ln steps-error & \(0.06861\) & \(3.33\) & \(3.274\) & \(0.002897\) & \(0.9871\) & \(0.000164\) \\
@@ -349,9 +341,7 @@ Bulirsch & ln-ln evals-error & \(0.007191\) & \(0.3683\) & \(1.209\) & \(0.00380
 
 We see that the harmonic sequence performes best, then Bulirsch and then Romberg. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch, but we are like \(2\) digits from there, using the harmonic sequence.\\
 
-For the Romberg and Bulirsch sequence, we can not say that the error converges exponentially with the number of function evaluations. In the case of the harmonic sequence, the model seems to fit very well, since we have very little variance in the parameters.\\
-
-For the harmonic sequence the error clearly seems to converge exponentally with the number of extrapolation steps, as we expect, since it seems to converge exponentially with the number of function evaluations. The exponent is approximately two the one from the former fitting as expected. The model, on the other hand, the fitting is rather unstable for the Romberg and Bulirsch sequence though, and hence also when considering the logarithm of the error against the logarithm of the number of function evaluations.
+Here we clearly have exponential convergence in the number of evaluations for the harmonic sequence and hence also in the number of steps. For Romberg and Bulirsch we seem to have exponential convergence in the number of steps.\\ 
 
 \begin{figure}[H]
 \centering
@@ -397,7 +387,9 @@ Bulirsch & ln-ln evals-error & \(0.08405\) & \(1.957\) & \(0.06538\) & \(1.649\)
 
 We see that we can not attain high precision using the harmonic sequence and standard double precision. It is hard to tell which sequence performes best in the long run, though we can say that Bulirsch performes better than Romberg.\\
 
-Here, none of our models seems to fit well. 
+For Romberg, we get low variance in all cases. But since we can not have both exponential convergence in the number of steps and in the number of function evaluations we can not say anything definite.\\
+
+For the other sequences, the results are not clear, unless that the last model clearly does not fit for the Harmonic sequence.\\
 
 \begin{figure}[H]
 \centering
@@ -441,7 +433,7 @@ Bulirsch & ln-ln evals-error & \(1.319\) & \(1.017\) & \(0.3206\) & \(0.7671\) &
     \label{tab:my_label}
 \end{table}
 
-Here again, we do not attain high precision when using the Harmonic sequence in double precision arithmetic. It is hard to say which sequence performes best. None of our models fits.
+Here again, we do not attain high precision when using the Harmonic sequence in double precision arithmetic. It is hard to say which sequence performes best. None of our models seems to fit.
 
 \subsection{Area of half circle}
 
@@ -480,13 +472,13 @@ This function is analytic inside the interval of definition but not at the endpo
     \small
     \begin{tabular}{c|c||c|c|c|c|c	|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
-Romberg & lin-ln evals-error & . & . & \(1.675\cdot 10^{4}\) & \(0.0007499\) & \(9.177\cdot 10^{-5}\) & \(0.001046\) \\
-Bulirsch & lin-ln evals-error & . & . & . & . & . & . \\
-Harmonic & lin-ln steps-error & . & . & . & . & . & . \\
+Harmonic & lin-ln evals-error & \(.\) & \(.\) & \(5.198\cdot 10^4\) & \(0.002568\) & \(2.252\cdot 10^{-5}\) & \(0.001907\) \\
+Romberg & lin-ln evals-error & \(.\) & \(.\) & \(5.666\cdot 10^4\) & \(0.005933\) & \(2.726\cdot 10^{-5}\) & \(0.004682\) \\
+Bulirsch & lin-ln evals-error & \(.\) & \(.\) & \(5.991\cdot 10^4\) & \(0.001785\) & \(2.548\cdot 10^{-5}\) & \(0.001618\) \\
+Harmonic & lin-ln steps-error & \(.\) & \(.\) & \(6.686\cdot 10^4\) & \(0.0003218\) & \(3.369\cdot 10^{-5}\) & \(0.0003045\) \\
 Romberg & lin-ln steps-error & \(1.624\) & \(0.001777\) & \(1.056\) & \(0.0002564\) & \(0.995\) & \(2.782\cdot 10^{-5}\) \\
 Bulirsch & lin-ln steps-error & \(0.4011\) & \(0.1625\) & \(0.5825\) & \(0.0448\) & \(0.9709\) & \(0.003052\) \\
-Harmonic & ln-ln evals-error & \(2.231\) & \(0.6651\) & \(1.643\) & \(0.03504\) & \(0.8886\) & \(0.003977\) \\
+Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
 Romberg & ln-ln evals-error & \(4.527\) & \(0.1118\) & \(1.939\) & \(0.008599\) & \(0.9166\) & \(0.001262\) \\
 Bulirsch & ln-ln evals-error & \(3.499\) & \(0.05917\) & \(1.649\) & \(0.007759\) & \(0.9758\) & \(0.001453\) \\
     \end{tabular}
@@ -495,7 +487,7 @@ Bulirsch & ln-ln evals-error & \(3.499\) & \(0.05917\) & \(1.649\) & \(0.007759\
 
 We see that we do not get high precision using double precision arithmetic, independent of sequence. The Romberg and Bulirsch sequence seem to perform similarly well but the harmonic sequence seems to be slowest.\\
 
-For the harmonic sequence, the error neither converges exponentally with the number of function evaluations nor the number of extrapolation steps. For the Bulirsch none of the models fits well, but for Romberg, model seems to fit moderately well when considering the logarithm of the error against the number of extrapolation steps or the logarithm of the number of function evaluations.
+For the harmonic sequence, the error neither converges exponentally with the number of function evaluations nor the number of extrapolation steps. For Romberg we get a nice fit for the exponential convergence in number of steps. For Bulirsch neither we do not have exponential convergence in number of evaluations, and the results are unclear for the number of steps.
 
 \subsection{Gaussian}
 
@@ -547,9 +539,7 @@ Bulirsch & ln-ln evals-error & \(1.149\cdot 10^{37}\) & \(15\) & \(2.172\) & \(1
 
 In double precision arithmetic we get down to machine level precision using Romberg or Bulirsch, but we get down to like \(2\) digits from there, using the harmonic sequence. The harmonic sequence performes best, then Bulirsch and then Romberg.\\
 
-For the harmonic sequence, the error seems to converge exponentially with the number of extrapolation steps (and hence also with the number of extrapolation steps), but we though must note that there is quite a lot of variance in the \(b\) parameter and the \(c\) parameter. For the Romberg sequence, model fits moderately well when considering the logarithm of the error agains the number of extrapolation steps or the logarithm of the number of function evaluations. For the Bulirsch seqeunce, none of the models fits.
-
-The values of the optimal parameters in the curve fitting of evaluations against the logarithm of the error are:
+For the Harmonic sequence, none of the models fits. For the Romberg sequence, we clearly have exponential convergence in the number of extrapolation steps. For Bulirsch, we clearly do not have exponential convergence in the number of evaluations and fitting of the other models should be rejected since the \(A\) constant is unreasonably big in there is a high variance in \(c\). 
 
 \begin{table}[H]
     \centering

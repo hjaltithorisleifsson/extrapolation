@@ -91,7 +91,7 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \label{tab:my_label}
 \end{table}
 
-Here we have exponential convergence in all cases. The harmonic sequence performes better than Romberg. In standard floating point arithmetic, we get down to maching level error using either sequence.
+Here we clearly have exponential convergence in the number of steps for the Romberg sequence but none of the models fits for the harmonic sequence.
 
 \subsection{Logistic curve}
 
@@ -145,7 +145,7 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \label{tab:my_label}
 \end{table}
 
-Here the model also fits very well, the Harmonic sequence performes better and we get down to machine level precision using either sequence in standard floating point arithmetic.
+Here we clearly have exponential convergence in the number of steps for the Romberg sequence. The model does not fit in any case for the harmonic sequence.
 
 \subsection{Tangens}
 
@@ -199,7 +199,7 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \label{tab:my_label}
 \end{table}
 
-Here we also have exponential convergence in all cases. The harmonic sequence performes better than Romberg. In standard floating point arithmetic, we get down to maching level error using either sequence.
+Here we clearly have exponential convergence in the number of steps for the Romberg sequence. None of the models fits well for the Harmonic sequence.
 
 \subsection{Equation with singularity}
 
@@ -252,6 +252,8 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \label{tab:my_label}
 \end{table}
 
+Here we seem to have exponential convergence in the number of steps for the Romberg sequence. For the Harmonic sequence, none of the models fits nicely.
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -290,6 +292,8 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
+
+Here the model fits moderately well for Romberg sequence, when considering exponential convergence in the number of steps. We do not have nice fit for the harmonic sequence in any of the cases.
 
 \begin{figure}[H]
 \centering
@@ -330,7 +334,7 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \label{tab:my_label}
 \end{table}
 
-The model fits well for large \(a\), and then the Harmonic sequence works better. But for small \(a\) we get a very poor fitting, and extremely slow convergence towards the solution. For \(a = 10^{-4}\), when considering the number of function evaluations agains the error, we can not say that we have exponential convergence because the values on the vertical axis are on much smaller scale then the ones on the horizontal axis. The fitting fails entirely when considering the number of extrapolation steps against the error with the Romberg sequence and \(a = 10^{-4}\).\\
+Here the model does not fit in any case.\\
 
 The plot of \(q\) against \(a\) is as follows:
 
@@ -391,6 +395,8 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \label{tab:my_label}
 \end{table}
 
+Here we clearly have exponential convergence in the number of steps and evaluations for the harmonic sequence. We also have it in the number of steps for the Romberg sequence.
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -430,6 +436,10 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \label{tab:my_label}
 \end{table}
 
+For the Romberg sequence, the model seems to fit moderately well when considering exponential convergence in the number of evaluations but it is not entirely clear since the model also fits moderately well when considering exponential converge in the number of steps and those two are mutually exclusive.\\
+
+For the harmonic sequence we do not get nice fit in any case.
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -468,6 +478,8 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
+
+Here, we do not have any clear fit.
 
 The plot of \(q\) against \(a\) is as follows:
 
@@ -522,15 +534,17 @@ which is entire.
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
 Romberg & lin-ln evals-error & \(9.158\cdot 10^{24}\) & \(3\) & \(27.06\) & \(0.103\) & \(0.1896\) & \(0.02387\) \\
 Harmonic & lin-ln evals-error & \(1.269\cdot 10^{13}\) & \(12.98\) & \(2.597\) & \(0.0327\) & \(0.6252\) & \(0.001654\) \\
-Romberg & lin-ln steps-error & \(1.09\) & \(0.0003639\) & \(0.6727\) & \(6.223\cdot 10^{-6}\) & \(2.007\) & \(2.397^{-7}\) \\
-Harmonic & lin-ln steps-error & \(4.499^{11}\) & \(12.52\) & \(2.643\) & \(0.02762\) & \(1.246\) & \(0.001318\) \\
+Romberg & lin-ln steps-error & \(1.09\) & \(0.0003639\) & \(0.6727\) & \(6.223\cdot 10^{-6}\) & \(2.007\) & \(2.397\cdot 10^{-7}\) \\
+Harmonic & lin-ln steps-error & \(4.499\cdot 10^{11}\) & \(12.52\) & \(2.643\) & \(0.02762\) & \(1.246\) & \(0.001318\) \\
 Romberg & ln-ln evals-error & \(7.126\) & \(0.3484\) & \(0.8677\) & \(0.005226\) & \(2.163\) & \(0.0002203\) \\
 Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-The harmonic sequence works better then Romberg and we get down to machine level precision using either sequence when using standard floating point arithmetic.
+The harmonic sequence works better then Romberg and we get down to machine level precision using either sequence when using standard floating point arithmetic.\\
+
+We clearly have exponential convergence in the number of steps for the Romberg sequence but we do not have any nice fit for the harmonic sequence.
 
 \subsection{Mathematical pendulum}
 
@@ -578,7 +592,7 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \label{tab:my_label}
 \end{table}
 
-Here the model also fits very well, the harmonic sequence works better and we get down to machine level precision in standard floating point arithmetic, using either sequence.
+Here we seem to have exponential convergence in the number of steps for the Romberg sequence. The harmonic sequence works is faster and we almost get down to machine level precision using either sequence. 
 
 \subsection{Federpendel}
 
@@ -627,6 +641,9 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \label{tab:my_label}
 \end{table}
 
+Here we seem to have exponential convergence in the number of steps for the Romberg sequence. None of the models fits well for the harmonic sequence.\\
+
+The harmonic sequence performes better we almost get down to machine level precision using either sequence, in double precision floating point arithmetic. 
 
 \begin{figure}[H]
 \centering
@@ -666,6 +683,10 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
+
+Here the model for exponential convergence in the number of steps seems to fit moderately well for the Romberg sequence but none of the models fits for the harmonic sequence.\\
+
+The harmonic sequence works better and we get almost down to machine level precision in standard double precision floating point arithmetic.
 
 \subsection{Lorenz equations}
 
@@ -713,6 +734,10 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \label{tab:my_label}
 \end{table}
 
+Here the harmonic sequence works better and we get down to machine level precision in standard double precision arithmetic.\\
+
+The model for exponential convergence in the number of steps seems to fit well for the Romberg sequence but none of the models fits for the harmonic sequence.
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -752,7 +777,10 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
     \label{tab:my_label}
 \end{table}
 
-The model fits very well in both cases when we consider the number of evaluations against error. The harmonic sequence works better. The fitting is not as nice when considering the number of extrapolation seps against the error. In standard floating point arithmetic, we obtain higher accurracy using the Romberg sequence, though we get high accurracy in both cases.\\
+
+Here we also get down to machine level precision in standard double precision floating point arithmetic. The harmonic sequence performes better.\\
+
+None of the models fits for the harmonic sequence but we seem to have exponential convergence in the number of steps for the romberg sequence.
 
 The values of the optimal parameters in the fitting of the number evaluations against the error, are:
 
