@@ -165,18 +165,39 @@ def parse_from_file(prob_ref, seq_ref, folder, ref):
 #
 #Will save the plot as a png file named ref in the folder given.
 def plot_eval_error(results, title, ref, by_seq, folder):
-	for result in results:
+	number_of_points_res = get_number_of_points(results)
+	
+	for (result, number_of_points) in zip(results, number_of_points_res):
 		my_label = result.seq_ref if by_seq else result.prob_ref
-		plt.plot(result.evals, result.log_e, '.', label = my_label)
+		evals = result.evals
+		log_e = result.log_e
+		plt.plot(evals[0:number_of_points], result.log_e[0:number_of_points], '.', label = my_label)
 		plt.legend()
 
 	plt.xlabel('Number of function evaluations, $N$')
 	plt.ylabel('Base $10$ logarithm of absolute error, $\log \epsilon $')
 	plt.title(title)
 	#plt.show()
-	plt.savefig(folder + ref + '.png')
+	plt.savefig(os.path.join(folder, ref + '.png'))
 	plt.close()
 
+#results (list<Results>): The results from the extrapolation.
+#
+#Returns a list containing the number of points, which should be used when plotting the results together, evals against error.
+def get_number_of_points(results):
+	max_evals = np.array([result.evals[-1] for result in results])
+	end = np.min(max_evals)
+
+	number_of_points = []
+	for result in results: 
+		evals = result.evals
+		i = 0
+		while i < len(evals) and evals[i] < 2 * end:
+			i += 1
+
+		number_of_points.append(i)
+
+	return number_of_points
 
 #results (list<Results>): The results from the extrapolation.
 #title (str): The title of the plot.
@@ -211,7 +232,7 @@ def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 	plt.ylabel(ylabel)
 	plt.title(title)
 	#plt.show()
-	plt.savefig(folder + ref + '_steps.png')
+	plt.savefig(os.path.join(folder, ref + '_steps.png'))
 	plt.close()
 
 	file = open(os.path.join(folder, ref + '_steps_variance.txt'), 'w')
@@ -233,20 +254,23 @@ def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 #does a curve fitting on the results. 
 #The plot will be saved as a png file named ref_trend under folder.
 def plot_trend(results, title, ref, by_seq, folder):
+	number_of_points_res = get_number_of_points(results)
+
 	xlabel = 'Number of function evaluations, $N$'
 	ylabel = 'Natural logarithm of absolute error, $\ln \epsilon $'
 	acq_vars_by_result = []
 	p_by_result = []
-	for result in results:
+	for (result, number_of_points) in zip(results, number_of_points_res):
 		my_label = result.seq_ref if by_seq else result.prob_ref
 		evals = result.evals
 		ln_e = result.ln_e
-		plt.plot(evals, ln_e, '.', label = my_label)
-		x = np.linspace(1, evals[-1], min(10 * evals[-1], 1000))
+		plt.plot(evals[0:number_of_points], ln_e[0:number_of_points], '.', label = my_label)
 		p = opt.curve_fit(fit_func, evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
 		p_by_result.append(p)
 		acq_vars = get_fit_variance(evals, ln_e, *p)
 		acq_vars_by_result.append(acq_vars)
+		end_val = evals[number_of_points- 1]
+		x = np.linspace(1, end_val, min(10 * (end_val - 1), 1000))
 		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
 		plt.legend()
 
@@ -254,7 +278,7 @@ def plot_trend(results, title, ref, by_seq, folder):
 	plt.ylabel(ylabel)
 	plt.title(title)
 	#plt.show()
-	plt.savefig(folder + ref + '_trend.png')
+	plt.savefig(os.path.join(folder, ref + '_trend.png'))
 	plt.close()
 
 	file = open(os.path.join(folder, ref + '_variance.txt'), 'w')
@@ -292,7 +316,7 @@ def plot_log_log(results, title, ref, by_seq, folder):
 	plt.ylabel('Natural logarithm of absolute error, $\ln \epsilon $')
 	plt.title(title)
 	#plt.show()
-	plt.savefig(folder + ref + '.png')
+	plt.savefig(os.path.join(folder, ref + '.png'))
 	plt.close()
 
 #Does the same as plot_log_log except it also does curve fitting.
@@ -320,7 +344,7 @@ def plot_log_log_trend(results, title, ref, by_seq, folder):
 	plt.ylabel(ylabel)
 	plt.title(title)
 	#plt.show()
-	plt.savefig(folder + ref + '_trend.png')
+	plt.savefig(os.path.join(folder,ref + '_trend.png'))
 	plt.close()
 
 	file = open(os.path.join(folder, ref + '_variance.txt'), 'w')
@@ -370,7 +394,7 @@ def plot_by_param(param_prob, scheme, ps, title, seqs, ref, folder, cache_folder
 	plt.xlabel('Minus the natural logarithm of $a$')
 	plt.ylabel('Optimal parameter $q$')
 	plt.title(title)
-	plt.savefig(folder + 'log_p_vs_q_%s.png' % ref)
+	plt.savefig(os.path.join(folder, 'log_p_vs_q_%s.png' % ref))
 	plt.clf()
 	
 	qs_seq_log_log = np.array(qs_seq_log_log)
@@ -382,7 +406,7 @@ def plot_by_param(param_prob, scheme, ps, title, seqs, ref, folder, cache_folder
 	plt.xlabel('Minus the natural logarithm of $a$')
 	plt.ylabel('Optimal parameter $q$')
 	plt.title(title)
-	plt.savefig(folder + 'log_p_vs_q_%s_log_log.png' % ref)
+	plt.savefig(os.path.join(folder, 'log_p_vs_q_%s_log_log.png' % ref))
 	plt.close()
 
 def get_fit_variance(x, y, b0, c0, q0):
@@ -390,7 +414,7 @@ def get_fit_variance(x, y, b0, c0, q0):
 	cs = []
 	qs = []
 
-	new_len = 6
+	new_len = min(len(x) - 3, max(10, (len(x) + 1) // 2))
 	success = True
 	for offset in range(3, len(x) - new_len):
 		xp = x[offset:(offset + new_len)]
@@ -403,7 +427,6 @@ def get_fit_variance(x, y, b0, c0, q0):
 		except: 
 			return None
 
-	##Write out summary
 	bs = np.array(bs)
 	cs = np.array(cs)
 	qs = np.array(qs)

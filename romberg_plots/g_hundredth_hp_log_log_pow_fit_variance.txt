@@ -1,3 +1,0 @@
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(2.102e+56\) & \(4\) & \(23.8\) & \(3.7\) & \(3.032\) & \(0.6855\) \\
-Bulirsch & ln-ln evals-error & \(inf\) & \(nan\) & \(1824\) & \(3.52\) & \(4.841\) & \(1.87\) \\

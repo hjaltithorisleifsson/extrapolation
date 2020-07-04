@@ -7,8 +7,15 @@ from extrapolation import *
 
 mp.dps = 500
 
-folder = '/Users/hjaltithorisleifsson/Documents/extrapolation/diff_quot_plots/'
-cache_folder = '/Users/hjaltithorisleifsson/Documents/extrapolation/diff_quot_plots/cache'
+folder = os.path.join(os.path.abspath(''), 'diff_quot_plots')
+
+if not os.path.isdir(folder):
+    os.mkdir(folder)
+
+cache_folder = os.path.join(folder, 'cache')
+
+if not os.path.isdir(cache_folder):
+    os.mkdir(cache_folder)
 
 class SymmetricDifference(Scheme):
 
@@ -86,7 +93,7 @@ def plot_basic():
 		plot_trend(results_seq, 'Quotient: %s' % quotient.tex, quotient.ref, True, folder)
 		plot_log_log_trend(results_seq, 'Quotient: %s' % quotient.tex, quotient.ref + "_log_log_pow_fit", True, folder)
 
-	file = open(folder + 'all_results.txt', 'w')
+	file = open(os.path.join(folder, 'all_results.txt'), 'w')
 
 	for hp_results_seq in hp_results_quot_seq:
 		for hp_result in hp_results_seq: 
@@ -118,7 +125,7 @@ sdq = SymmetricDifference()
 
 def main():
 	plot_basic()
-	plot_q_h()
-	plot_q_k()
+	#plot_q_h()
+	#plot_q_k()
 
 main()
