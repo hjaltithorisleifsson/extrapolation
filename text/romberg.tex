@@ -67,6 +67,7 @@ We will try various functions and the following sequences:
     1,\, 2,\, 3,\, 4,\, 6,\, 8,\, 12,\, 16,\, 24,\, 32,\ldots
     \]
 \end{itemize}
+
 Suppose that we are approximating the integral \(I\coloneqq \int_a^b f(x)dx\) using Romberg quadrature. We will use the stepsizes \(h_k\coloneqq (b-a)/a_k\) for the extrapolation. Let \(T_{ij}\), \(i\geq 0\) and \(j\leq i\) be the extrapolation table we get and \(\varepsilon_k \coloneqq |T_{kk}-I|\) be the error on the diagnoals. Let \(N_k\) be the number of function evaluations needed to compute \(T_{kk}\). We will use \(N_k\) as the measurement of computational effort as mentioned in section 1.3 and we will try to fit the exponential convergence model introduced there. We will also plot the logarithm of the error against the number of extrapolation steps. Note that \(N_k = \sum_{i=1}^k(a_i + 1)\) where \((a_i)\) is our sequence, so in case of the Harmonic sequence, we have \(N_n = n(n+3)/2 \approx n^2/2\) for \(n\) large. Hence if \(\varepsilon_n \sim A\exp(-cN_n^q)\) then 
 \[
 \varepsilon_n \sim A\exp(-c/2^qn^{2q})
@@ -77,17 +78,9 @@ If our sequence is the Romberg sequence then \(N_k = \sum_{i=1}^n (2^{i-1} + 1) 
 \[
 \varepsilon_k \sim A\exp(-c 2^{kq}) 
 \]
-for \(k\) large, which is not exponential convergence. On the other hand, if the we have exponential convergence in the number of extrapolation steps, i.e.
-\[
-\varepsilon_k \sim A \exp(-c k^q)
-\]
-then since \(k \approx \ln N_k / \ln 2\) we get 
-\[
-\ln \varepsilon_k \sim \ln A - c (\ln N_k / \ln 2)^q = \ln A - \frac{c}{(\ln 2)^q} (\ln N_k)^q
-\]
-so if we consider the ln-ln plot of the error against the number of function evaluations, then the points should fall on the graph of a function of the form \(t\mapsto b - c t^q\). The exponent should be the same as in the fitting for the logarithm of the error against the number of extrapolation steps.\\
+for \(k\) large, which is not exponential convergence. Hence possibilities of having exponential convergence in the number of steps and in the number of evaluations are mutually exclusive for the Romberg sequence.\\
 
-For the model fitting we will thus plot the logarithm of the error agains the number of function evaluations, the number of extrapolation steps and the logarithm of the number of extrapolation steps. We will also consider the plot of the base \(10\) logarithm of the error against the number of function evaluations. In all cases we will try to fit the points on curve of a function of the form \(t\mapsto b - ct^q\) and we will report the mean and relative variance of \(A\coloneqq e^b\), \(c\) and \(q\).\\
+For the model fitting we will plot the logarithm of the error against the number of function evaluations  and the number of extrapolation steps. Then we will try to fit the points on curve of a function of the form \(t\mapsto b - ct^q\) and we will report the mean and relative variance of \(A\coloneqq e^b\), \(c\) and \(q\). We will also consider the plot of the base \(10\) logarithm of the error against the number of function evaluations. \\
 
 We conduct the experiments in Python 3 and use the high precision arithmetic library mpmath for all the computations. The precision will be set to \(500\) significant digits so will not have to worry about numerical instabilities.\\
 
@@ -109,6 +102,18 @@ which is entire.
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
+\includegraphics[scale=0.45]{romberg_plots/cos_squared_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/cos_squared_hp_trend.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
 \includegraphics[scale=0.45]{romberg_plots/cos_squared_hp_steps.png}
 \end{minipage}
 \end{figure}
@@ -117,11 +122,35 @@ which is entire.
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/cos_squared_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/cos_squared_hp_harmonic_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/cos_squared_hp_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/cos_squared_hp_harmonic_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/cos_squared_hp_romberg_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/cos_squared_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/cos_squared_hp_bulirsch_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/cos_squared_hp_bulirsch_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -130,24 +159,21 @@ which is entire.
     \small
     \begin{tabular}{c|c||c|c|c|c|c	|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Harmonic & lin-ln evals-error & \(3.698\cdot 10^{18}\) & \(15.89\) & \(3.431\) & \(0.05254\) & \(0.6382\) & \(0.00378\) \\
-Romberg & lin-ln evals-error & \(3.478\cdot 10^{31}\) & \(4\) & \(34.93\) & \(0.1045\) & \(0.1765\) & \(0.02939\) \\
-Bulirsch & lin-ln evals-error & \(1.44\cdot 10^{73}\) & \(14.91\) & \(50.79\) & \(0.4318\) & \(0.2315\) & \(0.2026\) \\
-Harmonic & lin-ln steps-error & \(2.979\cdot 10^{14}\) & \(14.48\) & \(2.346\) & \(0.03992\) & \(1.261\) & \(0.002109\) \\
-Romberg & lin-ln steps-error & \(10.06\) & \(0.06604\) & \(0.5486\) & \(0.001087\) & \(2.066\) & \(3.842\cdot 10^{-5}\) \\
-Bulirsch & lin-ln steps-error & \(1.601\) & \(0.1852\) & \(0.4143\) & \(0.001942\) & \(1.956\) & \(5.581\cdot 10^{-5}\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(70.67\) & \(0.03149\) & \(1.31\) & \(0.0005279\) & \(2.022\) & \(2.887\cdot 10^{-5}\) \\
-Bulirsch & ln-ln evals-error & \(4.442\cdot 10^5\) & \(2.965\) & \(1.416\) & \(0.08864\) & \(2.274\) & \(0.007141\) \\
+Harmonic & lin-ln evals-error & \(4.426\cdot 10^{14}\) & \(8.674\) & \(3.524\) & \(0.01154\) & \(0.6287\) & \(0.0004025\) \\
+Romberg & lin-ln evals-error & \(1.853\cdot 10^{58}\) & \(6\) & \(63.25\) & \(0.11\) & \(0.1312\) & \(0.02905\) \\
+Bulirsch & lin-ln evals-error & \(2.195\cdot 10^{53}\) & \(7.998\) & \(47.04\) & \(0.1714\) & \(0.2034\) & \(0.04509\) \\
+Harmonic & lin-ln steps-error & \(8.963\cdot 10^{10}\) & \(7.637\) & \(2.386\) & \(0.009485\) & \(1.249\) & \(0.0002853\) \\
+Romberg & lin-ln steps-error & \(16.31\) & \(0.1345\) & \(0.5749\) & \(0.0008091\) & \(2.049\) & \(2.316\cdot 10^{-5}\) \\
+Bulirsch & lin-ln steps-error & \(1.658\) & \(0.06912\) & \(0.4129\) & \(0.0006159\) & \(1.957\) & \(1.639\cdot 10^{-5}\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
 We see that the harmonic sequence performes best, then Bulirsch and then Romberg. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch, but we are like \(2\) digits from there, using the harmonic sequence.\\
 
-For the Romberg sequence we clearly have exponential convergence in the number of extrapolation steps and thus we also get a good fitting for the \(\ln\)-\(\ln\) graph. We also have exponential convergence in the number of steps for the Bulirsch sequence.\\
+For the Romberg and Bulirsch sequence we clearly have exponential convergence in the number of steps but not in the number of evaluations.\\
 
-The model does not seem to fit well in any case for the Harmonic sequence since since we unreasonably big values for \(A\) in the first two cases and the curve fitting does not even converge in all cases for the last plot.
+For the harmonic sequence we get unreasonbly large values of \(A\) and we can see from the stack plots that the fitting is not so stable.\\
 
 \subsection{Function with poles}
 
@@ -155,11 +181,24 @@ Now we will consider the following function:
 \[
 g_a: [-1, 1] \rightarrow \R, \quad g_a(x) \coloneqq \frac{1}{a^2 + x^2},\, a > 0
 \]
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{romberg_plots/g_one.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_one_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_one_hp_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -171,11 +210,35 @@ g_a: [-1, 1] \rightarrow \R, \quad g_a(x) \coloneqq \frac{1}{a^2 + x^2},\, a > 0
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/g_one_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/g_one_hp_harmonic_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/g_one_hp_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/g_one_hp_harmonic_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_one_hp_romberg_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_one_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_one_hp_bulirsch_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_one_hp_bulirsch_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -184,28 +247,37 @@ g_a: [-1, 1] \rightarrow \R, \quad g_a(x) \coloneqq \frac{1}{a^2 + x^2},\, a > 0
         \small
     \begin{tabular}{c|c||c|c|c|c|c	|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Harmonic & lin-ln evals-error & \(3.832\) & \(0.09139\) & \(1.801\) & \(0.0006569\) & \(0.4956\) & \(3.963\cdot 10^{-5}\) \\
-Romberg & lin-ln evals-error & \(1.638\cdot 10^{29}\) & \(4\) & \(25.01\) & \(0.3364\) & \(0.194\) & \(0.08516\) \\
-Bulirsch & lin-ln evals-error & \(.\) & \(.\) & \(146.8\) & \(3.207\) & \(0.2756\) & \(0.5871\) \\
-Harmonic & lin-ln steps-error & \(0.691\) & \(0.1736\) & \(1.288\) & \(0.001823\) & \(0.9894\) & \(0.0001036\) \\
-Romberg & lin-ln steps-error & \(9.757\) & \(1.881\) & \(0.4355\) & \(0.5242\) & \(2.21\) & \(0.03547\) \\
-Bulirsch & lin-ln steps-error & \(3.958\cdot 10^{25}\) & \(15\) & \(0.8647\) & \(1.779\) & \(2.106\) & \(0.09976\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(53.88\) & \(1.418\) & \(1.013\) & \(0.4567\) & \(2.166\) & \(0.0389\) \\
-Bulirsch & ln-ln evals-error & \(2.619\cdot 10^{36}\) & \(15\) & \(2.987\) & \(1.774\) & \(2.483\) & \(0.1401\) \\
+Harmonic & lin-ln evals-error & \(3.771\) & \(0.02895\) & \(1.793\) & \(0.0001375\) & \(0.4963\) & \(6.495\cdot 10^{-6}\) \\
+Romberg & lin-ln evals-error & \(4.114\cdot 10^{37}\) & \(5.211\) & \(46.94\) & \(0.1026\) & \(0.135\) & \(0.03489\) \\
+Bulirsch & lin-ln evals-error & \(8.199\cdot 10^{22}\) & \(4.987\) & \(24.22\) & \(0.1103\) & \(0.2236\) & \(0.04529\) \\
+Harmonic & lin-ln steps-error & \(0.6596\) & \(0.04548\) & \(1.277\) & \(0.0002625\) & \(0.9918\) & \(1.093\cdot 10^{-5}\) \\
+Romberg & lin-ln steps-error & \(3.747\) & \(2.921\) & \(0.4181\) & \(0.02976\) & \(2.079\) & \(0.0008172\) \\
+Bulirsch & lin-ln steps-error & \(1.191\) & \(1.72\) & \(0.2048\) & \(0.105\) & \(2.062\) & \(0.00252\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
 We see that the harmonic sequence performes best, then Bulirsch and then Romberg. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch, but we are like \(5\) digits from there, using the harmonic sequence.\\
 
-Here we clearly have exponential convergence in the number of evaluations for the Harmonic sequence and hence also in the number of steps. The models do not seem to fit very nicely in the other cases.\\
+Here we clearly have exponential convergence in the number of evaluations for the Harmonic sequence and hence also in the number of steps. We do not have exponential convergence in the number of evaluations for Romberg and Bulirsch but the model for exponential convergence in the number of steps fits moderately well for those sequences. 
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{romberg_plots/g_tenth.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_tenth_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_tenth_hp_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -217,11 +289,35 @@ Here we clearly have exponential convergence in the number of evaluations for th
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/g_tenth_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/g_tenth_hp_harmonic_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/g_tenth_hp_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/g_tenth_hp_harmonic_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_tenth_hp_romberg_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_tenth_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_tenth_hp_bulirsch_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_tenth_hp_bulirsch_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -230,26 +326,36 @@ Here we clearly have exponential convergence in the number of evaluations for th
         \small
     \begin{tabular}{c|c||c|c|c|c|c	|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Harmonic & lin-ln evals-error & \(6.15\) & \(0.6637\) & \(-0.6969\) & \(0.01918\) & \(0.5172\) & \(0.003167\) \\
-Romberg & lin-ln evals-error & \(3.02\cdot 10^7\) & \(3.985\) & \(3.897\) & \(0.3031\) & \(0.3265\) & \(0.07301\) \\
-Bulirsch & lin-ln evals-error & \(.\) & \(.\) & \(1123\) & \(14.56\) & \(0.3275\) & \(0.744\) \\
-Harmonic & lin-ln steps-error & \(11.9\) & \(0.2941\) & \(-0.496\) & \(0.01497\) & \(1.029\) & \(0.00189\) \\
-Romberg & lin-ln steps-error & \(35.64\) & \(1.539\) & \(0.03496\) & \(0.4962\) & \(2.934\) & \(0.01283\) \\
-Bulirsch & lin-ln steps-error & \(.\) & \(.\) & \(844.6\) & \(14.99\) & \(2.519\) & \(0.2989\) \\
-Harmonic & ln-ln evals-error & \(.\) & \(.\) & \(4.863\cdot 10^5\) & \(0.03858\) & \(-0.0002903\) & \(0.3799\) \\
-Romberg & ln-ln evals-error & \(59.88\) & \(1.575\) & \(0.1019\) & \(0.4164\) & \(2.915\) & \(0.0144\) \\
-Bulirsch & ln-ln evals-error & \(.\) & \(.\) & \(1069\) & \(14.99\) & \(2.965\) & \(0.3358\) \\
+Harmonic & lin-ln evals-error & \(5.231\) & \(0.0773\) & \(-0.7178\) & \(0.001803\) & \(0.5101\) & \(9.026\cdot 10^{-5}\) \\
+Romberg & lin-ln evals-error & \(7.533\cdot 10^{22}\) & \(5.999\) & \(14.35\) & \(0.3322\) & \(0.2047\) & \(0.07855\) \\
+Bulirsch & lin-ln evals-error & \(8.963\cdot 10^{7}\) & \(7.604\) & \(2.995\) & \(0.186\) & \(0.3602\) & \(0.0129\) \\
+Harmonic & lin-ln steps-error & \(10.97\) & \(0.05032\) & \(-0.5086\) & \(0.001492\) & \(1.019\) & \(6.47\cdot 10^{-5}\) \\
+Romberg & lin-ln steps-error & \(727.7\) & \(2.108\) & \(0.06624\) & \(0.1819\) & \(2.623\) & \(0.005292\) \\
+Bulirsch & lin-ln steps-error & \(32.46\) & \(2.026\) & \(0.01381\) & \(0.7483\) & \(2.764\) & \(0.006506\) \\
+
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-Here we get divergence for the harmonic sequence, but convergence for the other sequences, fastest for Bulirsch. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch. None of the models fits.
+Here we get divergence for the harmonic sequence, but convergence for the other sequences, fastest for Bulirsch. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch. None of the models fits very well. 
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{romberg_plots/g_hundredth.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_hundredth_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_hundredth_hp_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -261,11 +367,35 @@ Here we get divergence for the harmonic sequence, but convergence for the other 
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/g_hundredth_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/g_hundredth_hp_harmonic_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/g_hundredth_hp_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/g_hundredth_hp_harmonic_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_hundredth_hp_romberg_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_hundredth_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_hundredth_hp_bulirsch_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/g_hundredth_hp_bulirsch_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -274,15 +404,12 @@ Here we get divergence for the harmonic sequence, but convergence for the other 
     \small
     \begin{tabular}{c|c||c|c|c|c|c	|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Harmonic & lin-ln evals-error & \(268\) & \(5.059\) & \(-0.9277\) & \(0.0424\) & \(0.5267\) & \(0.007106\) \\
-Romberg & lin-ln evals-error & \(.\) & \(.\) & \(3150\) & \(2.785\) & \(0.3352\) & \(1.082\) \\
-Bulirsch & lin-ln evals-error & \(.\) & \(.\) & \(2763\) & \(2.795\) & \(0.6219\) & \(2.844\) \\
-Harmonic & lin-ln steps-error & \(519.6\) & \(2.663\) & \(-0.659\) & \(0.03722\) & \(1.047\) & \(0.004672\) \\
-Romberg & lin-ln steps-error & \(9.388\cdot 10^{14}\) & \(4\) & \(4.469\) & \(3.191\) & \(3.087\) & \(0.6264\) \\
-Bulirsch & lin-ln steps-error & \(.\) & \(.\) & \(1615\) & \(3.548\) & \(4.057\) & \(1.73\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(2.102\cdot 10^{56}\) & \(4\) & \(23.8\) & \(3.7\) & \(3.032\) & \(0.6855\) \\
-Bulirsch & ln-ln evals-error & \(.\) & \(.\) & \(1824\) & \(3.52\) & \(4.841\) & \(1.87\) \\
+Harmonic & lin-ln evals-error & \(122.7\) & \(0.8001\) & \(-0.9641\) & \(0.007205\) & \(0.5155\) & \(0.0003682\) \\
+Romberg & lin-ln evals-error & \(8.898\cdot 10^{10}\) & \(5.785\) & \(3.021\) & \(0.6343\) & \(0.2928\) & \(0.05447\) \\
+Bulirsch & lin-ln evals-error & \(.\) & \(.\) & \(2876\) & \(4.874\) & \(0.4042\) & \(0.3708\) \\
+Harmonic & lin-ln steps-error & \(323.1\) & \(0.5753\) & \(-0.682\) & \(0.006766\) & \(1.029\) & \(0.0002999\) \\
+Romberg & lin-ln steps-error & \(4384\) & \(1.505\) & \(0.005443\) & \(0.4455\) & \(3.388\) & \(0.0103\) \\
+Bulirsch & lin-ln steps-error & \(1.73\cdot 10^{11}\) & \(8\) & \(1.498\) & \(6.41\) & \(3.17\) & \(0.272\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -305,6 +432,18 @@ This function is analytic on neighbourhood about the interval but we have a sing
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
+\includegraphics[scale=0.45]{romberg_plots/h_one_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_one_hp_trend.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
 \includegraphics[scale=0.45]{romberg_plots/h_one_hp_steps.png}
 \end{minipage}
 \end{figure}
@@ -313,11 +452,35 @@ This function is analytic on neighbourhood about the interval but we have a sing
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/h_one_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/h_one_hp_harmonic_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/h_one_hp_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/h_one_hp_harmonic_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_one_hp_romberg_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_one_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_one_hp_bulirsch_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_one_hp_bulirsch_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -326,28 +489,37 @@ This function is analytic on neighbourhood about the interval but we have a sing
     \small
     \begin{tabular}{c|c||c|c|c|c|c	|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Harmonic & lin-ln evals-error & \(4.305\) & \(1.625\) & \(4.577\) & \(0.001332\) & \(0.4944\) & \(8.445\cdot 10^{-5}\) \\
-Romberg & lin-ln evals-error & \(4.448\cdot 10^{23}\) & \(3.996\) & \(37.1\) & \(0.03467\) & \(0.1563\) & \(0.009509\) \\
-Bulirsch & lin-ln evals-error & \(1.085\cdot 10^{43}\) & \(13.73\) & \(38.32\) & \(0.2396\) & \(0.2067\) & \(0.06998\) \\
-Harmonic & lin-ln steps-error & \(0.06861\) & \(3.33\) & \(3.274\) & \(0.002897\) & \(0.9871\) & \(0.000164\) \\
-Romberg & lin-ln steps-error & \(0.0007205\) & \(0.9454\) & \(0.6403\) & \(0.01862\) & \(1.96\) & \(0.0006732\) \\
-Bulirsch & lin-ln steps-error & \(0.0001991\) & \(8.396\) & \(0.4164\) & \(0.3211\) & \(1.901\) & \(0.006898\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(0.006917\) & \(1.189\) & \(1.488\) & \(0.01968\) & \(1.912\) & \(0.001013\) \\
-Bulirsch & ln-ln evals-error & \(0.007191\) & \(0.3683\) & \(1.209\) & \(0.003807\) & \(2.187\) & \(0.0001579\) \\
+Harmonic & lin-ln evals-error & \(3.072\) & \(0.3632\) & \(4.545\) & \(0.000229\) & \(0.4954\) & \(1.085\cdot 10^{-5}\) \\
+Romberg & lin-ln evals-error & \(1.538\cdot 10^{43}\) & \(6\) & \(56.82\) & \(0.06603\) & \(0.1269\) & \(0.0163\) \\
+Bulirsch & lin-ln evals-error & \(1.55\cdot 10^{31}\) & \(7.894\) & \(36.84\) & \(0.08131\) & \(0.1955\) & \(0.0187\) \\
+Harmonic & lin-ln steps-error & \(0.03919\) & \(0.5477\) & \(3.237\) & \(0.0003865\) & \(0.9901\) & \(1.608\cdot 10^{-5}\) \\
+Romberg & lin-ln steps-error & \(0.0002063\) & \(1.214\) & \(0.5431\) & \(0.009515\) & \(2.02\) & \(0.000263\) \\
+Bulirsch & lin-ln steps-error & \(2.293\cdot 10^{-5}\) & \(3.407\) & \(0.3579\) & \(0.06839\) & \(1.929\) & \(0.001656\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
 We see that the harmonic sequence performes best, then Bulirsch and then Romberg. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch, but we are like \(2\) digits from there, using the harmonic sequence.\\
 
-Here we clearly have exponential convergence in the number of evaluations for the harmonic sequence and hence also in the number of steps. For Romberg and Bulirsch we seem to have exponential convergence in the number of steps.\\ 
+Here we clearly have exponential convergence in the number of evaluations for the harmonic sequence and hence also in the number of steps. For Romberg and Bulirsch we seem to have exponential convergence in the number of steps though the fitting is not as nice as in the case of the harmonic sequence.
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{romberg_plots/h_hundredth.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_hundredth_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_hundredth_hp_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -359,11 +531,35 @@ Here we clearly have exponential convergence in the number of evaluations for th
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/h_hundredth_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/h_hundredth_hp_harmonic_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/h_hundredth_hp_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/h_hundredth_hp_harmonic_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_hundredth_hp_romberg_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_hundredth_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_hundredth_hp_bulirsch_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_hundredth_hp_bulirsch_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -372,30 +568,37 @@ Here we clearly have exponential convergence in the number of evaluations for th
     \small
     \begin{tabular}{c|c||c|c|c|c|c	|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Harmonic & lin-ln evals-error & \(65.31\) & \(75.17\) & \(0.9698\) & \(1.442\) & \(0.4141\) & \(0.03051\) \\
-Romberg & lin-ln evals-error & \(62.93\) & \(1.966\) & \(3.02\) & \(0.02769\) & \(0.2887\) & \(0.002777\) \\
-Bulirsch & lin-ln evals-error & \(1421\) & \(10.21\) & \(2.024\) & \(0.1564\) & \(0.3492\) & \(0.01221\) \\
-Harmonic & lin-ln steps-error & \(1.245\) & \(26.82\) & \(0.6627\) & \(1.048\) & \(0.8362\) & \(0.02436\) \\
-Romberg & lin-ln steps-error & \(0.05696\) & \(0.5511\) & \(0.03227\) & \(0.3681\) & \(2.751\) & \(0.006105\) \\
-Bulirsch & lin-ln steps-error & \(0.04768\) & \(2.868\) & \(0.03603\) & \(3.54\) & \(2.666\) & \(0.04769\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(0.08097\) & \(0.6227\) & \(0.09113\) & \(0.2618\) & \(2.722\) & \(0.006305\) \\
-Bulirsch & ln-ln evals-error & \(0.08405\) & \(1.957\) & \(0.06538\) & \(1.649\) & \(3.144\) & \(0.02837\) \\
+Harmonic & lin-ln evals-error & \(0.1351\) & \(2.455\) & \(0.6631\) & \(0.1084\) & \(0.4296\) & \(0.004684\) \\
+Romberg & lin-ln evals-error & \(3.388\cdot 10^{9}\) & \(5.969\) & \(6.696\) & \(0.2315\) & \(0.2286\) & \(0.02614\) \\
+Bulirsch & lin-ln evals-error & \(6.859\) & \(1.956\) & \(1.626\) & \(0.0311\) & \(0.3675\) & \(0.002076\) \\
+Harmonic & lin-ln steps-error & \(0.07535\) & \(1.798\) & \(0.4822\) & \(0.1106\) & \(0.8628\) & \(0.0042\) \\
+Romberg & lin-ln steps-error & \(0.05205\) & \(0.2618\) & \(0.02252\) & \(0.01836\) & \(2.848\) & \(0.0002742\) \\
+Bulirsch & lin-ln steps-error & \(0.0214\) & \(1.016\) & \(0.00882\) & \(1.141\) & \(2.822\) & \(0.01164\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
 We see that we can not attain high precision using the harmonic sequence and standard double precision. It is hard to tell which sequence performes best in the long run, though we can say that Bulirsch performes better than Romberg.\\
 
-For Romberg, we get low variance in all cases. But since we can not have both exponential convergence in the number of steps and in the number of function evaluations we can not say anything definite.\\
-
-For the other sequences, the results are not clear, unless that the last model clearly does not fit for the Harmonic sequence.\\
+For Romberg, we get a moderately goot fit for exponential convergence in the number of steps. The fitting is quite good for the harmonic sequence but it is quite unstable for Bulirsch.
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{romberg_plots/h_tenthousandth.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_tenthousandth_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_tenthousandth_hp_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -407,11 +610,35 @@ For the other sequences, the results are not clear, unless that the last model c
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/h_tenthousandth_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/h_tenthousandth_hp_harmonic_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/h_tenthousandth_hp_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/h_tenthousandth_hp_harmonic_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_tenthousandth_hp_romberg_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_tenthousandth_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_tenthousandth_hp_bulirsch_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/h_tenthousandth_hp_bulirsch_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -420,20 +647,17 @@ For the other sequences, the results are not clear, unless that the last model c
     \small
     \begin{tabular}{c|c||c|c|c|c|c	|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
-Romberg & lin-ln evals-error & \(1.218\cdot 10^{10}\) & \(4\) & \(9.792\) & \(0.587\) & \(0.119\) & \(0.2065\) \\
-Bulirsch & lin-ln evals-error & \(4.389\cdot 10^{6}\) & \(3.871\) & \(7.595\) & \(0.5385\) & \(0.1447\) & \(0.3134\) \\
-Harmonic & lin-ln steps-error & . & . & . & . & . & . \\
-Romberg & lin-ln steps-error & \(0.8009\) & \(0.7945\) & \(0.1727\) & \(0.6742\) & \(1.81\) & \(0.05434\) \\
-Bulirsch & lin-ln steps-error & \(0.551\) & \(1.326\) & \(0.1412\) & \(1.37\) & \(1.807\) & \(0.1569\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(1.356\) & \(1.045\) & \(0.3691\) & \(0.618\) & \(1.751\) & \(0.06504\) \\
-Bulirsch & ln-ln evals-error & \(1.319\) & \(1.017\) & \(0.3206\) & \(0.7671\) & \(2.009\) & \(0.1528\) \\
+Harmonic & lin-ln evals-error & \(1.328\cdot 10^{13}\) & \(55.82\) & \(8.14\) & \(0.5474\) & \(0.09568\) & \(0.0936\) \\
+Romberg & lin-ln evals-error & \(106.1\) & \(5.445\) & \(2.037\) & \(0.7267\) & \(0.2364\) & \(0.06414\) \\
+Bulirsch & lin-ln evals-error & \(1.888\cdot 10^{5}\) & \(5.399\) & \(6.394\) & \(0.3315\) & \(0.1362\) & \(0.1274\) \\
+Harmonic & lin-ln steps-error & \(1.395\cdot 10^{4}\) & \(17.13\) & \(5.261\) & \(0.2049\) & \(0.2157\) & \(0.04738\) \\
+Romberg & lin-ln steps-error & \(0.1362\) & \(2.091\) & \(0.02426\) & \(2.55\) & \(3.039\) & \(0.07013\) \\
+Bulirsch & lin-ln steps-error & \(0.4121\) & \(0.6973\) & \(0.09479\) & \(0.8435\) & \(1.695\) & \(0.05417\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-Here again, we do not attain high precision when using the Harmonic sequence in double precision arithmetic. It is hard to say which sequence performes best. None of our models seems to fit.
+Here again, we do not attain high precision when using the Harmonic sequence in double precision arithmetic. It is hard to say which sequence performes best. We get reasonably good fit for the harmonic sequence but not for Romberg and Bulirsch.
 
 \subsection{Area of half circle}
 
@@ -451,6 +675,18 @@ This function is analytic inside the interval of definition but not at the endpo
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
+\includegraphics[scale=0.45]{romberg_plots/circle_area_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/circle_area_hp_trend.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
 \includegraphics[scale=0.45]{romberg_plots/circle_area_hp_steps.png}
 \end{minipage}
 \end{figure}
@@ -459,11 +695,35 @@ This function is analytic inside the interval of definition but not at the endpo
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/circle_area_hp.png}
+\includegraphics[scale=0.45]{romberg_plots/circle_area_hp_harmonic_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/circle_area_hp_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/circle_area_hp_harmonic_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/circle_area_hp_romberg_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/circle_area_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/circle_area_hp_bulirsch_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/circle_area_hp_bulirsch_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -472,22 +732,19 @@ This function is analytic inside the interval of definition but not at the endpo
     \small
     \begin{tabular}{c|c||c|c|c|c|c	|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Harmonic & lin-ln evals-error & \(.\) & \(.\) & \(5.198\cdot 10^4\) & \(0.002568\) & \(2.252\cdot 10^{-5}\) & \(0.001907\) \\
-Romberg & lin-ln evals-error & \(.\) & \(.\) & \(5.666\cdot 10^4\) & \(0.005933\) & \(2.726\cdot 10^{-5}\) & \(0.004682\) \\
-Bulirsch & lin-ln evals-error & \(.\) & \(.\) & \(5.991\cdot 10^4\) & \(0.001785\) & \(2.548\cdot 10^{-5}\) & \(0.001618\) \\
-Harmonic & lin-ln steps-error & \(.\) & \(.\) & \(6.686\cdot 10^4\) & \(0.0003218\) & \(3.369\cdot 10^{-5}\) & \(0.0003045\) \\
-Romberg & lin-ln steps-error & \(1.624\) & \(0.001777\) & \(1.056\) & \(0.0002564\) & \(0.995\) & \(2.782\cdot 10^{-5}\) \\
-Bulirsch & lin-ln steps-error & \(0.4011\) & \(0.1625\) & \(0.5825\) & \(0.0448\) & \(0.9709\) & \(0.003052\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(4.527\) & \(0.1118\) & \(1.939\) & \(0.008599\) & \(0.9166\) & \(0.001262\) \\
-Bulirsch & ln-ln evals-error & \(3.499\) & \(0.05917\) & \(1.649\) & \(0.007759\) & \(0.9758\) & \(0.001453\) \\
+Harmonic & lin-ln evals-error & \(.\) & \(.\) & \(5.358\cdot 10^4\) & \(0.003851\) & \(2.176\cdot 10^{-5}\) & \(0.00346\) \\
+Romberg & lin-ln evals-error & \(.\) & \(.\) & \(7.348\cdot 10^4\) & \(0.005727\) & \(2.071\cdot 10^{-5}\) & \(0.005124\) \\
+Bulirsch & lin-ln evals-error & \(.\) & \(.\) & \(5.763\cdot 10^4\) & \(0.0003158\) & \(2.647\cdot 10^{-5}\) & \(0.0002409\) \\
+Harmonic & lin-ln steps-error & \(.\) & \(.\) & \(6.694\cdot 10^4\) & \(0.0002388\) & \(3.364\cdot 10^{-5}\) & \(0.0002515\) \\
+Romberg & lin-ln steps-error & \(1.581\) & \(0.0005141\) & \(1.046\) & \(5.395\cdot 10^{-5}\) & \(0.9983\) & \(4.956\cdot 10^{-6}\) \\
+Bulirsch & lin-ln steps-error & \(0.375\) & \(0.03054\) & \(0.5595\) & \(0.00836\) & \(0.9807\) & \(0.000633\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
 We see that we do not get high precision using double precision arithmetic, independent of sequence. The Romberg and Bulirsch sequence seem to perform similarly well but the harmonic sequence seems to be slowest.\\
 
-For the harmonic sequence, the error neither converges exponentally with the number of function evaluations nor the number of extrapolation steps. For Romberg we get a nice fit for the exponential convergence in number of steps. For Bulirsch neither we do not have exponential convergence in number of evaluations, and the results are unclear for the number of steps.
+For the harmonic sequence we reject the fitting because we get unreasoable values of the parameters. The model for exponential convergence in the number of steps fits well in the case of the Romberg sequence and Bulirsch.
 
 \subsection{Gaussian}
 
@@ -503,6 +760,18 @@ j: [0,1]\rightarrow \R, \quad k(x) \coloneqq \frac{2}{\sqrt{\pi}} e^{-x^2}.
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
+\includegraphics[scale=0.45]{romberg_plots/gaussian_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/gaussian_hp_trend.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
 \includegraphics[scale=0.45]{romberg_plots/gaussian_hp_steps.png}
 \end{minipage}
 \end{figure}
@@ -511,11 +780,35 @@ j: [0,1]\rightarrow \R, \quad k(x) \coloneqq \frac{2}{\sqrt{\pi}} e^{-x^2}.
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/gaussian_hp.png}
+\includegraphics[scale=0.45]{romberg_plots/gaussian_hp_harmonic_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{romberg_plots/gaussian_hp_trend.png}
+\includegraphics[scale=0.45]{romberg_plots/gaussian_hp_harmonic_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/gaussian_hp_romberg_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/gaussian_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/gaussian_hp_bulirsch_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{romberg_plots/gaussian_hp_bulirsch_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -524,54 +817,51 @@ j: [0,1]\rightarrow \R, \quad k(x) \coloneqq \frac{2}{\sqrt{\pi}} e^{-x^2}.
     \small
     \begin{tabular}{c|c||c|c|c|c|c	|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
-Romberg & lin-ln evals-error & \(5.057\cdot 10^{30}\) & \(4\) & \(41.2\) & \(0.07555\) & \(0.162\) & \(0.02295\) \\
-Bulirsch & lin-ln evals-error & . & . & \(80.86\) & \(2.754\) & \(0.2109\) & \(0.1757\) \\
-Harmonic & lin-ln steps-error & . & . & . & . & . & . \\
-Romberg & lin-ln steps-error & \(0.005845\) & \(0.02304\) & \(0.6857\) & \(0.0002576\) & \(1.986\) & \(8.973\cdot 10^{-6}\) \\
-Bulirsch & lin-ln steps-error & \(3.072\cdot 10^{23}\) & \(15\) & \(0.6686\) & \(1.172\) & \(1.88\) & \(0.008732\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(0.05733\) & \(0.1689\) & \(1.603\) & \(0.001578\) & \(1.939\) & \(7.621\cdot 10^{-5}\) \\
-Bulirsch & ln-ln evals-error & \(1.149\cdot 10^{37}\) & \(15\) & \(2.172\) & \(1.422\) & \(2.171\) & \(0.01192\) \\
+Harmonic & lin-ln evals-error & \(1.037\cdot 10^9\) & \(5.523\) & \(4.257\) & \(0.02142\) & \(0.5814\) & \(0.0007265\) \\
+Romberg & lin-ln evals-error & \(1.398\cdot 10^{55}\) & \(6\) & \(68.42\) & \(0.08326\) & \(0.1248\) & \(0.02265\) \\
+Bulirsch & lin-ln evals-error & \(1.356\cdot 10^{51}\) & \(8\) & \(49.55\) & \(0.1212\) & \(0.1931\) & \(0.02978\) \\
+Harmonic & lin-ln steps-error & \(6.922\cdot 10^5\) & \(5.362\) & \(2.939\) & \(0.02212\) & \(1.157\) & \(0.0006628\) \\
+Romberg & lin-ln steps-error & \(0.003928\) & \(0.1462\) & \(0.659\) & \(0.0008259\) & \(2\) & \(2.366\cdot 10^{-5}\) \\
+Bulirsch & lin-ln steps-error & \(0.0003995\) & \(1.479\) & \(0.4704\) & \(0.02518\) & \(1.913\) & \(0.0007081\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
 In double precision arithmetic we get down to machine level precision using Romberg or Bulirsch, but we get down to like \(2\) digits from there, using the harmonic sequence. The harmonic sequence performes best, then Bulirsch and then Romberg.\\
 
-For the Harmonic sequence, none of the models fits. For the Romberg sequence, we clearly have exponential convergence in the number of extrapolation steps. For Bulirsch, we clearly do not have exponential convergence in the number of evaluations and fitting of the other models should be rejected since the \(A\) constant is unreasonably big in there is a high variance in \(c\). 
+For the Harmonic sequence it is hard to tell whether we have exponential convergence because we get very large value for \(A\). For Romberg we seem to have exponential convergence in the number steps and also for Bulirsch.
 
 \begin{table}[H]
     \centering
     \begin{tabular}{c|c||c|c|c}
         Integrand & Sequence & \(b\) & \(c\) & \(q\) \\\hline\hline
 $f$ & Harmonic & \(15.66\) & \(3.1537\) & \(0.63887\) \\
-$f$ & Romberg & \(30.844\) & \(22.442\) & \(0.2014\) \\
-$f$ & Bulirsch & \(46.309\) & \(29.549\) & \(0.22556\) \\
-$g_{10^{-2}}$ & Harmonic & \(5.7088\) & \(-0.8668\) & \(0.52546\) \\
-$g_{10^{-2}}$ & Romberg & \(9.3083\) & \(0.96199\) & \(0.35893\) \\
-$g_{10^{-2}}$ & Bulirsch & \(9.1445\) & \(0.49433\) & \(0.43743\) \\
-$g_{10^{-1}}$ & Harmonic & \(2.2352\) & \(-0.66129\) & \(0.51817\) \\
-$g_{10^{-1}}$ & Romberg & \(9.3824\) & \(3.6029\) & \(0.29851\) \\
-$g_{10^{-1}}$ & Bulirsch & \(10.844\) & \(2.8849\) & \(0.34731\) \\
-$g_1$ & Harmonic & \(1.6178\) & \(1.823\) & \(0.49467\) \\
-$g_1$ & Romberg & \(23.192\) & \(18.171\) & \(0.19817\) \\
+$f$ & Romberg & \(62.881\) & \(48.203\) & \(0.13887\)\\
+$f$ & Bulirsch & \(46.309\) & \(29.549\) & \(0.22556\)\\
+$g_{10^{-2}}$ & Harmonic & \(5.7088\) & \(-0.8668\) & \(0.52546\)\\
+$g_{10^{-2}}$ & Romberg & \(13.538\) & \(3.0588\) & \(0.25221\)\\
+$g_{10^{-2}}$ & Bulirsch & \(9.1445\) & \(0.49433\) & \(0.43743\)\\
+$g_{10^{-1}}$ & Harmonic & \(2.2352\) & \(-0.66129\) & \(0.51817\)\\
+$g_{10^{-1}}$ & Romberg & \(20.725\) & \(10.998\) & \(0.19552\)\\
+$g_{10^{-1}}$ & Bulirsch & \(10.844\) & \(2.8849\) & \(0.34731\)\\
+$g_1$ & Harmonic & \(1.6178\) & \(1.823\) & \(0.49467\)\\
+$g_1$ & Romberg & \(43.807\) & \(34.715\) & \(0.14465\)\\
 $g_1$ & Bulirsch & \(24.613\) & \(15.795\) & \(0.24492\) \\
-$h_{10^{-4}}$ & Harmonic & \(33.436\) & \(31.879\) & \(0.030738\) \\
-$h_{10^{-4}}$ & Romberg & \(9.6285\) & \(8.0889\) & \(0.1106\) \\
-$h_{10^{-4}}$ & Bulirsch & \(7.0462\) & \(5.7755\) & \(0.13169\) \\
+$h_{10^{-4}}$ & Harmonic & \(33.436\) & \(31.879\) & \(0.030738\)\\
+$h_{10^{-4}}$ & Romberg & \(1.5634\) & \(1.6161\) & \(0.23927\)\\
+$h_{10^{-4}}$ & Bulirsch & \(7.0462\) & \(5.7755\) & \(0.13169\)\\
 $h_{10^{-2}}$ & Harmonic & \(-0.19426\) & \(1.1078\) & \(0.37602\) \\
-$h_{10^{-2}}$ & Romberg & \(4.3792\) & \(3.631\) & \(0.26761\) \\
+$h_{10^{-2}}$ & Romberg & \(9.8594\) & \(7.1092\) & \(0.20823\)\\
 $h_{10^{-2}}$ & Bulirsch & \(2.2519\) & \(2.0217\) & \(0.34203\) \\
-$h_1$ & Harmonic & \(2.052\) & \(4.6543\) & \(0.4931\) \\
-$h_1$ & Romberg & \(33.542\) & \(31.468\) & \(0.16462\) \\
+$h_1$ & Harmonic & \(2.052\) & \(4.6543\) & \(0.4931\)\\
+$h_1$ & Romberg & \(55.957\) & \(50.318\) & \(0.1287\)\\
 $h_1$ & Bulirsch & \(35.525\) & \(29.752\) & \(0.20461\) \\
 $i$ & Harmonic & \(54099\) & \(54099\) & \(2.2756\cdot 10^{-5}\) \\
-$i$ & Romberg & \(55368\) & \(55367\) & \(2.8621\cdot 10^{-5}\) \\
-$i$ & Bulirsch & \(58074\) & \(58073\) & \(2.6538\cdot 10^{-5}\) \\
+$i$ & Romberg & \(70897\) & \(70896\) & \(2.1811\cdot 10^{-5}\) \\
+$i$ & Bulirsch & \(58074\) & \(58073\) & \(2.6538\cdot 10^{-5}\)\\
 $j$ & Harmonic & \(6.2138\) & \(4.0228\) & \(0.58595\) \\
-$j$ & Romberg & \(33.68\) & \(30.265\) & \(0.17797\) \\
-$j$ & Bulirsch & \(46.521\) & \(35.69\) & \(0.20788\) \\
+$j$ & Romberg & \(64.075\) & \(55.521\) & \(0.13037\)\\
+$j$ & Bulirsch & \(46.521\) & \(35.69\) & \(0.20788\)\\
     \end{tabular}
     \caption{Optimal parameters by test case}
     \label{tab:my_label}
@@ -583,33 +873,33 @@ The values of the optimal parameters in the curve fitting of extrapolation steps
     \centering
     \begin{tabular}{c|c||c|c|c}
         Integrand & Sequence & \(b\) & \(c\) & \(q\) \\\hline\hline
-$f$ & Harmonic & \(10.466\) & \(2.1696\) & \(1.2654\) \\
-$f$ & Romberg & \(1.5206\) & \(0.51255\) & \(2.089\) \\
-$f$ & Bulirsch & \(0.77673\) & \(0.41734\) & \(1.9549\) \\
-$g_{10^{-2}}$ & Harmonic & \(6.5675\) & \(-0.61916\) & \(1.0458\) \\
-$g_{10^{-2}}$ & Romberg & \(7.3378\) & \(0.0066103\) & \(3.1744\) \\
+$f$ & Harmonic & \(10.466\) & \(2.1696\) & \(1.2654\)\\
+$f$ & Romberg & \(1.8624\) & \(0.55261\) & \(2.0602\)\\
+$f$ & Bulirsch & \(0.77673\) & \(0.41734\) & \(1.9549\)\\
+$g_{10^{-2}}$ & Harmonic & \(6.5675\) & \(-0.61916\) & \(1.0458\)\\
+$g_{10^{-2}}$ & Romberg & \(7.403\) & \(0.006235\) & \(3.2075\)\\
 $g_{10^{-2}}$ & Bulirsch & \(7.3047\) & \(0.00063882\) & \(3.3913\) \\
 $g_{10^{-1}}$ & Harmonic & \(2.8699\) & \(-0.47343\) & \(1.0317\) \\
-$g_{10^{-1}}$ & Romberg & \(3.1888\) & \(0.039167\) & \(2.7667\) \\
-$g_{10^{-1}}$ & Bulirsch & \(3.9142\) & \(0.012441\) & \(2.7293\) \\
+$g_{10^{-1}}$ & Romberg & \(3.6964\) & \(0.059489\) & \(2.6042\) \\
+$g_{10^{-1}}$ & Bulirsch & \(3.9142\) & \(0.012441\) & \(2.7293\)\\
 $g_1$ & Harmonic & \(0.034332\) & \(1.3144\) & \(0.98632\) \\
-$g_1$ & Romberg & \(-0.4289\) & \(0.41763\) & \(2.0726\) \\
-$g_1$ & Bulirsch & \(-1.3077\) & \(0.18952\) & \(2.0725\) \\
-$h_{10^{-4}}$ & Harmonic & \(12.604\) & \(11.571\) & \(0.12559\) \\
-$h_{10^{-4}}$ & Romberg & \(0.85129\) & \(0.27953\) & \(1.4991\) \\
-$h_{10^{-4}}$ & Bulirsch & \(0.16861\) & \(0.15206\) & \(1.4061\) \\
+$g_1$ & Romberg & \(-0.86887\) & \(0.37786\) & \(2.1086\)\\
+$g_1$ & Bulirsch & \(-1.3077\) & \(0.18952\) & \(2.0725\)\\
+$h_{10^{-4}}$ & Harmonic & \(12.604\) & \(11.571\) & \(0.12559\)\\
+$h_{10^{-4}}$ & Romberg & \(-1.5468\) & \(0.0040324\) & \(3.0761\)\\
+$h_{10^{-4}}$ & Bulirsch & \(0.16861\) & \(0.15206\) & \(1.4061\)\\
 $h_{10^{-2}}$ & Harmonic & \(-0.80722\) & \(0.82135\) & \(0.75792\) \\
-$h_{10^{-2}}$ & Romberg & \(-1.309\) & \(0.051824\) & \(2.5402\) \\
-$h_{10^{-2}}$ & Bulirsch & \(-2.6424\) & \(0.0083341\) & \(2.7259\) \\
-$h_1$ & Harmonic & \(-1.9642\) & \(3.3575\) & \(0.98328\) \\
-$h_1$ & Romberg & \(-4.397\) & \(0.86863\) & \(1.8535\) \\
-$h_1$ & Bulirsch & \(-7.6558\) & \(0.48664\) & \(1.8348\) \\
-$i$ & Harmonic & \(67160\) & \(67160\) & \(3.3808\cdot 10^{-5}\) \\
-$i$ & Romberg & \(1.8004\) & \(1.6494\) & \(0.85593\) \\
+$h_{10^{-2}}$ & Romberg & \(-1.8118\) & \(0.030909\) & \(2.74\)\\
+$h_{10^{-2}}$ & Bulirsch & \(-2.6424\) & \(0.0083341\) & \(2.7259\)\\
+$h_1$ & Harmonic & \(-1.9642\) & \(3.3575\) & \(0.98328\)\\
+$h_1$ & Romberg & \(-5.8254\) & \(0.64611\) & \(1.9664\)\\
+$h_1$ & Bulirsch & \(-7.6558\) & \(0.48664\) & \(1.8348\)\\
+$i$ & Harmonic & \(67160\) & \(67160\) & \(3.3808\cdot 10^{-5}\)\\
+$i$ & Romberg & \(1.3857\) & \(1.3726\) & \(0.92029\)\\
 $i$ & Bulirsch & \(0.95043\) & \(1.2669\) & \(0.7645\) \\
-$j$ & Harmonic & \(1.0579\) & \(2.8215\) & \(1.1626\) \\
-$j$ & Romberg & \(-3.906\) & \(0.77717\) & \(1.9416\) \\
-$j$ & Bulirsch & \(-5.7837\) & \(0.56594\) & \(1.8564\)
+$j$ & Harmonic & \(1.0579\) & \(2.8215\) & \(1.1626\)\\
+$j$ & Romberg & \(-4.4762\) & \(0.69593\) & \(1.9838\)\\
+$j$ & Bulirsch & \(-5.7837\) & \(0.56594\) & \(1.8564\)\\
     \end{tabular}
     \caption{Optimal parameters by test case}
     \label{tab:my_label}

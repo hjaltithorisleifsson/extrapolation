@@ -43,14 +43,9 @@ def plot_basic():
 	quotients.append(Quotient(lambda x: 0.0 if x < 0 else math.exp(-1.0 / x), 0.0, 0.5, 0.0, '$d/dx|_{x=0}r(x)$', 'rho'))
 	quotients.append(Quotient(lambda x: x * math.exp(-1.0/x**2), 0.0, 0.5, 0.0, '$d/dx|_{x=0}xe^{-1/x^2}$. $h=1/2$', 'xemxm2'))
 	quotients.append(Quotient(lambda x: math.sin(x), 0.0, 0.5, 1.0, '$d/dx|_{x=0}\sin x$. $h=1/2$', 'sin'))
-	quotients.append(Quotient(lambda x: math.log(x + 0.0001), 0.0, 0.00005, 10000.0, '$d/dx|_{x = 0} \ln (x + 0.0001)$. $h=1/2\cdot 10^{-4}$', 'h_tenthousandth'))
-	quotients.append(Quotient(lambda x: math.log(x + 0.01), 0.0, 0.005,100.0, '$d/dx|_{x=0} \ln (x + 0.01)$. $h=1/2\cdot 10^{-2}$', 'h_hundredth'))
 	quotients.append(Quotient(lambda x: math.log(x + 1), 0.0, 0.5, 1.0, '$d/dx|_{x=0} \ln(x + 1)$. $h=1/2$', 'h_one'))
 	quotients.append(Quotient(lambda x: x * x * math.sin(1 / x), 0.0, 1.0, 0.0, '$d/dx|_{x=0} x^2 \sin(1/x)$. $h=1$', 'xsin'))
 	quotients.append(Quotient(lambda x: math.sqrt(x + 1), 0.0, 0.5, 0.5, '$d/dx|_{x=0} \sqrt{x + 1}$. $h=1/2$', 'sqrt_1'))
-	quotients.append(Quotient(lambda x: math.sqrt(x + 10**(-2)), 0.0, 0.005, 5.0, '$d/dx|_{x=0}\sqrt{x + 10^{-2}}$. $h=1/2\cdot 10^{-2}$', 'sqrt_em2'))
-	quotients.append(Quotient(lambda x: math.sqrt(x + 10**(-4)), 0.0, 0.00005, 50.0, '$d/dx|_{x=0}\sqrt{x + 10^{-4}}$ $h=1/2\cdot 10^{-4}$', 'sqrt_em4'))
-	quotients.append(Quotient(lambda x: math.sqrt(x + 10**(-16)), 0.0, 0.5 * 10**(-16), 50000000.0, '$d/dx|_{x=0}\sqrt{x + 10^{-16}}$ $h=1/2\cdot 10^{-16}$', 'sqrt_em16'))
 	quotients.append(Quotient(lambda x: math.exp(x), 0, 1.0, 1.0, '$d/dx|_{x=0}e^x$. $h=1$', 'exp_0'))
 
 	#hp is for 'high precision'
@@ -58,14 +53,9 @@ def plot_basic():
 	hp_quotients.append(Quotient(lambda x: 0 if x < 0 else mp.exp(-1/x), mpf('0'), mpf('0.5'), mpf('0'), '$d/dx|_{x=0}r(x)$', 'rho_hp'))
 	hp_quotients.append(Quotient(lambda x: x * mp.exp(-1/mpf(x)**2), mpf('0'), mpf('0.5'), mpf('0'), '$d/dx|_{x=0}xe^{-1/x^2}$. $h=1/2$', 'xemxm2_hp'))
 	hp_quotients.append(Quotient(lambda x: mp.sin(x), 0.0, mpf('0.5'), mpf('1'), '$d/dx|_{x=0}\sin x$. $h=1/2$', 'sin_hp'))
-	hp_quotients.append(Quotient(lambda x: mp.log(mpf(x) + mpf('0.0001')), mpf(0.0), mpf('0.00005'), mpf(10000), '$d/dx|_{x = 0} \ln (x + 0.0001)$. $h=1/2\cdot 10^{-4}$', 'h_tenthousandth_hp'))
-	hp_quotients.append(Quotient(lambda x: mp.log(mpf(x) + mpf('0.01')), mpf(0.0), mpf('0.005'), mpf(100), '$d/dx|_{x=0} \ln (x + 0.01)$. $h=1/2\cdot 10^{-2}$', 'h_hundredth_hp'))
 	hp_quotients.append(Quotient(lambda x: mp.log(mpf(x) + mpf(1)), mpf(0.0), mpf(0.5), mpf(1), '$d/dx|_{x=0} \ln(x + 1)$. $h=1/2$', 'h_one_hp'))
 	hp_quotients.append(Quotient(lambda x: mpf(x) * mpf(x) * mp.sin(mpf(1) / mpf(x)), mpf(0.0), mpf(1.0), mpf(0.0), '$d/dx|_{x=0} x^2 \sin(1/x)$. $h=1$', 'xsin_hp'))
 	hp_quotients.append(Quotient(lambda x: mp.sqrt(mpf(x) + 1), 0.0, mpf('0.5'), mpf('0.5'), '$d/dx|_{x=0} \sqrt{x + 1}$. $h=1/2$', 'sqrt_1_hp'))
-	hp_quotients.append(Quotient(lambda x: mp.sqrt(mpf(x) + mpf(10)**(-2)), 0.0, mpf('0.005'), mpf('5.0'), '$d/dx|_{x=0}\sqrt{x + 10^{-2}}$. $h=1/2\cdot 10^{-2}$', 'sqrt_em2_hp'))
-	hp_quotients.append(Quotient(lambda x: mp.sqrt(mpf(x) + mpf(10)**(-4)), 0.0, mpf('0.00005'), mpf('50.0'), '$d/dx|_{x=0}\sqrt{x + 10^{-4}}$ $h=1/2\cdot 10^{-4}$', 'sqrt_em4_hp'))
-	hp_quotients.append(Quotient(lambda x: mp.sqrt(mpf(x) + mpf(10)**(-16)), 0.0, mpf('0.5') * mpf(10)**(-16), mpf('50000000.0'), '$d/dx|_{x=0}\sqrt{x + 10^{-16}}$ $h=1/2\cdot 10^{-16}$', 'sqrt_em16_hp'))
 	hp_quotients.append(Quotient(lambda x: mp.exp(x), 0.0, mpf(1.0), mpf(1.0), '$d/dx|_{x=0}e^x$', 'exp_0_hp'))
 
 	results_quot_seq = []
@@ -91,7 +81,6 @@ def plot_basic():
 	for (results_seq, quotient) in zip(hp_results_quot_seq, hp_quotients):
 		plot_eval_error(results_seq, 'Quotient: %s' % quotient.tex, quotient.ref, True, folder)
 		plot_trend(results_seq, 'Quotient: %s' % quotient.tex, quotient.ref, True, folder)
-		plot_log_log_trend(results_seq, 'Quotient: %s' % quotient.tex, quotient.ref + "_log_log_pow_fit", True, folder)
 
 	file = open(os.path.join(folder, 'all_results.txt'), 'w')
 
@@ -104,18 +93,6 @@ def plot_basic():
 
 	file.close()
 
-def plot_q_h():
-	param_quot = lambda q: Quotient(lambda x: mp.log(mpf(x) + q), mpf(0.0), q/2, 1 / q, '', '')
-	ps = np.array([mpf(0.5) ** i for i in range(30)])
-	title = 'Quotient: $d/dx|_{x=0}\ln(x+a)$'
-	plot_by_param(param_quot, sdq, ps, title, seqs, 'h_a_by_param', folder, cache_folder)
-
-def plot_q_k():
-	param_quot = lambda q: Quotient(lambda x: mp.sqrt(mpf(x) + q), mpf(0.0), q/2, mpf('0.5') / mp.sqrt(q), '', '')
-	ps = np.array([mpf(0.5) ** i for i in range(30)])
-	title = 'Quotient: $d/dx|_{x=0}\sqrt{x+a}$'
-	plot_by_param(param_quot, sdq, ps, title, seqs, 'k_a_by_param', folder, cache_folder)
-
 seqs = []
 seqs.append(romberg_seq(35))
 seqs.append(bulirsch_seq(35))
@@ -125,7 +102,5 @@ sdq = SymmetricDifference()
 
 def main():
 	plot_basic()
-	#plot_q_h()
-	#plot_q_k()
 
 main()

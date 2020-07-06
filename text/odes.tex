@@ -60,6 +60,18 @@ whose solution is the analytic function \(y(x) = e^x\).
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
+\includegraphics[scale=0.45]{emr_plots/exp_growth_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/exp_growth_hp_trend.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
 \includegraphics[scale=0.45]{emr_plots/exp_growth_hp_steps.png}
 \end{minipage}
 \end{figure}
@@ -68,11 +80,23 @@ whose solution is the analytic function \(y(x) = e^x\).
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/exp_growth_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/exp_growth_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/exp_growth_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/exp_growth_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/exp_growth_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/exp_growth_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -81,17 +105,17 @@ whose solution is the analytic function \(y(x) = e^x\).
     \small
     \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(3.929\cdot 10^{28}\) & \(3\) & \(34.22\) & \(0.08528\) & \(0.1755\) & \(0.02121\) \\
-Harmonic & lin-ln evals-error & \(1.053\cdot 10^{12}\) & \(12.16\) & \(3.226\) & \(0.02133\) & \(0.6119\) & \(0.001013\) \\
-Romberg & lin-ln steps-error & \(0.162\) & \(0.07703\) & \(0.8922\) & \(0.0008956\) & \(1.928\) & \(3.583\cdot 10^{-5}\) \\
-Harmonic & lin-ln steps-error & \(2.469\cdot 10^{10}\) & \(11.7\) & \(3.279\) & \(0.01751\) & \(1.22\) & \(0.0007849\) \\
-Romberg & ln-ln evals-error & \(1.232\) & \(0.1808\) & \(1.147\) & \(0.001975\) & \(2.075\) & \(8.865\cdot 10^{-5}\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(6.231\cdot 10^{65}\) & \(6\) & \(71.92\) & \(0.1174\) & \(0.1236\) & \(0.03122\) \\
+Harmonic & lin-ln evals-error & \(1.204\cdot 10^9\) & \(6.365\) & \(3.264\) & \(0.005221\) & \(0.6081\) & \(0.0001653\) \\
+Romberg & lin-ln steps-error & \(0.0873\) & \(0.2223\) & \(0.841\) & \(0.0009203\) & \(1.95\) & \(2.797\cdot 10^{-5}\) \\
+Harmonic & lin-ln steps-error & \(3.805\cdot 10^7\) & \(6.024\) & \(3.309\) & \(0.004502\) & \(1.214\) & \(0.0001425\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-Here we clearly have exponential convergence in the number of steps for the Romberg sequence but none of the models fits for the harmonic sequence.
+The Harmonic sequence performes better. We get down to machine level precision using either sequence in double precision arithmetic.\\
+
+We clearly have exponential convergence in the number of steps for the Romberg sequence and the fitting for the Harmonic sequence seems nice but we though have very big values for \(A\).
 
 \subsection{Logistic curve}
 
@@ -114,6 +138,18 @@ which is analytic.
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
+\includegraphics[scale=0.45]{emr_plots/logistic_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/logistic_hp_trend.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
 \includegraphics[scale=0.45]{emr_plots/logistic_hp_steps.png}
 \end{minipage}
 \end{figure}
@@ -122,11 +158,23 @@ which is analytic.
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/logistic_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/logistic_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/logistic_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/logistic_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/logistic_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/logistic_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -135,17 +183,17 @@ which is analytic.
     \small
      \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(7.183\cdot 10^{18}\) & \(2.999\) & \(26.25\) & \(0.08333\) & \(0.1874\) & \(0.02078\) \\
-Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
-Romberg & lin-ln steps-error & \(9.544\cdot 10^{-5}\) & \(0.1065\) & \(0.6621\) & \(0.001969\) & \(1.995\) & \(7.267\cdot 10^{-5}\) \\
-Harmonic & lin-ln steps-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(0.0004803\) & \(0.1008\) & \(0.852\) & \(0.002435\) & \(2.15\) & \(0.0001118\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(8.848\cdot 10^{63}\) & \(6\) & \(70.69\) & \(0.1952\) & \(0.1226\) & \(0.0637\) \\
+Harmonic & lin-ln evals-error & \(2510\) & \(9.384\) & \(4.249\) & \(0.00357\) & \(0.5073\) & \(0.0001329\) \\
+Romberg & lin-ln steps-error & \(0.01026\) & \(1.856\) & \(0.814\) & \(0.03122\) & \(1.932\) & \(0.001091\) \\
+Harmonic & lin-ln steps-error & \(257.8\) & \(9.223\) & \(4.256\) & \(0.003464\) & \(1.014\) & \(0.0001294\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-Here we clearly have exponential convergence in the number of steps for the Romberg sequence. The model does not fit in any case for the harmonic sequence.
+The harmonic sequence performes better and we get down to machine level precisision using either sequence, in double precision.\\
+
+We seem to have exponential convergence in the number of steps for the Romberg sequence and the models fit well for the harmonic sequence.\\
 
 \subsection{Tangens}
 
@@ -168,6 +216,18 @@ which is meromorphic and we are quite far from singularites.
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
+\includegraphics[scale=0.45]{emr_plots/tangens_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/tangens_hp_trend.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
 \includegraphics[scale=0.45]{emr_plots/tangens_hp_steps.png}
 \end{minipage}
 \end{figure}
@@ -176,11 +236,23 @@ which is meromorphic and we are quite far from singularites.
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/tangens_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/tangens_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/tangens_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/tangens_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/tangens_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/tangens_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -189,17 +261,17 @@ which is meromorphic and we are quite far from singularites.
     \small
      \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(1.351\cdot 10^{13}\) & \(2.997\) & \(13.1\) & \(0.1255\) & \(0.224\) & \(0.02402\) \\
-Harmonic & lin-ln evals-error & \(616.1\) & \(0.9751\) & \(1.974\) & \(0.01426\) & \(0.517\) & \(0.001138\) \\
-Romberg & lin-ln steps-error & \(0.2218\) & \(0.00522\) & \(0.2875\) & \(0.0001785\) & \(2.2\) & \(5.487\cdot 10^{-6}\) \\
-Harmonic & lin-ln steps-error & \(204.6\) & \(0.9415\) & \(1.982\) & \(0.01258\) & \(1.033\) & \(0.0009701\) \\
-Romberg & ln-ln evals-error & \(0.6649\) & \(0.2211\) & \(0.373\) & \(0.008112\) & \(2.379\) & \(0.0002882\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(9.496\cdot 10^{36}\) & \(6\) & \(33.25\) & \(0.1689\) & \(0.1523\) & \(0.03648\) \\
+Harmonic & lin-ln evals-error & \(358.8\) & \(0.5652\) & \(2.017\) & \(0.002488\) & \(0.5127\) & \(0.000109\) \\
+Romberg & lin-ln steps-error & \(0.3476\) & \(0.1097\) & \(0.3039\) & \(0.001043\) & \(2.18\) & \(2.579\cdot 10^{-5}\) \\
+Harmonic & lin-ln steps-error & \(121.5\) & \(0.5373\) & \(2.021\) & \(0.002309\) & \(1.025\) & \(0.0001013\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-Here we clearly have exponential convergence in the number of steps for the Romberg sequence. None of the models fits well for the Harmonic sequence.
+The harmonic sequence performes better and we get down to machine level precision in double precision arithmetic, using either sequence.\\
+
+Here we clearly have exponential convergence in the number of steps for the Romberg sequence and the fit is also very nice for the harmonic sequence.
 
 \subsection{Equation with singularity}
 
@@ -213,11 +285,24 @@ whose solution is
 y(t) = \frac{1}{1-(t-a)}.
 \]
 The solution is meromorphic with a pole at \(1+a\).
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{emr_plots/singularity_0.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/singularity_0_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/singularity_0_hp_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -229,11 +314,23 @@ The solution is meromorphic with a pole at \(1+a\).
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/singularity_0_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/singularity_0_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/singularity_0_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/singularity_0_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/singularity_0_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/singularity_0_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -242,23 +339,35 @@ The solution is meromorphic with a pole at \(1+a\).
     \small
      \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(1.725\cdot 10^{16}\) & \(2.999\) & \(18.53\) & \(0.09702\) & \(0.2017\) & \(0.02064\) \\
-Harmonic & lin-ln evals-error & \(728.6\) & \(0.9185\) & \(2.701\) & \(0.007961\) & \(0.5123\) & \(0.0006199\) \\
-Romberg & lin-ln steps-error & \(0.05483\) & \(0.02945\) & \(0.4449\) & \(0.0008532\) & \(2.075\) & \(3.038\cdot 10^{-5}\) \\
-Harmonic & lin-ln steps-error & \(169.4\) & \(0.8824\) & \(2.711\) & \(0.006852\) & \(1.024\) & \(0.0005169\) \\
-Romberg & ln-ln evals-error & \(0.1965\) & \(0.09582\) & \(0.5737\) & \(0.002273\) & \(2.24\) & \(8.882\cdot 10^{-5}\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(1.418\cdot 10^{42}\) & \(6\) & \(42.1\) & \(0.1387\) & \(0.141\) & \(0.03195\) \\
+Harmonic & lin-ln evals-error & \(440\) & \(0.5196\) & \(2.747\) & \(0.001256\) & \(0.5092\) & \(5.472\cdot 10^{-5}\) \\
+Romberg & lin-ln steps-error & \(0.04186\) & \(0.03016\) & \(0.4274\) & \(0.0002961\) & \(2.091\) & \(8.21\cdot 10^{-6}\) \\
+Harmonic & lin-ln steps-error & \(104.3\) & \(0.4903\) & \(2.752\) & \(0.001151\) & \(1.018\) & \(5.022\cdot 10^{-5}\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-Here we seem to have exponential convergence in the number of steps for the Romberg sequence. For the Harmonic sequence, none of the models fits nicely.
+The harmonic sequence performes better and we get almost down to machine level precision using standar double precision floating point arithmetic, with either sequence.\\
+
+We have very nice fit for the exponential convergence in the number of steps for the Romberg sequence and also for the harmonic sequence.
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{emr_plots/singularity_2.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/singularity_2_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/singularity_2_hp_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -270,11 +379,23 @@ Here we seem to have exponential convergence in the number of steps for the Romb
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/singularity_2_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/singularity_2_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/singularity_2_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/singularity_2_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/singularity_2_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/singularity_2_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -283,23 +404,35 @@ Here we seem to have exponential convergence in the number of steps for the Romb
     \small
      \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(567.8\) & \(1.143\) & \(0.1661\) & \(0.7022\) & \(0.5832\) & \(0.03661\) \\
-Harmonic & lin-ln evals-error & \(241.1\) & \(0.4337\) & \(0.04452\) & \(0.2373\) & \(0.6456\) & \(0.007567\) \\
-Romberg & lin-ln steps-error & \(108\) & \(0.05406\) & \(0.0004885\) & \(0.3319\) & \(4.297\) & \(0.002772\) \\
-Harmonic & lin-ln steps-error & \(226.2\) & \(0.4359\) & \(-25.94\) & \(51.96\) & \(1.257\) & \(0.02703\) \\
-Romberg & ln-ln evals-error & \(117.2\) & \(0.08201\) & \(0.0007221\) & \(0.4366\) & \(4.711\) & \(0.004126\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(1.249\cdot 10^{12}\) & \(5.984\) & \(2.77\) & \(0.7656\) & \(0.3067\) & \(0.08315\) \\
+Harmonic & lin-ln evals-error & \(173.2\) & \(0.1158\) & \(0.03983\) & \(0.08603\) & \(0.6452\) & \(0.002375\) \\
+Romberg & lin-ln steps-error & \(3540\) & \(2.885\) & \(0.005212\) & \(0.6307\) & \(3.461\) & \(0.00941\) \\
+Harmonic & lin-ln steps-error & \(165.2\) & \(0.1095\) & \(0.04047\) & \(0.08154\) & \(1.287\) & \(0.002248\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-Here the model fits moderately well for Romberg sequence, when considering exponential convergence in the number of steps. We do not have nice fit for the harmonic sequence in any of the cases.
+Here Romberg works better and we do not attain as high precisison using the harmonic as when using Romberg, in standard double precision arithmetic.\\
+
+Here the model fits moderately well for Romberg sequence, when considering exponential convergence in the number of steps. We also have moderate fit for the harmonic sequence.
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{emr_plots/singularity_4.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/singularity_4_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/singularity_4_hp_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -311,40 +444,43 @@ Here the model fits moderately well for Romberg sequence, when considering expon
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/singularity_4_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/singularity_4_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/singularity_4_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/singularity_4_hp_romberg_steps_stack.png}
 \end{minipage}
 \end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/singularity_4_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/singularity_4_hp_harmonic_steps_stack.png}
+\end{minipage}
+\end{figure}
+
 
 \begin{table}[H]
     \centering
     \small
      \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(1.001\cdot 10^{4}\) & \(9.072\cdot 10^{-7}\) & \(9.09\cdot 10^{-5}\) & \(0.01109\) & \(0.9818\) & \(0.0001641\) \\
-Harmonic & lin-ln evals-error & \(1\cdot 10^{4}\) & \(2.528\cdot 10^{-8}\) & \(0.0001699\) & \(0.0002823\) & \(0.7496\) & \(7.364\cdot 10^{-6}\) \\
-Romberg & lin-ln steps-error & \(7433\) & \(0.3334\) & \(-67.64\) & \(3\) & \(5.423\) & \(0.3392\) \\
-Harmonic & lin-ln steps-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(4948\) & \(1\) & \(-198.5\) & \(1.232\) & \(4.103\) & \(1.002\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(1.462\cdot 10^4\) & \(0.2298\) & \(0.004335\) & \(2.285\) & \(0.7393\) & \(0.04196\) \\
+Harmonic & lin-ln evals-error & \(1\cdot 10^4\) & \(5.52\cdot 10^{-9}\) & \(0.0001699\) & \(5.806\cdot 10^{-5}\) & \(0.7494\) & \(1.194\cdot 10^{-6}\) \\
+Romberg & lin-ln steps-error & \(1.087\cdot 10^4\) & \(0.02206\) & \(1.977\cdot 10^{-8}\) & \(3.201\) & \(7.604\) & \(0.006289\) \\
+Harmonic & lin-ln steps-error & \(9997\) & \(3.302\cdot 10^{-10}\) & \(0.0001749\) & \(5.29\cdot 10^{-6}\) & \(1.494\) & \(1.204\cdot 10^{-7}\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-Here the model does not fit in any case.\\
+Here we clearly do not have exponential convergence in the number of evaluations for the Romberg sequence. We have not so good fit for exponential convergence in the number of steps.\\
 
-The plot of \(q\) against \(a\) is as follows:
-
-\begin{figure}[H]
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{emr_plots/log_p_vs_q_sing.png}
-\end{minipage}
-\end{figure}
+Regarding the harmonic sequence, we note that we have extremely slow convergence, so the \(x\) and \(y\) values differ by many orders of magnitude, so the results are maybe not so reliable.
 
 \subsection{Equation with moderate singularity}
 
@@ -356,11 +492,24 @@ whose solution is
 \[
 y(t) = \sqrt{1 - (t-a)}
 \]
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{emr_plots/quad_sing_0.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/quad_sing_0_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/quad_sing_0_hp_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -372,11 +521,23 @@ y(t) = \sqrt{1 - (t-a)}
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/quad_sing_0_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/quad_sing_0_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/quad_sing_0_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/quad_sing_0_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/quad_sing_0_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/quad_sing_0_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -385,23 +546,35 @@ y(t) = \sqrt{1 - (t-a)}
     \small
      \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(3.406\cdot 10^{16}\) & \(2.999\) & \(23.22\) & \(0.06365\) & \(0.1841\) & \(0.01443\) \\
-Harmonic & lin-ln evals-error & \(0.4658\) & \(0.1195\) & \(3.123\) & \(0.0002015\) & \(0.4979\) & \(1.14\cdot 10^{-5}\) \\
-Romberg & lin-ln steps-error & \(0.0008592\) & \(0.3997\) & \(0.5989\) & \(0.009262\) & \(1.979\) & \(0.0003485\) \\
-Harmonic & lin-ln steps-error & \(0.1044\) & \(0.144\) & \(3.127\) & \(0.0002611\) & \(0.9956\) & \(1.552\cdot 10^{-5}\) \\
-Romberg & ln-ln evals-error & \(0.002924\) & \(0.01955\) & \(0.7671\) & \(0.0003673\) & \(2.132\) & \(1.55\cdot 10^{-5}\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(8.335\cdot 10^{41}\) & \(6\) & \(47.04\) & \(0.1111\) & \(0.1343\) & \(0.02593\) \\
+Harmonic & lin-ln evals-error & \(0.454\) & \(0.03631\) & \(3.115\) & \(3.797\cdot 10^{-5}\) & \(0.4983\) & \(1.623\cdot 10^{-6}\) \\
+Romberg & lin-ln steps-error & \(0.0002771\) & \(0.7384\) & \(0.5104\) & \(0.0058\) & \(2.038\) & \(0.0001599\) \\
+Harmonic & lin-ln steps-error & \(0.1009\) & \(0.0414\) & \(3.117\) & \(4.412\cdot 10^{-5}\) & \(0.9965\) & \(1.9\cdot 10^{-6}\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-Here we clearly have exponential convergence in the number of steps and evaluations for the harmonic sequence. We also have it in the number of steps for the Romberg sequence.
+Here the harmonic sequence works better than Romberg and we get down to machine level precision using either sequence, in standard double precision floating point arithmetic.\\
+
+Here we clearly have exponential convergence in the number of steps and evaluations for the harmonic sequence. Regarding Romberg, we seem to have exponential convergence in the number of steps.
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{emr_plots/quad_sing_2.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/quad_sing_2_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/quad_sing_2_hp_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -413,11 +586,23 @@ Here we clearly have exponential convergence in the number of steps and evaluati
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/quad_sing_2_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/quad_sing_2_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/quad_sing_2_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/quad_sing_2_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/quad_sing_2_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/quad_sing_2_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -426,25 +611,35 @@ Here we clearly have exponential convergence in the number of steps and evaluati
     \small
     \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(1.977\) & \(1.277\) & \(0.912\) & \(0.1265\) & \(0.3841\) & \(0.009173\) \\
-Harmonic & lin-ln evals-error & \(0.1185\) & \(0.9408\) & \(0.3049\) & \(0.2691\) & \(0.4676\) & \(0.007262\) \\
-Romberg & lin-ln steps-error & \(0.05369\) & \(0.04044\) & \(0.009886\) & \(0.08471\) & \(3.134\) & \(0.001253\) \\
-Harmonic & lin-ln steps-error & \(0.1007\) & \(0.6539\) & \(0.2999\) & \(0.2215\) & \(0.9368\) & \(0.006574\) \\
-Romberg & ln-ln evals-error & \(0.06264\) & \(0.01892\) & \(0.01292\) & \(0.03735\) & \(3.418\) & \(0.0006328\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(3.095\cdot 10^9\) & \(5.978\) & \(4.521\) & \(0.4282\) & \(0.2537\) & \(0.04639\) \\
+Harmonic & lin-ln evals-error & \(0.09273\) & \(0.0545\) & \(0.263\) & \(0.01142\) & \(0.4785\) & \(0.0004549\) \\
+Romberg & lin-ln steps-error & \(0.2097\) & \(1.241\) & \(0.01393\) & \(0.1057\) & \(3.022\) & \(0.001297\) \\
+Harmonic & lin-ln steps-error & \(0.08262\) & \(0.05039\) & \(0.2624\) & \(0.01092\) & \(0.9574\) & \(0.0004388\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-For the Romberg sequence, the model seems to fit moderately well when considering exponential convergence in the number of evaluations but it is not entirely clear since the model also fits moderately well when considering exponential converge in the number of steps and those two are mutually exclusive.\\
+Here Romberg performes better and we do not attain as high precision using the harmonic sequence in standard double precision floating point arithmetic.\\
 
-For the harmonic sequence we do not get nice fit in any case.
+For the Romberg sequence, the model seems to fit moderately well when considering exponential convergence in the number of evaluations. We also have reasonably good fit for the harmonic sequence.\\
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{emr_plots/quad_sing_4.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/quad_sing_4_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/quad_sing_4_hp_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -456,11 +651,23 @@ For the harmonic sequence we do not get nice fit in any case.
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/quad_sing_4_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/quad_sing_4_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/quad_sing_4_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/quad_sing_4_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/quad_sing_4_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/quad_sing_4_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -469,27 +676,15 @@ For the harmonic sequence we do not get nice fit in any case.
     \small
      \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(1.59\) & \(1.047\) & \(1.341\) & \(0.3366\) & \(0.1989\) & \(0.08076\) \\
-Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
-Romberg & lin-ln steps-error & \(0.1375\) & \(0.1919\) & \(0.04595\) & \(0.8511\) & \(2.117\) & \(0.05595\) \\
-Harmonic & lin-ln steps-error & \(10.05\) & \(18.03\) & \(1.442\) & \(1.062\) & \(0.3442\) & \(0.1232\) \\
-Romberg & ln-ln evals-error & \(0.148\) & \(0.1921\) & \(0.05535\) & \(0.7589\) & \(2.281\) & \(0.05284\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(0.1398\) & \(0.4846\) & \(0.2489\) & \(0.4625\) & \(0.3506\) & \(0.01881\) \\
+Harmonic & lin-ln evals-error & \(1.282\) & \(3.403\) & \(1.258\) & \(0.3894\) & \(0.1631\) & \(0.05472\) \\
+Romberg & lin-ln steps-error & \(0.0429\) & \(0.5116\) & \(0.001785\) & \(3.769\) & \(4.002\) & \(0.04408\) \\
+Harmonic & lin-ln steps-error & \(0.8136\) & \(1.714\) & \(1.146\) & \(0.311\) & \(0.3342\) & \(0.04634\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
 Here, we do not have any clear fit.
-
-The plot of \(q\) against \(a\) is as follows:
-
-\begin{figure}[H]
-\centering
-\begin{minipage}{0.45\textwidth}
-\centering
-\includegraphics[scale=0.45]{emr_plots/log_p_vs_q_quad_sing.png}
-\end{minipage}
-\end{figure}
 
 \subsection{Circular rotation}
 
@@ -511,6 +706,18 @@ which is entire.
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
+\includegraphics[scale=0.45]{emr_plots/rotation_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/rotation_hp_trend.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
 \includegraphics[scale=0.45]{emr_plots/rotation_hp_steps.png}
 \end{minipage}
 \end{figure}
@@ -519,11 +726,23 @@ which is entire.
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/rotation_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/rotation_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/rotation_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/rotation_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/rotation_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/rotation_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -532,19 +751,17 @@ which is entire.
     \small
      \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(9.158\cdot 10^{24}\) & \(3\) & \(27.06\) & \(0.103\) & \(0.1896\) & \(0.02387\) \\
-Harmonic & lin-ln evals-error & \(1.269\cdot 10^{13}\) & \(12.98\) & \(2.597\) & \(0.0327\) & \(0.6252\) & \(0.001654\) \\
-Romberg & lin-ln steps-error & \(1.09\) & \(0.0003639\) & \(0.6727\) & \(6.223\cdot 10^{-6}\) & \(2.007\) & \(2.397\cdot 10^{-7}\) \\
-Harmonic & lin-ln steps-error & \(4.499\cdot 10^{11}\) & \(12.52\) & \(2.643\) & \(0.02762\) & \(1.246\) & \(0.001318\) \\
-Romberg & ln-ln evals-error & \(7.126\) & \(0.3484\) & \(0.8677\) & \(0.005226\) & \(2.163\) & \(0.0002203\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(1.215\cdot 10^{60}\) & \(6\) & \(61.05\) & \(0.1358\) & \(0.1308\) & \(0.03453\) \\
+Harmonic & lin-ln evals-error & \(9\cdot 10^9\) & \(6.841\) & \(2.636\) & \(0.007896\) & \(0.62\) & \(0.0002457\) \\
+Romberg & lin-ln steps-error & \(1.083\) & \(0.000101\) & \(0.6717\) & \(4.963\cdot 10^{-7}\) & \(2.007\) & \(1.48\cdot 10^{-8}\) \\
+Harmonic & lin-ln steps-error & \(4.276\cdot 10^8\) & \(6.508\) & \(2.675\) & \(0.006923\) & \(1.237\) & \(0.0002153\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
 The harmonic sequence works better then Romberg and we get down to machine level precision using either sequence when using standard floating point arithmetic.\\
 
-We clearly have exponential convergence in the number of steps for the Romberg sequence but we do not have any nice fit for the harmonic sequence.
+We clearly have exponential convergence in the number of steps for the Romberg sequence. For the harmonic sequence, we seem to have exponential convergence, but though we must note that the mean value of the \(A\) coefficient is suspiciously large.
 
 \subsection{Mathematical pendulum}
 
@@ -561,6 +778,18 @@ y''(t) + \sin y(t) = 0,\quad y(0) = 0,\, y'(0) = 1, \quad t\in [0,1].
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
+\includegraphics[scale=0.45]{emr_plots/oscillation_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/oscillation_hp_trend.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
 \includegraphics[scale=0.45]{emr_plots/oscillation_hp_steps.png}
 \end{minipage}
 \end{figure}
@@ -569,11 +798,23 @@ y''(t) + \sin y(t) = 0,\quad y(0) = 0,\, y'(0) = 1, \quad t\in [0,1].
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/oscillation_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/oscillation_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/oscillation_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/oscillation_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/oscillation_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/oscillation_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -582,17 +823,17 @@ y''(t) + \sin y(t) = 0,\quad y(0) = 0,\, y'(0) = 1, \quad t\in [0,1].
     \small
      \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(4.852\cdot 10^{18}\) & \(3\) & \(23.49\) & \(0.06226\) & \(0.1898\) & \(0.01102\) \\
-Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
-Romberg & lin-ln steps-error & \(0.01054\) & \(1.671\) & \(0.603\) & \(0.03526\) & \(2.013\) & \(0.001162\) \\
-Harmonic & lin-ln steps-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(0.0311\) & \(0.7449\) & \(0.7694\) & \(0.01405\) & \(2.17\) & \(0.0005522\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(3.245\cdot 10^{52}\) & \(6\) & \(56.9\) & \(0.1423\) & \(0.1295\) & \(0.03859\) \\
+Harmonic & lin-ln evals-error & \(471.5\) & \(0.2744\) & \(3.713\) & \(0.0002618\) & \(0.5042\) & \(1.13\cdot 10^{-5}\) \\
+Romberg & lin-ln steps-error & \(0.01384\) & \(0.3333\) & \(0.6305\) & \(0.002076\) & \(1.995\) & \(6.207\cdot 10^{-5}\) \\
+Harmonic & lin-ln steps-error & \(72.54\) & \(0.2499\) & \(3.718\) & \(0.0002297\) & \(1.008\) & \(9.918\cdot 10^{-6}\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-Here we seem to have exponential convergence in the number of steps for the Romberg sequence. The harmonic sequence works is faster and we almost get down to machine level precision using either sequence. 
+Here the harmonic sequence works better and we get down to machine level precision in standard double precision floating point arithmetic, using either sequence.\\
+
+We have nice fit for the exponential convergence in the number of steps for the Romberg sequence. We also have very nice fit for the harmonic sequence.
 
 \subsection{Federpendel}
 
@@ -610,6 +851,18 @@ where \(\bfp\) and \(\bfq\) are two dimensional vectors. We will consider it wit
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
+\includegraphics[scale=0.45]{emr_plots/federpendel_1_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/federpendel_1_hp_trend.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
 \includegraphics[scale=0.45]{emr_plots/federpendel_1_hp_steps.png}
 \end{minipage}
 \end{figure}
@@ -618,11 +871,23 @@ where \(\bfp\) and \(\bfq\) are two dimensional vectors. We will consider it wit
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/federpendel_1_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/federpendel_1_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/federpendel_1_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/federpendel_1_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/federpendel_1_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/federpendel_1_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -631,25 +896,35 @@ where \(\bfp\) and \(\bfq\) are two dimensional vectors. We will consider it wit
     \small
      \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(2.325^{15}\) & \(2.897\) & \(20.8\) & \(0.07387\) & \(0.1913\) & \(0.01729\) \\
-Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
-Romberg & lin-ln steps-error & \(0.006769\) & \(0.2266\) & \(0.5219\) & \(0.007752\) & \(2.019\) & \(0.0002881\) \\
-Harmonic & lin-ln steps-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(0.02348\) & \(0.2334\) & \(0.6702\) & \(0.003067\) & \(2.176\) & \(0.000111\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(8.241\cdot 10^{40}\) & \(6\) & \(43.86\) & \(0.1208\) & \(0.1376\) & \(0.02818\) \\
+Harmonic & lin-ln evals-error & \(0.5082\) & \(0.2486\) & \(2.612\) & \(0.0003409\) & \(0.4955\) & \(1.457\cdot 10^{-5}\) \\
+Romberg & lin-ln steps-error & \(0.002791\) & \(0.3701\) & \(0.4615\) & \(0.003294\) & \(2.064\) & \(8.941\cdot 10^{-5}\) \\
+Harmonic & lin-ln steps-error & \(0.1465\) & \(0.2485\) & \(2.613\) & \(0.0003471\) & \(0.9909\) & \(1.492\cdot 10^{-5}\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-Here we seem to have exponential convergence in the number of steps for the Romberg sequence. None of the models fits well for the harmonic sequence.\\
+Here the harmonic sequence works better and we get down to machine level precision in standard double precision floating point arithmetic, using either sequence.\\
 
-The harmonic sequence performes better we almost get down to machine level precision using either sequence, in double precision floating point arithmetic. 
+We have nice fit for exponential convergence in the number of steps for the Romberg sequence. We also have nice fit for exponential convergence for the harmonic sequence.
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{emr_plots/federpendel_2.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/federpendel_2_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/federpendel_2_hp_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -661,11 +936,23 @@ The harmonic sequence performes better we almost get down to machine level preci
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/federpendel_2_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/federpendel_2_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/federpendel_2_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/federpendel_2_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/federpendel_2_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/federpendel_2_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -674,19 +961,17 @@ The harmonic sequence performes better we almost get down to machine level preci
     \small
      \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(2.562\cdot 10^{13}\) & \(3\) & \(13.43\) & \(0.1715\) & \(0.224\) & \(0.04363\) \\
-Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
-Romberg & lin-ln steps-error & \(0.07725\) & \(0.4469\) & \(0.2919\) & \(0.04082\) & \(2.194\) & \(0.001626\) \\
-Harmonic & lin-ln steps-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(0.2609\) & \(0.6696\) & \(0.3816\) & \(0.05891\) & \(2.373\) & \(0.002839\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(2.335\cdot 10^{34}\) & \(6\) & \(32.11\) & \(0.1569\) & \(0.1519\) & \(0.03495\) \\
+Harmonic & lin-ln evals-error & \(0.5245\) & \(0.3886\) & \(1.643\) & \(0.001271\) & \(0.492\) & \(5.413\cdot 10^{-5}\) \\
+Romberg & lin-ln steps-error & \(0.05507\) & \(0.06164\) & \(0.2956\) & \(0.001162\) & \(2.178\) & \(3.178\cdot 10^{-5}\) \\
+Harmonic & lin-ln steps-error & \(0.2422\) & \(0.3718\) & \(1.642\) & \(0.001252\) & \(0.984\) & \(5.36\cdot 10^{-5}\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
-Here the model for exponential convergence in the number of steps seems to fit moderately well for the Romberg sequence but none of the models fits for the harmonic sequence.\\
+Here the harmonic sequence also works better and we attain high precision using either sequence in standard double precision floating point arithmetic.\\
 
-The harmonic sequence works better and we get almost down to machine level precision in standard double precision floating point arithmetic.
+We seem to have very nice fit for exponential convergence in the number of steps for the Romberg sequence. We also have very nice fit for exponential convergence for the harmonic sequence.
 
 \subsection{Lorenz equations}
 
@@ -704,6 +989,18 @@ where \(\sigma,\,\rho\) and \(\beta\) are constants. In our experiment, the cons
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
+\includegraphics[scale=0.45]{emr_plots/lorenz_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/lorenz_hp_trend.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
 \includegraphics[scale=0.45]{emr_plots/lorenz_hp_steps.png}
 \end{minipage}
 \end{figure}
@@ -712,11 +1009,23 @@ where \(\sigma,\,\rho\) and \(\beta\) are constants. In our experiment, the cons
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/lorenz_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/lorenz_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/lorenz_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/lorenz_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/lorenz_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/lorenz_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -724,25 +1033,35 @@ where \(\sigma,\,\rho\) and \(\beta\) are constants. In our experiment, the cons
     \centering\small
      \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(3.447\cdot 10^{21}\) & \(3\) & \(21.2\) & \(0.1242\) & \(0.2061\) & \(0.02692\) \\
-Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
-Romberg & lin-ln steps-error & \(2.886\) & \(0.04035\) & \(0.4956\) & \(0.0009672\) & \(2.098\) & \(3.499\cdot 10^{-5}\) \\
-Harmonic & lin-ln steps-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(15.97\) & \(0.4928\) & \(0.6421\) & \(0.01116\) & \(2.265\) & \(0.0004469\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(1.532\cdot 10^{73}\) & \(6\) & \(66.42\) & \(0.2606\) & \(0.1285\) & \(0.07315\) \\
+Harmonic & lin-ln evals-error & \(2.639\cdot 10^7\) & \(6.828\) & \(4.214\) & \(0.001814\) & \(0.5062\) & \(7.152\cdot 10^{-5}\) \\
+Romberg & lin-ln steps-error & \(8932\) & \(2.321\) & \(0.7248\) & \(0.06447\) & \(1.976\) & \(0.001984\) \\
+Harmonic & lin-ln steps-error & \(2.903\cdot 10^6\) & \(6.603\) & \(4.22\) & \(0.001799\) & \(1.012\) & \(7.141\cdot 10^{-5}\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
 
 Here the harmonic sequence works better and we get down to machine level precision in standard double precision arithmetic.\\
 
-The model for exponential convergence in the number of steps seems to fit well for the Romberg sequence but none of the models fits for the harmonic sequence.
+The model for exponential convergence in the number of steps fits moderately well for the Romberg sequence. We get nice fit for exponential convergence for the harmonic sequence.
 
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[scale=0.45]{emr_plots/lorenz_02.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/lorenz_02_hp.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/lorenz_02_hp_trend.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
@@ -754,11 +1073,23 @@ The model for exponential convergence in the number of steps seems to fit well f
 \centering
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/lorenz_02_hp_log_log_pow_fit_trend.png}
+\includegraphics[scale=0.45]{emr_plots/lorenz_02_hp_romberg_stack.png}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
 \centering
-\includegraphics[scale=0.45]{emr_plots/lorenz_02_hp_trend.png}
+\includegraphics[scale=0.45]{emr_plots/lorenz_02_hp_romberg_steps_stack.png}
+\end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/lorenz_02_hp_harmonic_stack.png}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[scale=0.45]{emr_plots/lorenz_02_hp_harmonic_steps_stack.png}
 \end{minipage}
 \end{figure}
 
@@ -767,12 +1098,10 @@ The model for exponential convergence in the number of steps seems to fit well f
     \small
     \begin{tabular}{c|c||c|c|c|c|c|c}
 Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
-Romberg & lin-ln evals-error & \(1.544\cdot 10^{17}\) & \(3\) & \(12.97\) & \(0.1833\) & \(0.2372\) & \(0.03499\) \\
-Harmonic & lin-ln evals-error & . & . & . & . & . & . \\
-Romberg & lin-ln steps-error & \(129.1\) & \(0.3322\) & \(0.2655\) & \(0.01477\) & \(2.27\) & \(0.0004755\) \\
-Harmonic & lin-ln steps-error & . & . & . & . & . & . \\
-Romberg & ln-ln evals-error & \(506.5\) & \(0.8695\) & \(0.3478\) & \(0.03817\) & \(2.457\) & \(0.00137\) \\
-Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
+Romberg & lin-ln evals-error & \(2.009\cdot 10^{46}\) & \(6\) & \(37.38\) & \(0.2052\) & \(0.1527\) & \(0.04644\) \\
+Harmonic & lin-ln evals-error & \(7.974\cdot 10^8\) & \(7.349\) & \(2.931\) & \(0.02946\) & \(0.5011\) & \(0.001063\) \\
+Romberg & lin-ln steps-error & \(1040\) & \(1.066\) & \(0.337\) & \(0.01327\) & \(2.18\) & \(0.0003518\) \\
+Harmonic & lin-ln steps-error & \(1.538\cdot 10^8\) & \(7.211\) & \(2.931\) & \(0.02863\) & \(1.002\) & \(0.001041\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -780,7 +1109,7 @@ Harmonic & ln-ln evals-error & . & . & . & . & . & . \\
 
 Here we also get down to machine level precision in standard double precision floating point arithmetic. The harmonic sequence performes better.\\
 
-None of the models fits for the harmonic sequence but we seem to have exponential convergence in the number of steps for the romberg sequence.
+The model for exponential convergence in the number of steps fits moderately well for the Romberg sequence. We get moderate fit for exponential convergence for the harmonic sequence.
 
 The values of the optimal parameters in the fitting of the number evaluations against the error, are:
 
@@ -788,36 +1117,36 @@ The values of the optimal parameters in the fitting of the number evaluations ag
     \centering
     \begin{tabular}{c|c||c|c|c}
            IVP & Sequence & \(b\) & \(c\) & \(q\) \\\hline\hline
-$y'=y$, $y(0) = 0$ & Romberg & \(27.187\) & \(22.015\) & \(0.20227\) \\
+$y'=y$, $y(0) = 0$ & Romberg & \(65.485\) & \(52.551\) & \(0.13291\) \\
 $y'=y$, $y(0) = 0$ & Harmonic & \(8.8124\) & \(3.0433\) & \(0.61436\) \\
-$y' = y(1-y)$ & Romberg & \(17.604\) & \(19.237\) & \(0.20418\) \\
+$y' = y(1-y)$ & Romberg & \(53.149\) & \(47.621\) & \(0.13177\) \\
 $y' = y(1-y)$ & Harmonic & \(1.7927\) & \(4.0933\) & \(0.51064\) \\
-$y' = 1 + y^2$, $y(0) = 0$ & Romberg & \(11.465\) & \(8.8186\) & \(0.24549\) \\
-$y' = 1 + y^2$, $y(0) = 0$ & Harmonic & \(3.3496\) & \(1.8647\) & \(0.51993\) \\
-$(y_1,y_2)' = (-y_2,y_1)$, $y(0) = (1,0)$ & Romberg & \(22.626\) & \(16.846\) & \(0.2184\) \\
+$y' = 1 + y^2$, $y(0) = 0$ & Romberg & \(33.382\) & \(24.704\) & \(0.15812\) \\
+$y' = 1 + y^2$, $y(0) = 0$ & Harmonic & \(3.3496\) & \(1.8647\) & \(0.51993\)  \\
+$(y_1,y_2)' = (-y_2,y_1)$, $y(0) = (1,0)$ & Romberg & \(57.413\) & \(43.792\) & \(0.1403\) \\
 $(y_1,y_2)' = (-y_2,y_1)$, $y(0) = (1,0)$ & Harmonic & \(9.7592\) & \(2.4171\) & \(0.62765\) \\
-$y' = y^2$, $y(0) = 1/2$ & Romberg & \(14.78\) & \(12.517\) & \(0.22455\) \\
-$y' = y^2$, $y(0) = 1/2$ & Harmonic & \(3.5994\) & \(2.5894\) & \(0.51472\) \\
-$y'=y^2$, $y(0) = 1/(1+10^{-2})$ & Romberg & \(5.3983\) & \(0.1961\) & \(0.4989\) \\
+$y' = y^2$, $y(0) = 1/2$ & Romberg & \(39.999\) & \(31.606\) & \(0.14796\) \\
+$y' = y^2$, $y(0) = 1/2$ & Harmonic & \(3.5994\) & \(2.5894\) & \(0.51472\)  \\
+$y'=y^2$, $y(0) = 1/(1+10^{-2})$ & Romberg & \(11.039\) & \(2.3505\) & \(0.26394\)  \\
 $y'=y^2$, $y(0) = 1/(1+10^{-2})$ & Harmonic & \(4.7796\) & \(0.032416\) & \(0.6592\) \\
-$y'=y^2$, $y(0) = 1/(1+10^{-4})$ & Romberg & \(9.212\) & \(0.00012308\) & \(0.94461\) \\
+$y'=y^2$, $y(0) = 1/(1+10^{-4})$ & Romberg & \(9.6163\) & \(0.016825\) & \(0.50749\) \\
 $y'=y^2$, $y(0) = 1/(1+10^{-4})$ & Harmonic & \(9.2104\) & \(0.00016925\) & \(0.74975\) \\
-$y' = -1/2y$, $y(0) = \sqrt{2}$ & Romberg & \(17.142\) & \(17.376\) & \(0.2007\) \\
+$y' = -1/2y$, $y(0) = \sqrt{2}$ & Romberg & \(42.458\) & \(37.281\) & \(0.13969\) \\
 $y' = -1/2y$, $y(0) = \sqrt{2}$ & Harmonic & \(-0.45512\) & \(3.1436\) & \(0.49744\) \\
-$y' = -1/2y$, $y(0) = \sqrt{1+10^{-2}}$ & Romberg & \(0.063222\) & \(1.0479\) & \(0.35645\) \\
+$y' = -1/2y$, $y(0) = \sqrt{1+10^{-2}}$ & Romberg & \(6.2634\) & \(4.2006\) & \(0.23055\)\\
 $y' = -1/2y$, $y(0) = \sqrt{1+10^{-2}}$ & Harmonic & \(-1.7425\) & \(0.33371\) & \(0.45544\) \\
-$y' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$ & Romberg & \(0.13652\) & \(1.2653\) & \(0.19436\) \\
-$y' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$ & Harmonic & \(2.2343\) & \(3.3206\) & \(0.091009\) \\
-$y'' + \sin(y) = 0$ & Romberg & \(22.275\) & \(19.017\) & \(0.20078\) \\
-$y'' + \sin(y) = 0$ & Harmonic & \(4.7064\) & \(3.6116\) & \(0.50678\) \\
-Federpendel, estimate after 1 time unit. & Romberg & \(17.532\) & \(15.778\) & \(0.20624\) \\
-Federpendel, estimate after 1 time unit. & Harmonic & \(0.30737\) & \(2.706\) & \(0.49211\) \\
-Federpendel, estimate after 2 time units. & Romberg & \(14.66\) & \(11.217\) & \(0.22272\) \\
+$y' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$ & Romberg & \(-1.4645\) & \(0.28248\) & \(0.33417\)\\
+$y' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$ & Harmonic & \(2.2343\) & \(3.3206\) & \(0.091009\)\\
+$y'' + sin(y) = 0$ & Romberg & \(52.459\) & \(42.97\) & \(0.13575\)\\
+$y'' + sin(y) = 0$ & Harmonic & \(4.7064\) & \(3.6116\) & \(0.50678\)\\
+Federpendel, estimate after 1 time unit. & Romberg & \(41.924\) & \(34.768\) & \(0.14246\)\\
+Federpendel, estimate after 1 time unit. & Harmonic & \(0.30737\) & \(2.706\) & \(0.49211\)\\
+Federpendel, estimate after 2 time units. & Romberg & \(34.307\) & \(25.884\) & \(0.15365\) \\
 Federpendel, estimate after 2 time units. & Harmonic & \(0.79006\) & \(1.789\) & \(0.48379\) \\
-Lorenz, estimate after 0.1 time steps. & Romberg & \(18.654\) & \(12.939\) & \(0.2354\) \\
+Lorenz, estimate after 0.1 time steps. & Romberg & \(54.885\) & \(40.609\) & \(0.14032\)\\
 Lorenz, estimate after 0.1 time steps. & Harmonic & \(12.615\) & \(4.0068\) & \(0.5111\) \\
-Lorenz, estimate after 0.2 time steps. & Romberg & \(14.264\) & \(7.2173\) & \(0.27063\) \\
-Lorenz, estimate after 0.2 time steps. & Harmonic & \(13.212\) & \(2.7376\) & \(0.50732\) \\
+Lorenz, estimate after 0.2 time steps. & Romberg & \(39.854\) & \(25.197\) & \(0.16206\)  \\
+Lorenz, estimate after 0.2 time steps. & Harmonic & \(13.212\) & \(2.7376\) & \(0.50732\)\\
     \end{tabular}
     \caption{Optimal parameters by test case}
     \label{tab:my_label}
@@ -831,36 +1160,36 @@ The values of the optimal parameters in the fitting of the number of extrapolati
     \centering
     \begin{tabular}{c|c||c|c|c}
            IVP & Sequence & \(b\) & \(c\) & \(q\) \\\hline\hline
-$y'=y$, $y(0) = 0$ & Romberg & \(-1.0083\) & \(0.9557\) & \(1.904\) \\
-$y'=y$, $y(0) = 0$ & Harmonic & \(6.425\) & \(3.1061\) & \(1.225\) \\
-$y' = y(1-y)$ & Romberg & \(-7.1901\) & \(0.82672\) & \(1.916\) \\
-$y' = y(1-y)$ & Harmonic & \(-0.19572\) & \(4.1127\) & \(1.0204\) \\
-$y' = 1 + y^2$, $y(0) = 0$ & Romberg & \(-1.2103\) & \(0.30542\) & \(2.1771\) \\
-$y' = 1 + y^2$, $y(0) = 0$ & Harmonic & \(2.405\) & \(1.8763\) & \(1.0387\) \\
-$(y_1,y_2)' = (-y_2,y_1)$, $y(0) = (1,0)$ & Romberg & \(0.15924\) & \(0.67746\) & \(2.004\) \\
-$(y_1,y_2)' = (-y_2,y_1)$, $y(0) = (1,0)$ & Harmonic & \(7.7307\) & \(2.4712\) & \(1.2513\) \\
-$y' = y^2$, $y(0) = 1/2$ & Romberg & \(-2.193\) & \(0.48799\) & \(2.0424\) \\
-$y' = y^2$, $y(0) = 1/2$ & Harmonic & \(2.3181\) & \(2.6033\) & \(1.0284\) \\
-$y'=y^2$, $y(0) = 1/(1+10^{-2})$ & Romberg & \(4.6269\) & \(0.00074557\) & \(4.042\) \\
+$y'=y$, $y(0) = 0$ & Romberg & \(-1.5037\) & \(0.87585\) & \(1.9378\)\\
+$y'=y$, $y(0) = 0$ & Harmonic & \(6.425\) & \(3.1061\) & \(1.225\)\\
+$y' = y(1-y)$ & Romberg & \(-7.388\) & \(0.79828\) & \(1.9293\)\\
+$y' = y(1-y)$ & Harmonic & \(-0.19572\) & \(4.1127\) & \(1.0204\)\\
+$y' = 1 + y^2$, $y(0) = 0$ & Romberg & \(-1.1782\) & \(0.30723\) & \(2.1752\) \\
+$y' = 1 + y^2$, $y(0) = 0$ & Harmonic & \(2.405\) & \(1.8763\) & \(1.0387\)\\
+$(y_1,y_2)' = (-y_2,y_1)$, $y(0) = (1,0)$ & Romberg & \(0.13463\) & \(0.67385\) & \(2.0061\) \\
+$(y_1,y_2)' = (-y_2,y_1)$, $y(0) = (1,0)$ & Harmonic & \(7.7307\) & \(2.4712\) & \(1.2513\)\\
+$y' = y^2$, $y(0) = 1/2$ & Romberg & \(-2.521\) & \(0.44573\) & \(2.0777\) \\
+$y' = y^2$, $y(0) = 1/2$ & Harmonic & \(2.3181\) & \(2.6033\) & \(1.0284\)\\
+$y'=y^2$, $y(0) = 1/(1+10^{-2})$ & Romberg & \(5.4845\) & \(0.0052111\) & \(3.2981\) \\
 $y'=y^2$, $y(0) = 1/(1+10^{-2})$ & Harmonic & \(4.7474\) & \(0.033263\) & \(1.3137\) \\
-$y'=y^2$, $y(0) = 1/(1+10^{-4})$ & Romberg & \(-2507.7\) & \(-2517.1\) & \(-0.00010114\) \\
-$y'=y^2$, $y(0) = 1/(1+10^{-4})$ & Harmonic & \(9.2101\) & \(0.00017545\) & \(1.4929\) \\
-$y' = -1/2y$, $y(0) = \sqrt{2}$ & Romberg & \(-5.0269\) & \(0.76221\) & \(1.8929\) \\
-$y' = -1/2y$, $y(0) = \sqrt{2}$ & Harmonic & \(-1.8945\) & \(3.1518\) & \(0.99437\) \\
-$y' = -1/2y$, $y(0) = \sqrt{1+10^{-2}}$ & Romberg & \(-2.1638\) & \(0.015532\) & \(2.9565\) \\
+$y'=y^2$, $y(0) = 1/(1+10^{-4})$ & Romberg & \(9.3422\) & \(1.3598e-07\) & \(6.3724\)\\
+$y'=y^2$, $y(0) = 1/(1+10^{-4})$ & Harmonic & \(9.2101\) & \(0.00017545\) & \(1.4929\)\\
+$y' = -1/2y$, $y(0) = \sqrt{2}$ & Romberg & \(-6.2149\) & \(0.57862\) & \(1.9997\)\\
+$y' = -1/2y$, $y(0) = \sqrt{2}$ & Harmonic & \(-1.8945\) & \(3.1518\) & \(0.99437\)\\
+$y' = -1/2y$, $y(0) = \sqrt{1+10^{-2}}$ & Romberg & \(-2.0186\) & \(0.016933\) & \(2.9296\)\\
 $y' = -1/2y$, $y(0) = \sqrt{1+10^{-2}}$ & Harmonic & \(-1.8689\) & \(0.33241\) & \(0.91148\) \\
-$y' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$ & Romberg & \(-1.4291\) & \(0.062542\) & \(1.8173\) \\
-$y' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$ & Harmonic & \(1.3726\) & \(2.6336\) & \(0.20682\) \\
-$y'' + \sin(y) = 0$ & Romberg & \(-1.9686\) & \(0.83745\) & \(1.8917\) \\
-$y'' + \sin(y) = 0$ & Harmonic & \(2.9822\) & \(3.6265\) & \(1.0128\) \\
-Federpendel, estimate after 1 time unit. & Romberg & \(-2.8486\) & \(0.67856\) & \(1.9249\) \\
-Federpendel, estimate after 1 time unit. & Harmonic & \(-0.90208\) & \(2.7108\) & \(0.98385\) \\
-Federpendel, estimate after 2 time units. & Romberg & \(-0.45874\) & \(0.44537\) & \(2.0272\) \\
-Federpendel, estimate after 2 time units. & Harmonic & \(0.020877\) & \(1.79\) & \(0.96743\) \\
-Lorenz, estimate after 0.1 time steps. & Romberg & \(0.59151\) & \(0.47509\) & \(2.112\) \\
+$y' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$ & Romberg & \(-2.613\) & \(0.00012201\) & \(4.1931\)\\
+$y' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$ & Harmonic & \(1.3726\) & \(2.6336\) & \(0.20682\)\\
+$y'' + sin(y) = 0$ & Romberg & \(-2.8658\) & \(0.69546\) & \(1.9636\) \\
+$y'' + sin(y) = 0$ & Harmonic & \(2.9822\) & \(3.6265\) & \(1.0128\) \\
+Federpendel, estimate after 1 time unit. & Romberg & \(-3.9094\) & \(0.52384\) & \(2.0251\) \\
+Federpendel, estimate after 1 time unit. & Harmonic & \(-0.90208\) & \(2.7108\) & \(0.98385\)\\
+Federpendel, estimate after 2 time units. & Romberg & \(-1.2973\) & \(0.34056\) & \(2.132\)\\
+Federpendel, estimate after 2 time units. & Harmonic & \(0.020877\) & \(1.79\) & \(0.96743\)\\
+Lorenz, estimate after 0.1 time steps. & Romberg & \(1.7404\) & \(0.62119\) & \(2.0083\)\\
 Lorenz, estimate after 0.1 time steps. & Harmonic & \(10.659\) & \(4.0254\) & \(1.0213\) \\
-Lorenz, estimate after 0.2 time steps. & Romberg & \(3.1116\) & \(0.21429\) & \(2.3417\) \\
-Lorenz, estimate after 0.2 time steps. & Harmonic & \(11.891\) & \(2.7477\) & \(1.014\) \\
+Lorenz, estimate after 0.2 time steps. & Romberg & \(4.0863\) & \(0.2983\) & \(2.2131\)  \\
+Lorenz, estimate after 0.2 time steps. & Harmonic & \(11.891\) & \(2.7477\) & \(1.014\)\\
     \end{tabular}
     \caption{Optimal parameters by test case}
     \label{tab:my_label}
