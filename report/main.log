@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 AUG 2020 16:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 AUG 2020 19:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1244,8 +1244,13 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
+(/usr/local/texlive/2016/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+\everycr=\toks58
+\minrowclearance=\skip60
+)
 
-Package amsthm Warning: Unknown theoremstyle `theorem' on input line 18.
+Package amsthm Warning: Unknown theoremstyle `theorem' on input line 19.
 
 \c@theorem=\count294
 )
@@ -1413,12 +1418,12 @@ LaTeX Font Info:    ... okay on input line 5.
 \scratchbox=\box78
 \nofMPsegments=\count296
 \nofMParguments=\count297
-\everyMPshowfont=\toks58
+\everyMPshowfont=\toks59
 \MPscratchCnt=\count298
 \MPscratchDim=\dimen308
 \MPnumerator=\count299
 \makeMPintoPDFobject=\count300
-\everyMPtoPDFconversion=\toks59
+\everyMPtoPDFconversion=\toks60
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1701,7 +1706,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 153--154
  []
 
 
-Overfull \hbox (24.08356pt too wide) in paragraph at lines 160--170
+Overfull \hbox (24.08356pt too wide) in paragraph at lines 160--176
  [][] 
  []
 
@@ -1712,17 +1717,17 @@ tack.png> <../results/romberg_plots/cos_squared_hp_harmonic_steps_stack.png> <.
 lots/cos_squared_hp_romberg_steps_stack.png> <../results/romberg_plots/cos_squa
 red_hp_bulirsch_stack.png> <../results/romberg_plots/cos_squared_hp_bulirsch_st
 eps_stack.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
 
@@ -1731,10 +1736,10 @@ File: ../results/romberg_plots/g_one.png Graphic file (type png)
 
 <use ../results/romberg_plots/g_one.png>
 Package pdftex.def Info: ../results/romberg_plots/g_one.png used on input line 
-189.
+195.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 189--190
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 195--196
  [][] 
  []
 
@@ -1743,10 +1748,10 @@ File: ../results/romberg_plots/g_one_hp.png Graphic file (type png)
 
 <use ../results/romberg_plots/g_one_hp.png>
 Package pdftex.def Info: ../results/romberg_plots/g_one_hp.png used on input li
-ne 193.
+ne 199.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 193--194
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 199--200
  [][] 
  []
 
@@ -1755,10 +1760,10 @@ File: ../results/romberg_plots/g_one_hp_trend.png Graphic file (type png)
 
 <use ../results/romberg_plots/g_one_hp_trend.png>
 Package pdftex.def Info: ../results/romberg_plots/g_one_hp_trend.png used on in
-put line 201.
+put line 207.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 201--202
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 207--208
  [][] 
  []
 
@@ -1767,10 +1772,10 @@ File: ../results/romberg_plots/g_one_hp_steps.png Graphic file (type png)
 
 <use ../results/romberg_plots/g_one_hp_steps.png>
 Package pdftex.def Info: ../results/romberg_plots/g_one_hp_steps.png used on in
-put line 205.
+put line 211.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 205--206
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 211--212
  [][] 
  []
 
@@ -1781,10 +1786,10 @@ File: ../results/romberg_plots/g_one_hp_harmonic_stack.png Graphic file (type p
 ng)
  <use ../results/romberg_plots/g_one_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_one_hp_harmonic_stack.png u
-sed on input line 213.
+sed on input line 219.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 213--214
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 219--220
  [][] 
  []
 
@@ -1795,10 +1800,10 @@ File: ../results/romberg_plots/g_one_hp_harmonic_steps_stack.png Graphic file (
 type png)
  <use ../results/romberg_plots/g_one_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_one_hp_harmonic_steps_stack
-.png used on input line 217.
+.png used on input line 223.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 217--218
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 223--224
  [][] 
  []
 
@@ -1811,10 +1816,10 @@ File: ../results/romberg_plots/g_one_hp_romberg_stack.png Graphic file (type pn
 g)
  <use ../results/romberg_plots/g_one_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_one_hp_romberg_stack.png us
-ed on input line 225.
+ed on input line 231.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 225--226
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 231--232
  [][] 
  []
 
@@ -1825,10 +1830,10 @@ File: ../results/romberg_plots/g_one_hp_romberg_steps_stack.png Graphic file (t
 ype png)
  <use ../results/romberg_plots/g_one_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_one_hp_romberg_steps_stack.
-png used on input line 229.
+png used on input line 235.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 229--230
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 235--236
  [][] 
  []
 
@@ -1839,10 +1844,10 @@ File: ../results/romberg_plots/g_one_hp_bulirsch_stack.png Graphic file (type p
 ng)
  <use ../results/romberg_plots/g_one_hp_bulirsch_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_one_hp_bulirsch_stack.png u
-sed on input line 237.
+sed on input line 243.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 237--238
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 243--244
  [][] 
  []
 
@@ -1853,20 +1858,20 @@ File: ../results/romberg_plots/g_one_hp_bulirsch_steps_stack.png Graphic file (
 type png)
  <use ../results/romberg_plots/g_one_hp_bulirsch_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_one_hp_bulirsch_steps_stack
-.png used on input line 241.
+.png used on input line 247.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 241--242
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 247--248
  [][] 
  []
 
 
-Overfull \hbox (24.08356pt too wide) in paragraph at lines 248--258
+Overfull \hbox (24.08356pt too wide) in paragraph at lines 254--270
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 
  []
 
@@ -1880,10 +1885,10 @@ File: ../results/romberg_plots/g_tenth.png Graphic file (type png)
 
 <use ../results/romberg_plots/g_tenth.png>
 Package pdftex.def Info: ../results/romberg_plots/g_tenth.png used on input lin
-e 268.
+e 280.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 268--269
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 280--281
  [][] 
  []
 
@@ -1892,10 +1897,10 @@ File: ../results/romberg_plots/g_tenth_hp.png Graphic file (type png)
 
 <use ../results/romberg_plots/g_tenth_hp.png>
 Package pdftex.def Info: ../results/romberg_plots/g_tenth_hp.png used on input 
-line 272.
+line 284.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 272--273
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 284--285
  [][] 
  []
 
@@ -1905,10 +1910,10 @@ File: ../results/romberg_plots/g_tenth_hp_trend.png Graphic file (type png)
 
 <use ../results/romberg_plots/g_tenth_hp_trend.png>
 Package pdftex.def Info: ../results/romberg_plots/g_tenth_hp_trend.png used on 
-input line 280.
+input line 292.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 280--281
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 292--293
  [][] 
  []
 
@@ -1918,10 +1923,10 @@ File: ../results/romberg_plots/g_tenth_hp_steps.png Graphic file (type png)
 
 <use ../results/romberg_plots/g_tenth_hp_steps.png>
 Package pdftex.def Info: ../results/romberg_plots/g_tenth_hp_steps.png used on 
-input line 284.
+input line 296.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 284--285
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 296--297
  [][] 
  []
 
@@ -1932,10 +1937,10 @@ File: ../results/romberg_plots/g_tenth_hp_harmonic_stack.png Graphic file (type
  png)
  <use ../results/romberg_plots/g_tenth_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_tenth_hp_harmonic_stack.png
- used on input line 292.
+ used on input line 304.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 292--293
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 304--305
  [][] 
  []
 
@@ -1947,10 +1952,10 @@ File: ../results/romberg_plots/g_tenth_hp_harmonic_steps_stack.png Graphic file
 
 <use ../results/romberg_plots/g_tenth_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_tenth_hp_harmonic_steps_sta
-ck.png used on input line 296.
+ck.png used on input line 308.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 296--297
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 308--309
  [][] 
  []
 
@@ -1961,10 +1966,10 @@ File: ../results/romberg_plots/g_tenth_hp_romberg_stack.png Graphic file (type
 png)
  <use ../results/romberg_plots/g_tenth_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_tenth_hp_romberg_stack.png 
-used on input line 304.
+used on input line 316.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 304--305
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 316--317
  [][] 
  []
 
@@ -1976,10 +1981,10 @@ File: ../results/romberg_plots/g_tenth_hp_romberg_steps_stack.png Graphic file
 
 <use ../results/romberg_plots/g_tenth_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_tenth_hp_romberg_steps_stac
-k.png used on input line 308.
+k.png used on input line 320.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 308--309
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 320--321
  [][] 
  []
 
@@ -1996,10 +2001,10 @@ File: ../results/romberg_plots/g_tenth_hp_bulirsch_stack.png Graphic file (type
  png)
  <use ../results/romberg_plots/g_tenth_hp_bulirsch_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_tenth_hp_bulirsch_stack.png
- used on input line 316.
+ used on input line 328.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 316--317
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 328--329
  [][] 
  []
 
@@ -2011,15 +2016,15 @@ File: ../results/romberg_plots/g_tenth_hp_bulirsch_steps_stack.png Graphic file
 
 <use ../results/romberg_plots/g_tenth_hp_bulirsch_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_tenth_hp_bulirsch_steps_sta
-ck.png used on input line 320.
+ck.png used on input line 332.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 320--321
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 332--333
  [][] 
  []
 
 
-Overfull \hbox (23.7702pt too wide) in paragraph at lines 327--338
+Overfull \hbox (23.7702pt too wide) in paragraph at lines 339--355
  [][] 
  []
 
@@ -2028,10 +2033,10 @@ File: ../results/romberg_plots/g_hundredth.png Graphic file (type png)
 
 <use ../results/romberg_plots/g_hundredth.png>
 Package pdftex.def Info: ../results/romberg_plots/g_hundredth.png used on input
- line 346.
+ line 363.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 346--347
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 363--364
  [][] 
  []
 
@@ -2040,10 +2045,10 @@ File: ../results/romberg_plots/g_hundredth_hp.png Graphic file (type png)
 
 <use ../results/romberg_plots/g_hundredth_hp.png>
 Package pdftex.def Info: ../results/romberg_plots/g_hundredth_hp.png used on in
-put line 350.
+put line 367.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 350--351
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 367--368
  [][] 
  []
 
@@ -2054,10 +2059,10 @@ File: ../results/romberg_plots/g_hundredth_hp_trend.png Graphic file (type png)
 
  <use ../results/romberg_plots/g_hundredth_hp_trend.png>
 Package pdftex.def Info: ../results/romberg_plots/g_hundredth_hp_trend.png used
- on input line 358.
+ on input line 375.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 358--359
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 375--376
  [][] 
  []
 
@@ -2068,10 +2073,10 @@ File: ../results/romberg_plots/g_hundredth_hp_steps.png Graphic file (type png)
 
  <use ../results/romberg_plots/g_hundredth_hp_steps.png>
 Package pdftex.def Info: ../results/romberg_plots/g_hundredth_hp_steps.png used
- on input line 362.
+ on input line 379.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 362--363
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 379--380
  [][] 
  []
 
@@ -2086,10 +2091,10 @@ File: ../results/romberg_plots/g_hundredth_hp_harmonic_stack.png Graphic file (
 type png)
  <use ../results/romberg_plots/g_hundredth_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_hundredth_hp_harmonic_stack
-.png used on input line 370.
+.png used on input line 387.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 370--371
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 387--388
  [][] 
  []
 
@@ -2101,10 +2106,10 @@ file (type png)
 
 <use ../results/romberg_plots/g_hundredth_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_hundredth_hp_harmonic_steps
-_stack.png used on input line 374.
+_stack.png used on input line 391.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 374--375
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 391--392
  [][] 
  []
 
@@ -2115,10 +2120,10 @@ File: ../results/romberg_plots/g_hundredth_hp_romberg_stack.png Graphic file (t
 ype png)
  <use ../results/romberg_plots/g_hundredth_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_hundredth_hp_romberg_stack.
-png used on input line 382.
+png used on input line 399.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 382--383
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 399--400
  [][] 
  []
 
@@ -2130,10 +2135,10 @@ ile (type png)
 
 <use ../results/romberg_plots/g_hundredth_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_hundredth_hp_romberg_steps_
-stack.png used on input line 386.
+stack.png used on input line 403.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 386--387
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 403--404
  [][] 
  []
 
@@ -2144,10 +2149,10 @@ File: ../results/romberg_plots/g_hundredth_hp_bulirsch_stack.png Graphic file (
 type png)
  <use ../results/romberg_plots/g_hundredth_hp_bulirsch_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_hundredth_hp_bulirsch_stack
-.png used on input line 394.
+.png used on input line 411.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 394--395
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 411--412
  [][] 
  []
 
@@ -2159,15 +2164,15 @@ file (type png)
 
 <use ../results/romberg_plots/g_hundredth_hp_bulirsch_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/g_hundredth_hp_bulirsch_steps
-_stack.png used on input line 398.
+_stack.png used on input line 415.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 398--399
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 415--416
  [][] 
  []
 
 
-Overfull \hbox (12.40901pt too wide) in paragraph at lines 405--415
+Overfull \hbox (12.40901pt too wide) in paragraph at lines 422--438
  [][] 
  []
 
@@ -2183,10 +2188,10 @@ File: ../results/romberg_plots/h_one.png Graphic file (type png)
 
 <use ../results/romberg_plots/h_one.png>
 Package pdftex.def Info: ../results/romberg_plots/h_one.png used on input line 
-431.
+454.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 431--432
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 454--455
  [][] 
  []
 
@@ -2195,10 +2200,10 @@ File: ../results/romberg_plots/h_one_hp.png Graphic file (type png)
 
 <use ../results/romberg_plots/h_one_hp.png>
 Package pdftex.def Info: ../results/romberg_plots/h_one_hp.png used on input li
-ne 435.
+ne 458.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 435--436
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 458--459
  [][] 
  []
 
@@ -2207,10 +2212,10 @@ File: ../results/romberg_plots/h_one_hp_trend.png Graphic file (type png)
 
 <use ../results/romberg_plots/h_one_hp_trend.png>
 Package pdftex.def Info: ../results/romberg_plots/h_one_hp_trend.png used on in
-put line 443.
+put line 466.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 443--444
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 466--467
  [][] 
  []
 
@@ -2219,10 +2224,10 @@ File: ../results/romberg_plots/h_one_hp_steps.png Graphic file (type png)
 
 <use ../results/romberg_plots/h_one_hp_steps.png>
 Package pdftex.def Info: ../results/romberg_plots/h_one_hp_steps.png used on in
-put line 447.
+put line 470.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 447--448
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 470--471
  [][] 
  []
 
@@ -2233,10 +2238,10 @@ File: ../results/romberg_plots/h_one_hp_harmonic_stack.png Graphic file (type p
 ng)
  <use ../results/romberg_plots/h_one_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_one_hp_harmonic_stack.png u
-sed on input line 455.
+sed on input line 478.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 455--456
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 478--479
  [][] 
  []
 
@@ -2247,10 +2252,10 @@ File: ../results/romberg_plots/h_one_hp_harmonic_steps_stack.png Graphic file (
 type png)
  <use ../results/romberg_plots/h_one_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_one_hp_harmonic_steps_stack
-.png used on input line 459.
+.png used on input line 482.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 459--460
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 482--483
  [][] 
  []
 
@@ -2266,10 +2271,10 @@ File: ../results/romberg_plots/h_one_hp_romberg_stack.png Graphic file (type pn
 g)
  <use ../results/romberg_plots/h_one_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_one_hp_romberg_stack.png us
-ed on input line 467.
+ed on input line 490.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 467--468
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 490--491
  [][] 
  []
 
@@ -2280,10 +2285,10 @@ File: ../results/romberg_plots/h_one_hp_romberg_steps_stack.png Graphic file (t
 ype png)
  <use ../results/romberg_plots/h_one_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_one_hp_romberg_steps_stack.
-png used on input line 471.
+png used on input line 494.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 471--472
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 494--495
  [][] 
  []
 
@@ -2294,10 +2299,10 @@ File: ../results/romberg_plots/h_one_hp_bulirsch_stack.png Graphic file (type p
 ng)
  <use ../results/romberg_plots/h_one_hp_bulirsch_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_one_hp_bulirsch_stack.png u
-sed on input line 479.
+sed on input line 502.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 479--480
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 502--503
  [][] 
  []
 
@@ -2308,20 +2313,20 @@ File: ../results/romberg_plots/h_one_hp_bulirsch_steps_stack.png Graphic file (
 type png)
  <use ../results/romberg_plots/h_one_hp_bulirsch_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_one_hp_bulirsch_steps_stack
-.png used on input line 483.
+.png used on input line 506.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 483--484
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 506--507
  [][] 
  []
 
 
-Overfull \hbox (20.9697pt too wide) in paragraph at lines 490--500
+Overfull \hbox (20.9697pt too wide) in paragraph at lines 513--529
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--503
+Underfull \hbox (badness 10000) in paragraph at lines 531--532
 
  []
 
@@ -2335,10 +2340,10 @@ File: ../results/romberg_plots/h_hundredth.png Graphic file (type png)
 
 <use ../results/romberg_plots/h_hundredth.png>
 Package pdftex.def Info: ../results/romberg_plots/h_hundredth.png used on input
- line 510.
+ line 539.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 510--511
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 539--540
  [][] 
  []
 
@@ -2347,10 +2352,10 @@ File: ../results/romberg_plots/h_hundredth_hp.png Graphic file (type png)
 
 <use ../results/romberg_plots/h_hundredth_hp.png>
 Package pdftex.def Info: ../results/romberg_plots/h_hundredth_hp.png used on in
-put line 514.
+put line 543.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 514--515
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 543--544
  [][] 
  []
 
@@ -2361,10 +2366,10 @@ File: ../results/romberg_plots/h_hundredth_hp_trend.png Graphic file (type png)
 
  <use ../results/romberg_plots/h_hundredth_hp_trend.png>
 Package pdftex.def Info: ../results/romberg_plots/h_hundredth_hp_trend.png used
- on input line 522.
+ on input line 551.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 522--523
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 551--552
  [][] 
  []
 
@@ -2375,10 +2380,10 @@ File: ../results/romberg_plots/h_hundredth_hp_steps.png Graphic file (type png)
 
  <use ../results/romberg_plots/h_hundredth_hp_steps.png>
 Package pdftex.def Info: ../results/romberg_plots/h_hundredth_hp_steps.png used
- on input line 526.
+ on input line 555.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 526--527
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 555--556
  [][] 
  []
 
@@ -2389,10 +2394,10 @@ File: ../results/romberg_plots/h_hundredth_hp_harmonic_stack.png Graphic file (
 type png)
  <use ../results/romberg_plots/h_hundredth_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_hundredth_hp_harmonic_stack
-.png used on input line 534.
+.png used on input line 563.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 534--535
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 563--564
  [][] 
  []
 
@@ -2404,10 +2409,10 @@ file (type png)
 
 <use ../results/romberg_plots/h_hundredth_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_hundredth_hp_harmonic_steps
-_stack.png used on input line 538.
+_stack.png used on input line 567.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 538--539
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 567--568
  [][] 
  []
 
@@ -2418,10 +2423,10 @@ File: ../results/romberg_plots/h_hundredth_hp_romberg_stack.png Graphic file (t
 ype png)
  <use ../results/romberg_plots/h_hundredth_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_hundredth_hp_romberg_stack.
-png used on input line 546.
+png used on input line 575.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 546--547
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 575--576
  [][] 
  []
 
@@ -2433,10 +2438,10 @@ ile (type png)
 
 <use ../results/romberg_plots/h_hundredth_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_hundredth_hp_romberg_steps_
-stack.png used on input line 550.
+stack.png used on input line 579.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 550--551
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 579--580
  [][] 
  []
 
@@ -2454,10 +2459,10 @@ File: ../results/romberg_plots/h_hundredth_hp_bulirsch_stack.png Graphic file (
 type png)
  <use ../results/romberg_plots/h_hundredth_hp_bulirsch_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_hundredth_hp_bulirsch_stack
-.png used on input line 558.
+.png used on input line 587.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 558--559
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 587--588
  [][] 
  []
 
@@ -2469,15 +2474,15 @@ file (type png)
 
 <use ../results/romberg_plots/h_hundredth_hp_bulirsch_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_hundredth_hp_bulirsch_steps
-_stack.png used on input line 562.
+_stack.png used on input line 591.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 562--563
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 591--592
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 581--582
+Underfull \hbox (badness 10000) in paragraph at lines 616--617
 
  []
 
@@ -2486,10 +2491,10 @@ File: ../results/romberg_plots/h_tenthousandth.png Graphic file (type png)
 
 <use ../results/romberg_plots/h_tenthousandth.png>
 Package pdftex.def Info: ../results/romberg_plots/h_tenthousandth.png used on i
-nput line 589.
+nput line 624.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 589--590
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 624--625
  [][] 
  []
 
@@ -2499,10 +2504,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 589--590
 File: ../results/romberg_plots/h_tenthousandth_hp.png Graphic file (type png)
  <use ../results/romberg_plots/h_tenthousandth_hp.png>
 Package pdftex.def Info: ../results/romberg_plots/h_tenthousandth_hp.png used o
-n input line 593.
+n input line 628.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 593--594
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 628--629
  [][] 
  []
 
@@ -2513,10 +2518,10 @@ File: ../results/romberg_plots/h_tenthousandth_hp_trend.png Graphic file (type
 png)
  <use ../results/romberg_plots/h_tenthousandth_hp_trend.png>
 Package pdftex.def Info: ../results/romberg_plots/h_tenthousandth_hp_trend.png 
-used on input line 601.
+used on input line 636.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 601--602
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 636--637
  [][] 
  []
 
@@ -2527,10 +2532,10 @@ File: ../results/romberg_plots/h_tenthousandth_hp_steps.png Graphic file (type
 png)
  <use ../results/romberg_plots/h_tenthousandth_hp_steps.png>
 Package pdftex.def Info: ../results/romberg_plots/h_tenthousandth_hp_steps.png 
-used on input line 605.
+used on input line 640.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 605--606
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 640--641
  [][] 
  []
 
@@ -2546,10 +2551,10 @@ le (type png)
 
 <use ../results/romberg_plots/h_tenthousandth_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_tenthousandth_hp_harmonic_s
-tack.png used on input line 613.
+tack.png used on input line 648.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 613--614
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 648--649
  [][] 
  []
 
@@ -2561,10 +2566,10 @@ hic file (type png)
 
 <use ../results/romberg_plots/h_tenthousandth_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_tenthousandth_hp_harmonic_s
-teps_stack.png used on input line 617.
+teps_stack.png used on input line 652.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 617--618
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 652--653
  [][] 
  []
 
@@ -2576,10 +2581,10 @@ e (type png)
 
 <use ../results/romberg_plots/h_tenthousandth_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_tenthousandth_hp_romberg_st
-ack.png used on input line 625.
+ack.png used on input line 660.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 625--626
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 660--661
  [][] 
  []
 
@@ -2591,10 +2596,10 @@ ic file (type png)
 
 <use ../results/romberg_plots/h_tenthousandth_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_tenthousandth_hp_romberg_st
-eps_stack.png used on input line 629.
+eps_stack.png used on input line 664.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 629--630
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 664--665
  [][] 
  []
 
@@ -2606,10 +2611,10 @@ le (type png)
 
 <use ../results/romberg_plots/h_tenthousandth_hp_bulirsch_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_tenthousandth_hp_bulirsch_s
-tack.png used on input line 637.
+tack.png used on input line 672.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 637--638
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 672--673
  [][] 
  []
 
@@ -2621,10 +2626,10 @@ hic file (type png)
 
 <use ../results/romberg_plots/h_tenthousandth_hp_bulirsch_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/h_tenthousandth_hp_bulirsch_s
-teps_stack.png used on input line 641.
+teps_stack.png used on input line 676.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 641--642
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 676--677
  [][] 
  []
 
@@ -2640,10 +2645,10 @@ File: ../results/romberg_plots/circle_area.png Graphic file (type png)
 
 <use ../results/romberg_plots/circle_area.png>
 Package pdftex.def Info: ../results/romberg_plots/circle_area.png used on input
- line 674.
+ line 715.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 674--675
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 715--716
  [][] 
  []
 
@@ -2652,10 +2657,10 @@ File: ../results/romberg_plots/circle_area_hp.png Graphic file (type png)
 
 <use ../results/romberg_plots/circle_area_hp.png>
 Package pdftex.def Info: ../results/romberg_plots/circle_area_hp.png used on in
-put line 678.
+put line 719.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 678--679
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 719--720
  [][] 
  []
 
@@ -2666,10 +2671,10 @@ File: ../results/romberg_plots/circle_area_hp_trend.png Graphic file (type png)
 
  <use ../results/romberg_plots/circle_area_hp_trend.png>
 Package pdftex.def Info: ../results/romberg_plots/circle_area_hp_trend.png used
- on input line 686.
+ on input line 727.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 686--687
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 727--728
  [][] 
  []
 
@@ -2680,10 +2685,10 @@ File: ../results/romberg_plots/circle_area_hp_steps.png Graphic file (type png)
 
  <use ../results/romberg_plots/circle_area_hp_steps.png>
 Package pdftex.def Info: ../results/romberg_plots/circle_area_hp_steps.png used
- on input line 690.
+ on input line 731.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 690--691
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 731--732
  [][] 
  []
 
@@ -2694,10 +2699,10 @@ File: ../results/romberg_plots/circle_area_hp_harmonic_stack.png Graphic file (
 type png)
  <use ../results/romberg_plots/circle_area_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/circle_area_hp_harmonic_stack
-.png used on input line 698.
+.png used on input line 739.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 698--699
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 739--740
  [][] 
  []
 
@@ -2709,10 +2714,10 @@ file (type png)
 
 <use ../results/romberg_plots/circle_area_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/circle_area_hp_harmonic_steps
-_stack.png used on input line 702.
+_stack.png used on input line 743.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 702--703
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 743--744
  [][] 
  []
 
@@ -2728,10 +2733,10 @@ File: ../results/romberg_plots/circle_area_hp_romberg_stack.png Graphic file (t
 ype png)
  <use ../results/romberg_plots/circle_area_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/circle_area_hp_romberg_stack.
-png used on input line 710.
+png used on input line 751.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 710--711
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 751--752
  [][] 
  []
 
@@ -2743,10 +2748,10 @@ ile (type png)
 
 <use ../results/romberg_plots/circle_area_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/circle_area_hp_romberg_steps_
-stack.png used on input line 714.
+stack.png used on input line 755.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 714--715
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 755--756
  [][] 
  []
 
@@ -2757,10 +2762,10 @@ File: ../results/romberg_plots/circle_area_hp_bulirsch_stack.png Graphic file (
 type png)
  <use ../results/romberg_plots/circle_area_hp_bulirsch_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/circle_area_hp_bulirsch_stack
-.png used on input line 722.
+.png used on input line 763.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 722--723
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 763--764
  [][] 
  []
 
@@ -2772,20 +2777,20 @@ file (type png)
 
 <use ../results/romberg_plots/circle_area_hp_bulirsch_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/circle_area_hp_bulirsch_steps
-_stack.png used on input line 726.
+_stack.png used on input line 767.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 726--727
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 767--768
  [][] 
  []
 
 
-Overfull \hbox (63.4239pt too wide) in paragraph at lines 733--743
+Overfull \hbox (63.4239pt too wide) in paragraph at lines 774--790
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--746
+Underfull \hbox (badness 10000) in paragraph at lines 792--793
 
  []
 
@@ -2799,10 +2804,10 @@ File: ../results/romberg_plots/gaussian.png Graphic file (type png)
 
 <use ../results/romberg_plots/gaussian.png>
 Package pdftex.def Info: ../results/romberg_plots/gaussian.png used on input li
-ne 759.
+ne 806.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 759--760
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 806--807
  [][] 
  []
 
@@ -2811,10 +2816,10 @@ File: ../results/romberg_plots/gaussian_hp.png Graphic file (type png)
 
 <use ../results/romberg_plots/gaussian_hp.png>
 Package pdftex.def Info: ../results/romberg_plots/gaussian_hp.png used on input
- line 763.
+ line 810.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 763--764
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 810--811
  [][] 
  []
 
@@ -2823,10 +2828,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 763--764
 File: ../results/romberg_plots/gaussian_hp_trend.png Graphic file (type png)
 <use ../results/romberg_plots/gaussian_hp_trend.png>
 Package pdftex.def Info: ../results/romberg_plots/gaussian_hp_trend.png used on
- input line 771.
+ input line 818.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 771--772
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 818--819
  [][] 
  []
 
@@ -2835,10 +2840,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 771--772
 File: ../results/romberg_plots/gaussian_hp_steps.png Graphic file (type png)
 <use ../results/romberg_plots/gaussian_hp_steps.png>
 Package pdftex.def Info: ../results/romberg_plots/gaussian_hp_steps.png used on
- input line 775.
+ input line 822.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 775--776
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 822--823
  [][] 
  []
 
@@ -2849,10 +2854,10 @@ File: ../results/romberg_plots/gaussian_hp_harmonic_stack.png Graphic file (typ
 e png)
  <use ../results/romberg_plots/gaussian_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/gaussian_hp_harmonic_stack.pn
-g used on input line 783.
+g used on input line 830.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 783--784
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 830--831
  [][] 
  []
 
@@ -2864,10 +2869,10 @@ e (type png)
 
 <use ../results/romberg_plots/gaussian_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/gaussian_hp_harmonic_steps_st
-ack.png used on input line 787.
+ack.png used on input line 834.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 787--788
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 834--835
  [][] 
  []
 
@@ -2878,10 +2883,10 @@ File: ../results/romberg_plots/gaussian_hp_romberg_stack.png Graphic file (type
  png)
  <use ../results/romberg_plots/gaussian_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/gaussian_hp_romberg_stack.png
- used on input line 795.
+ used on input line 842.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 795--796
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 842--843
  [][] 
  []
 
@@ -2893,10 +2898,10 @@ File: ../results/romberg_plots/gaussian_hp_romberg_steps_stack.png Graphic file
 
 <use ../results/romberg_plots/gaussian_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/gaussian_hp_romberg_steps_sta
-ck.png used on input line 799.
+ck.png used on input line 846.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 799--800
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 846--847
  [][] 
  []
 
@@ -2910,10 +2915,10 @@ File: ../results/romberg_plots/gaussian_hp_bulirsch_stack.png Graphic file (typ
 e png)
  <use ../results/romberg_plots/gaussian_hp_bulirsch_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/gaussian_hp_bulirsch_stack.pn
-g used on input line 807.
+g used on input line 854.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 807--808
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 854--855
  [][] 
  []
 
@@ -2925,20 +2930,20 @@ e (type png)
 
 <use ../results/romberg_plots/gaussian_hp_bulirsch_steps_stack.png>
 Package pdftex.def Info: ../results/romberg_plots/gaussian_hp_bulirsch_steps_st
-ack.png used on input line 811.
+ack.png used on input line 858.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 811--812
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 858--859
  [][] 
  []
 
 
-Overfull \hbox (18.60855pt too wide) in paragraph at lines 818--828
+Overfull \hbox (18.60855pt too wide) in paragraph at lines 865--881
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 830--831
+Underfull \hbox (badness 10000) in paragraph at lines 883--884
 
  []
 
@@ -3046,7 +3051,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [26 <../results/diff_quot_plots/exp_0.png> <../results/diff_quot_plots/exp_0_h
 p.png> <../results/diff_quot_plots/exp_0_hp_trend.png> <../results/diff_quot_pl
 ots/exp_0_hp_romberg_stack.png>]
-Overfull \hbox (4.16335pt too wide) in paragraph at lines 81--88
+Overfull \hbox (4.16335pt too wide) in paragraph at lines 81--91
  [][] 
  []
 
@@ -3055,10 +3060,10 @@ File: ../results/diff_quot_plots/h_one.png Graphic file (type png)
 
 <use ../results/diff_quot_plots/h_one.png>
 Package pdftex.def Info: ../results/diff_quot_plots/h_one.png used on input lin
-e 103.
+e 106.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 103--104
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 106--107
  [][] 
  []
 
@@ -3067,10 +3072,10 @@ File: ../results/diff_quot_plots/h_one_hp.png Graphic file (type png)
 
 <use ../results/diff_quot_plots/h_one_hp.png>
 Package pdftex.def Info: ../results/diff_quot_plots/h_one_hp.png used on input 
-line 107.
+line 110.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 107--108
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 110--111
  [][] 
  []
 
@@ -3080,10 +3085,10 @@ File: ../results/diff_quot_plots/h_one_hp_trend.png Graphic file (type png)
 
 <use ../results/diff_quot_plots/h_one_hp_trend.png>
 Package pdftex.def Info: ../results/diff_quot_plots/h_one_hp_trend.png used on 
-input line 115.
+input line 118.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 115--116
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 118--119
  [][] 
  []
 
@@ -3094,10 +3099,10 @@ File: ../results/diff_quot_plots/h_one_hp_romberg_stack.png Graphic file (type
 png)
  <use ../results/diff_quot_plots/h_one_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/diff_quot_plots/h_one_hp_romberg_stack.png 
-used on input line 119.
+used on input line 122.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 119--120
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 122--123
  [][] 
  []
 
@@ -3108,10 +3113,10 @@ File: ../results/diff_quot_plots/h_one_hp_bulirsch_stack.png Graphic file (type
  png)
  <use ../results/diff_quot_plots/h_one_hp_bulirsch_stack.png>
 Package pdftex.def Info: ../results/diff_quot_plots/h_one_hp_bulirsch_stack.png
- used on input line 127.
+ used on input line 130.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 127--128
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 130--131
  [][] 
  []
 
@@ -3122,10 +3127,10 @@ File: ../results/diff_quot_plots/h_one_hp_harmonic_stack.png Graphic file (type
  png)
  <use ../results/diff_quot_plots/h_one_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/diff_quot_plots/h_one_hp_harmonic_stack.png
- used on input line 131.
+ used on input line 134.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 131--132
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 134--135
  [][] 
  []
 
@@ -3133,7 +3138,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 131--132
 uot_plots/exp_0_hp_harmonic_stack.png> <../results/diff_quot_plots/h_one.png> <
 ../results/diff_quot_plots/h_one_hp.png> <../results/diff_quot_plots/h_one_hp_t
 rend.png> <../results/diff_quot_plots/h_one_hp_romberg_stack.png>]
-Overfull \hbox (0.73305pt too wide) in paragraph at lines 138--145
+Overfull \hbox (0.73305pt too wide) in paragraph at lines 141--151
  [][] 
  []
 
@@ -3142,10 +3147,10 @@ File: ../results/diff_quot_plots/sqrt_1.png Graphic file (type png)
 
 <use ../results/diff_quot_plots/sqrt_1.png>
 Package pdftex.def Info: ../results/diff_quot_plots/sqrt_1.png used on input li
-ne 160.
+ne 166.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 160--161
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 166--167
  [][] 
  []
 
@@ -3154,10 +3159,10 @@ File: ../results/diff_quot_plots/sqrt_1_hp.png Graphic file (type png)
 
 <use ../results/diff_quot_plots/sqrt_1_hp.png>
 Package pdftex.def Info: ../results/diff_quot_plots/sqrt_1_hp.png used on input
- line 164.
+ line 170.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 164--165
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 170--171
  [][] 
  []
 
@@ -3166,10 +3171,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 164--165
 File: ../results/diff_quot_plots/sqrt_1_hp_trend.png Graphic file (type png)
 <use ../results/diff_quot_plots/sqrt_1_hp_trend.png>
 Package pdftex.def Info: ../results/diff_quot_plots/sqrt_1_hp_trend.png used on
- input line 172.
+ input line 178.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 172--173
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 178--179
  [][] 
  []
 
@@ -3180,10 +3185,10 @@ File: ../results/diff_quot_plots/sqrt_1_hp_romberg_stack.png Graphic file (type
  png)
  <use ../results/diff_quot_plots/sqrt_1_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/diff_quot_plots/sqrt_1_hp_romberg_stack.png
- used on input line 176.
+ used on input line 182.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 176--177
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 182--183
  [][] 
  []
 
@@ -3194,10 +3199,10 @@ File: ../results/diff_quot_plots/sqrt_1_hp_bulirsch_stack.png Graphic file (typ
 e png)
  <use ../results/diff_quot_plots/sqrt_1_hp_bulirsch_stack.png>
 Package pdftex.def Info: ../results/diff_quot_plots/sqrt_1_hp_bulirsch_stack.pn
-g used on input line 184.
+g used on input line 190.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 184--185
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 190--191
  [][] 
  []
 
@@ -3208,10 +3213,10 @@ File: ../results/diff_quot_plots/sqrt_1_hp_harmonic_stack.png Graphic file (typ
 e png)
  <use ../results/diff_quot_plots/sqrt_1_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/diff_quot_plots/sqrt_1_hp_harmonic_stack.pn
-g used on input line 188.
+g used on input line 194.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 188--189
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 194--195
  [][] 
  []
 
@@ -3219,7 +3224,7 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 188--189
 uot_plots/h_one_hp_harmonic_stack.png> <../results/diff_quot_plots/sqrt_1.png> 
 <../results/diff_quot_plots/sqrt_1_hp.png> <../results/diff_quot_plots/sqrt_1_h
 p_trend.png> <../results/diff_quot_plots/sqrt_1_hp_romberg_stack.png>]
-Overfull \hbox (6.20805pt too wide) in paragraph at lines 195--202
+Overfull \hbox (6.20805pt too wide) in paragraph at lines 201--211
  [][] 
  []
 
@@ -3228,10 +3233,10 @@ File: ../results/diff_quot_plots/rho.png Graphic file (type png)
 
 <use ../results/diff_quot_plots/rho.png>
 Package pdftex.def Info: ../results/diff_quot_plots/rho.png used on input line 
-221.
+230.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 221--222
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 230--231
  [][] 
  []
 
@@ -3240,10 +3245,10 @@ File: ../results/diff_quot_plots/rho_hp.png Graphic file (type png)
 
 <use ../results/diff_quot_plots/rho_hp.png>
 Package pdftex.def Info: ../results/diff_quot_plots/rho_hp.png used on input li
-ne 225.
+ne 234.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 225--226
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 234--235
  [][] 
  []
 
@@ -3252,10 +3257,10 @@ File: ../results/diff_quot_plots/rho_hp_trend.png Graphic file (type png)
 
 <use ../results/diff_quot_plots/rho_hp_trend.png>
 Package pdftex.def Info: ../results/diff_quot_plots/rho_hp_trend.png used on in
-put line 233.
+put line 242.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 233--234
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 242--243
  [][] 
  []
 
@@ -3266,10 +3271,10 @@ File: ../results/diff_quot_plots/rho_hp_romberg_stack.png Graphic file (type pn
 g)
  <use ../results/diff_quot_plots/rho_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/diff_quot_plots/rho_hp_romberg_stack.png us
-ed on input line 237.
+ed on input line 246.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 237--238
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 246--247
  [][] 
  []
 
@@ -3285,10 +3290,10 @@ File: ../results/diff_quot_plots/rho_hp_bulirsch_stack.png Graphic file (type p
 ng)
  <use ../results/diff_quot_plots/rho_hp_bulirsch_stack.png>
 Package pdftex.def Info: ../results/diff_quot_plots/rho_hp_bulirsch_stack.png u
-sed on input line 245.
+sed on input line 254.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 245--246
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 254--255
  [][] 
  []
 
@@ -3299,15 +3304,15 @@ File: ../results/diff_quot_plots/rho_hp_harmonic_stack.png Graphic file (type p
 ng)
  <use ../results/diff_quot_plots/rho_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/diff_quot_plots/rho_hp_harmonic_stack.png u
-sed on input line 249.
+sed on input line 258.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 249--250
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 258--259
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
@@ -3316,10 +3321,10 @@ File: ../results/diff_quot_plots/xemxm2.png Graphic file (type png)
 
 <use ../results/diff_quot_plots/xemxm2.png>
 Package pdftex.def Info: ../results/diff_quot_plots/xemxm2.png used on input li
-ne 284.
+ne 296.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 284--285
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 296--297
  [][] 
  []
 
@@ -3328,10 +3333,10 @@ File: ../results/diff_quot_plots/xemxm2_hp.png Graphic file (type png)
 
 <use ../results/diff_quot_plots/xemxm2_hp.png>
 Package pdftex.def Info: ../results/diff_quot_plots/xemxm2_hp.png used on input
- line 288.
+ line 300.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 288--289
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 300--301
  [][] 
  []
 
@@ -3345,10 +3350,10 @@ rho_hp_romberg_stack.png> <../results/diff_quot_plots/rho_hp_bulirsch_stack.png
 File: ../results/diff_quot_plots/xemxm2_hp_trend.png Graphic file (type png)
 <use ../results/diff_quot_plots/xemxm2_hp_trend.png>
 Package pdftex.def Info: ../results/diff_quot_plots/xemxm2_hp_trend.png used on
- input line 296.
+ input line 308.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 296--297
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 308--309
  [][] 
  []
 
@@ -3359,10 +3364,10 @@ File: ../results/diff_quot_plots/xemxm2_hp_romberg_stack.png Graphic file (type
  png)
  <use ../results/diff_quot_plots/xemxm2_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/diff_quot_plots/xemxm2_hp_romberg_stack.png
- used on input line 300.
+ used on input line 312.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 300--301
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 312--313
  [][] 
  []
 
@@ -3373,10 +3378,10 @@ File: ../results/diff_quot_plots/xemxm2_hp_bulirsch_stack.png Graphic file (typ
 e png)
  <use ../results/diff_quot_plots/xemxm2_hp_bulirsch_stack.png>
 Package pdftex.def Info: ../results/diff_quot_plots/xemxm2_hp_bulirsch_stack.pn
-g used on input line 308.
+g used on input line 320.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 308--309
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 320--321
  [][] 
  []
 
@@ -3387,20 +3392,20 @@ File: ../results/diff_quot_plots/xemxm2_hp_harmonic_stack.png Graphic file (typ
 e png)
  <use ../results/diff_quot_plots/xemxm2_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/diff_quot_plots/xemxm2_hp_harmonic_stack.pn
-g used on input line 312.
+g used on input line 324.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 312--313
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 324--325
  [][] 
  []
 
 
-Overfull \hbox (5.05836pt too wide) in paragraph at lines 319--326
+Overfull \hbox (5.05836pt too wide) in paragraph at lines 331--341
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
 
  []
 
@@ -3413,10 +3418,10 @@ File: ../results/diff_quot_plots/xsin.png Graphic file (type png)
 
 <use ../results/diff_quot_plots/xsin.png>
 Package pdftex.def Info: ../results/diff_quot_plots/xsin.png used on input line
- 346.
+ 361.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 346--347
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 361--362
  [][] 
  []
 
@@ -3425,10 +3430,10 @@ File: ../results/diff_quot_plots/xsin_hp.png Graphic file (type png)
 
 <use ../results/diff_quot_plots/xsin_hp.png>
 Package pdftex.def Info: ../results/diff_quot_plots/xsin_hp.png used on input l
-ine 350.
+ine 365.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 350--351
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 365--366
  [][] 
  []
 
@@ -3437,15 +3442,15 @@ File: ../results/diff_quot_plots/xsin_hp_trend.png Graphic file (type png)
 
 <use ../results/diff_quot_plots/xsin_hp_trend.png>
 Package pdftex.def Info: ../results/diff_quot_plots/xsin_hp_trend.png used on i
-nput line 358.
+nput line 373.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 358--359
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 373--374
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 375--376
+Underfull \hbox (badness 10000) in paragraph at lines 393--394
 
  []
 
@@ -3454,7 +3459,7 @@ Underfull \vbox (badness 3118) has occurred while \output is active []
 
  [32 <../results/diff_quot_plots/xsin.png> <../results/diff_quot_plots/xsin_hp.
 png> <../results/diff_quot_plots/xsin_hp_trend.png>]) (./text/odes.tex
-Underfull \hbox (badness 10000) in paragraph at lines 409--1
+Underfull \hbox (badness 10000) in paragraph at lines 427--1
 
  []
 
@@ -3587,12 +3592,12 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 99--100
  []
 
 
-Overfull \hbox (18.60855pt too wide) in paragraph at lines 106--114
+Overfull \hbox (18.60855pt too wide) in paragraph at lines 106--118
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
  []
 
@@ -3601,10 +3606,10 @@ File: ../results/emr_plots/logistic.png Graphic file (type png)
 
 <use ../results/emr_plots/logistic.png>
 Package pdftex.def Info: ../results/emr_plots/logistic.png used on input line 1
-37.
+41.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 137--138
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 141--142
  [][] 
  []
 
@@ -3613,10 +3618,10 @@ File: ../results/emr_plots/logistic_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/logistic_hp.png>
 Package pdftex.def Info: ../results/emr_plots/logistic_hp.png used on input lin
-e 141.
+e 145.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 141--142
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 145--146
  [][] 
  []
 
@@ -3628,10 +3633,10 @@ File: ../results/emr_plots/logistic_hp_trend.png Graphic file (type png)
 
 <use ../results/emr_plots/logistic_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/logistic_hp_trend.png used on inp
-ut line 149.
+ut line 153.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 149--150
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 153--154
  [][] 
  []
 
@@ -3640,10 +3645,10 @@ File: ../results/emr_plots/logistic_hp_steps.png Graphic file (type png)
 
 <use ../results/emr_plots/logistic_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/logistic_hp_steps.png used on inp
-ut line 153.
+ut line 157.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 153--154
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 157--158
  [][] 
  []
 
@@ -3654,10 +3659,10 @@ File: ../results/emr_plots/logistic_hp_romberg_stack.png Graphic file (type png
 )
  <use ../results/emr_plots/logistic_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/logistic_hp_romberg_stack.png use
-d on input line 161.
+d on input line 165.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 161--162
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 165--166
  [][] 
  []
 
@@ -3668,10 +3673,10 @@ File: ../results/emr_plots/logistic_hp_romberg_steps_stack.png Graphic file (ty
 pe png)
  <use ../results/emr_plots/logistic_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/logistic_hp_romberg_steps_stack.p
-ng used on input line 165.
+ng used on input line 169.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 165--166
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 169--170
  [][] 
  []
 
@@ -3682,10 +3687,10 @@ File: ../results/emr_plots/logistic_hp_harmonic_stack.png Graphic file (type pn
 g)
  <use ../results/emr_plots/logistic_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/logistic_hp_harmonic_stack.png us
-ed on input line 173.
+ed on input line 177.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 173--174
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 177--178
  [][] 
  []
 
@@ -3696,15 +3701,15 @@ File: ../results/emr_plots/logistic_hp_harmonic_steps_stack.png Graphic file (t
 ype png)
  <use ../results/emr_plots/logistic_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/logistic_hp_harmonic_steps_stack.
-png used on input line 177.
+png used on input line 181.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 177--178
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 181--182
  [][] 
  []
 
 
-Overfull \hbox (1.06104pt too wide) in paragraph at lines 184--192
+Overfull \hbox (1.06104pt too wide) in paragraph at lines 188--200
  [][] 
  []
 
@@ -3714,12 +3719,12 @@ steps.png> <../results/emr_plots/logistic_hp_romberg_stack.png> <../results/emr
 _plots/logistic_hp_romberg_steps_stack.png> <../results/emr_plots/logistic_hp_h
 armonic_stack.png> <../results/emr_plots/logistic_hp_harmonic_steps_stack.png>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
@@ -3727,11 +3732,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--197
 File: ../results/emr_plots/tangens.png Graphic file (type png)
 
 <use ../results/emr_plots/tangens.png>
-Package pdftex.def Info: ../results/emr_plots/tangens.png used on input line 21
-5.
+Package pdftex.def Info: ../results/emr_plots/tangens.png used on input line 22
+3.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 215--216
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 223--224
  [][] 
  []
 
@@ -3740,10 +3745,10 @@ File: ../results/emr_plots/tangens_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/tangens_hp.png>
 Package pdftex.def Info: ../results/emr_plots/tangens_hp.png used on input line
- 219.
+ 227.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 219--220
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 227--228
  [][] 
  []
 
@@ -3752,10 +3757,10 @@ File: ../results/emr_plots/tangens_hp_trend.png Graphic file (type png)
 
 <use ../results/emr_plots/tangens_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/tangens_hp_trend.png used on inpu
-t line 227.
+t line 235.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 227--228
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 235--236
  [][] 
  []
 
@@ -3764,10 +3769,10 @@ File: ../results/emr_plots/tangens_hp_steps.png Graphic file (type png)
 
 <use ../results/emr_plots/tangens_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/tangens_hp_steps.png used on inpu
-t line 231.
+t line 239.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 231--232
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 239--240
  [][] 
  []
 
@@ -3778,10 +3783,10 @@ File: ../results/emr_plots/tangens_hp_romberg_stack.png Graphic file (type png)
 
  <use ../results/emr_plots/tangens_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/tangens_hp_romberg_stack.png used
- on input line 239.
+ on input line 247.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 239--240
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 247--248
  [][] 
  []
 
@@ -3792,10 +3797,10 @@ File: ../results/emr_plots/tangens_hp_romberg_steps_stack.png Graphic file (typ
 e png)
  <use ../results/emr_plots/tangens_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/tangens_hp_romberg_steps_stack.pn
-g used on input line 243.
+g used on input line 251.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 243--244
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 251--252
  [][] 
  []
 
@@ -3808,10 +3813,10 @@ File: ../results/emr_plots/tangens_hp_harmonic_stack.png Graphic file (type png
 )
  <use ../results/emr_plots/tangens_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/tangens_hp_harmonic_stack.png use
-d on input line 251.
+d on input line 259.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 251--252
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 259--260
  [][] 
  []
 
@@ -3822,20 +3827,20 @@ File: ../results/emr_plots/tangens_hp_harmonic_steps_stack.png Graphic file (ty
 pe png)
  <use ../results/emr_plots/tangens_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/tangens_hp_harmonic_steps_stack.p
-ng used on input line 255.
+ng used on input line 263.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 255--256
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 263--264
  [][] 
  []
 
 
-Overfull \hbox (13.13354pt too wide) in paragraph at lines 262--270
+Overfull \hbox (13.13354pt too wide) in paragraph at lines 270--282
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
@@ -3844,10 +3849,10 @@ File: ../results/emr_plots/singularity_0.png Graphic file (type png)
 
 <use ../results/emr_plots/singularity_0.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_0.png used on input l
-ine 293.
+ine 305.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 293--294
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 305--306
  [][] 
  []
 
@@ -3856,10 +3861,10 @@ File: ../results/emr_plots/singularity_0_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/singularity_0_hp.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_0_hp.png used on inpu
-t line 297.
+t line 309.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 297--298
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 309--310
  [][] 
  []
 
@@ -3871,10 +3876,10 @@ ack.png> <../results/emr_plots/tangens_hp_harmonic_steps_stack.png>]
 File: ../results/emr_plots/singularity_0_hp_trend.png Graphic file (type png)
  <use ../results/emr_plots/singularity_0_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_0_hp_trend.png used o
-n input line 305.
+n input line 317.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 305--306
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 317--318
  [][] 
  []
 
@@ -3884,10 +3889,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 305--306
 File: ../results/emr_plots/singularity_0_hp_steps.png Graphic file (type png)
  <use ../results/emr_plots/singularity_0_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_0_hp_steps.png used o
-n input line 309.
+n input line 321.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 309--310
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 321--322
  [][] 
  []
 
@@ -3898,10 +3903,10 @@ File: ../results/emr_plots/singularity_0_hp_romberg_stack.png Graphic file (typ
 e png)
  <use ../results/emr_plots/singularity_0_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_0_hp_romberg_stack.pn
-g used on input line 317.
+g used on input line 329.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 317--318
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 329--330
  [][] 
  []
 
@@ -3913,10 +3918,10 @@ e (type png)
 
 <use ../results/emr_plots/singularity_0_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_0_hp_romberg_steps_st
-ack.png used on input line 321.
+ack.png used on input line 333.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 321--322
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 333--334
  [][] 
  []
 
@@ -3927,10 +3932,10 @@ File: ../results/emr_plots/singularity_0_hp_harmonic_stack.png Graphic file (ty
 pe png)
  <use ../results/emr_plots/singularity_0_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_0_hp_harmonic_stack.p
-ng used on input line 329.
+ng used on input line 341.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 329--330
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 341--342
  [][] 
  []
 
@@ -3942,17 +3947,293 @@ le (type png)
 
 <use ../results/emr_plots/singularity_0_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_0_hp_harmonic_steps_s
-tack.png used on input line 333.
+tack.png used on input line 345.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 333--334
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 345--346
  [][] 
  []
 
+! Misplaced alignment tab character &.
+l.357 Harmonic &
+                 lin-ln evals-error & \(440\) & \(0.5196\) & \(2.747\) & \(0...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-Overfull \hbox (24.08356pt too wide) in paragraph at lines 340--348
- [][] 
- []
+! Misplaced alignment tab character &.
+l.357 Harmonic & lin-ln evals-error &
+                                      \(440\) & \(0.5196\) & \(2.747\) & \(0...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.357 Harmonic & lin-ln evals-error & \(440\) &
+                                                \(0.5196\) & \(2.747\) & \(0...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.357 ...n-ln evals-error & \(440\) & \(0.5196\) &
+                                                   \(2.747\) & \(0.001256\) ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.357 ...rror & \(440\) & \(0.5196\) & \(2.747\) &
+                                                   \(0.001256\) & \(0.5092\)...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.357 ...& \(0.5196\) & \(2.747\) & \(0.001256\) &
+                                                   \(0.5092\) & \(5.472\cdot...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.357 ...& \(2.747\) & \(0.001256\) & \(0.5092\) &
+                                                   \(5.472\cdot 10^{-5}\) \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\reserved@c ->\ifnum 0=`{}\fi \cr 
+                                  
+l.358 \rowcolor
+               {green}
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\rowcolor ->\noalign 
+                     {\ifnum 0=`}\fi \global \let \CT@do@color \CT@@do@color...
+l.358 \rowcolor
+               {green}
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.359 Romberg &
+                lin-ln steps-error & \(0.04186\) & \(0.03016\) & \(0.4274\) ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.359 Romberg & lin-ln steps-error &
+                                     \(0.04186\) & \(0.03016\) & \(0.4274\) ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.359 Romberg & lin-ln steps-error & \(0.04186\) &
+                                                   \(0.03016\) & \(0.4274\) ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.359 ...steps-error & \(0.04186\) & \(0.03016\) &
+                                                   \(0.4274\) & \(0.0002961\...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.359 ... \(0.04186\) & \(0.03016\) & \(0.4274\) &
+                                                   \(0.0002961\) & \(2.091\)...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.359 ...(0.03016\) & \(0.4274\) & \(0.0002961\) &
+                                                   \(2.091\) & \(8.21\cdot 1...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.359 ... \(0.4274\) & \(0.0002961\) & \(2.091\) &
+                                                   \(8.21\cdot 10^{-6}\) \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\reserved@c ->\ifnum 0=`{}\fi \cr 
+                                  
+l.360 \rowcolor
+               {green}
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \noalign.
+\rowcolor ->\noalign 
+                     {\ifnum 0=`}\fi \global \let \CT@do@color \CT@@do@color...
+l.360 \rowcolor
+               {green}
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+! Misplaced alignment tab character &.
+l.361 Harmonic &
+                 lin-ln steps-error & \(104.3\) & \(0.4903\) & \(2.752\) & \...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.361 Harmonic & lin-ln steps-error &
+                                      \(104.3\) & \(0.4903\) & \(2.752\) & \...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.361 Harmonic & lin-ln steps-error & \(104.3\) &
+                                                  \(0.4903\) & \(2.752\) & \...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.361 ...ln steps-error & \(104.3\) & \(0.4903\) &
+                                                   \(2.752\) & \(0.001151\) ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.361 ...or & \(104.3\) & \(0.4903\) & \(2.752\) &
+                                                   \(0.001151\) & \(1.018\) ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.361 ...& \(0.4903\) & \(2.752\) & \(0.001151\) &
+                                                   \(1.018\) & \(5.022\cdot ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.361 ... & \(2.752\) & \(0.001151\) & \(1.018\) &
+                                                   \(5.022\cdot 10^{-5}\) \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \cr.
+\reserved@c ->\ifnum 0=`{}\fi \cr 
+                                  
+l.362     \end
+              {tabular}
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \crcr.
+\endarray ->\crcr 
+                  \egroup \egroup \gdef \@preamble {}\CT@end 
+l.362     \end{tabular}
+                       
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten $.
+\endarray ->\crcr \egroup \egroup 
+                                  \gdef \@preamble {}\CT@end 
+l.362     \end{tabular}
+                       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 [41 <../results/emr_plots/singularity_0.png> <../results/emr_plots/singularity_
 0_hp.png> <../results/emr_plots/singularity_0_hp_trend.png> <../results/emr_plo
@@ -3960,7 +4241,7 @@ ts/singularity_0_hp_steps.png> <../results/emr_plots/singularity_0_hp_romberg_s
 tack.png> <../results/emr_plots/singularity_0_hp_romberg_steps_stack.png> <../r
 esults/emr_plots/singularity_0_hp_harmonic_stack.png> <../results/emr_plots/sin
 gularity_0_hp_harmonic_steps_stack.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 350--351
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
 
  []
 
@@ -3969,10 +4250,10 @@ File: ../results/emr_plots/singularity_2.png Graphic file (type png)
 
 <use ../results/emr_plots/singularity_2.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_2.png used on input l
-ine 358.
+ine 374.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 358--359
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 374--375
  [][] 
  []
 
@@ -3981,10 +4262,10 @@ File: ../results/emr_plots/singularity_2_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/singularity_2_hp.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_2_hp.png used on inpu
-t line 362.
+t line 378.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 362--363
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 378--379
  [][] 
  []
 
@@ -3994,10 +4275,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 362--363
 File: ../results/emr_plots/singularity_2_hp_trend.png Graphic file (type png)
  <use ../results/emr_plots/singularity_2_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_2_hp_trend.png used o
-n input line 370.
+n input line 386.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 370--371
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 386--387
  [][] 
  []
 
@@ -4007,10 +4288,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 370--371
 File: ../results/emr_plots/singularity_2_hp_steps.png Graphic file (type png)
  <use ../results/emr_plots/singularity_2_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_2_hp_steps.png used o
-n input line 374.
+n input line 390.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 374--375
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 390--391
  [][] 
  []
 
@@ -4021,10 +4302,10 @@ File: ../results/emr_plots/singularity_2_hp_romberg_stack.png Graphic file (typ
 e png)
  <use ../results/emr_plots/singularity_2_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_2_hp_romberg_stack.pn
-g used on input line 382.
+g used on input line 398.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 382--383
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 398--399
  [][] 
  []
 
@@ -4036,10 +4317,10 @@ e (type png)
 
 <use ../results/emr_plots/singularity_2_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_2_hp_romberg_steps_st
-ack.png used on input line 386.
+ack.png used on input line 402.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 386--387
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 402--403
  [][] 
  []
 
@@ -4050,10 +4331,10 @@ File: ../results/emr_plots/singularity_2_hp_harmonic_stack.png Graphic file (ty
 pe png)
  <use ../results/emr_plots/singularity_2_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_2_hp_harmonic_stack.p
-ng used on input line 394.
+ng used on input line 410.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 394--395
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 410--411
  [][] 
  []
 
@@ -4065,10 +4346,10 @@ le (type png)
 
 <use ../results/emr_plots/singularity_2_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_2_hp_harmonic_steps_s
-tack.png used on input line 398.
+tack.png used on input line 414.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 398--399
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 414--415
  [][] 
  []
 
@@ -4076,12 +4357,12 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 398--399
 2_hp.png> <../results/emr_plots/singularity_2_hp_trend.png> <../results/emr_plo
 ts/singularity_2_hp_steps.png> <../results/emr_plots/singularity_2_hp_romberg_s
 tack.png> <../results/emr_plots/singularity_2_hp_romberg_steps_stack.png>]
-Overfull \hbox (1.459pt too wide) in paragraph at lines 405--413
+Overfull \hbox (1.459pt too wide) in paragraph at lines 421--433
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
@@ -4090,10 +4371,10 @@ File: ../results/emr_plots/singularity_4.png Graphic file (type png)
 
 <use ../results/emr_plots/singularity_4.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_4.png used on input l
-ine 423.
+ine 443.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 423--424
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 443--444
  [][] 
  []
 
@@ -4102,10 +4383,10 @@ File: ../results/emr_plots/singularity_4_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/singularity_4_hp.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_4_hp.png used on inpu
-t line 427.
+t line 447.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 427--428
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 447--448
  [][] 
  []
 
@@ -4115,10 +4396,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 427--428
 File: ../results/emr_plots/singularity_4_hp_trend.png Graphic file (type png)
  <use ../results/emr_plots/singularity_4_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_4_hp_trend.png used o
-n input line 435.
+n input line 455.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 435--436
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 455--456
  [][] 
  []
 
@@ -4128,10 +4409,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 435--436
 File: ../results/emr_plots/singularity_4_hp_steps.png Graphic file (type png)
  <use ../results/emr_plots/singularity_4_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_4_hp_steps.png used o
-n input line 439.
+n input line 459.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 439--440
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 459--460
  [][] 
  []
 
@@ -4142,10 +4423,10 @@ File: ../results/emr_plots/singularity_4_hp_romberg_stack.png Graphic file (typ
 e png)
  <use ../results/emr_plots/singularity_4_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_4_hp_romberg_stack.pn
-g used on input line 447.
+g used on input line 467.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 447--448
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 467--468
  [][] 
  []
 
@@ -4157,10 +4438,10 @@ e (type png)
 
 <use ../results/emr_plots/singularity_4_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_4_hp_romberg_steps_st
-ack.png used on input line 451.
+ack.png used on input line 471.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 451--452
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 471--472
  [][] 
  []
 
@@ -4174,10 +4455,10 @@ File: ../results/emr_plots/singularity_4_hp_harmonic_stack.png Graphic file (ty
 pe png)
  <use ../results/emr_plots/singularity_4_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_4_hp_harmonic_stack.p
-ng used on input line 459.
+ng used on input line 479.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 459--460
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 479--480
  [][] 
  []
 
@@ -4189,20 +4470,20 @@ le (type png)
 
 <use ../results/emr_plots/singularity_4_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/singularity_4_hp_harmonic_steps_s
-tack.png used on input line 463.
+tack.png used on input line 483.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 463--464
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 483--484
  [][] 
  []
 
 
-Overfull \hbox (73.06206pt too wide) in paragraph at lines 471--479
+Overfull \hbox (73.06206pt too wide) in paragraph at lines 491--503
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 481--482
+Underfull \hbox (badness 10000) in paragraph at lines 505--506
 
  []
 
@@ -4211,10 +4492,10 @@ File: ../results/emr_plots/quad_sing_0.png Graphic file (type png)
 
 <use ../results/emr_plots/quad_sing_0.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_0.png used on input lin
-e 500.
+e 524.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 500--501
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 524--525
  [][] 
  []
 
@@ -4223,10 +4504,10 @@ File: ../results/emr_plots/quad_sing_0_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/quad_sing_0_hp.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_0_hp.png used on input 
-line 504.
+line 528.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 504--505
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 528--529
  [][] 
  []
 
@@ -4239,10 +4520,10 @@ File: ../results/emr_plots/quad_sing_0_hp_trend.png Graphic file (type png)
 
 <use ../results/emr_plots/quad_sing_0_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_0_hp_trend.png used on 
-input line 512.
+input line 536.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 512--513
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 536--537
  [][] 
  []
 
@@ -4252,10 +4533,10 @@ File: ../results/emr_plots/quad_sing_0_hp_steps.png Graphic file (type png)
 
 <use ../results/emr_plots/quad_sing_0_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_0_hp_steps.png used on 
-input line 516.
+input line 540.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 516--517
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 540--541
  [][] 
  []
 
@@ -4266,10 +4547,10 @@ File: ../results/emr_plots/quad_sing_0_hp_romberg_stack.png Graphic file (type
 png)
  <use ../results/emr_plots/quad_sing_0_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_0_hp_romberg_stack.png 
-used on input line 524.
+used on input line 548.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 524--525
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 548--549
  [][] 
  []
 
@@ -4281,10 +4562,10 @@ File: ../results/emr_plots/quad_sing_0_hp_romberg_steps_stack.png Graphic file
 
 <use ../results/emr_plots/quad_sing_0_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_0_hp_romberg_steps_stac
-k.png used on input line 528.
+k.png used on input line 552.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 528--529
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 552--553
  [][] 
  []
 
@@ -4295,10 +4576,10 @@ File: ../results/emr_plots/quad_sing_0_hp_harmonic_stack.png Graphic file (type
  png)
  <use ../results/emr_plots/quad_sing_0_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_0_hp_harmonic_stack.png
- used on input line 536.
+ used on input line 560.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 536--537
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 560--561
  [][] 
  []
 
@@ -4310,15 +4591,15 @@ File: ../results/emr_plots/quad_sing_0_hp_harmonic_steps_stack.png Graphic file
 
 <use ../results/emr_plots/quad_sing_0_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_0_hp_harmonic_steps_sta
-ck.png used on input line 540.
+ck.png used on input line 564.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 540--541
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 564--565
  [][] 
  []
 
 
-Overfull \hbox (32.40306pt too wide) in paragraph at lines 547--555
+Overfull \hbox (32.40306pt too wide) in paragraph at lines 571--583
  [][] 
  []
 
@@ -4328,7 +4609,7 @@ d_sing_0_hp_steps.png> <../results/emr_plots/quad_sing_0_hp_romberg_stack.png>
 <../results/emr_plots/quad_sing_0_hp_romberg_steps_stack.png> <../results/emr_p
 lots/quad_sing_0_hp_harmonic_stack.png> <../results/emr_plots/quad_sing_0_hp_ha
 rmonic_steps_stack.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 557--558
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
 
  []
 
@@ -4337,10 +4618,10 @@ File: ../results/emr_plots/quad_sing_2.png Graphic file (type png)
 
 <use ../results/emr_plots/quad_sing_2.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_2.png used on input lin
-e 565.
+e 593.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 565--566
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 593--594
  [][] 
  []
 
@@ -4349,10 +4630,10 @@ File: ../results/emr_plots/quad_sing_2_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/quad_sing_2_hp.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_2_hp.png used on input 
-line 569.
+line 597.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 569--570
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 597--598
  [][] 
  []
 
@@ -4362,10 +4643,10 @@ File: ../results/emr_plots/quad_sing_2_hp_trend.png Graphic file (type png)
 
 <use ../results/emr_plots/quad_sing_2_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_2_hp_trend.png used on 
-input line 577.
+input line 605.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 577--578
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 605--606
  [][] 
  []
 
@@ -4375,10 +4656,10 @@ File: ../results/emr_plots/quad_sing_2_hp_steps.png Graphic file (type png)
 
 <use ../results/emr_plots/quad_sing_2_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_2_hp_steps.png used on 
-input line 581.
+input line 609.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 581--582
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 609--610
  [][] 
  []
 
@@ -4389,10 +4670,10 @@ File: ../results/emr_plots/quad_sing_2_hp_romberg_stack.png Graphic file (type
 png)
  <use ../results/emr_plots/quad_sing_2_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_2_hp_romberg_stack.png 
-used on input line 589.
+used on input line 617.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 589--590
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 617--618
  [][] 
  []
 
@@ -4404,10 +4685,10 @@ File: ../results/emr_plots/quad_sing_2_hp_romberg_steps_stack.png Graphic file
 
 <use ../results/emr_plots/quad_sing_2_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_2_hp_romberg_steps_stac
-k.png used on input line 593.
+k.png used on input line 621.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 593--594
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 621--622
  [][] 
  []
 
@@ -4418,10 +4699,10 @@ File: ../results/emr_plots/quad_sing_2_hp_harmonic_stack.png Graphic file (type
  png)
  <use ../results/emr_plots/quad_sing_2_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_2_hp_harmonic_stack.png
- used on input line 601.
+ used on input line 629.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 601--602
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 629--630
  [][] 
  []
 
@@ -4433,10 +4714,10 @@ File: ../results/emr_plots/quad_sing_2_hp_harmonic_steps_stack.png Graphic file
 
 <use ../results/emr_plots/quad_sing_2_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_2_hp_harmonic_steps_sta
-ck.png used on input line 605.
+ck.png used on input line 633.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 605--606
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 633--634
  [][] 
  []
 
@@ -4444,17 +4725,17 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 605--606
 .png> <../results/emr_plots/quad_sing_2_hp_trend.png> <../results/emr_plots/qua
 d_sing_2_hp_steps.png> <../results/emr_plots/quad_sing_2_hp_romberg_stack.png> 
 <../results/emr_plots/quad_sing_2_hp_romberg_steps_stack.png>]
-Overfull \hbox (2.68394pt too wide) in paragraph at lines 612--620
+Overfull \hbox (2.68394pt too wide) in paragraph at lines 640--652
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 622--623
+Underfull \hbox (badness 10000) in paragraph at lines 654--655
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 624--625
+Underfull \hbox (badness 10000) in paragraph at lines 656--657
 
  []
 
@@ -4463,10 +4744,10 @@ File: ../results/emr_plots/quad_sing_4.png Graphic file (type png)
 
 <use ../results/emr_plots/quad_sing_4.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_4.png used on input lin
-e 630.
+e 662.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 630--631
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 662--663
  [][] 
  []
 
@@ -4475,10 +4756,10 @@ File: ../results/emr_plots/quad_sing_4_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/quad_sing_4_hp.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_4_hp.png used on input 
-line 634.
+line 666.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 634--635
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 666--667
  [][] 
  []
 
@@ -4488,10 +4769,10 @@ File: ../results/emr_plots/quad_sing_4_hp_trend.png Graphic file (type png)
 
 <use ../results/emr_plots/quad_sing_4_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_4_hp_trend.png used on 
-input line 642.
+input line 674.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 642--643
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 674--675
  [][] 
  []
 
@@ -4501,10 +4782,10 @@ File: ../results/emr_plots/quad_sing_4_hp_steps.png Graphic file (type png)
 
 <use ../results/emr_plots/quad_sing_4_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_4_hp_steps.png used on 
-input line 646.
+input line 678.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 646--647
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 678--679
  [][] 
  []
 
@@ -4515,10 +4796,10 @@ File: ../results/emr_plots/quad_sing_4_hp_romberg_stack.png Graphic file (type
 png)
  <use ../results/emr_plots/quad_sing_4_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_4_hp_romberg_stack.png 
-used on input line 654.
+used on input line 686.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 654--655
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 686--687
  [][] 
  []
 
@@ -4530,10 +4811,10 @@ File: ../results/emr_plots/quad_sing_4_hp_romberg_steps_stack.png Graphic file
 
 <use ../results/emr_plots/quad_sing_4_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_4_hp_romberg_steps_stac
-k.png used on input line 658.
+k.png used on input line 690.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 658--659
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 690--691
  [][] 
  []
 
@@ -4547,10 +4828,10 @@ File: ../results/emr_plots/quad_sing_4_hp_harmonic_stack.png Graphic file (type
  png)
  <use ../results/emr_plots/quad_sing_4_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_4_hp_harmonic_stack.png
- used on input line 666.
+ used on input line 698.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 666--667
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 698--699
  [][] 
  []
 
@@ -4562,10 +4843,10 @@ File: ../results/emr_plots/quad_sing_4_hp_harmonic_steps_stack.png Graphic file
 
 <use ../results/emr_plots/quad_sing_4_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/quad_sing_4_hp_harmonic_steps_sta
-ck.png used on input line 670.
+ck.png used on input line 702.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 670--671
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 702--703
  [][] 
  []
 
@@ -4574,10 +4855,10 @@ File: ../results/emr_plots/rotation.png Graphic file (type png)
 
 <use ../results/emr_plots/rotation.png>
 Package pdftex.def Info: ../results/emr_plots/rotation.png used on input line 7
-05.
+41.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 705--706
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 741--742
  [][] 
  []
 
@@ -4586,10 +4867,10 @@ File: ../results/emr_plots/rotation_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/rotation_hp.png>
 Package pdftex.def Info: ../results/emr_plots/rotation_hp.png used on input lin
-e 709.
+e 745.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 709--710
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 745--746
  [][] 
  []
 
@@ -4605,10 +4886,10 @@ File: ../results/emr_plots/rotation_hp_trend.png Graphic file (type png)
 
 <use ../results/emr_plots/rotation_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/rotation_hp_trend.png used on inp
-ut line 717.
+ut line 753.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 717--718
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 753--754
  [][] 
  []
 
@@ -4617,10 +4898,10 @@ File: ../results/emr_plots/rotation_hp_steps.png Graphic file (type png)
 
 <use ../results/emr_plots/rotation_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/rotation_hp_steps.png used on inp
-ut line 721.
+ut line 757.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 721--722
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 757--758
  [][] 
  []
 
@@ -4631,10 +4912,10 @@ File: ../results/emr_plots/rotation_hp_romberg_stack.png Graphic file (type png
 )
  <use ../results/emr_plots/rotation_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/rotation_hp_romberg_stack.png use
-d on input line 729.
+d on input line 765.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 729--730
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 765--766
  [][] 
  []
 
@@ -4645,10 +4926,10 @@ File: ../results/emr_plots/rotation_hp_romberg_steps_stack.png Graphic file (ty
 pe png)
  <use ../results/emr_plots/rotation_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/rotation_hp_romberg_steps_stack.p
-ng used on input line 733.
+ng used on input line 769.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 733--734
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 769--770
  [][] 
  []
 
@@ -4659,10 +4940,10 @@ File: ../results/emr_plots/rotation_hp_harmonic_stack.png Graphic file (type pn
 g)
  <use ../results/emr_plots/rotation_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/rotation_hp_harmonic_stack.png us
-ed on input line 741.
+ed on input line 777.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 741--742
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 777--778
  [][] 
  []
 
@@ -4673,15 +4954,15 @@ File: ../results/emr_plots/rotation_hp_harmonic_steps_stack.png Graphic file (t
 ype png)
  <use ../results/emr_plots/rotation_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/rotation_hp_harmonic_steps_stack.
-png used on input line 745.
+png used on input line 781.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 745--746
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 781--782
  [][] 
  []
 
 
-Overfull \hbox (32.40306pt too wide) in paragraph at lines 752--760
+Overfull \hbox (32.40306pt too wide) in paragraph at lines 788--800
  [][] 
  []
 
@@ -4691,7 +4972,7 @@ steps.png> <../results/emr_plots/rotation_hp_romberg_stack.png> <../results/emr
 _plots/rotation_hp_romberg_steps_stack.png> <../results/emr_plots/rotation_hp_h
 armonic_stack.png> <../results/emr_plots/rotation_hp_harmonic_steps_stack.png>]
 
-Underfull \hbox (badness 10000) in paragraph at lines 762--763
+Underfull \hbox (badness 10000) in paragraph at lines 802--803
 
  []
 
@@ -4700,10 +4981,10 @@ File: ../results/emr_plots/oscillation.png Graphic file (type png)
 
 <use ../results/emr_plots/oscillation.png>
 Package pdftex.def Info: ../results/emr_plots/oscillation.png used on input lin
-e 777.
+e 817.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 777--778
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 817--818
  [][] 
  []
 
@@ -4712,10 +4993,10 @@ File: ../results/emr_plots/oscillation_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/oscillation_hp.png>
 Package pdftex.def Info: ../results/emr_plots/oscillation_hp.png used on input 
-line 781.
+line 821.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 781--782
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 821--822
  [][] 
  []
 
@@ -4725,10 +5006,10 @@ File: ../results/emr_plots/oscillation_hp_trend.png Graphic file (type png)
 
 <use ../results/emr_plots/oscillation_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/oscillation_hp_trend.png used on 
-input line 789.
+input line 829.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 789--790
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 829--830
  [][] 
  []
 
@@ -4738,10 +5019,10 @@ File: ../results/emr_plots/oscillation_hp_steps.png Graphic file (type png)
 
 <use ../results/emr_plots/oscillation_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/oscillation_hp_steps.png used on 
-input line 793.
+input line 833.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 793--794
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 833--834
  [][] 
  []
 
@@ -4752,10 +5033,10 @@ File: ../results/emr_plots/oscillation_hp_romberg_stack.png Graphic file (type
 png)
  <use ../results/emr_plots/oscillation_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/oscillation_hp_romberg_stack.png 
-used on input line 801.
+used on input line 841.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 801--802
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 841--842
  [][] 
  []
 
@@ -4767,10 +5048,10 @@ File: ../results/emr_plots/oscillation_hp_romberg_steps_stack.png Graphic file
 
 <use ../results/emr_plots/oscillation_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/oscillation_hp_romberg_steps_stac
-k.png used on input line 805.
+k.png used on input line 845.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 805--806
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 845--846
  [][] 
  []
 
@@ -4786,10 +5067,10 @@ File: ../results/emr_plots/oscillation_hp_harmonic_stack.png Graphic file (type
  png)
  <use ../results/emr_plots/oscillation_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/oscillation_hp_harmonic_stack.png
- used on input line 813.
+ used on input line 853.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 813--814
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 853--854
  [][] 
  []
 
@@ -4801,37 +5082,37 @@ File: ../results/emr_plots/oscillation_hp_harmonic_steps_stack.png Graphic file
 
 <use ../results/emr_plots/oscillation_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/oscillation_hp_harmonic_steps_sta
-ck.png used on input line 817.
+ck.png used on input line 857.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 817--818
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 857--858
  [][] 
  []
 
 
-Overfull \hbox (18.60855pt too wide) in paragraph at lines 824--832
+Overfull \hbox (18.60855pt too wide) in paragraph at lines 864--876
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 834--835
+Underfull \hbox (badness 10000) in paragraph at lines 878--879
 
  []
 
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 842.
+(amsmath)                 on input line 886.
 
 <../results/emr_plots/federpendel.png, id=608, 462.528pt x 346.896pt>
 File: ../results/emr_plots/federpendel.png Graphic file (type png)
 
 <use ../results/emr_plots/federpendel.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel.png used on input lin
-e 850.
+e 894.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 850--851
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 894--895
  [][] 
  []
 
@@ -4840,10 +5121,10 @@ File: ../results/emr_plots/federpendel_1_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/federpendel_1_hp.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp.png used on inpu
-t line 854.
+t line 898.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 854--855
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 898--899
  [][] 
  []
 
@@ -4856,10 +5137,10 @@ png>]
 File: ../results/emr_plots/federpendel_1_hp_trend.png Graphic file (type png)
  <use ../results/emr_plots/federpendel_1_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_trend.png used o
-n input line 862.
+n input line 906.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 862--863
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 906--907
  [][] 
  []
 
@@ -4869,10 +5150,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 862--863
 File: ../results/emr_plots/federpendel_1_hp_steps.png Graphic file (type png)
  <use ../results/emr_plots/federpendel_1_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_steps.png used o
-n input line 866.
+n input line 910.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 866--867
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 910--911
  [][] 
  []
 
@@ -4883,10 +5164,10 @@ File: ../results/emr_plots/federpendel_1_hp_romberg_stack.png Graphic file (typ
 e png)
  <use ../results/emr_plots/federpendel_1_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_romberg_stack.pn
-g used on input line 874.
+g used on input line 918.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 874--875
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 918--919
  [][] 
  []
 
@@ -4898,10 +5179,10 @@ e (type png)
 
 <use ../results/emr_plots/federpendel_1_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_romberg_steps_st
-ack.png used on input line 878.
+ack.png used on input line 922.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 878--879
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 922--923
  [][] 
  []
 
@@ -4912,10 +5193,10 @@ File: ../results/emr_plots/federpendel_1_hp_harmonic_stack.png Graphic file (ty
 pe png)
  <use ../results/emr_plots/federpendel_1_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_harmonic_stack.p
-ng used on input line 886.
+ng used on input line 930.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 886--887
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 930--931
  [][] 
  []
 
@@ -4927,15 +5208,15 @@ le (type png)
 
 <use ../results/emr_plots/federpendel_1_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_harmonic_steps_s
-tack.png used on input line 890.
+tack.png used on input line 934.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 890--891
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 934--935
  [][] 
  []
 
 
-Overfull \hbox (18.60855pt too wide) in paragraph at lines 897--905
+Overfull \hbox (18.60855pt too wide) in paragraph at lines 941--953
  [][] 
  []
 
@@ -4945,7 +5226,7 @@ hp.png> <../results/emr_plots/federpendel_1_hp_trend.png> <../results/emr_plots
 ck.png> <../results/emr_plots/federpendel_1_hp_romberg_steps_stack.png> <../res
 ults/emr_plots/federpendel_1_hp_harmonic_stack.png> <../results/emr_plots/feder
 pendel_1_hp_harmonic_steps_stack.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 907--908
+Underfull \hbox (badness 10000) in paragraph at lines 955--956
 
  []
 
@@ -4954,10 +5235,10 @@ File: ../results/emr_plots/federpendel_2.png Graphic file (type png)
 
 <use ../results/emr_plots/federpendel_2.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_2.png used on input l
-ine 915.
+ine 963.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 915--916
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 963--964
  [][] 
  []
 
@@ -4966,10 +5247,10 @@ File: ../results/emr_plots/federpendel_2_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/federpendel_2_hp.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp.png used on inpu
-t line 919.
+t line 967.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 919--920
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 967--968
  [][] 
  []
 
@@ -4979,10 +5260,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 919--920
 File: ../results/emr_plots/federpendel_2_hp_trend.png Graphic file (type png)
  <use ../results/emr_plots/federpendel_2_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_trend.png used o
-n input line 927.
+n input line 975.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 927--928
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 975--976
  [][] 
  []
 
@@ -4992,10 +5273,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 927--928
 File: ../results/emr_plots/federpendel_2_hp_steps.png Graphic file (type png)
  <use ../results/emr_plots/federpendel_2_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_steps.png used o
-n input line 931.
+n input line 979.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 931--932
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 979--980
  [][] 
  []
 
@@ -5006,10 +5287,10 @@ File: ../results/emr_plots/federpendel_2_hp_romberg_stack.png Graphic file (typ
 e png)
  <use ../results/emr_plots/federpendel_2_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_romberg_stack.pn
-g used on input line 939.
+g used on input line 987.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 939--940
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 987--988
  [][] 
  []
 
@@ -5021,10 +5302,10 @@ e (type png)
 
 <use ../results/emr_plots/federpendel_2_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_romberg_steps_st
-ack.png used on input line 943.
+ack.png used on input line 991.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 943--944
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 991--992
  [][] 
  []
 
@@ -5035,10 +5316,10 @@ File: ../results/emr_plots/federpendel_2_hp_harmonic_stack.png Graphic file (ty
 pe png)
  <use ../results/emr_plots/federpendel_2_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_harmonic_stack.p
-ng used on input line 951.
+ng used on input line 999.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 951--952
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 999--1000
  [][] 
  []
 
@@ -5050,10 +5331,10 @@ le (type png)
 
 <use ../results/emr_plots/federpendel_2_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_harmonic_steps_s
-tack.png used on input line 955.
+tack.png used on input line 1003.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 955--956
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1003--1004
  [][] 
  []
 
@@ -5061,17 +5342,17 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 955--956
 2_hp.png> <../results/emr_plots/federpendel_2_hp_trend.png> <../results/emr_plo
 ts/federpendel_2_hp_steps.png> <../results/emr_plots/federpendel_2_hp_romberg_s
 tack.png> <../results/emr_plots/federpendel_2_hp_romberg_steps_stack.png>]
-Overfull \hbox (18.60855pt too wide) in paragraph at lines 962--970
+Overfull \hbox (18.60855pt too wide) in paragraph at lines 1010--1022
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 972--973
+Underfull \hbox (badness 10000) in paragraph at lines 1024--1025
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 981--983
+Underfull \hbox (badness 10000) in paragraph at lines 1033--1035
 
  []
 
@@ -5079,11 +5360,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 981--983
 File: ../results/emr_plots/lorenz.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz.png>
-Package pdftex.def Info: ../results/emr_plots/lorenz.png used on input line 988
-.
+Package pdftex.def Info: ../results/emr_plots/lorenz.png used on input line 104
+0.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 988--989
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1040--1041
  [][] 
  []
 
@@ -5092,10 +5373,10 @@ File: ../results/emr_plots/lorenz_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz_hp.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_hp.png used on input line 
-992.
+1044.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 992--993
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1044--1045
  [][] 
  []
 
@@ -5104,10 +5385,10 @@ File: ../results/emr_plots/lorenz_hp_trend.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_hp_trend.png used on input
- line 1000.
+ line 1052.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1000--1001
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1052--1053
  [][] 
  []
 
@@ -5116,10 +5397,10 @@ File: ../results/emr_plots/lorenz_hp_steps.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_hp_steps.png used on input
- line 1004.
+ line 1056.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1004--1005
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1056--1057
  [][] 
  []
 
@@ -5131,10 +5412,10 @@ t>
 File: ../results/emr_plots/lorenz_hp_romberg_stack.png Graphic file (type png)
  <use ../results/emr_plots/lorenz_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_hp_romberg_stack.png used 
-on input line 1012.
+on input line 1064.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1012--1013
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1064--1065
  [][] 
  []
 
@@ -5145,10 +5426,10 @@ File: ../results/emr_plots/lorenz_hp_romberg_steps_stack.png Graphic file (type
  png)
  <use ../results/emr_plots/lorenz_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_hp_romberg_steps_stack.png
- used on input line 1016.
+ used on input line 1068.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1016--1017
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1068--1069
  [][] 
  []
 
@@ -5159,10 +5440,10 @@ File: ../results/emr_plots/lorenz_hp_harmonic_stack.png Graphic file (type png)
 
  <use ../results/emr_plots/lorenz_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_hp_harmonic_stack.png used
- on input line 1024.
+ on input line 1076.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1024--1025
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1076--1077
  [][] 
  []
 
@@ -5173,20 +5454,20 @@ File: ../results/emr_plots/lorenz_hp_harmonic_steps_stack.png Graphic file (typ
 e png)
  <use ../results/emr_plots/lorenz_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_hp_harmonic_steps_stack.pn
-g used on input line 1028.
+g used on input line 1080.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1028--1029
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1080--1081
  [][] 
  []
 
 
-Overfull \hbox (9.38054pt too wide) in paragraph at lines 1034--1042
+Overfull \hbox (9.38054pt too wide) in paragraph at lines 1086--1098
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1044--1045
+Underfull \hbox (badness 10000) in paragraph at lines 1100--1101
 
  []
 
@@ -5195,10 +5476,10 @@ File: ../results/emr_plots/lorenz_02.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz_02.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02.png used on input line 
-1052.
+1108.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1052--1053
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1108--1109
  [][] 
  []
 
@@ -5207,10 +5488,10 @@ File: ../results/emr_plots/lorenz_02_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz_02_hp.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp.png used on input li
-ne 1056.
+ne 1112.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1056--1057
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1112--1113
  [][] 
  []
 
@@ -5223,10 +5504,10 @@ File: ../results/emr_plots/lorenz_02_hp_trend.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz_02_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp_trend.png used on in
-put line 1064.
+put line 1120.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1064--1065
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1120--1121
  [][] 
  []
 
@@ -5235,10 +5516,10 @@ File: ../results/emr_plots/lorenz_02_hp_steps.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz_02_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp_steps.png used on in
-put line 1068.
+put line 1124.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1068--1069
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1124--1125
  [][] 
  []
 
@@ -5249,10 +5530,10 @@ File: ../results/emr_plots/lorenz_02_hp_romberg_stack.png Graphic file (type pn
 g)
  <use ../results/emr_plots/lorenz_02_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp_romberg_stack.png us
-ed on input line 1076.
+ed on input line 1132.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1076--1077
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1132--1133
  [][] 
  []
 
@@ -5263,10 +5544,10 @@ File: ../results/emr_plots/lorenz_02_hp_romberg_steps_stack.png Graphic file (t
 ype png)
  <use ../results/emr_plots/lorenz_02_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp_romberg_steps_stack.
-png used on input line 1080.
+png used on input line 1136.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1080--1081
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1136--1137
  [][] 
  []
 
@@ -5277,10 +5558,10 @@ File: ../results/emr_plots/lorenz_02_hp_harmonic_stack.png Graphic file (type p
 ng)
  <use ../results/emr_plots/lorenz_02_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp_harmonic_stack.png u
-sed on input line 1088.
+sed on input line 1144.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1088--1089
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1144--1145
  [][] 
  []
 
@@ -5291,10 +5572,10 @@ File: ../results/emr_plots/lorenz_02_hp_harmonic_steps_stack.png Graphic file (
 type png)
  <use ../results/emr_plots/lorenz_02_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp_harmonic_steps_stack
-.png used on input line 1092.
+.png used on input line 1148.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1092--1093
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1148--1149
  [][] 
  []
 
@@ -5304,22 +5585,22 @@ _hp_steps.png> <../results/emr_plots/lorenz_02_hp_romberg_stack.png> <../result
 s/emr_plots/lorenz_02_hp_romberg_steps_stack.png> <../results/emr_plots/lorenz_
 02_hp_harmonic_stack.png> <../results/emr_plots/lorenz_02_hp_harmonic_steps_sta
 ck.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1110--1111
+Underfull \hbox (badness 10000) in paragraph at lines 1169--1170
 
  []
 
 
-Overfull \hbox (10.48955pt too wide) in paragraph at lines 1118--1151
+Overfull \hbox (10.48955pt too wide) in paragraph at lines 1177--1210
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1155--1156
+Underfull \hbox (badness 10000) in paragraph at lines 1214--1215
 
  []
 
 [57]
-Overfull \hbox (12.97713pt too wide) in paragraph at lines 1161--1194
+Overfull \hbox (12.97713pt too wide) in paragraph at lines 1220--1253
  [][] 
  []
 
@@ -5334,13 +5615,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24310 strings out of 493014
- 489542 string characters out of 6133351
- 569212 words of memory out of 5000000
- 27111 multiletter control sequences out of 15000+600000
+ 24360 strings out of 493014
+ 490191 string characters out of 6133351
+ 576433 words of memory out of 5000000
+ 27157 multiletter control sequences out of 15000+600000
  22751 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,11n,82p,1028b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,82p,1028b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
@@ -5367,7 +5648,7 @@ mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf
 -dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dis
 t/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (59 pages, 7462461 bytes).
+Output written on main.pdf (59 pages, 7470971 bytes).
 PDF statistics:
  787 PDF objects out of 1000 (max. 8388607)
  212 compressed objects within 3 object streams
