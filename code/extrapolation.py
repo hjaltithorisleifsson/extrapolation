@@ -209,7 +209,7 @@ def get_number_of_points(results):
 #Will save the plot as a png file named ref_steps in the folder given.
 def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 	xlabel = 'Extrapolation steps'
-	ylabel = 'Base $10$ logarithm of absolute error, $\log \epsilon $'
+	ylabel = 'Natural logarithm of absolute error, $\ln \epsilon $'
 	acq_vars_by_result = []
 	p_by_result = []
 	for result in results:

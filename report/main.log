@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 AUG 2020 19:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 AUG 2020 22:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3954,286 +3954,10 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 345--346
  [][] 
  []
 
-! Misplaced alignment tab character &.
-l.357 Harmonic &
-                 lin-ln evals-error & \(440\) & \(0.5196\) & \(2.747\) & \(0...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
-! Misplaced alignment tab character &.
-l.357 Harmonic & lin-ln evals-error &
-                                      \(440\) & \(0.5196\) & \(2.747\) & \(0...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.357 Harmonic & lin-ln evals-error & \(440\) &
-                                                \(0.5196\) & \(2.747\) & \(0...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.357 ...n-ln evals-error & \(440\) & \(0.5196\) &
-                                                   \(2.747\) & \(0.001256\) ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.357 ...rror & \(440\) & \(0.5196\) & \(2.747\) &
-                                                   \(0.001256\) & \(0.5092\)...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.357 ...& \(0.5196\) & \(2.747\) & \(0.001256\) &
-                                                   \(0.5092\) & \(5.472\cdot...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.357 ...& \(2.747\) & \(0.001256\) & \(0.5092\) &
-                                                   \(5.472\cdot 10^{-5}\) \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \cr.
-\reserved@c ->\ifnum 0=`{}\fi \cr 
-                                  
-l.358 \rowcolor
-               {green}
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \noalign.
-\rowcolor ->\noalign 
-                     {\ifnum 0=`}\fi \global \let \CT@do@color \CT@@do@color...
-l.358 \rowcolor
-               {green}
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced alignment tab character &.
-l.359 Romberg &
-                lin-ln steps-error & \(0.04186\) & \(0.03016\) & \(0.4274\) ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.359 Romberg & lin-ln steps-error &
-                                     \(0.04186\) & \(0.03016\) & \(0.4274\) ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.359 Romberg & lin-ln steps-error & \(0.04186\) &
-                                                   \(0.03016\) & \(0.4274\) ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.359 ...steps-error & \(0.04186\) & \(0.03016\) &
-                                                   \(0.4274\) & \(0.0002961\...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.359 ... \(0.04186\) & \(0.03016\) & \(0.4274\) &
-                                                   \(0.0002961\) & \(2.091\)...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.359 ...(0.03016\) & \(0.4274\) & \(0.0002961\) &
-                                                   \(2.091\) & \(8.21\cdot 1...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.359 ... \(0.4274\) & \(0.0002961\) & \(2.091\) &
-                                                   \(8.21\cdot 10^{-6}\) \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \cr.
-\reserved@c ->\ifnum 0=`{}\fi \cr 
-                                  
-l.360 \rowcolor
-               {green}
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \noalign.
-\rowcolor ->\noalign 
-                     {\ifnum 0=`}\fi \global \let \CT@do@color \CT@@do@color...
-l.360 \rowcolor
-               {green}
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-! Misplaced alignment tab character &.
-l.361 Harmonic &
-                 lin-ln steps-error & \(104.3\) & \(0.4903\) & \(2.752\) & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.361 Harmonic & lin-ln steps-error &
-                                      \(104.3\) & \(0.4903\) & \(2.752\) & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.361 Harmonic & lin-ln steps-error & \(104.3\) &
-                                                  \(0.4903\) & \(2.752\) & \...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.361 ...ln steps-error & \(104.3\) & \(0.4903\) &
-                                                   \(2.752\) & \(0.001151\) ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.361 ...or & \(104.3\) & \(0.4903\) & \(2.752\) &
-                                                   \(0.001151\) & \(1.018\) ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.361 ...& \(0.4903\) & \(2.752\) & \(0.001151\) &
-                                                   \(1.018\) & \(5.022\cdot ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.361 ... & \(2.752\) & \(0.001151\) & \(1.018\) &
-                                                   \(5.022\cdot 10^{-5}\) \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \cr.
-\reserved@c ->\ifnum 0=`{}\fi \cr 
-                                  
-l.362     \end
-              {tabular}
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \crcr.
-\endarray ->\crcr 
-                  \egroup \egroup \gdef \@preamble {}\CT@end 
-l.362     \end{tabular}
-                       
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Extra }, or forgotten $.
-\endarray ->\crcr \egroup \egroup 
-                                  \gdef \@preamble {}\CT@end 
-l.362     \end{tabular}
-                       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+Overfull \hbox (24.08356pt too wide) in paragraph at lines 352--364
+ [][] 
+ []
 
 [41 <../results/emr_plots/singularity_0.png> <../results/emr_plots/singularity_
 0_hp.png> <../results/emr_plots/singularity_0_hp_trend.png> <../results/emr_plo
@@ -5585,22 +5309,22 @@ _hp_steps.png> <../results/emr_plots/lorenz_02_hp_romberg_stack.png> <../result
 s/emr_plots/lorenz_02_hp_romberg_steps_stack.png> <../results/emr_plots/lorenz_
 02_hp_harmonic_stack.png> <../results/emr_plots/lorenz_02_hp_harmonic_steps_sta
 ck.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1169--1170
+Underfull \hbox (badness 10000) in paragraph at lines 1170--1171
 
  []
 
 
-Overfull \hbox (10.48955pt too wide) in paragraph at lines 1177--1210
+Overfull \hbox (10.48955pt too wide) in paragraph at lines 1178--1211
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1214--1215
+Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
 
  []
 
 [57]
-Overfull \hbox (12.97713pt too wide) in paragraph at lines 1220--1253
+Overfull \hbox (12.97713pt too wide) in paragraph at lines 1221--1254
  [][] 
  []
 
@@ -5648,7 +5372,7 @@ mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf
 -dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dis
 t/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (59 pages, 7470971 bytes).
+Output written on main.pdf (59 pages, 7433715 bytes).
 PDF statistics:
  787 PDF objects out of 1000 (max. 8388607)
  212 compressed objects within 3 object streams

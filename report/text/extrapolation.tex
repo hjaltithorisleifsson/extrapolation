@@ -38,7 +38,7 @@ Let \((x_1,y_1),\,\ldots,\,(x_k,y_k)\) be a collection of points such that \(x_1
 
 Let \(T\) be a method with asymptotic expansion in \(p\) up to \(pm\). The extrapolation process works as follows: We compute \(T(h)\) for some points \(h_1,h_2,\ldots,h_k\) where \(k \leq m\). Then we compute the interpolation polynomial \(P\) in \(h^p\) which goes through \((h_1,T(h_1)),\ldots,(h_k,T(h_k))\). We then hope that \(P(0)\) gives a good approximation \(T_0\).\\
 
-In order to compute \(P(0)\) we use the {\it Neville scheme}. Let \(P_{ij}(h^p) \coloneqq P(h^p; h_{i-j+1}^p, h_i^p)\) be the interpolation polynomial in \(h^p\) which interpolates \((h_{i-j+1}^p, T(h_{i-j+1}),\ldots,(h_i^p, T(h_i^p))\) and set \(T_{ij}\coloneqq P_{ij}(0)\). Then according to the Neville scheme we can compute \(T_{ij}\), \(j\leq i\), in the following recursive way:
+In order to compute \(P(0)\) we use the {\it Neville scheme}. Let \(P_{ij}(h^p) \coloneqq P(h^p; h_{i-j+1}^p, h_i^p)\) be the interpolation polynomial in \(h^p\) which interpolates \((h_{i-j+1}^p, T(h_{i-j+1})),\ldots, (h_i^p, T(h_i^p))\) and set \(T_{ij}\coloneqq P_{ij}(0)\). Then according to the Neville scheme we can compute \(T_{ij}\), \(j\leq i\), in the following recursive way:
 
 \begin{enumerate}
     \item \(T_{i1}\coloneqq T(h_i)\) for \(i=1,\ldots,k\).
@@ -49,7 +49,7 @@ If we align \(T_{ij}\) to a triangular table, we call that the {\it extrapolatio
 
 \section{Convergence}
 
-If we have a numerical method or scheme that has an asymptotic expansion as (\ref{expansion}), then the error decays polynomially as \(h\rightarrow 0\). It is known (see e.g. theorem 9.22 in \cite{dh}) that \(T_{ij}\) has faster polynomial decay of higher degree, as \(h\rightarrow 0\), then \(T\). Let \(\varepsilon_k \coloneqq |T_{kk} - T|\). We want to analyze how \(\varepsilon_k\) behaves as \(k\rightarrow +\infty\), i.e. how \(\varepsilon_k\) behaves when we increse the number of extrapolation steps. Let \(N_nk\) be some measure of the effort needed to compute \(T_{kk}\). In what follows we will test numerically the qualitative hypothesis that the error converges exponentially with the computational effort i.e.
+If we have a numerical method or scheme that has an asymptotic expansion as (\ref{expansion}), then the error decays polynomially as \(h\rightarrow 0\). It is known (see e.g. theorem 9.22 in \cite{dh}) that \(T_{ij}\) has  polynomial decay of higher degree, as \(h\rightarrow 0\), than \(T\). Let \(\varepsilon_k \coloneqq |T_{kk} - T|\). We want to analyze how \(\varepsilon_k\) behaves as \(k\rightarrow +\infty\), i.e. how \(\varepsilon_k\) behaves when we increse the number of extrapolation steps. Let \(N_n\) be some measure of the effort needed to compute \(T_{kk}\). In what follows we will test numerically the qualitative hypothesis that the error converges exponentially with the computational effort i.e.
 \begin{equation}
 \varepsilon_k \sim A \exp(-cN_k^q)
 \end{equation}
@@ -65,7 +65,7 @@ We will also test the hypothesis that the error converges exponentially with the
 \end{equation}
 for constants \(A,c,q\).\\
 
-In order to validate the estimated parameters \(b,c,q\) we will do a simple "cross validation" by fitting the model to subsets of the data and see whether the parameters vary a lot. If they vary a lot, we conclude that the fitting is unstable. If they are almost the same we will be more confident in that the model is actually appropriate. The cross validation strategy we will use goes as follows: Suppose that we have done a curve fitting on \((x_k,y_k)\) for \(k=0,1,\ldots,n\). Then we will do the curve fitting for \((x_{k+3},y_{k+3}), \ldots, (x_{k+9},x_{k+9})\) for \(k=0,\ldots,n-6\) and compute the relative variance of the parameters. Let \(a_k\), \(k=1,\ldots, m\) be numbers. Then we define their mean value by \(\overline{a} \coloneqq \frac{1}{m}\sum_{k=1}^m a_k\), and the relative variance by 
+In order to validate the estimated parameters \(b,c,q\) we will do a simple {\it cross validation} by fitting the model to subsets of the data and see whether the parameters vary a lot. If they vary a lot, we conclude that the fitting is unstable. If they are almost the same we will be more confident in that the model is actually appropriate. The cross validation strategy we will use goes as follows: Suppose that we have done a curve fitting on \((x_k,y_k)\) for \(k=0,1,\ldots,n\). Let \(r = \max{10, [n/2]}\). Then we will do the curve fitting for \((x_k,y_k), \ldots, (x_{k+r-1},x_{k+r-1})\) for \(k=3,\ldots,n-r-1\) and compute the relative variance of the parameters. Let \(a_k\), \(k=1,\ldots, m\) be numbers. Then we define their mean value by \(\overline{a} \coloneqq \frac{1}{m}\sum_{k=1}^m a_k\), and the relative variance by 
 \[
 \frac{1}{m\overline{a}^2}\sum_{k=1}^m (a_k - \overline{a})^2. 
 \]
