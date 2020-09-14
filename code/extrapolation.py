@@ -177,7 +177,6 @@ def plot_eval_error(results, title, ref, by_seq, folder):
 	plt.xlabel('Number of function evaluations, $N$')
 	plt.ylabel('Base $10$ logarithm of absolute error, $\log \epsilon $')
 	plt.title(title)
-	#plt.show()
 	plt.savefig(os.path.join(folder, ref + '.png'))
 	plt.close()
 
@@ -231,7 +230,6 @@ def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 	plt.xlabel(xlabel)
 	plt.ylabel(ylabel)
 	plt.title(title)
-	#plt.show()
 	plt.savefig(os.path.join(folder, ref + '_steps.png'))
 	plt.close()
 
@@ -277,7 +275,6 @@ def plot_trend(results, title, ref, by_seq, folder):
 	plt.xlabel(xlabel)
 	plt.ylabel(ylabel)
 	plt.title(title)
-	#plt.show()
 	plt.savefig(os.path.join(folder, ref + '_trend.png'))
 	plt.close()
 
@@ -343,7 +340,6 @@ def plot_log_log_trend(results, title, ref, by_seq, folder):
 	plt.xlabel(xlabel)
 	plt.ylabel(ylabel)
 	plt.title(title)
-	#plt.show()
 	plt.savefig(os.path.join(folder,ref + '_trend.png'))
 	plt.close()
 
@@ -361,53 +357,6 @@ def plot_log_log_trend(results, title, ref, by_seq, folder):
 			file.write('%s & %s & . & . & . & . & . & . \\\\\n' % (result.seq_ref, "ln-ln evals-error"))
 
 	file.close()
-
-
-def plot_by_param(param_prob, scheme, ps, title, seqs, ref, folder, cache_folder):
-	qs_seq = []
-	qs_seq_log_log = []
-	for seq in seqs:
-		qs = []
-		qs_log_log = []
-		for p in ps:
-			prob = param_prob(p)
-			result = analyze(prob, scheme, seq, True, "%s_%s_%s" % (ref, seq.ref.lower(), p), cache_folder)
-			plt.clf()
-			evals = result.evals
-			ln_e = result.ln_e
-			ln_evals = np.log(evals)
-			q = opt.curve_fit(fit_func, evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0][-1]
-			q_log_log = opt.curve_fit(fit_func, ln_evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0][-1]
-			qs.append(q)
-			qs_log_log.append(q_log_log)
-
-		qs_seq.append(qs)
-		qs_seq_log_log.append(qs_log_log)
-	
-	qs_seq = np.array(qs_seq)
-	mln_ps = np.array([-float(mp.log(p)) for p in ps])
-
-	for (qs, seq) in zip(qs_seq, seqs):
-		plt.plot(mln_ps, qs, '.', label = seq.ref)
-		plt.legend()
-
-	plt.xlabel('Minus the natural logarithm of $a$')
-	plt.ylabel('Optimal parameter $q$')
-	plt.title(title)
-	plt.savefig(os.path.join(folder, 'log_p_vs_q_%s.png' % ref))
-	plt.clf()
-	
-	qs_seq_log_log = np.array(qs_seq_log_log)
-
-	for (qs, seq) in zip(qs_seq_log_log, seqs):
-		plt.plot(mln_ps, qs, '.', label = seq.ref)
-		plt.legend()
-
-	plt.xlabel('Minus the natural logarithm of $a$')
-	plt.ylabel('Optimal parameter $q$')
-	plt.title(title)
-	plt.savefig(os.path.join(folder, 'log_p_vs_q_%s_log_log.png' % ref))
-	plt.close()
 
 def get_fit_variance(x, y, b0, c0, q0):
 	bs = []
