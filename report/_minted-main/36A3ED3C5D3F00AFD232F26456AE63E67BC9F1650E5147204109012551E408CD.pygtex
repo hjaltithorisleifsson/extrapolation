@@ -5,10 +5,10 @@
 \PYG{c+c1}{\PYGZsh{}seq (Sequence): The sequence to use in the extrapolation}
 \PYG{c+c1}{\PYGZsh{}hp (bool): Indicates whether to use high precision arithmetic (true)}
 \PYG{c+c1}{\PYGZsh{}           or standard double precision (false).}
-\PYG{c+c1}{\PYGZsh{}returns: The extrapolation table as a list of lists.}
+\PYG{c+c1}{\PYGZsh{}returns: The extrapolation table as an np.array of np.arrays.}
 \PYG{k}{def} \PYG{n+nf}{extrapolate}\PYG{p}{(}\PYG{n}{sc}\PYG{p}{,} \PYG{n}{prob}\PYG{p}{,} \PYG{n}{seq}\PYG{p}{,} \PYG{n}{hp}\PYG{p}{):}
 	\PYG{n}{n} \PYG{o}{=} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{seq}\PYG{p}{)}
-	\PYG{n}{X} \PYG{o}{=} \PYG{p}{[[}\PYG{l+m+mi}{0} \PYG{k}{for} \PYG{n}{j} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)]} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)]}
+	\PYG{n}{X} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{n}{mpf}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{k}{if} \PYG{n}{hp} \PYG{k}{else} \PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{*} \PYG{p}{(}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{))} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)])}
 
 	\PYG{c+c1}{\PYGZsh{}X[i][j] = T\PYGZus{}ij}
 	\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}

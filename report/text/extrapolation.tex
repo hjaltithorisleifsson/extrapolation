@@ -24,17 +24,17 @@ Note that \(R(h)\) has \(O(h^{n+1})\) convergence to \(T_0\) while \(T(h)\) has 
 
 \section{The extrapolation table}
 
-We always think of \(T\) as arising from some numerical scheme e.g. the trapezoidal rule and then \(T_0\) is the integral of some function. Thus we do not require that \(T\) is necessarily defined for all values near \(0\), but only on set which has \(0\) as an accumulation point. In what follows, we will thus refer to \(T\) as a {\it method} for computing \(T_0\).
+We always think of \(T\) as arising from some numerical scheme e.g. the trapezoidal rule and then \(T_0\) is the integral of some function. Thus we do not require that \(T\) is necessarily defined for all values near \(0\), but only on a discrete set \(\Hset\) which has \(0\) as an accumulation point. In what follows, we will thus refer to \(T\) as a {\it method} for computing \(T_0\).
 
 \begin{definition}
 Let \(T\) be a method for computing \(T_0\). We say that \(T\) has an asymptotic expansion in \(h^p\) up to order \(pm\) if there exist constants \(\tau_p,\tau_{2p},\ldots,\tau_{mp} \in \R\) such that 
 \begin{equation}\label{expansion}
 T(h) = T_0 + \tau_ph^p + \tau_{2p}h^{2p} + \cdots \tau_{mp}h^{mp} + O(h^{(m+1)p})
 \end{equation}
-for \(h\rightarrow 0\).
+for \(h\rightarrow 0\), \(h\in\Hset\).
 \end{definition}
 
-Let \((x_1,y_1),\,\ldots,\,(x_k,y_k)\) be a collection of points such that \(x_1,\ldots,x_k\) are distinct. Then there exists a polynomial \(P\) which interpolates the points, i.e. \(P(x_i) = y_i\) for all \(i\). We say that \(P\) is {\it the interpolation polynomial} for the points if \(P\) has the lowest degree among all polynomials which interpolate them. The interpolation polynomial is unique. Let \(p > 0\) be an integer and points \((x_1^p,y_1),\,\ldots,\,(x_n^p,y_n)\) such that \(x_i^p\) are distinct, be given. Let \(P\) be the interpolation polynomial for the points. We then call \(P(h^p)\) the {\it interpolation polynomial in \(p\)} for the points.\\
+Let \((x_1,y_1),\,\ldots,\,(x_k,y_k)\) be a collection of points such that \(x_1,\ldots,x_k\) are distinct. Then there exists a uniqe polynomial \(P\) of degree \(k-1\) which interpolates the points, i.e. \(P(x_i) = y_i\) for all \(i\). We say that \(P\) is {\it the interpolation polynomial} for the points. Let \(p > 0\) be an integer and points \((x_1^p,y_1),\,\ldots,\,(x_n^p,y_n)\) such that \(x_i^p\) are distinct, be given. Let \(P\) be the interpolation polynomial for the points. We then call \(P(h^p)\) the {\it interpolation polynomial in \(p\)} for these points.\\
 
 Let \(T\) be a method with asymptotic expansion in \(p\) up to \(pm\). The extrapolation process works as follows: We compute \(T(h)\) for some points \(h_1,h_2,\ldots,h_k\) where \(k \leq m\). Then we compute the interpolation polynomial \(P\) in \(h^p\) which goes through \((h_1,T(h_1)),\ldots,(h_k,T(h_k))\). We then hope that \(P(0)\) gives a good approximation \(T_0\).\\
 
@@ -49,15 +49,15 @@ If we align \(T_{ij}\) to a triangular table, we call that the {\it extrapolatio
 
 \section{Convergence}
 
-If we have a numerical method or scheme that has an asymptotic expansion as (\ref{expansion}), then the error decays polynomially as \(h\rightarrow 0\). It is known (see e.g. theorem 9.22 in \cite{dh}) that \(T_{ij}\) has  polynomial decay of higher degree, as \(h\rightarrow 0\), than \(T\). Let \(\varepsilon_k \coloneqq |T_{kk} - T|\). We want to analyze how \(\varepsilon_k\) behaves as \(k\rightarrow +\infty\), i.e. how \(\varepsilon_k\) behaves when we increse the number of extrapolation steps. Let \(N_n\) be some measure of the effort needed to compute \(T_{kk}\). In what follows we will test numerically the qualitative hypothesis that the error converges exponentially with the computational effort i.e.
+If we have a numerical method or scheme that has an asymptotic expansion as (\ref{expansion}), then the error decays polynomially as \(h\rightarrow 0\). It is known (see e.g. theorem 9.22 in \cite{dh}) that \(T_{ij}\) has  polynomial decay of higher degree, as \(h\rightarrow 0\), than \(T\). Let \(\varepsilon_k \coloneqq |T_{kk} - T|\). We want to analyse how \(\varepsilon_k\) behaves as \(k\rightarrow +\infty\), i.e. how \(\varepsilon_k\) behaves when we increse the number of extrapolation steps. Let \(N_n\) be some measure of the effort needed to compute \(T_{kk}\). In what follows we will test numerically the qualitative hypothesis that the error converges exponentially with the computational effort i.e.
 \begin{equation}
 \varepsilon_k \sim A \exp(-cN_k^q)
 \end{equation}
 for constants \(A, c, q\). Note that if \(\varepsilon_k = A\exp(-c N_k^q)\) then \(\ln\varepsilon_k = b - cN_k^q\) so in order to test the hypothesis we will do the following: Assume that we have the error \(\varepsilon_k\) for \(k=1,\ldots,n\). Then we will compute
 \begin{equation}
-(b,c,q) \coloneqq \arg\min \left\{\sum_{k=1}^n|\ln \varepsilon_k - (b - cN_k^q)|^2\right\}
+(b^*,c^*,q^*) \coloneqq \operatorname{arg min}_{(b,c,q)} \left\{\sum_{k=1}^n|\ln \varepsilon_k - (b - cN_k^q)|^2\right\}
 \end{equation}
-and see whether the points \((N_k,\ln\varepsilon_k)\) fit well to the graph of \(t\mapsto b - ct^q\).\\
+and see whether the points \((N_k,\ln\varepsilon_k)\) fit well to the graph of \(t\mapsto b - ct^q\). Here \(b = \ln A\).\\
 
 We will also test the hypothesis that the error converges exponentially with the number of extrapolation steps, i.e. whether
 \begin{equation}
@@ -65,14 +65,29 @@ We will also test the hypothesis that the error converges exponentially with the
 \end{equation}
 for constants \(A,c,q\).\\
 
-In order to validate the estimated parameters \(b,c,q\) we will do a simple {\it cross validation} by fitting the model to subsets of the data and see whether the parameters vary a lot. If they vary a lot, we conclude that the fitting is unstable. If they are almost the same we will be more confident in that the model is actually appropriate. The cross validation strategy we will use goes as follows: Suppose that we have done a curve fitting on \((x_k,y_k)\) for \(k=0,1,\ldots,n\). Let \(r = \max{10, [n/2]}\). Then we will do the curve fitting for \((x_k,y_k), \ldots, (x_{k+r-1},x_{k+r-1})\) for \(k=3,\ldots,n-r-1\) and compute the relative variance of the parameters. Let \(a_k\), \(k=1,\ldots, m\) be numbers. Then we define their mean value by \(\overline{a} \coloneqq \frac{1}{m}\sum_{k=1}^m a_k\), and the relative variance by 
+We define the following relative residuals:
+
+\[
+\rho_{\ln} \coloneqq \frac{\sum_{k=1}^n|\ln\varepsilon_k  - (b^* - c^*N_k^{q^*})|^2}{\sum_{k=1}^n|\ln\varepsilon_k|^2}
+\]
+
+and 
+
+\[
+\rho_{\operatorname{lin}}\coloneqq \frac{\sum_{k=1}^n|\varepsilon_k - A^*\exp(-c^*N_k^{q^*})|^2}{\sum_{k=1}^n|\varepsilon_k|^2}
+\]
+
+where \(A^*\coloneqq \exp(b^*)\). We will use these residuals as one measurement of the goodness of fit.\\
+
+In addition to that we will do a simple {\it cross validation} by fitting the model to subsets of the data and see whether the parameters vary a lot. If they vary a lot, we conclude that the fitting is unstable. If they are almost the same we will be more confident in that the model is actually appropriate. The cross validation strategy we will use goes as follows: Suppose that we have done a curve fitting on \((x_k,y_k)\) for \(k=0,1,\ldots,n\). Let \(r = \max{10, [n/2]}\). Then we will do the curve fitting for \((x_k,y_k), \ldots, (x_{k+r-1},x_{k+r-1})\) for \(k=3,\ldots,n-r-1\) and compute the relative variance of the parameters. Let \(a_k\), \(k=1,\ldots, m\) be numbers. Then we define their mean value by \(\overline{a} \coloneqq \frac{1}{m}\sum_{k=1}^m a_k\), and the relative variance by 
 \[
 \frac{1}{m\overline{a}^2}\sum_{k=1}^m (a_k - \overline{a})^2. 
 \]
 
+In order to visualize the stability of the fit, we will plot all the curves obtained in the cross validation, on top of each other. We call this plots {\it stack plots}. 
 \section{Code}
 
-The following Python mehtod computes the extrapolation table for some scheme which has an asymptotic expansion in \(h^p\).
+The following Python function computes the extrapolation table for some scheme which has an asymptotic expansion in \(h^p\).
 
 \begin{minted}[tabsize=2, fontsize=\footnotesize]{python}
 #sc (Scheme): The scheme to extrapolate	
@@ -81,10 +96,10 @@ The following Python mehtod computes the extrapolation table for some scheme whi
 #seq (Sequence): The sequence to use in the extrapolation
 #hp (bool): Indicates whether to use high precision arithmetic (true) 
 #           or standard double precision (false).
-#returns: The extrapolation table as a list of lists. 
+#returns: The extrapolation table as an np.array of np.arrays.
 def extrapolate(sc, prob, seq, hp):
 	n = len(seq)
-	X = [[0 for j in range(i + 1)] for i in range(n)]
+	X = np.array([np.array([mpf(0) if hp else 0] * (i+1)) for i in range(n)])
 
 	#X[i][j] = T_ij
 	for i in range(n):

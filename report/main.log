@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 AUG 2020 22:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  14 SEP 2020 11:57
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1249,8 +1249,12 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks58
 \minrowclearance=\skip60
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/seqsplit/seqsplit.sty
+Package: seqsplit 2006/08/07 v0.1 Splitting long sequences (DNA, RNA, proteins,
+ etc.) 
+)
 
-Package amsthm Warning: Unknown theoremstyle `theorem' on input line 19.
+Package amsthm Warning: Unknown theoremstyle `theorem' on input line 20.
 
 \c@theorem=\count294
 )
@@ -1259,24 +1263,6 @@ runsystem(which "pygmentize" && touch "main.aex")...executed.
 runsystem(rm "main.aex")...executed.
 
  (./main.aux
-
-LaTeX Warning: Label `tab:my_label' multiply defined.
-
-
-LaTeX Warning: Label `tab:my_label' multiply defined.
-
-
-LaTeX Warning: Label `tab:my_label' multiply defined.
-
-
-LaTeX Warning: Label `tab:my_label' multiply defined.
-
-
-LaTeX Warning: Label `tab:my_label' multiply defined.
-
-
-LaTeX Warning: Label `tab:my_label' multiply defined.
-
 
 LaTeX Warning: Label `tab:my_label' multiply defined.
 
@@ -1504,6 +1490,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
  []
 
 
+LaTeX Warning: Citation `dh' on page 2 undefined on input line 52.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 59--61
 
  []
@@ -1513,23 +1502,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
 \openout3 = `main.pyg'.
 
 
-(./_minted-main/4675AA522F70E18FEAC12C2EE52A98E57BC9F1650E5147204109012551E408C
+(./_minted-main/36A3ED3C5D3F00AFD232F26456AE63E67BC9F1650E5147204109012551E408C
 D.pygtex
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 9.
-)) (./text/romberg.tex [3] [4
-
-]
+ [3])) (./text/romberg.tex [4]
 Chapter 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
-[5]
+
+LaTeX Warning: Citation `kn' on page 5 undefined on input line 16.
+
+[5
+
+]
 \openout3 = `main.pyg'.
 
 
@@ -1545,12 +1542,12 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 63.
-
+ [6]
 Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
-[6]
+
 Underfull \hbox (badness 10000) in paragraph at lines 80--82
 
  []
@@ -4700,15 +4697,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 802--803
 
  []
 
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 815--823
+\OT1/cmr/m/n/12 063043468856633835363022486858597646814092746120415602252974269
+9705231816982332
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 815--823
+\OT1/cmr/m/n/12 875857346500673133786889916492046579446443336573454234448912717
+2608253083611368
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 815--823
+\OT1/cmr/m/n/12 100652708812000298026501229194604004816026969723578902333304863
+1065165528080437
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 815--823
+\OT1/cmr/m/n/12 942903580963891205844122081548797171158608165714621264564218937
+5079112255277643
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 815--823
+\OT1/cmr/m/n/12 985217962293910119704130097616142891422432437391145846219393489
+8208401314255177
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 824--832
+\OT1/cmr/m/n/12 976602484108014828181871284418676530085142989996993013124223079
+7649624727126014
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 824--832
+\OT1/cmr/m/n/12 481734539577929952609402984793251351341405040646241211439611813
+9738629227789263
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 824--832
+\OT1/cmr/m/n/12 817126057781519897957308852021221319964302038632134798102885982
+3073409833268487
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 824--832
+\OT1/cmr/m/n/12 446502806319895101393672151932955861076973749758299534799116120
+6624419371276898
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 824--832
+\OT1/cmr/m/n/12 648988997691904623723371850615097727878192863338896660305324545
+7050361914127647
+ []
+
 <../results/emr_plots/oscillation.png, id=592, 462.528pt x 346.896pt>
 File: ../results/emr_plots/oscillation.png Graphic file (type png)
 
 <use ../results/emr_plots/oscillation.png>
 Package pdftex.def Info: ../results/emr_plots/oscillation.png used on input lin
-e 817.
+e 837.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 817--818
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 837--838
  [][] 
  []
 
@@ -4717,10 +4774,10 @@ File: ../results/emr_plots/oscillation_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/oscillation_hp.png>
 Package pdftex.def Info: ../results/emr_plots/oscillation_hp.png used on input 
-line 821.
+line 841.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 821--822
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 841--842
  [][] 
  []
 
@@ -4730,10 +4787,10 @@ File: ../results/emr_plots/oscillation_hp_trend.png Graphic file (type png)
 
 <use ../results/emr_plots/oscillation_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/oscillation_hp_trend.png used on 
-input line 829.
+input line 849.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 829--830
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 849--850
  [][] 
  []
 
@@ -4743,55 +4800,7 @@ File: ../results/emr_plots/oscillation_hp_steps.png Graphic file (type png)
 
 <use ../results/emr_plots/oscillation_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/oscillation_hp_steps.png used on 
-input line 833.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 833--834
- [][] 
- []
-
-
-<../results/emr_plots/oscillation_hp_romberg_stack.png, id=596, 462.528pt x 346
-.896pt>
-File: ../results/emr_plots/oscillation_hp_romberg_stack.png Graphic file (type 
-png)
- <use ../results/emr_plots/oscillation_hp_romberg_stack.png>
-Package pdftex.def Info: ../results/emr_plots/oscillation_hp_romberg_stack.png 
-used on input line 841.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 841--842
- [][] 
- []
-
-
-<../results/emr_plots/oscillation_hp_romberg_steps_stack.png, id=597, 462.528pt
- x 346.896pt>
-File: ../results/emr_plots/oscillation_hp_romberg_steps_stack.png Graphic file 
-(type png)
-
-<use ../results/emr_plots/oscillation_hp_romberg_steps_stack.png>
-Package pdftex.def Info: ../results/emr_plots/oscillation_hp_romberg_steps_stac
-k.png used on input line 845.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 845--846
- [][] 
- []
-
-
-Underfull \vbox (badness 3568) has occurred while \output is active []
-
- [50 <../results/emr_plots/oscillation.png> <../results/emr_plots/oscillation_h
-p.png> <../results/emr_plots/oscillation_hp_trend.png> <../results/emr_plots/os
-cillation_hp_steps.png>]
-<../results/emr_plots/oscillation_hp_harmonic_stack.png, id=606, 462.528pt x 34
-6.896pt>
-File: ../results/emr_plots/oscillation_hp_harmonic_stack.png Graphic file (type
- png)
- <use ../results/emr_plots/oscillation_hp_harmonic_stack.png>
-Package pdftex.def Info: ../results/emr_plots/oscillation_hp_harmonic_stack.png
- used on input line 853.
+input line 853.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 853--854
@@ -4799,179 +4808,317 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 853--854
  []
 
 
-<../results/emr_plots/oscillation_hp_harmonic_steps_stack.png, id=607, 462.528p
+Underfull \vbox (badness 2237) has occurred while \output is active []
+
+ [50 <../results/emr_plots/oscillation.png> <../results/emr_plots/oscillation_h
+p.png>]
+<../results/emr_plots/oscillation_hp_romberg_stack.png, id=602, 462.528pt x 346
+.896pt>
+File: ../results/emr_plots/oscillation_hp_romberg_stack.png Graphic file (type 
+png)
+ <use ../results/emr_plots/oscillation_hp_romberg_stack.png>
+Package pdftex.def Info: ../results/emr_plots/oscillation_hp_romberg_stack.png 
+used on input line 861.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 861--862
+ [][] 
+ []
+
+
+<../results/emr_plots/oscillation_hp_romberg_steps_stack.png, id=603, 462.528pt
+ x 346.896pt>
+File: ../results/emr_plots/oscillation_hp_romberg_steps_stack.png Graphic file 
+(type png)
+
+<use ../results/emr_plots/oscillation_hp_romberg_steps_stack.png>
+Package pdftex.def Info: ../results/emr_plots/oscillation_hp_romberg_steps_stac
+k.png used on input line 865.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 865--866
+ [][] 
+ []
+
+
+<../results/emr_plots/oscillation_hp_harmonic_stack.png, id=604, 462.528pt x 34
+6.896pt>
+File: ../results/emr_plots/oscillation_hp_harmonic_stack.png Graphic file (type
+ png)
+ <use ../results/emr_plots/oscillation_hp_harmonic_stack.png>
+Package pdftex.def Info: ../results/emr_plots/oscillation_hp_harmonic_stack.png
+ used on input line 873.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 873--874
+ [][] 
+ []
+
+
+<../results/emr_plots/oscillation_hp_harmonic_steps_stack.png, id=605, 462.528p
 t x 346.896pt>
 File: ../results/emr_plots/oscillation_hp_harmonic_steps_stack.png Graphic file
  (type png)
 
 <use ../results/emr_plots/oscillation_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/oscillation_hp_harmonic_steps_sta
-ck.png used on input line 857.
+ck.png used on input line 877.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 857--858
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 877--878
  [][] 
  []
 
 
-Overfull \hbox (18.60855pt too wide) in paragraph at lines 864--876
+Overfull \hbox (18.60855pt too wide) in paragraph at lines 884--896
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 878--879
+Underfull \hbox (badness 10000) in paragraph at lines 898--899
 
  []
 
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 886.
+(amsmath)                 on input line 906.
 
-<../results/emr_plots/federpendel.png, id=608, 462.528pt x 346.896pt>
+[51 <../results/emr_plots/oscillation_hp_trend.png> <../results/emr_plots/oscil
+lation_hp_steps.png> <../results/emr_plots/oscillation_hp_romberg_stack.png> <.
+./results/emr_plots/oscillation_hp_romberg_steps_stack.png> <../results/emr_plo
+ts/oscillation_hp_harmonic_stack.png> <../results/emr_plots/oscillation_hp_harm
+onic_steps_stack.png>]
+! Undefined control sequence.
+<argument> \SQSPL@end 
+                      
+l.933 }
+       \).
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Runaway argument?
+! Paragraph ended before \SQSPL@scani was complete.
+<to be read again> 
+                   \par 
+l.934 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 790596217174067651270725629749024430986921054914348828197135104
+9854478027514056
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 626292092391909430887946142324202324900652880230401646901965945
+0867666853516641
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 897160581599858863899725312812829812684512320657317082138495267
+9781625192283326
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 461437859956514402961485773917489613281890858712434448619785031
+6077660975033430
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 186150913973450541788152316179790311844256280895113543034505229
+9394995970839644
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 197131969498274041987037275653260071358935781531162588844245599
+0290263338843920
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 016918602606157039461358161414116875822338011746054046268046036
+5968098566107856
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 779482201612470498180704162851949768440062961244771092682668336
+3619072300602971
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 314911170924736225765942368177001287872182354765851175482837220
+4936485071190516
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 706898628581042433198667327558306613787976959627739409422402942
+8587321605052542
+ []
+
+
+Overfull \hbox (37.82144pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 169342241792247628701103386788818566679073360823547395480762177
+71507305280004[]$\T1/cmr/m/n/12 , $\OML/cmm/m/it/12 q[]\OT1/cmr/m/n/12 (2) =
+ []
+
+
+Overfull \hbox (4.03294pt too wide) in paragraph at lines 912--934
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 05789051
+93478659361183269820123810589022849245683766184320848367032663559388
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 584447093322918006767001694239339077197220385130595126369705937
+8236143483165809
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 767496092414534534793820369871649278187183812343128435112189640
+1807895747317005
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 745314418159998831991872785307347966987045509215485283303825359
+9472175252066107
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 870685651408507087669359373123601269648252712052680592564231034
+3906436262801205
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 794222553581594269276233481895505587435311805668007613746843847
+7813164951871956
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 847751473576804483689250158112186053792008897494219080916773325
+2204685854070956
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 436172086548611890915107982553229367864980986038871518339209302
+2856689516474945
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 957976857432063566328912554621556035698998249200503676524584605
+9130661617492068
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 003636650284045924568537722452196933353861560059772798358938815
+2976741517156030
+ []
+
+
+Overfull \hbox (3.18561pt too wide) in paragraph at lines 912--934
+\OT1/cmr/m/n/12 761362157370375000503926104514833250455472252900409509564660961
+2057847931708647
+ []
+
+<../results/emr_plots/federpendel.png, id=615, 462.528pt x 346.896pt>
 File: ../results/emr_plots/federpendel.png Graphic file (type png)
 
 <use ../results/emr_plots/federpendel.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel.png used on input lin
-e 894.
+e 939.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 894--895
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 939--940
  [][] 
  []
 
-<../results/emr_plots/federpendel_1_hp.png, id=609, 462.528pt x 346.896pt>
+<../results/emr_plots/federpendel_1_hp.png, id=616, 462.528pt x 346.896pt>
 File: ../results/emr_plots/federpendel_1_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/federpendel_1_hp.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp.png used on inpu
-t line 898.
+t line 943.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 898--899
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 943--944
  [][] 
  []
 
-[51 <../results/emr_plots/oscillation_hp_romberg_stack.png> <../results/emr_plo
-ts/oscillation_hp_romberg_steps_stack.png> <../results/emr_plots/oscillation_hp
-_harmonic_stack.png> <../results/emr_plots/oscillation_hp_harmonic_steps_stack.
-png>]
-<../results/emr_plots/federpendel_1_hp_trend.png, id=618, 462.528pt x 346.896pt
+
+<../results/emr_plots/federpendel_1_hp_trend.png, id=617, 462.528pt x 346.896pt
 >
 File: ../results/emr_plots/federpendel_1_hp_trend.png Graphic file (type png)
  <use ../results/emr_plots/federpendel_1_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_trend.png used o
-n input line 906.
+n input line 951.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 906--907
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 951--952
  [][] 
  []
 
 
-<../results/emr_plots/federpendel_1_hp_steps.png, id=619, 462.528pt x 346.896pt
+<../results/emr_plots/federpendel_1_hp_steps.png, id=618, 462.528pt x 346.896pt
 >
 File: ../results/emr_plots/federpendel_1_hp_steps.png Graphic file (type png)
  <use ../results/emr_plots/federpendel_1_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_steps.png used o
-n input line 910.
+n input line 955.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 910--911
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 955--956
  [][] 
  []
 
 
-<../results/emr_plots/federpendel_1_hp_romberg_stack.png, id=620, 462.528pt x 3
+Underfull \vbox (badness 2310) has occurred while \output is active []
+
+ [52 <../results/emr_plots/federpendel.png> <../results/emr_plots/federpendel_1
+_hp.png>]
+<../results/emr_plots/federpendel_1_hp_romberg_stack.png, id=625, 462.528pt x 3
 46.896pt>
 File: ../results/emr_plots/federpendel_1_hp_romberg_stack.png Graphic file (typ
 e png)
  <use ../results/emr_plots/federpendel_1_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_romberg_stack.pn
-g used on input line 918.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 918--919
- [][] 
- []
-
-
-<../results/emr_plots/federpendel_1_hp_romberg_steps_stack.png, id=621, 462.528
-pt x 346.896pt>
-File: ../results/emr_plots/federpendel_1_hp_romberg_steps_stack.png Graphic fil
-e (type png)
-
-<use ../results/emr_plots/federpendel_1_hp_romberg_steps_stack.png>
-Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_romberg_steps_st
-ack.png used on input line 922.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 922--923
- [][] 
- []
-
-
-<../results/emr_plots/federpendel_1_hp_harmonic_stack.png, id=622, 462.528pt x 
-346.896pt>
-File: ../results/emr_plots/federpendel_1_hp_harmonic_stack.png Graphic file (ty
-pe png)
- <use ../results/emr_plots/federpendel_1_hp_harmonic_stack.png>
-Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_harmonic_stack.p
-ng used on input line 930.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 930--931
- [][] 
- []
-
-
-<../results/emr_plots/federpendel_1_hp_harmonic_steps_stack.png, id=623, 462.52
-8pt x 346.896pt>
-File: ../results/emr_plots/federpendel_1_hp_harmonic_steps_stack.png Graphic fi
-le (type png)
-
-<use ../results/emr_plots/federpendel_1_hp_harmonic_steps_stack.png>
-Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_harmonic_steps_s
-tack.png used on input line 934.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 934--935
- [][] 
- []
-
-
-Overfull \hbox (18.60855pt too wide) in paragraph at lines 941--953
- [][] 
- []
-
-[52 <../results/emr_plots/federpendel.png> <../results/emr_plots/federpendel_1_
-hp.png> <../results/emr_plots/federpendel_1_hp_trend.png> <../results/emr_plots
-/federpendel_1_hp_steps.png> <../results/emr_plots/federpendel_1_hp_romberg_sta
-ck.png> <../results/emr_plots/federpendel_1_hp_romberg_steps_stack.png> <../res
-ults/emr_plots/federpendel_1_hp_harmonic_stack.png> <../results/emr_plots/feder
-pendel_1_hp_harmonic_steps_stack.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 955--956
-
- []
-
-<../results/emr_plots/federpendel_2.png, id=635, 462.528pt x 346.896pt>
-File: ../results/emr_plots/federpendel_2.png Graphic file (type png)
-
-<use ../results/emr_plots/federpendel_2.png>
-Package pdftex.def Info: ../results/emr_plots/federpendel_2.png used on input l
-ine 963.
+g used on input line 963.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 963--964
  [][] 
  []
 
-<../results/emr_plots/federpendel_2_hp.png, id=636, 462.528pt x 346.896pt>
-File: ../results/emr_plots/federpendel_2_hp.png Graphic file (type png)
 
-<use ../results/emr_plots/federpendel_2_hp.png>
-Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp.png used on inpu
-t line 967.
+<../results/emr_plots/federpendel_1_hp_romberg_steps_stack.png, id=626, 462.528
+pt x 346.896pt>
+File: ../results/emr_plots/federpendel_1_hp_romberg_steps_stack.png Graphic fil
+e (type png)
+
+<use ../results/emr_plots/federpendel_1_hp_romberg_steps_stack.png>
+Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_romberg_steps_st
+ack.png used on input line 967.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 967--968
@@ -4979,12 +5126,13 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 967--968
  []
 
 
-<../results/emr_plots/federpendel_2_hp_trend.png, id=637, 462.528pt x 346.896pt
->
-File: ../results/emr_plots/federpendel_2_hp_trend.png Graphic file (type png)
- <use ../results/emr_plots/federpendel_2_hp_trend.png>
-Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_trend.png used o
-n input line 975.
+<../results/emr_plots/federpendel_1_hp_harmonic_stack.png, id=627, 462.528pt x 
+346.896pt>
+File: ../results/emr_plots/federpendel_1_hp_harmonic_stack.png Graphic file (ty
+pe png)
+ <use ../results/emr_plots/federpendel_1_hp_harmonic_stack.png>
+Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_harmonic_stack.p
+ng used on input line 975.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 975--976
@@ -4992,12 +5140,14 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 975--976
  []
 
 
-<../results/emr_plots/federpendel_2_hp_steps.png, id=638, 462.528pt x 346.896pt
->
-File: ../results/emr_plots/federpendel_2_hp_steps.png Graphic file (type png)
- <use ../results/emr_plots/federpendel_2_hp_steps.png>
-Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_steps.png used o
-n input line 979.
+<../results/emr_plots/federpendel_1_hp_harmonic_steps_stack.png, id=628, 462.52
+8pt x 346.896pt>
+File: ../results/emr_plots/federpendel_1_hp_harmonic_steps_stack.png Graphic fi
+le (type png)
+
+<use ../results/emr_plots/federpendel_1_hp_harmonic_steps_stack.png>
+Package pdftex.def Info: ../results/emr_plots/federpendel_1_hp_harmonic_steps_s
+tack.png used on input line 979.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 979--980
@@ -5005,347 +5155,418 @@ Overfull \hbox (0.71652pt too wide) in paragraph at lines 979--980
  []
 
 
-<../results/emr_plots/federpendel_2_hp_romberg_stack.png, id=639, 462.528pt x 3
+Overfull \hbox (18.60855pt too wide) in paragraph at lines 986--998
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1000--1001
+
+ []
+
+<../results/emr_plots/federpendel_2.png, id=629, 462.528pt x 346.896pt>
+File: ../results/emr_plots/federpendel_2.png Graphic file (type png)
+
+<use ../results/emr_plots/federpendel_2.png>
+Package pdftex.def Info: ../results/emr_plots/federpendel_2.png used on input l
+ine 1008.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1008--1009
+ [][] 
+ []
+
+<../results/emr_plots/federpendel_2_hp.png, id=630, 462.528pt x 346.896pt>
+File: ../results/emr_plots/federpendel_2_hp.png Graphic file (type png)
+
+<use ../results/emr_plots/federpendel_2_hp.png>
+Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp.png used on inpu
+t line 1012.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1012--1013
+ [][] 
+ []
+
+[53 <../results/emr_plots/federpendel_1_hp_trend.png> <../results/emr_plots/fed
+erpendel_1_hp_steps.png> <../results/emr_plots/federpendel_1_hp_romberg_stack.p
+ng> <../results/emr_plots/federpendel_1_hp_romberg_steps_stack.png> <../results
+/emr_plots/federpendel_1_hp_harmonic_stack.png> <../results/emr_plots/federpend
+el_1_hp_harmonic_steps_stack.png>]
+<../results/emr_plots/federpendel_2_hp_trend.png, id=640, 462.528pt x 346.896pt
+>
+File: ../results/emr_plots/federpendel_2_hp_trend.png Graphic file (type png)
+ <use ../results/emr_plots/federpendel_2_hp_trend.png>
+Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_trend.png used o
+n input line 1020.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1020--1021
+ [][] 
+ []
+
+
+<../results/emr_plots/federpendel_2_hp_steps.png, id=641, 462.528pt x 346.896pt
+>
+File: ../results/emr_plots/federpendel_2_hp_steps.png Graphic file (type png)
+ <use ../results/emr_plots/federpendel_2_hp_steps.png>
+Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_steps.png used o
+n input line 1024.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1024--1025
+ [][] 
+ []
+
+
+<../results/emr_plots/federpendel_2_hp_romberg_stack.png, id=642, 462.528pt x 3
 46.896pt>
 File: ../results/emr_plots/federpendel_2_hp_romberg_stack.png Graphic file (typ
 e png)
  <use ../results/emr_plots/federpendel_2_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_romberg_stack.pn
-g used on input line 987.
+g used on input line 1032.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 987--988
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1032--1033
  [][] 
  []
 
 
-<../results/emr_plots/federpendel_2_hp_romberg_steps_stack.png, id=640, 462.528
+<../results/emr_plots/federpendel_2_hp_romberg_steps_stack.png, id=643, 462.528
 pt x 346.896pt>
 File: ../results/emr_plots/federpendel_2_hp_romberg_steps_stack.png Graphic fil
 e (type png)
 
 <use ../results/emr_plots/federpendel_2_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_romberg_steps_st
-ack.png used on input line 991.
+ack.png used on input line 1036.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 991--992
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1036--1037
  [][] 
  []
 
 
-<../results/emr_plots/federpendel_2_hp_harmonic_stack.png, id=641, 462.528pt x 
+<../results/emr_plots/federpendel_2_hp_harmonic_stack.png, id=644, 462.528pt x 
 346.896pt>
 File: ../results/emr_plots/federpendel_2_hp_harmonic_stack.png Graphic file (ty
 pe png)
  <use ../results/emr_plots/federpendel_2_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_harmonic_stack.p
-ng used on input line 999.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 999--1000
- [][] 
- []
-
-
-<../results/emr_plots/federpendel_2_hp_harmonic_steps_stack.png, id=642, 462.52
-8pt x 346.896pt>
-File: ../results/emr_plots/federpendel_2_hp_harmonic_steps_stack.png Graphic fi
-le (type png)
-
-<use ../results/emr_plots/federpendel_2_hp_harmonic_steps_stack.png>
-Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_harmonic_steps_s
-tack.png used on input line 1003.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1003--1004
- [][] 
- []
-
-[53 <../results/emr_plots/federpendel_2.png> <../results/emr_plots/federpendel_
-2_hp.png> <../results/emr_plots/federpendel_2_hp_trend.png> <../results/emr_plo
-ts/federpendel_2_hp_steps.png> <../results/emr_plots/federpendel_2_hp_romberg_s
-tack.png> <../results/emr_plots/federpendel_2_hp_romberg_steps_stack.png>]
-Overfull \hbox (18.60855pt too wide) in paragraph at lines 1010--1022
- [][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1024--1025
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1033--1035
-
- []
-
-<../results/emr_plots/lorenz.png, id=652, 462.528pt x 346.896pt>
-File: ../results/emr_plots/lorenz.png Graphic file (type png)
-
-<use ../results/emr_plots/lorenz.png>
-Package pdftex.def Info: ../results/emr_plots/lorenz.png used on input line 104
-0.
-(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
-
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1040--1041
- [][] 
- []
-
-<../results/emr_plots/lorenz_hp.png, id=653, 462.528pt x 346.896pt>
-File: ../results/emr_plots/lorenz_hp.png Graphic file (type png)
-
-<use ../results/emr_plots/lorenz_hp.png>
-Package pdftex.def Info: ../results/emr_plots/lorenz_hp.png used on input line 
-1044.
+ng used on input line 1044.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
 Overfull \hbox (0.71652pt too wide) in paragraph at lines 1044--1045
  [][] 
  []
 
-<../results/emr_plots/lorenz_hp_trend.png, id=654, 462.528pt x 346.896pt>
+
+<../results/emr_plots/federpendel_2_hp_harmonic_steps_stack.png, id=645, 462.52
+8pt x 346.896pt>
+File: ../results/emr_plots/federpendel_2_hp_harmonic_steps_stack.png Graphic fi
+le (type png)
+
+<use ../results/emr_plots/federpendel_2_hp_harmonic_steps_stack.png>
+Package pdftex.def Info: ../results/emr_plots/federpendel_2_hp_harmonic_steps_s
+tack.png used on input line 1048.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1048--1049
+ [][] 
+ []
+
+
+Overfull \hbox (18.60855pt too wide) in paragraph at lines 1055--1067
+ [][] 
+ []
+
+[54 <../results/emr_plots/federpendel_2.png> <../results/emr_plots/federpendel_
+2_hp.png> <../results/emr_plots/federpendel_2_hp_trend.png> <../results/emr_plo
+ts/federpendel_2_hp_steps.png> <../results/emr_plots/federpendel_2_hp_romberg_s
+tack.png> <../results/emr_plots/federpendel_2_hp_romberg_steps_stack.png> <../r
+esults/emr_plots/federpendel_2_hp_harmonic_stack.png> <../results/emr_plots/fed
+erpendel_2_hp_harmonic_steps_stack.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1069--1070
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1078--1080
+
+ []
+
+<../results/emr_plots/lorenz.png, id=657, 462.528pt x 346.896pt>
+File: ../results/emr_plots/lorenz.png Graphic file (type png)
+
+<use ../results/emr_plots/lorenz.png>
+Package pdftex.def Info: ../results/emr_plots/lorenz.png used on input line 108
+5.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1085--1086
+ [][] 
+ []
+
+<../results/emr_plots/lorenz_hp.png, id=658, 462.528pt x 346.896pt>
+File: ../results/emr_plots/lorenz_hp.png Graphic file (type png)
+
+<use ../results/emr_plots/lorenz_hp.png>
+Package pdftex.def Info: ../results/emr_plots/lorenz_hp.png used on input line 
+1089.
+(pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
+
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1089--1090
+ [][] 
+ []
+
+<../results/emr_plots/lorenz_hp_trend.png, id=659, 462.528pt x 346.896pt>
 File: ../results/emr_plots/lorenz_hp_trend.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_hp_trend.png used on input
- line 1052.
+ line 1097.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1052--1053
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1097--1098
  [][] 
  []
 
-<../results/emr_plots/lorenz_hp_steps.png, id=655, 462.528pt x 346.896pt>
+<../results/emr_plots/lorenz_hp_steps.png, id=660, 462.528pt x 346.896pt>
 File: ../results/emr_plots/lorenz_hp_steps.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_hp_steps.png used on input
- line 1056.
+ line 1101.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1056--1057
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1101--1102
  [][] 
  []
 
-[54 <../results/emr_plots/federpendel_2_hp_harmonic_stack.png> <../results/emr_
-plots/federpendel_2_hp_harmonic_steps_stack.png> <../results/emr_plots/lorenz.p
-ng> <../results/emr_plots/lorenz_hp.png>]
-<../results/emr_plots/lorenz_hp_romberg_stack.png, id=663, 462.528pt x 346.896p
+
+<../results/emr_plots/lorenz_hp_romberg_stack.png, id=661, 462.528pt x 346.896p
 t>
 File: ../results/emr_plots/lorenz_hp_romberg_stack.png Graphic file (type png)
  <use ../results/emr_plots/lorenz_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_hp_romberg_stack.png used 
-on input line 1064.
+on input line 1109.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1064--1065
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1109--1110
  [][] 
  []
 
 
-<../results/emr_plots/lorenz_hp_romberg_steps_stack.png, id=664, 462.528pt x 34
+<../results/emr_plots/lorenz_hp_romberg_steps_stack.png, id=662, 462.528pt x 34
 6.896pt>
 File: ../results/emr_plots/lorenz_hp_romberg_steps_stack.png Graphic file (type
  png)
  <use ../results/emr_plots/lorenz_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_hp_romberg_steps_stack.png
- used on input line 1068.
+ used on input line 1113.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1068--1069
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1113--1114
  [][] 
  []
 
-
-<../results/emr_plots/lorenz_hp_harmonic_stack.png, id=665, 462.528pt x 346.896
+[55 <../results/emr_plots/lorenz.png> <../results/emr_plots/lorenz_hp.png> <../
+results/emr_plots/lorenz_hp_trend.png> <../results/emr_plots/lorenz_hp_steps.pn
+g>]
+<../results/emr_plots/lorenz_hp_harmonic_stack.png, id=671, 462.528pt x 346.896
 pt>
 File: ../results/emr_plots/lorenz_hp_harmonic_stack.png Graphic file (type png)
 
  <use ../results/emr_plots/lorenz_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_hp_harmonic_stack.png used
- on input line 1076.
+ on input line 1121.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1076--1077
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1121--1122
  [][] 
  []
 
 
-<../results/emr_plots/lorenz_hp_harmonic_steps_stack.png, id=666, 462.528pt x 3
+<../results/emr_plots/lorenz_hp_harmonic_steps_stack.png, id=672, 462.528pt x 3
 46.896pt>
 File: ../results/emr_plots/lorenz_hp_harmonic_steps_stack.png Graphic file (typ
 e png)
  <use ../results/emr_plots/lorenz_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_hp_harmonic_steps_stack.pn
-g used on input line 1080.
+g used on input line 1125.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1080--1081
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1125--1126
  [][] 
  []
 
 
-Overfull \hbox (9.38054pt too wide) in paragraph at lines 1086--1098
+Overfull \hbox (9.38054pt too wide) in paragraph at lines 1131--1143
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1100--1101
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1146
 
  []
 
-<../results/emr_plots/lorenz_02.png, id=667, 462.528pt x 346.896pt>
+<../results/emr_plots/lorenz_02.png, id=673, 462.528pt x 346.896pt>
 File: ../results/emr_plots/lorenz_02.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz_02.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02.png used on input line 
-1108.
+1153.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1108--1109
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1153--1154
  [][] 
  []
 
-<../results/emr_plots/lorenz_02_hp.png, id=668, 462.528pt x 346.896pt>
+<../results/emr_plots/lorenz_02_hp.png, id=674, 462.528pt x 346.896pt>
 File: ../results/emr_plots/lorenz_02_hp.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz_02_hp.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp.png used on input li
-ne 1112.
+ne 1157.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1112--1113
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1157--1158
  [][] 
  []
 
-[55 <../results/emr_plots/lorenz_hp_trend.png> <../results/emr_plots/lorenz_hp_
-steps.png> <../results/emr_plots/lorenz_hp_romberg_stack.png> <../results/emr_p
-lots/lorenz_hp_romberg_steps_stack.png> <../results/emr_plots/lorenz_hp_harmoni
-c_stack.png> <../results/emr_plots/lorenz_hp_harmonic_steps_stack.png>]
-<../results/emr_plots/lorenz_02_hp_trend.png, id=679, 462.528pt x 346.896pt>
+<../results/emr_plots/lorenz_02_hp_trend.png, id=675, 462.528pt x 346.896pt>
 File: ../results/emr_plots/lorenz_02_hp_trend.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz_02_hp_trend.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp_trend.png used on in
-put line 1120.
+put line 1165.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1120--1121
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1165--1166
  [][] 
  []
 
-<../results/emr_plots/lorenz_02_hp_steps.png, id=680, 462.528pt x 346.896pt>
+<../results/emr_plots/lorenz_02_hp_steps.png, id=676, 462.528pt x 346.896pt>
 File: ../results/emr_plots/lorenz_02_hp_steps.png Graphic file (type png)
 
 <use ../results/emr_plots/lorenz_02_hp_steps.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp_steps.png used on in
-put line 1124.
+put line 1169.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1124--1125
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1169--1170
  [][] 
  []
 
-
-<../results/emr_plots/lorenz_02_hp_romberg_stack.png, id=681, 462.528pt x 346.8
+[56 <../results/emr_plots/lorenz_hp_romberg_stack.png> <../results/emr_plots/lo
+renz_hp_romberg_steps_stack.png> <../results/emr_plots/lorenz_hp_harmonic_stack
+.png> <../results/emr_plots/lorenz_hp_harmonic_steps_stack.png> <../results/emr
+_plots/lorenz_02.png> <../results/emr_plots/lorenz_02_hp.png>]
+<../results/emr_plots/lorenz_02_hp_romberg_stack.png, id=686, 462.528pt x 346.8
 96pt>
 File: ../results/emr_plots/lorenz_02_hp_romberg_stack.png Graphic file (type pn
 g)
  <use ../results/emr_plots/lorenz_02_hp_romberg_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp_romberg_stack.png us
-ed on input line 1132.
+ed on input line 1177.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1132--1133
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1177--1178
  [][] 
  []
 
 
-<../results/emr_plots/lorenz_02_hp_romberg_steps_stack.png, id=682, 462.528pt x
+<../results/emr_plots/lorenz_02_hp_romberg_steps_stack.png, id=687, 462.528pt x
  346.896pt>
 File: ../results/emr_plots/lorenz_02_hp_romberg_steps_stack.png Graphic file (t
 ype png)
  <use ../results/emr_plots/lorenz_02_hp_romberg_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp_romberg_steps_stack.
-png used on input line 1136.
+png used on input line 1181.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1136--1137
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1181--1182
  [][] 
  []
 
 
-<../results/emr_plots/lorenz_02_hp_harmonic_stack.png, id=683, 462.528pt x 346.
+<../results/emr_plots/lorenz_02_hp_harmonic_stack.png, id=688, 462.528pt x 346.
 896pt>
 File: ../results/emr_plots/lorenz_02_hp_harmonic_stack.png Graphic file (type p
 ng)
  <use ../results/emr_plots/lorenz_02_hp_harmonic_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp_harmonic_stack.png u
-sed on input line 1144.
+sed on input line 1189.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1144--1145
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1189--1190
  [][] 
  []
 
 
-<../results/emr_plots/lorenz_02_hp_harmonic_steps_stack.png, id=684, 462.528pt 
+<../results/emr_plots/lorenz_02_hp_harmonic_steps_stack.png, id=689, 462.528pt 
 x 346.896pt>
 File: ../results/emr_plots/lorenz_02_hp_harmonic_steps_stack.png Graphic file (
 type png)
  <use ../results/emr_plots/lorenz_02_hp_harmonic_steps_stack.png>
 Package pdftex.def Info: ../results/emr_plots/lorenz_02_hp_harmonic_steps_stack
-.png used on input line 1148.
+.png used on input line 1193.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 
-Overfull \hbox (0.71652pt too wide) in paragraph at lines 1148--1149
- [][] 
- []
-
-[56 <../results/emr_plots/lorenz_02.png> <../results/emr_plots/lorenz_02_hp.png
-> <../results/emr_plots/lorenz_02_hp_trend.png> <../results/emr_plots/lorenz_02
-_hp_steps.png> <../results/emr_plots/lorenz_02_hp_romberg_stack.png> <../result
-s/emr_plots/lorenz_02_hp_romberg_steps_stack.png> <../results/emr_plots/lorenz_
-02_hp_harmonic_stack.png> <../results/emr_plots/lorenz_02_hp_harmonic_steps_sta
-ck.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1170--1171
-
- []
-
-
-Overfull \hbox (10.48955pt too wide) in paragraph at lines 1178--1211
+Overfull \hbox (0.71652pt too wide) in paragraph at lines 1193--1194
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1215--1216
+Underfull \hbox (badness 10000) in paragraph at lines 1214--1215
 
  []
 
-[57]
-Overfull \hbox (12.97713pt too wide) in paragraph at lines 1221--1254
+
+Overfull \hbox (10.48955pt too wide) in paragraph at lines 1222--1255
  [][] 
  []
 
-) (./text/bibliography.tex [58])
+[57 <../results/emr_plots/lorenz_02_hp_trend.png> <../results/emr_plots/lorenz_
+02_hp_steps.png> <../results/emr_plots/lorenz_02_hp_romberg_stack.png> <../resu
+lts/emr_plots/lorenz_02_hp_romberg_steps_stack.png> <../results/emr_plots/loren
+z_02_hp_harmonic_stack.png> <../results/emr_plots/lorenz_02_hp_harmonic_steps_s
+tack.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1259--1260
+
+ []
+
+
+Overfull \hbox (12.97713pt too wide) in paragraph at lines 1265--1298
+ [][] 
+ []
+
+) (./text/bibliography.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
+[59] [60
+
+])
 runsystem(rm "main.pyg")...executed.
 
- [59
+ [61] (./main.aux)
 
-] (./main.aux)
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24360 strings out of 493014
- 490191 string characters out of 6133351
- 576433 words of memory out of 5000000
- 27157 multiletter control sequences out of 15000+600000
+ 24378 strings out of 493014
+ 490549 string characters out of 6133351
+ 583372 words of memory out of 5000000
+ 27171 multiletter control sequences out of 15000+600000
  22751 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,82p,1028b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,82p,1028b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
@@ -5372,10 +5593,10 @@ mf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf
 -dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dis
 t/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (59 pages, 7433715 bytes).
+Output written on main.pdf (61 pages, 7441475 bytes).
 PDF statistics:
- 787 PDF objects out of 1000 (max. 8388607)
- 212 compressed objects within 3 object streams
+ 794 PDF objects out of 1000 (max. 8388607)
+ 217 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  1228 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -96,10 +96,10 @@ def harmonic_seq(n):
 #seq (Sequence): The sequence to use in the extrapolation
 #hp (bool): Indicates whether to use high precision arithmetic (true) 
 #           or standard double precision (false).
-#returns: The extrapolation table as a list of lists. 
+#returns: The extrapolation table as an np.array of np.arrays.
 def extrapolate(sc, prob, seq, hp):
 	n = len(seq)
-	X = [[0 for j in range(i + 1)] for i in range(n)]
+	X = np.array([np.array([mpf(0) if hp else 0] * (i+1)) for i in range(n)])
 
 	#X[i][j] = T_ij
 	for i in range(n):
