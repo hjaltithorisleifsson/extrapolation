@@ -178,7 +178,7 @@ def process_hp_examples():
 
     integrand_hp = Integration(h_one_hp, h_one_int_hp, mpf('0'), mpf('1'), '$h_1$', 'h_one_hp')
     integrands_hp.append(integrand_hp)
-
+    
     integrand_hp = Integration(circle_area_hp, circle_area_int_hp, mpf('-1'), mpf('1'), '$i$', 'circle_area_hp')
     integrands_hp.append(integrand_hp)
 
@@ -187,6 +187,7 @@ def process_hp_examples():
 
     pool = multiprocessing.Pool(max(1, multiprocessing.cpu_count() - 2))
     results_int_seq_hp = pool.map(process_hp_integrand, integrands_hp)
+
     pool.close()
 
     return (results_int_seq_hp, integrands_hp)
@@ -205,7 +206,7 @@ def plot_basic_hp(results_int_seq_hp, integrands_hp):
         ref = integrand_hp.ref.lower()
         plot_eval_error(results_seq_hp, title, ref, True, folder)
         plot_trend(results_seq_hp, title, ref, True, folder)
-        plot_steps_error(results_seq_hp, 'Integral: %s' % integrand_hp.tex, integrand_hp.ref, True, 20, folder)
+        plot_steps_error(results_seq_hp, title, ref, True, 20, folder)
 
     #Write out all results as latex table
     file1 = open(os.path.join(folder, 'all_results_evals_error_exp_conv.txt'), 'w')
@@ -220,18 +221,40 @@ def plot_basic_hp(results_int_seq_hp, integrands_hp):
             rho_log_1 = get_rho_log(p1, result_hp.evals, ln_e)
             rho_lin_2 = get_rho_lin(p2, steps, ln_e)
             rho_log_2 = get_rho_log(p2, steps, ln_e)
-            file1.write('%s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.seq_ref, p1[0], p1[1], p1[2], rho_log_1, rho_lin_1))
-            file2.write('%s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.seq_ref, p2[0], p2[1], p2[2], rho_log_2, rho_lin_2))
+            file1.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p1[0], p1[1], p1[2], rho_log_1, rho_lin_1))
+            file2.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p2[0], p2[1], p2[2], rho_log_2, rho_lin_2))
 
     file1.close()
     file2.close()
 
-def plot_strange_results(results, integrands):
-    for (results_seq, integrand) in zip(results, integrands):
+def process_strange_examples():
+    integrands_hp = []
+
+    integrand_hp = Integration(circle_area_hp, circle_area_int_hp, mpf('-1'), mpf('1'), '$i$', 'circle_area_hp')
+    integrands_hp.append(integrand_hp)
+
+    results_int_seq_hp = [process_hp_integrand(integrand) for integrand in integrands_hp]
+    return (results_int_seq_hp, integrands_hp)
+
+
+def plot_strange_results(results_int_seq_hp, integrands_hp):
+    for (results_seq, integrand) in zip(results_int_seq_hp, integrands_hp):
         title = "Integrand: %s" % integrand.tex
         ref = "%s_log_log" % integrand.ref.lower()
+        plot_log_log(results_seq, title, ref, True, folder)
         plot_log_log_trend(results_seq, title, ref, True, folder)
 
+    file = open(os.path.join(folder, 'stange_results_ln_evals_ln_error_alg_conv.txt'), 'w')
+    for results_seq_hp in results_int_seq_hp:
+        for result in results_seq_hp:
+            ln_e = result.ln_e
+            ln_evals = np.log(result.evals)
+            x = np.linspace(ln_evals[0], ln_evals[-1])
+            k,c = np.polyfit(ln_evals, ln_e, 1)
+            rho = np.sum((ln_e - k * ln_evals - c)**2) / np.sum(ln_e**2)
+            file.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\)\\\\\n' % (result.prob_ref, result.seq_ref, k, c, rho))
+
+    file.close()
 
 harmonic = harmonic_seq(120)
 romberg = romberg_seq(20)
@@ -248,7 +271,9 @@ tr = TrapezoidalRule()
 def main():
     (results_int_seq, integrands) = process_examples()
     (results_int_seq_hp, integrands_hp) = process_hp_examples()
+    (strange_results_int_seq, strange_integrands) = process_strange_examples()
     plot_basic(results_int_seq, integrands)
     plot_basic_hp(results_int_seq_hp, integrands_hp)
+    plot_strange_results(strange_results_int_seq, strange_integrands)
 
 main()

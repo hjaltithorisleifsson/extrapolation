@@ -312,11 +312,10 @@ def plot_log_log(results, title, ref, by_seq, folder):
 	plt.xlabel('Natural logarithm of number of function evaluations, $\ln N$')
 	plt.ylabel('Natural logarithm of absolute error, $\ln \epsilon $')
 	plt.title(title)
-	#plt.show()
 	plt.savefig(os.path.join(folder, ref + '.png'))
 	plt.close()
 
-#Does the same as plot_log_log except it also does curve fitting.
+#Does the same as plot_log_log except it also does linear fitting
 #
 #The plot will be saved as a png file named ref_trend under folder.
 def plot_log_log_trend(results, title, ref, by_seq, folder):
@@ -330,11 +329,8 @@ def plot_log_log_trend(results, title, ref, by_seq, folder):
 		ln_e = result.ln_e
 		plt.plot(ln_evals, ln_e, '.', label = my_label)
 		x = np.linspace(ln_evals[0], ln_evals[-1])
-		p = opt.curve_fit(fit_func, ln_evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-		p_by_result.append(p)
-		acq_vars = get_fit_variance(ln_evals, ln_e, *p)
-		acq_vars_by_result.append(acq_vars)
-		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
+		k,c = np.polyfit(ln_evals, ln_e, 1)
+		plt.plot(x, k * x + c)
 		plt.legend()
 
 	plt.xlabel(xlabel)
@@ -342,21 +338,6 @@ def plot_log_log_trend(results, title, ref, by_seq, folder):
 	plt.title(title)
 	plt.savefig(os.path.join(folder,ref + '_trend.png'))
 	plt.close()
-
-	file = open(os.path.join(folder, ref + '_variance.txt'), 'w')
-	for (acq_vars, p, result) in zip(acq_vars_by_result, p_by_result, results):
-		if acq_vars != None:
-			(a_mean, a_var, c_mean, c_var, q_mean, q_var, bcq_mat) = acq_vars
-			stack_title = title + '. Stack plot. Sequence: ' + result.seq_ref
-			stack_ref = os.path.join(folder, ref + '_' + result.seq_ref.lower() + '_stack.png')
-			ln_evals = np.log(result.evals)
-			ln_e = result.ln_e
-			plot_stack(ln_evals, ln_e, bcq_mat, p, stack_title, stack_ref, xlabel, ylabel)
-			file.write('%s & %s & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) \\\\\n' % (result.seq_ref, "ln-ln evals-error", a_mean, a_var, c_mean, c_var, q_mean, q_var))
-		else:
-			file.write('%s & %s & . & . & . & . & . & . \\\\\n' % (result.seq_ref, "ln-ln evals-error"))
-
-	file.close()
 
 def get_fit_variance(x, y, b0, c0, q0):
 	bs = []
@@ -416,7 +397,7 @@ def get_rho_lin(p, x, y):
 		return get_relative_residual(fit_func_lin, pp, x, eps)
 	except:
 		return -1
-		
+
 def get_relative_residual(f, p, x, y):
 	try:
 		return np.sum((y - f(x, *p))**2) / np.sum(y**2)

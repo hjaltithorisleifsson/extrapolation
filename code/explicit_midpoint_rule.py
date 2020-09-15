@@ -344,8 +344,8 @@ def plot_basic_hp(results_ivp_seq, ivps):
 			rho_log_1 = get_rho_log(p1, result.evals, ln_e)
 			rho_lin_2 = get_rho_lin(p2, steps, ln_e)
 			rho_log_2 = get_rho_log(p2, steps, ln_e)
-			file1.write('%s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\)\\\\\n' % (result.prob_ref, p1[0], p1[1], p1[2], rho_log_1, rho_lin_1))
-			file2.write('%s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\)\\\\\n' % (result.prob_ref, p2[0], p2[1], p2[2], rho_log_2, rho_lin_2))
+			file1.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, p1[0], p1[1], p1[2], rho_log_1, rho_lin_1))
+			file2.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, p2[0], p2[1], p2[2], rho_log_2, rho_lin_2))
 
 	file1.close()
 	file2.close()
