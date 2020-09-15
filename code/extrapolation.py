@@ -99,7 +99,7 @@ def harmonic_seq(n):
 #returns: The extrapolation table as an np.array of np.arrays.
 def extrapolate(sc, prob, seq, hp):
 	n = len(seq)
-	X = np.array([np.array([mpf(0) if hp else 0] * (i+1)) for i in range(n)])
+	X = [[None] * (i+1) for i in range(n)]
 
 	#X[i][j] = T_ij
 	for i in range(n):
@@ -111,7 +111,7 @@ def extrapolate(sc, prob, seq, hp):
 			rp = ((mpf('1') * seq[i]) / (mpf('1') * seq[i-j]) if hp else seq[i] / seq[i-j]) ** sc.p
 			X[i][j] = (rp * X[i][j-1] - X[i-1][j-1]) / (rp - 1)
 
-	return X
+	return np.array([np.array(X_i) for X_i in X])
 
 #Extrapolates the scheme using sequence h / seq[i].
 #
@@ -406,9 +406,25 @@ def plot_stack(x, y, bcq_mat, bcq_0, title, ref, xlabel, ylabel):
 	plt.savefig(ref)
 	plt.close()
 
+def get_rho_log(p, x, y):
+	return get_relative_residual(fit_func, p, x, y)
 
-def get_least_square_error(f, p, x, y):
-	return np.sum((y - f(x, *p))**2) / len(x)
+def get_rho_lin(p, x, y):
+	try:
+		eps = np.exp(y)
+		pp = (math.exp(p[0]), p[1], p[2])
+		return get_relative_residual(fit_func_lin, pp, x, eps)
+	except:
+		return -1
+		
+def get_relative_residual(f, p, x, y):
+	try:
+		return np.sum((y - f(x, *p))**2) / np.sum(y**2)
+	except:
+		return -1
 
 def fit_func(x, b, c, q):
 	return b - c * (x**q)
+
+def fit_func_lin(x, A, c, q):
+	return A * np.exp(-c * (x**q))

@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 from mpl_toolkits import mplot3d
+import os
+
+folder = os.path.join(os.path.abspath(''), '../results/trajectories')
 
 def compute(f, y0, a, b, m, seq):
 	n = len(seq)
@@ -48,7 +51,7 @@ def plot_mathematical_pendulum():
 	theta = ys[0]
 	x = np.sin(theta)
 	y = 1 - np.cos(theta)
-	plot(x, y, a, b, m)
+	plot(x, y, a, b, m, "x", "y", "Mathematical pendulum", "mathematical_pendulum_trajectory")
 
 def plot_federpendel():
 	y0 = np.array([1, 0, 0, 1])
@@ -59,22 +62,7 @@ def plot_federpendel():
 	ys = compute(fp, y0, a, b, m, seq)
 	x = ys[0]
 	y = ys[1]
-	plot(x, y, a, b, m)
-
-def plot_lotka_volterra():
-	f = lambda t,y: np.array([2 / 3 * y[0] - 4 / 3 * y[0] * y[1], y[0] * y[1] - y[1]])
-	y0 = np.array([10, 5])
-	a = 0
-	b = 2
-	m = 1000
-	seq = [2 ** i for i in range(10)]
-	ys = compute(f, y0, a, b, m, seq)
-	x = ys[0]
-	y = ys[1]
-	t = get_t(a, b, m)
-	plt.plot(t, x)
-	plt.plot(t, y)
-	plt.show()
+	plot(x, y, a, b, m, "x", "y", "Federpendel", "federpendel_trajectory")
 
 def fp(t, y): 
 	q = y[0:2]
@@ -87,18 +75,26 @@ def get_t(a, b, m):
 	h = (b - a) / m
 	return np.array([a + i * h for i in range(m)])
 	
-def plot(x, y, a, b, m):
+def plot(x, y, a, b, m, x_label, y_label, title, ref):
 	t = get_t(a, b, m)
-	plot_explicit(t, x, y)
+	plot_explicit(t, x, y, x_label, y_label, title, ref)
 
-def plot_explicit(t, x, y):
+def plot_explicit(t, x, y, x_label, y_label, title, ref):
 	fig = plt.figure()
 	ax = plt.axes(projection='3d')
 	ax.plot3D(t, x, y)
-	plt.show()
+	ax.set_xlabel("Time")
+	ax.set_ylabel(x_label)
+	ax.set_zlabel(y_label)
+	ax.text2D(0.05, 0.95, title, transform=ax.transAxes)
+	file_name = os.path.join(folder, ref + ".png")
+	if not os.path.isdir(folder):
+		os.mkdir(folder)
+
+	plt.savefig(file_name)
+	plt.close()
 
 def main():
-	plot_lotka_volterra()
 	plot_mathematical_pendulum()
 	plot_federpendel()
 

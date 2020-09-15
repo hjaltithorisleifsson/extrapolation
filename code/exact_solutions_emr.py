@@ -50,16 +50,6 @@ def pendulum():
 	approx = [X_i[len(X_i) - 1] for X_i in X]
 	return approx
 
-def lotka_volterra():
-	f = lambda t,y: np.array([mpf('2')/mpf('3')*y[0] - mpf('4')/mpf('3')*y[0]*y[1], mpf('1')*y[0]*y[1] - mpf('1')*y[1]])
-	y0 = np.array([mpf('10'), mpf('5')])
-	a = mpf('0')
-	b = mpf('1')
-	seq = [2 * (i + 1) for i in range(500)]
-	X = compute(f, y0, a, b, seq)
-	approx = [X_i[len(X_i) - 1] for X_i in X]
-	return approx
-
 def federpendel():
 	y0 = np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')])
 	a = mpf('0')

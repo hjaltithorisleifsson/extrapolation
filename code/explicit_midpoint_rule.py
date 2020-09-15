@@ -77,11 +77,6 @@ lorenz_solution_02_hp = np.array([mpf('6.542527555892368111267646380056566685378
 	mpf('13.731186714070480190374714284158841878594661610595311014469689966976896343663093836396509776621991038051032934348812977347635925174724221848484379339253863581590167495693816436416308289206971555435930516675387827399537475997651106549034781332158230394710600862732045511648678958208435238125082323000251989675436150952185873499040005119332913118555026745114821205022173383642749554643779775134222517073775971616436789506307773942016101601285406869561868000908825550106619337472683999868442735310930247'),
 	mpf('4.1801974119705221144245450826488465324310770319261171975583143107979753221724745884037621935930278861777190487037628826799748162631355962391921895983484491046620054963551710955899267326161536257916806757114930837898595890021663616185509933482198645452430122343692020291628624750667278596518629281978764354821368536865928139426390330320669682519491942998235038729282304018512768544537018297200855640225897140156635015228342712441697781109673946849246057668282385528851111258164560565690957394559826368')])
 
-lotka_volterra_solution = np.array([0.00052020049824246967594, 5.1128592857103855683])
-#250 correct digits
-lotka_volterra_solution_hp = np.array([mpf('0.0005202004982424696759392378709752313010367942418871686121466966557843043694571103661381951667543078110404250351898096339107497177677175206919476313184505318552911933137673213538990728459246508825834500848569054445828411282207192144300002422827753459597'),
-	mpf('5.1128592857103855682878128981920703127866843287439215827496227954563301984740805602645514728451279432721520818380570855125934674913946008212074961279042175146117685226403685107224153778361804593518643453338027090457990569103700394621227781960576455143')])
-
 def fp(t, y): 
 	q = y[0:2]
 	p = y[2:4]
@@ -99,7 +94,6 @@ def process_examples():
 	result_harmonic = analyze(ivp, emr, harmonic_short, False)
 	results_ivp_seq.append([result_rom, result_harmonic])
 
-
 	ivp = InitialValueProblem(lambda t,y: y * (1 - y), 0.5, 0.0, 1.0, 1.0 / (1.0 + math.exp(-1.0)), '$y\' = y(1-y)$, $y(0) = 1/2$', 'logistic')
 	ivps.append(ivp)
 	result_rom = analyze(ivp, emr, romberg_short, False)
@@ -113,6 +107,36 @@ def process_examples():
 	results_ivp_seq.append([result_rom, result_harmonic])
 
 	ivp = InitialValueProblem(lambda t,y: np.array([-y[1], y[0]]), np.array([1.0,0.0]), 0.0, math.pi / 2, np.array([0.0, 1.0]), '$(y_1,y_2)\' = (-y_2,y_1)$, $y(0) = (1,0)$', 'rotation') 
+	ivps.append(ivp)
+	result_rom = analyze(ivp, emr, romberg_short, False)
+	result_harmonic = analyze(ivp, emr, harmonic_short, False)
+	results_ivp_seq.append([result_rom, result_harmonic])
+
+	ivp = InitialValueProblem(lambda t,y: math.exp(-y), 0.0, 0.0, 1.0, math.log(2.0), '$y\'= exp(-y)$, $y(0) = 0$', 'ln_e0')
+	ivps.append(ivp)
+	result_rom = analyze(ivp, emr, romberg_short, False)
+	result_harmonic = analyze(ivp, emr, harmonic_short, False)
+	results_ivp_seq.append([result_rom, result_harmonic])
+
+	ivp = InitialValueProblem(lambda t,y: math.exp(-y), -1.0, 0.0, 1.0, math.log(1.0 + math.e) - 1, '$y\'= exp(-y)$, $y(0) = -1$', 'ln_em1')
+	ivps.append(ivp)
+	result_rom = analyze(ivp, emr, romberg_short, False)
+	result_harmonic = analyze(ivp, emr, harmonic_short, False)
+	results_ivp_seq.append([result_rom, result_harmonic])
+
+	ivp = InitialValueProblem(lambda t,y: math.exp(-y), -2.0, 0.0, 1.0, math.log(1.0 + math.exp(2.0)) - 2, '$y\'= exp(-y)$, $y(0) = -2$', 'ln_em2')
+	ivps.append(ivp)
+	result_rom = analyze(ivp, emr, romberg_short, False)
+	result_harmonic = analyze(ivp, emr, harmonic_short, False)
+	results_ivp_seq.append([result_rom, result_harmonic])
+
+	ivp = InitialValueProblem(lambda t,y: math.exp(-y), -4.0, 0.0, 1.0, math.log(1.0 + math.exp(4.0)) - 4, '$y\'= exp(-y)$, $y(0) = -4$', 'ln_em4')
+	ivps.append(ivp)
+	result_rom = analyze(ivp, emr, romberg_short, False)
+	result_harmonic = analyze(ivp, emr, harmonic_short, False)
+	results_ivp_seq.append([result_rom, result_harmonic])
+
+	ivp = InitialValueProblem(lambda t,y: math.exp(-y), -6.0, 0.0, 1.0, math.log(1.0 + math.exp(6.0)) - 6, '$y\'= exp(-y)$, $y(0) = -6$', 'ln_em6')
 	ivps.append(ivp)
 	result_rom = analyze(ivp, emr, romberg_short, False)
 	result_harmonic = analyze(ivp, emr, harmonic_short, False)
@@ -161,11 +185,6 @@ def process_examples():
 	result_rom = analyze(ivp, emr, romberg_short, False)
 	result_harmonic = analyze(ivp, emr, harmonic_short, False)
 	results_ivp_seq.append([result_rom, result_harmonic])
-
-	#ivp = InitialValueProblem(lambda t,y: np.array([2.0/3.0*y[0] - 4.0/3.0*y[0]*y[1], y[0]*y[1] - y[1]]), np.array([10.0, 5.0]), 0.0, 1.0, lotka_volterra_solution, 'Lotkta Volterra', 'lotka_volterra')
-	#result_rom = analyze(ivp, emr, romberg_short, False)
-	#result_harmonic = analyze(ivp, emr, harmonic_short, False)
-	#results_ivp_seq.append([result_rom, result_harmonic])
 	
 	ivp = InitialValueProblem(fp, np.array([1.0, 0.0, 0.0, 1.0]), 0.0, 1.0, federpendel_solution_1, 'Federpendel, estimate after 1 time unit', 'federpendel')
 	ivps.append(ivp)
@@ -210,6 +229,9 @@ def tangens_hp(t, y):
 def rotation_hp(t, y):
 	return np.array([-y[1], y[0]])
 
+def ln_eq_hp(t, y):
+	return mp.exp(-y)
+
 def sing(t,y):
 	return y * y
 
@@ -240,6 +262,21 @@ def process_examples_hp():
 	ivps_hp.append(ivp_hp)
 
 	ivp_hp = InitialValueProblem(rotation_hp, np.array([mpf('1'),mpf('0')]), mpf('0'), pi_hp / 2, np.array([mpf('0'), mpf('1')]), '$(y_1,y_2)\' = (-y_2,y_1)$, $y(0) = (1,0)$', 'rotation_hp')
+	ivps_hp.append(ivp_hp)
+	
+	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('0'), mpf('0'), mpf('1'), mp.log(mpf('2')), '$y\'= exp(-y)$, $y(0) = 0$', 'ln_e0_hp')
+	ivps_hp.append(ivp_hp)
+
+	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('-1'), mpf('0'), mpf('1'), mp.log(mpf('1') + mp.exp(mpf('-1'))), '$y\'= exp(-y)$, $y(0) = -1$', 'ln_em1_hp')
+	ivps_hp.append(ivp_hp)
+
+	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('-2'), mpf('0'), mpf('1'), mp.log(mpf('1') + mp.exp(mpf('-2'))), '$y\'= exp(-y)$, $y(0) = -2$', 'ln_em2_hp')
+	ivps_hp.append(ivp_hp)
+
+	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('-4'), mpf('0'), mpf('1'), mp.log(mpf('1') + mp.exp(mpf('-4'))), '$y\'= exp(-y)$, $y(0) = -4$', 'ln_em4_hp')
+	ivps_hp.append(ivp_hp)
+
+	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('-6'), mpf('0'), mpf('1'), mp.log(mpf('1') + mp.exp(mpf('-6'))), '$y\'= exp(-y)$, $y(0) = -6$', 'ln_em6_hp')
 	ivps_hp.append(ivp_hp)
 
 	ivp_hp = InitialValueProblem(sing, mpf('0.5'), mpf('0'), mpf('1'), mpf('1'), '$y\' = y^2$, $y(0) = 1/2$', 'singularity_0_hp')
@@ -302,29 +339,16 @@ def plot_basic_hp(results_ivp_seq, ivps):
 			ln_evals = np.log(result.evals)
 			steps = np.array([i+1 for i in range(len(ln_e))])
 			p1 = opt.curve_fit(fit_func, result.evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-			e1 = get_least_square_error(fit_func, p1, result.evals, ln_e)
 			p2 = opt.curve_fit(fit_func, steps, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-			e2 = get_least_square_error(fit_func, p2, steps, ln_e)
-			file1.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, p1[0], p1[1], p1[2], e1))
-			file2.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result.prob_ref, result.seq_ref, p2[0], p2[1], p2[2], e2))
+			rho_lin_1 = get_rho_lin(p1, result.evals, ln_e)
+			rho_log_1 = get_rho_log(p1, result.evals, ln_e)
+			rho_lin_2 = get_rho_lin(p2, steps, ln_e)
+			rho_log_2 = get_rho_log(p2, steps, ln_e)
+			file1.write('%s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\)\\\\\n' % (result.prob_ref, p1[0], p1[1], p1[2], rho_log_1, rho_lin_1))
+			file2.write('%s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\)\\\\\n' % (result.prob_ref, p2[0], p2[1], p2[2], rho_log_2, rho_lin_2))
 
 	file1.close()
 	file2.close()
-
-def plot_q_sing():
-	param_ivp = lambda q: InitialValueProblem(lambda t,y: mpf(y) * mpf(y), 1.0 / (1.0 + q), mpf('0'), mpf('1'), 1 / q, '', '')
-	ps = np.array([mpf('0.5') ** i for i in range(18)])
-	title = 'IVP: $y\' = y^2$, $y(0) = 1/(1 + a)$'
-	ref = "sing"
-	plot_by_param(param_ivp, emr, ps, title, seqs, ref, folder, cache_folder)
-
-def plot_q_quad_sing():
-	param_ivp = lambda q: InitialValueProblem(lambda t,y: mpf('-0.5') / y, mp.sqrt(1.0 + q), mpf('0'), mpf('1'), mp.sqrt(q), '', '')
-	ps = np.array([mpf('0.5') ** i for i in range(18)])
-	title = 'IVP: $y\' = -1/2y$, $y(0) = \sqrt{1 + a}$'
-	ref = "quad_sing"
-	plot_by_param(param_ivp, emr, ps, title, seqs, ref, folder, cache_folder)
-
 
 romberg = Sequence([2 ** i for i in range(20)], 'Romberg')
 harmonic = Sequence([i + 1 for i in range(110)], 'Harmonic')

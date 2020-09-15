@@ -8,7 +8,7 @@ from extrapolation import *
 
 import multiprocessing
 
-mp.dps = 500
+mp.dps = 750
 
 folder = os.path.join(os.path.abspath(''), '../results/romberg_plots')
 
@@ -49,7 +49,7 @@ def process_examples():
     results_int_seq = []
     integrands = []
 
-    integrand = Integration(lambda x: math.cos(x)**2, lambda x: math.sin(2*x) / 4 + x / 2, 0, math.pi, '$f$', 'cos_squared')
+    integrand = Integration(lambda x: math.cos(x)**2, lambda x: math.sin(2*x) / 4 + x / 2, 0, 1, '$f$', 'cos_squared')
     integrands.append(integrand)
     results_int_seq.append(process_integrand(integrand))
 
@@ -158,7 +158,7 @@ pi_hp = mpf('3.14159265358979323846264338327950288419716939937510582097494459230
 def process_hp_examples():
     integrands_hp = []
 
-    integrand_hp = Integration(cos_squared_hp, cos_squared_int_hp, mpf('0'), pi_hp, '$f$', 'cos_squared_hp')
+    integrand_hp = Integration(cos_squared_hp, cos_squared_int_hp, mpf('0'), mpf('1'), '$f$', 'cos_squared_hp')
     integrands_hp.append(integrand_hp)
 
     integrand_hp = Integration(g_hundredth_hp, g_hundredth_int_hp, mpf('-1'), mpf('1'), '$g_{10^{-2}}$', 'g_hundredth_hp')
@@ -215,11 +215,13 @@ def plot_basic_hp(results_int_seq_hp, integrands_hp):
             ln_e = result_hp.ln_e
             steps = np.array([i+1 for i in range(len(ln_e))])
             p1 = opt.curve_fit(fit_func, result_hp.evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-            e1 = get_least_square_error(fit_func, p1, result_hp.evals, ln_e)
             p2 = opt.curve_fit(fit_func, steps, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
-            e2 = get_least_square_error(fit_func, p2, steps, ln_e)
-            file1.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p1[0], p1[1], p1[2], e1))
-            file2.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p2[0], p2[1], p2[2], e2))
+            rho_lin_1 = get_rho_lin(p1, result_hp.evals, ln_e)
+            rho_log_1 = get_rho_log(p1, result_hp.evals, ln_e)
+            rho_lin_2 = get_rho_lin(p2, steps, ln_e)
+            rho_log_2 = get_rho_log(p2, steps, ln_e)
+            file1.write('%s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.seq_ref, p1[0], p1[1], p1[2], rho_log_1, rho_lin_1))
+            file2.write('%s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.seq_ref, p2[0], p2[1], p2[2], rho_log_2, rho_lin_2))
 
     file1.close()
     file2.close()
