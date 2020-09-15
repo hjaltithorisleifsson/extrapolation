@@ -241,10 +241,12 @@ def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 			stack_ref = os.path.join(folder, ref + '_' + result.seq_ref.lower() + '_steps_stack.png')
 			ln_e = result.ln_e
 			steps_all = np.array([i+1 for i in range(len(ln_e))])
+			rho_lin = get_rho_lin(p, steps_all, ln_e)
+			rho_log = get_rho_log(p, steps_all, ln_e)
 			plot_stack(steps_all, ln_e, bcq_mat, p, stack_title, stack_ref, xlabel, ylabel)
-			file.write('%s & %s & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) \\\\\n' % (result.seq_ref, "lin-ln steps-error", a_mean, a_var, c_mean, c_var, q_mean, q_var))
+			file.write('%s & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) \\\\\n' % (result.seq_ref, a_mean, a_var, c_mean, c_var, q_mean, q_var, rho_lin, rho_log))
 		else:
-			file.write('%s & %s & . & . & . & . & . & . \\\\\n' % (result.seq_ref, "lin-ln steps-error"))
+			file.write('%s & . & . & . & . & . & . & . & .\\\\\n' % (result.seq_ref))
 
 	file.close()
 
@@ -286,10 +288,12 @@ def plot_trend(results, title, ref, by_seq, folder):
 			stack_ref = os.path.join(folder, ref + '_' + result.seq_ref.lower() + '_stack.png')
 			evals = result.evals
 			ln_e = result.ln_e
+			rho_lin = get_rho_lin(p, evals, ln_e)
+			rho_log = get_rho_log(p, evals, ln_e)
 			plot_stack(evals, ln_e, bcq_mat, p, stack_title, stack_ref, xlabel, ylabel)
-			file.write('%s & %s & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) \\\\\n' % (result.seq_ref, "lin-ln evals-error", a_mean, a_var, c_mean, c_var, q_mean, q_var))
+			file.write('%s & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) \\\\\n' % (result.seq_ref, a_mean, a_var, c_mean, c_var, q_mean, q_var, rho_lin, rho_log))
 		else:
-			file.write('%s & %s & . & . & . & . & . & . \\\\\n' % (result.seq_ref, "lin-ln evals-error"))
+			file.write('%s & . & . & . & . & . & . & . & .\\\\\n' % result.seq_ref)
 
 	file.close()
 
