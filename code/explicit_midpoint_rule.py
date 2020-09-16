@@ -186,25 +186,25 @@ def process_examples():
 	result_harmonic = analyze(ivp, emr, harmonic_short, False)
 	results_ivp_seq.append([result_rom, result_harmonic])
 	
-	ivp = InitialValueProblem(fp, np.array([1.0, 0.0, 0.0, 1.0]), 0.0, 1.0, federpendel_solution_1, 'Federpendel, estimate after 1 time unit', 'federpendel')
+	ivp = InitialValueProblem(fp, np.array([1.0, 0.0, 0.0, 1.0]), 0.0, 1.0, federpendel_solution_1, 'Federpendel, est. at t = 1.', 'federpendel')
 	ivps.append(ivp)
 	result_rom = analyze(ivp, emr, romberg_short, False)
 	result_harmonic = analyze(ivp, emr, harmonic_short, False)
 	results_ivp_seq.append([result_rom, result_harmonic])
 
-	ivp = InitialValueProblem(fp, np.array([1.0, 0.0, 0.0, 1.0]), 0.0, 2.0, federpendel_solution_2, 'Federpendel, estimate after 2 time units.', 'federpendel_2')
+	ivp = InitialValueProblem(fp, np.array([1.0, 0.0, 0.0, 1.0]), 0.0, 2.0, federpendel_solution_2, 'Federpendel, est. at t = 2.', 'federpendel_2')
 	ivps.append(ivp)
 	result_rom = analyze(ivp, emr, romberg_short, False)
 	result_harmonic = analyze(ivp, emr, harmonic_short, False)
 	results_ivp_seq.append([result_rom, result_harmonic])
 
-	ivp = InitialValueProblem(lambda t,y: np.array([10.0 * (y[1] - y[0]), y[0] * (28.0 - y[2]) - y[1], y[0] * y[1] - 8.0/3.0 * y[2]]), np.array([1.0, 1.0, 1.0]), 0.0, 0.1, lorenz_solution, 'Lorenz, estimate after 0.1 time steps.', 'lorenz')
+	ivp = InitialValueProblem(lambda t,y: np.array([10.0 * (y[1] - y[0]), y[0] * (28.0 - y[2]) - y[1], y[0] * y[1] - 8.0/3.0 * y[2]]), np.array([1.0, 1.0, 1.0]), 0.0, 0.1, lorenz_solution, 'Lorenz, est. at t = 0.1.', 'lorenz')
 	ivps.append(ivp)
 	result_rom = analyze(ivp, emr, romberg_short, False)
 	result_harmonic = analyze(ivp, emr, harmonic_short, False)
 	results_ivp_seq.append([result_rom, result_harmonic])
 
-	ivp = InitialValueProblem(lambda t,y: np.array([10.0 * (y[1] - y[0]), y[0] * (28.0 - y[2]) - y[1], y[0] * y[1] - 8.0/3.0 * y[2]]), np.array([1.0, 1.0, 1.0]), 0.0, 0.2, lorenz_solution_02, 'Lorenz, estimate after 0.2 time steps.', 'lorenz_02')
+	ivp = InitialValueProblem(lambda t,y: np.array([10.0 * (y[1] - y[0]), y[0] * (28.0 - y[2]) - y[1], y[0] * y[1] - 8.0/3.0 * y[2]]), np.array([1.0, 1.0, 1.0]), 0.0, 0.2, lorenz_solution_02, 'Lorenz, est. at t = 0.2.', 'lorenz_02')
 	ivps.append(ivp)
 	result_rom = analyze(ivp, emr, romberg_short, False)
 	result_harmonic = analyze(ivp, emr, harmonic_short, False)
@@ -300,16 +300,16 @@ def process_examples_hp():
 	ivp_hp = InitialValueProblem(oscillation_hp, np.array([mpf('0'), mpf('1')]), mpf('0'), mpf('1'), oscillation_solution_hp, '$y\'\' + sin(y) = 0$', 'oscillation_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(fp, np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')]), mpf('0'), mpf('1'), federpendel_solution_1_hp, 'Federpendel, estimate after 1 time unit.', 'federpendel_1_hp')
+	ivp_hp = InitialValueProblem(fp, np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')]), mpf('0'), mpf('1'), federpendel_solution_1_hp, 'Federpendel, est. at t = 1.', 'federpendel_1_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(fp, np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')]), mpf('0'), mpf('2'), federpendel_solution_2_hp, 'Federpendel, estimate after 2 time units.', 'federpendel_2_hp')
+	ivp_hp = InitialValueProblem(fp, np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')]), mpf('0'), mpf('2'), federpendel_solution_2_hp, 'Federpendel, est. at t = 2.', 'federpendel_2_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(lorenz_hp, np.array([mpf('1'), mpf('1'), mpf('1')]), mpf('0'), mpf('0.1'), lorenz_solution_hp, 'Lorenz, estimate after 0.1 time steps.', 'lorenz_hp')
+	ivp_hp = InitialValueProblem(lorenz_hp, np.array([mpf('1'), mpf('1'), mpf('1')]), mpf('0'), mpf('0.1'), lorenz_solution_hp, 'Lorenz, est. at t = 0.1.', 'lorenz_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(lorenz_hp, np.array([mpf('1'), mpf('1'), mpf('1')]), mpf('0'), mpf('0.2'), lorenz_solution_02_hp, 'Lorenz, estimate after 0.2 time steps.', 'lorenz_02_hp')
+	ivp_hp = InitialValueProblem(lorenz_hp, np.array([mpf('1'), mpf('1'), mpf('1')]), mpf('0'), mpf('0.2'), lorenz_solution_02_hp, 'Lorenz, est at t = 0.2.', 'lorenz_02_hp')
 	ivps_hp.append(ivp_hp)
 
 	pool = multiprocessing.Pool(max(1, multiprocessing.cpu_count() - 2))

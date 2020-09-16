@@ -157,20 +157,20 @@ which is entire.
 \begin{table}[H]
     \centering
     \small
-    \begin{tabular}{c||c|c|c|c|c}
-Sequence & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+    \begin{tabular}{c||c|c|c|c|c|c|c|c}
+Sequence & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var & \(\rho_{\operatorname{lin}}\) & \(\rho_{\ln}\)\\\hline
 \rowcolor{yellow}
-Harmonic & \(14.067\) & \(5.4376\) & \(0.60664\) & \(6.4643e-06\) & \(1.6046\cdot 10^7\) \\
+Harmonic & \(8.644\cdot 10^{12}\) & \(7.493\) & \(5.843\) & \(0.004665\) & \(0.5999\) & \(0.00017\) & \(1.605\cdot 10^7\) & \(6.464\cdot 10^{-6}\) \\
 \rowcolor{red}
-Romberg & \(89.758\) & \(77.473\) & \(0.11913\) & \(0.00039369\) & \(1.1397\cdot 10^7\) \\
+Romberg & \(1.071\cdot 10^{73}\) & \(6\) & \(95.86\) & \(0.06674\) & \(0.1125\) & \(0.01945\) & \(1.14\cdot 10^7\) & \(0.0003937\) \\
 \rowcolor{red}
-Bulirsch & \(73.637\) & \(56.341\) & \(0.18781\) & \(0.00079423\) & \(2.5022e+10\) \\
+Bulirsch & \(3.78\cdot 10^{76}\) & \(7.998\) & \(87.35\) & \(0.1063\) & \(0.164\) & \(0.03428\) & \(2.502\cdot 10^{10}\) & \(0.0007942\) \\
 \rowcolor{yellow}
-Harmonic & \(6.3898\) & \(3.7857\) & \(1.2028\) & \(3.3255\cdot 10^{-6}\) & \(27269\) \\
+Harmonic & \(8.372\cdot 10^7\) & \(6.367\) & \(4.002\) & \(0.003408\) & \(1.193\) & \(0.0001069\) & \(2.727\cdot 10^4\) & \(3.325\cdot 10^{-6}\) \\
 \rowcolor{green}
-Romberg & \(-2.898\) & \(1.0819\) & \(1.8846\) & \(1.1166\cdot 10^{-5}\) & \(0.59322\) \\
+Romberg & \(0.0127\) & \(0.6464\) & \(1.015\) & \(0.002443\) & \(1.904\) & \(7.669\cdot 10^{-5}\) & \(0.5932\) & \(1.117\cdot 10^{-5}\) \\
 \rowcolor{green}
-Bulirsch & \(-4.0998\) & \(1.0389\) & \(1.737\) & \(3.9235\cdot 10^{-5}\) & \(0.86086\) \\
+Bulirsch & \(0.002302\) & \(2.227\) & \(0.9216\) & \(0.01377\) & \(1.771\) & \(0.0004207\) & \(0.8609\) & \(3.924\cdot 10^{-5}\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -251,20 +251,20 @@ g_a: [-1, 1] \rightarrow \R, \quad g_a(x) \coloneqq \frac{1}{a^2 + x^2},\, a > 0
 \begin{table}[H]
     \centering
         \small
-    \begin{tabular}{c|c||c|c|c|c|c	|c}
-Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+        \begin{tabular}{c||c|c|c|c|c|c|c|c}
+Sequence & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var & \(\rho_{\operatorname{lin}}\) & \(\rho_{\ln}\)\\\hline
 \rowcolor{green}
-Harmonic & lin-ln evals-error & \(3.771\) & \(0.02895\) & \(1.793\) & \(0.0001375\) & \(0.4963\) & \(6.495\cdot 10^{-6}\) \\
+Harmonic & \(3.771\) & \(0.02895\) & \(1.793\) & \(0.0001375\) & \(0.4963\) & \(6.495\cdot 10^{-6}\) & \(0.1014\) & \(3.209\cdot 10^{-7}\) \\
 \rowcolor{yellow}
-Romberg & lin-ln evals-error & \(4.114\cdot 10^{37}\) & \(5.211\) & \(46.94\) & \(0.1026\) & \(0.135\) & \(0.03489\) \\
+Romberg & \(4.114\cdot 10^{37}\) & \(5.211\) & \(46.94\) & \(0.1026\) & \(0.135\) & \(0.03489\) & \(1.548\cdot 10^5\) & \(0.0005732\) \\
 \rowcolor{yellow}
-Bulirsch & lin-ln evals-error & \(8.199\cdot 10^{22}\) & \(4.987\) & \(24.22\) & \(0.1103\) & \(0.2236\) & \(0.04529\) \\
+Bulirsch & \(8.199\cdot 10^{22}\) & \(4.987\) & \(24.22\) & \(0.1103\) & \(0.2236\) & \(0.04529\) & \(3.921\cdot 10^5\) & \(0.001355\) \\
 \rowcolor{green}
-Harmonic & lin-ln steps-error & \(0.6596\) & \(0.04548\) & \(1.277\) & \(0.0002625\) & \(0.9918\) & \(1.093\cdot 10^{-5}\) \\
+Harmonic & \(0.6596\) & \(0.04548\) & \(1.277\) & \(0.0002625\) & \(0.9918\) & \(1.093\cdot 10^{-5}\) & \(0.2565\) & \(1.067\cdot 10^{-6}\) \\
 \rowcolor{red}
-Romberg & lin-ln steps-error & \(3.747\) & \(2.921\) & \(0.4181\) & \(0.02976\) & \(2.079\) & \(0.0008172\) \\
+Romberg & \(3.747\) & \(2.921\) & \(0.4181\) & \(0.02976\) & \(2.079\) & \(0.0008172\) & \(0.2401\) & \(7.665\cdot 10^{-5}\) \\
 \rowcolor{red}
-Bulirsch & lin-ln steps-error & \(1.191\) & \(1.72\) & \(0.2048\) & \(0.105\) & \(2.062\) & \(0.00252\) \\
+Bulirsch & \(1.191\) & \(1.72\) & \(0.2048\) & \(0.105\) & \(2.062\) & \(0.00252\) & \(0.3619\) & \(9.058\cdot 10^{-5}\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -336,20 +336,20 @@ Here we clearly have exponential convergence in the number of evaluations for th
 \begin{table}[H]
     \centering
         \small
-    \begin{tabular}{c|c||c|c|c|c|c	|c}
-Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+    \begin{tabular}{c||c|c|c|c|c|c|c|c}
+Sequence & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var & \(\rho_{\operatorname{lin}}\) & \(\rho_{\ln}\)\\\hline
 \rowcolor{red}
-Harmonic & lin-ln evals-error & \(5.231\) & \(0.0773\) & \(-0.7178\) & \(0.001803\) & \(0.5101\) & \(9.026\cdot 10^{-5}\) \\
+Harmonic & \(5.231\) & \(0.0773\) & \(-0.7178\) & \(0.001803\) & \(0.5101\) & \(9.026\cdot 10^{-5}\) & \(0.01647\) & \(8.663\cdot 10^{-6}\) \\
 \rowcolor{red}
-Romberg & lin-ln evals-error & \(7.533\cdot 10^{22}\) & \(5.999\) & \(14.35\) & \(0.3322\) & \(0.2047\) & \(0.07855\) \\
+Romberg & \(7.533\cdot 10^{22}\) & \(5.999\) & \(14.35\) & \(0.3322\) & \(0.2047\) & \(0.07855\) & \(974.3\) & \(0.001405\) \\
 \rowcolor{red}
-Bulirsch & lin-ln evals-error & \(8.963\cdot 10^{7}\) & \(7.604\) & \(2.995\) & \(0.186\) & \(0.3602\) & \(0.0129\) \\
+Bulirsch & \(8.963\cdot 10^7\) & \(7.604\) & \(2.995\) & \(0.186\) & \(0.3602\) & \(0.0129\) & \(33.54\) & \(0.001672\) \\
 \rowcolor{red}
-Harmonic & lin-ln steps-error & \(10.97\) & \(0.05032\) & \(-0.5086\) & \(0.001492\) & \(1.019\) & \(6.47\cdot 10^{-5}\) \\
+Harmonic & \(10.97\) & \(0.05032\) & \(-0.5086\) & \(0.001492\) & \(1.019\) & \(6.47\cdot 10^{-5}\) & \(0.01168\) & \(6.684\cdot 10^{-6}\) \\
 \rowcolor{yellow}
-Romberg & lin-ln steps-error & \(727.7\) & \(2.108\) & \(0.06624\) & \(0.1819\) & \(2.623\) & \(0.005292\) \\
+Romberg & \(727.7\) & \(2.108\) & \(0.06624\) & \(0.1819\) & \(2.623\) & \(0.005292\) & \(0.521\) & \(0.0001729\) \\
 \rowcolor{yellow}
-Bulirsch & lin-ln steps-error & \(32.46\) & \(2.026\) & \(0.01381\) & \(0.7483\) & \(2.764\) & \(0.006506\) \\
+Bulirsch & \(32.46\) & \(2.026\) & \(0.01381\) & \(0.7483\) & \(2.764\) & \(0.006506\) & \(0.5118\) & \(0.0008637\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -419,20 +419,20 @@ Here we get divergence for the harmonic sequence, but convergence for the other 
 \begin{table}[H]
     \centering
     \small
-    \begin{tabular}{c|c||c|c|c|c|c	|c}
-Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+    \begin{tabular}{c||c|c|c|c|c|c|c|c}
+Sequence & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var & \(\rho_{\operatorname{lin}}\) & \(\rho_{\ln}\)\\\hline
 \rowcolor{red}
-Harmonic & lin-ln evals-error & \(122.7\) & \(0.8001\) & \(-0.9641\) & \(0.007205\) & \(0.5155\) & \(0.0003682\) \\
+Harmonic & \(122.7\) & \(0.8001\) & \(-0.9641\) & \(0.007205\) & \(0.5155\) & \(0.0003682\) & \(0.07171\) & \(1.955\cdot 10^{-5}\) \\
 \rowcolor{red}
-Romberg & lin-ln evals-error & \(8.898\cdot 10^{10}\) & \(5.785\) & \(3.021\) & \(0.6343\) & \(0.2928\) & \(0.05447\) \\
+Romberg & \(8.898\cdot 10^{10}\) & \(5.785\) & \(3.021\) & \(0.6343\) & \(0.2928\) & \(0.05447\) & \(2.317\) & \(0.00266\) \\
 \rowcolor{red}
-Bulirsch & lin-ln evals-error & \(.\) & \(.\) & \(2876\) & \(4.874\) & \(0.4042\) & \(0.3708\) \\
+Bulirsch & \(\cdot\) & \(\cdot\) & \(2876\) & \(4.874\) & \(0.4042\) & \(0.3708\) & \(0.7208\) & \(0.01268\) \\
 \rowcolor{red}
-Harmonic & lin-ln steps-error & \(323.1\) & \(0.5753\) & \(-0.682\) & \(0.006766\) & \(1.029\) & \(0.0002999\) \\
+Harmonic & \(323.1\) & \(0.5753\) & \(-0.682\) & \(0.006766\) & \(1.029\) & \(0.0002999\) & \(0.05485\) & \(1.857\cdot 10^{-5}\) \\
 \rowcolor{yellow}
-Romberg & lin-ln steps-error & \(4384\) & \(1.505\) & \(0.005443\) & \(0.4455\) & \(3.388\) & \(0.0103\) \\
+Romberg & \(4384\) & \(1.505\) & \(0.005443\) & \(0.4455\) & \(3.388\) & \(0.0103\) & \(0.76\) & \(0.001069\) \\
 \rowcolor{red}
-Bulirsch & lin-ln steps-error & \(1.73\cdot 10^{11}\) & \(8\) & \(1.498\) & \(6.41\) & \(3.17\) & \(0.272\) \\
+Bulirsch & \(1.73\cdot 10^{11}\) & \(8\) & \(1.498\) & \(6.41\) & \(3.17\) & \(0.272\) & \(0.8139\) & \(0.01705\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -510,20 +510,20 @@ This function is analytic on neighbourhood about the interval but we have a sing
 \begin{table}[H]
     \centering
     \small
-    \begin{tabular}{c|c||c|c|c|c|c	|c}
-Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+    \begin{tabular}{c||c|c|c|c|c|c|c|c}
+Sequence & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var & \(\rho_{\operatorname{lin}}\) & \(\rho_{\ln}\)\\\hline
 \rowcolor{green}
-Harmonic & lin-ln evals-error & \(3.072\) & \(0.3632\) & \(4.545\) & \(0.000229\) & \(0.4954\) & \(1.085\cdot 10^{-5}\) \\
+Harmonic & \(3.072\) & \(0.3632\) & \(4.545\) & \(0.000229\) & \(0.4954\) & \(1.085\cdot 10^{-5}\) & \(0.5183\) & \(6.335\cdot 10^{-7}\) \\
 \rowcolor{red}
-Romberg & lin-ln evals-error & \(1.538\cdot 10^{43}\) & \(6\) & \(56.82\) & \(0.06603\) & \(0.1269\) & \(0.0163\) \\
+Romberg & \(1.538\cdot 10^{43}\) & \(6\) & \(56.82\) & \(0.06603\) & \(0.1269\) & \(0.0163\) & \(4054\) & \(0.0002381\) \\
 \rowcolor{red}
-Bulirsch & lin-ln evals-error & \(1.55\cdot 10^{31}\) & \(7.894\) & \(36.84\) & \(0.08131\) & \(0.1955\) & \(0.0187\) \\
+Bulirsch & \(1.55\cdot 10^{31}\) & \(7.894\) & \(36.84\) & \(0.08131\) & \(0.1955\) & \(0.0187\) & \(7380\) & \(0.0003219\) \\
 \rowcolor{green}
-Harmonic & lin-ln steps-error & \(0.03919\) & \(0.5477\) & \(3.237\) & \(0.0003865\) & \(0.9901\) & \(1.608\cdot 10^{-5}\) \\
+Harmonic & \(0.03919\) & \(0.5477\) & \(3.237\) & \(0.0003865\) & \(0.9901\) & \(1.608\cdot 10^{-5}\) & \(0.7691\) & \(1.584\cdot 10^{-6}\) \\
 \rowcolor{yellow}
-Romberg & lin-ln steps-error & \(0.0002063\) & \(1.214\) & \(0.5431\) & \(0.009515\) & \(2.02\) & \(0.000263\) \\
+Romberg & \(0.0002063\) & \(1.214\) & \(0.5431\) & \(0.009515\) & \(2.02\) & \(0.000263\) & \(0.9235\) & \(7.907\cdot 10^{-5}\) \\
 \rowcolor{yellow}
-Bulirsch & lin-ln steps-error & \(2.293\cdot 10^{-5}\) & \(3.407\) & \(0.3579\) & \(0.06839\) & \(1.929\) & \(0.001656\) \\
+Bulirsch & \(2.293\cdot 10^{-5}\) & \(3.407\) & \(0.3579\) & \(0.06839\) & \(1.929\) & \(0.001656\) & \(0.9854\) & \(0.0002632\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -595,20 +595,20 @@ Here we clearly have exponential convergence in the number of evaluations for th
 \begin{table}[H]
     \centering
     \small
-    \begin{tabular}{c|c||c|c|c|c|c	|c}
-Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+    \begin{tabular}{c||c|c|c|c|c|c|c|c}
+Sequence & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var & \(\rho_{\operatorname{lin}}\) & \(\rho_{\ln}\)\\\hline
 \rowcolor{yellow}
-Harmonic & lin-ln evals-error & \(0.1351\) & \(2.455\) & \(0.6631\) & \(0.1084\) & \(0.4296\) & \(0.004684\) \\
+Harmonic & \(0.1351\) & \(2.455\) & \(0.6631\) & \(0.1084\) & \(0.4296\) & \(0.004684\) & \(0.7131\) & \(0.0001955\) \\
 \rowcolor{red}
-Romberg & lin-ln evals-error & \(3.388\cdot 10^{9}\) & \(5.969\) & \(6.696\) & \(0.2315\) & \(0.2286\) & \(0.02614\) \\
+Romberg & \(3.388\cdot 10^9\) & \(5.969\) & \(6.696\) & \(0.2315\) & \(0.2286\) & \(0.02614\) & \(7.917\) & \(0.0005581\) \\
 \rowcolor{yellow}
-Bulirsch & lin-ln evals-error & \(6.859\) & \(1.956\) & \(1.626\) & \(0.0311\) & \(0.3675\) & \(0.002076\) \\
+Bulirsch & \(6.859\) & \(1.956\) & \(1.626\) & \(0.0311\) & \(0.3675\) & \(0.002076\) & \(0.2014\) & \(0.0001172\) \\
 \rowcolor{yellow}
-Harmonic & lin-ln steps-error & \(0.07535\) & \(1.798\) & \(0.4822\) & \(0.1106\) & \(0.8628\) & \(0.0042\) \\
+Harmonic & \(0.07535\) & \(1.798\) & \(0.4822\) & \(0.1106\) & \(0.8628\) & \(0.0042\) & \(0.7117\) & \(0.0001939\) \\
 \rowcolor{yellow}
-Romberg & lin-ln steps-error & \(0.05205\) & \(0.2618\) & \(0.02252\) & \(0.01836\) & \(2.848\) & \(0.0002742\) \\
+Romberg & \(0.05205\) & \(0.2618\) & \(0.02252\) & \(0.01836\) & \(2.848\) & \(0.0002742\) & \(0.7571\) & \(0.0001742\) \\
 \rowcolor{red}
-Bulirsch & lin-ln steps-error & \(0.0214\) & \(1.016\) & \(0.00882\) & \(1.141\) & \(2.822\) & \(0.01164\) \\
+Bulirsch & \(0.0214\) & \(1.016\) & \(0.00882\) & \(1.141\) & \(2.822\) & \(0.01164\) & \(0.8803\) & \(0.00138\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -680,20 +680,20 @@ For Romberg, we get a moderately goot fit for exponential convergence in the num
 \begin{table}[H]
     \centering
     \small
-    \begin{tabular}{c|c||c|c|c|c|c	|c}
-Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+    \begin{tabular}{c||c|c|c|c|c|c|c|c}
+Sequence & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var & \(\rho_{\operatorname{lin}}\) & \(\rho_{\ln}\)\\\hline
 \rowcolor{yellow}
-Harmonic & lin-ln evals-error & \(1.328\cdot 10^{13}\) & \(55.82\) & \(8.14\) & \(0.5474\) & \(0.09568\) & \(0.0936\) \\
+Harmonic & \(1.328\cdot 10^{13}\) & \(55.82\) & \(8.14\) & \(0.5474\) & \(0.09568\) & \(0.0936\) & \(0.1034\) & \(9.631\cdot 10^{-5}\) \\
 \rowcolor{red}
-Romberg & lin-ln evals-error & \(106.1\) & \(5.445\) & \(2.037\) & \(0.7267\) & \(0.2364\) & \(0.06414\) \\
+Romberg & \(106.1\) & \(5.445\) & \(2.037\) & \(0.7267\) & \(0.2364\) & \(0.06414\) & \(0.6139\) & \(0.001346\) \\
 \rowcolor{red}
-Bulirsch & lin-ln evals-error & \(1.888\cdot 10^{5}\) & \(5.399\) & \(6.394\) & \(0.3315\) & \(0.1362\) & \(0.1274\) \\
+Bulirsch & \(1.888\cdot 10^5\) & \(5.399\) & \(6.394\) & \(0.3315\) & \(0.1362\) & \(0.1274\) & \(0.1687\) & \(0.0008794\) \\
 \rowcolor{yellow}
-Harmonic & lin-ln steps-error & \(1.395\cdot 10^{4}\) & \(17.13\) & \(5.261\) & \(0.2049\) & \(0.2157\) & \(0.04738\) \\
+Harmonic & \(1.395\cdot 10^4\) & \(17.13\) & \(5.261\) & \(0.2049\) & \(0.2157\) & \(0.04738\) & \(0.04431\) & \(4.038\cdot 10^{-5}\) \\
 \rowcolor{red}
-Romberg & lin-ln steps-error & \(0.1362\) & \(2.091\) & \(0.02426\) & \(2.55\) & \(3.039\) & \(0.07013\) \\
+Romberg & \(0.1362\) & \(2.091\) & \(0.02426\) & \(2.55\) & \(3.039\) & \(0.07013\) & \(0.8591\) & \(0.004444\) \\
 \rowcolor{red}
-Bulirsch & lin-ln steps-error & \(0.4121\) & \(0.6973\) & \(0.09479\) & \(0.8435\) & \(1.695\) & \(0.05417\) \\
+Bulirsch & \(0.4121\) & \(0.6973\) & \(0.09479\) & \(0.8435\) & \(1.695\) & \(0.05417\) & \(0.4717\) & \(0.003557\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -771,20 +771,20 @@ This function is analytic inside the interval of definition but not at the endpo
 \begin{table}[H]
     \centering
     \small
-    \begin{tabular}{c|c||c|c|c|c|c	|c}
-Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+    \begin{tabular}{c||c|c|c|c|c|c|c|c}
+Sequence & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var & \(\rho_{\operatorname{lin}}\) & \(\rho_{\ln}\)\\\hline
 \rowcolor{red}
-Harmonic & lin-ln evals-error & \(.\) & \(.\) & \(5.358\cdot 10^4\) & \(0.003851\) & \(2.176\cdot 10^{-5}\) & \(0.00346\) \\
+Harmonic & \(\cdot\) & \(\cdot\) & \(5.358\cdot 10^4\) & \(0.003851\) & \(2.176\cdot 10^{-5}\) & \(0.00346\) & \(\cdot\) & \(0.0002451\) \\
 \rowcolor{red}
-Romberg & lin-ln evals-error & \(.\) & \(.\) & \(7.348\cdot 10^4\) & \(0.005727\) & \(2.071\cdot 10^{-5}\) & \(0.005124\) \\
+Romberg & \(\cdot\) & \(\cdot\) & \(7.348\cdot 10^4\) & \(0.005727\) & \(2.071\cdot 10^{-5}\) & \(0.005124\) & \(\cdot\) & \(0.0002178\) \\
 \rowcolor{red}
-Bulirsch & lin-ln evals-error & \(.\) & \(.\) & \(5.763\cdot 10^4\) & \(0.0003158\) & \(2.647\cdot 10^{-5}\) & \(0.0002409\) \\
+Bulirsch & \(\cdot\) & \(\cdot\) & \(5.763\cdot 10^4\) & \(0.0003158\) & \(2.647\cdot 10^{-5}\) & \(0.0002409\) & \(\cdot\) & \(0.0001299\) \\
 \rowcolor{red}
-Harmonic & lin-ln steps-error & \(.\) & \(.\) & \(6.694\cdot 10^4\) & \(0.0002388\) & \(3.364\cdot 10^{-5}\) & \(0.0002515\) \\
+Harmonic & \(\cdot\) & \(\cdot\) & \(6.694\cdot 10^4\) & \(0.0002388\) & \(3.364\cdot 10^{-5}\) & \(0.0002515\) & \(\cdot\) & \(1.351\cdot 10^{-5}\) \\
 \rowcolor{green}
-Romberg & lin-ln steps-error & \(1.581\) & \(0.0005141\) & \(1.046\) & \(5.395\cdot 10^{-5}\) & \(0.9983\) & \(4.956\cdot 10^{-6}\) \\
+Romberg & \(1.581\) & \(0.0005141\) & \(1.046\) & \(5.395\cdot 10^{-5}\) & \(0.9983\) & \(4.956\cdot 10^{-6}\) & \(0.1245\) & \(0.0001394\) \\
 \rowcolor{green}
-Bulirsch & lin-ln steps-error & \(0.375\) & \(0.03054\) & \(0.5595\) & \(0.00836\) & \(0.9807\) & \(0.000633\) \\
+Bulirsch & \(0.375\) & \(0.03054\) & \(0.5595\) & \(0.00836\) & \(0.9807\) & \(0.000633\) & \(0.2822\) & \(0.0007036\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
@@ -862,8 +862,8 @@ j: [0,1]\rightarrow \R, \quad k(x) \coloneqq \frac{2}{\sqrt{\pi}} e^{-x^2}.
 \begin{table}[H]
     \centering
     \small
-    \begin{tabular}{c|c||c|c|c|c|c	|c}
-Sequence & Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var\\\hline
+    \begin{tabular}{c||c|c|c|c|c|c|c|c}
+Sequence & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var & \(\rho_{\operatorname{lin}}\) & \(\rho_{\ln}\)\\\hline
 \rowcolor{yellow}
 Harmonic & lin-ln evals-error & \(1.037\cdot 10^9\) & \(5.523\) & \(4.257\) & \(0.02142\) & \(0.5814\) & \(0.0007265\) \\
 \rowcolor{red}
@@ -883,77 +883,3 @@ Bulirsch & lin-ln steps-error & \(0.0003995\) & \(1.479\) & \(0.4704\) & \(0.025
 In double precision arithmetic we get down to machine level precision using Romberg or Bulirsch, but we get down to like \(2\) digits from there, using the harmonic sequence. The harmonic sequence performes best, then Bulirsch and then Romberg.\\
 
 For the Harmonic sequence it is hard to tell whether we have exponential convergence because we get very large value for \(A\). For Romberg we seem to have exponential convergence in the number steps and also for Bulirsch.
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{c|c||c|c|c}
-        Integrand & Sequence & \(b\) & \(c\) & \(q\) \\\hline\hline
-$f$ & Harmonic & \(15.66\) & \(3.1537\) & \(0.63887\) \\
-$f$ & Romberg & \(62.881\) & \(48.203\) & \(0.13887\)\\
-$f$ & Bulirsch & \(46.309\) & \(29.549\) & \(0.22556\)\\
-$g_{10^{-2}}$ & Harmonic & \(5.7088\) & \(-0.8668\) & \(0.52546\)\\
-$g_{10^{-2}}$ & Romberg & \(13.538\) & \(3.0588\) & \(0.25221\)\\
-$g_{10^{-2}}$ & Bulirsch & \(9.1445\) & \(0.49433\) & \(0.43743\)\\
-$g_{10^{-1}}$ & Harmonic & \(2.2352\) & \(-0.66129\) & \(0.51817\)\\
-$g_{10^{-1}}$ & Romberg & \(20.725\) & \(10.998\) & \(0.19552\)\\
-$g_{10^{-1}}$ & Bulirsch & \(10.844\) & \(2.8849\) & \(0.34731\)\\
-$g_1$ & Harmonic & \(1.6178\) & \(1.823\) & \(0.49467\)\\
-$g_1$ & Romberg & \(43.807\) & \(34.715\) & \(0.14465\)\\
-$g_1$ & Bulirsch & \(24.613\) & \(15.795\) & \(0.24492\) \\
-$h_{10^{-4}}$ & Harmonic & \(33.436\) & \(31.879\) & \(0.030738\)\\
-$h_{10^{-4}}$ & Romberg & \(1.5634\) & \(1.6161\) & \(0.23927\)\\
-$h_{10^{-4}}$ & Bulirsch & \(7.0462\) & \(5.7755\) & \(0.13169\)\\
-$h_{10^{-2}}$ & Harmonic & \(-0.19426\) & \(1.1078\) & \(0.37602\) \\
-$h_{10^{-2}}$ & Romberg & \(9.8594\) & \(7.1092\) & \(0.20823\)\\
-$h_{10^{-2}}$ & Bulirsch & \(2.2519\) & \(2.0217\) & \(0.34203\) \\
-$h_1$ & Harmonic & \(2.052\) & \(4.6543\) & \(0.4931\)\\
-$h_1$ & Romberg & \(55.957\) & \(50.318\) & \(0.1287\)\\
-$h_1$ & Bulirsch & \(35.525\) & \(29.752\) & \(0.20461\) \\
-$i$ & Harmonic & \(54099\) & \(54099\) & \(2.2756\cdot 10^{-5}\) \\
-$i$ & Romberg & \(70897\) & \(70896\) & \(2.1811\cdot 10^{-5}\) \\
-$i$ & Bulirsch & \(58074\) & \(58073\) & \(2.6538\cdot 10^{-5}\)\\
-$j$ & Harmonic & \(6.2138\) & \(4.0228\) & \(0.58595\) \\
-$j$ & Romberg & \(64.075\) & \(55.521\) & \(0.13037\)\\
-$j$ & Bulirsch & \(46.521\) & \(35.69\) & \(0.20788\)\\
-    \end{tabular}
-    \caption{Optimal parameters by test case}
-    \label{tab:my_label}
-\end{table}
-
-The values of the optimal parameters in the curve fitting of extrapolation steps against the logarithm of the error are:
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{c|c||c|c|c}
-        Integrand & Sequence & \(b\) & \(c\) & \(q\) \\\hline\hline
-$f$ & Harmonic & \(10.466\) & \(2.1696\) & \(1.2654\)\\
-$f$ & Romberg & \(1.8624\) & \(0.55261\) & \(2.0602\)\\
-$f$ & Bulirsch & \(0.77673\) & \(0.41734\) & \(1.9549\)\\
-$g_{10^{-2}}$ & Harmonic & \(6.5675\) & \(-0.61916\) & \(1.0458\)\\
-$g_{10^{-2}}$ & Romberg & \(7.403\) & \(0.006235\) & \(3.2075\)\\
-$g_{10^{-2}}$ & Bulirsch & \(7.3047\) & \(0.00063882\) & \(3.3913\) \\
-$g_{10^{-1}}$ & Harmonic & \(2.8699\) & \(-0.47343\) & \(1.0317\) \\
-$g_{10^{-1}}$ & Romberg & \(3.6964\) & \(0.059489\) & \(2.6042\) \\
-$g_{10^{-1}}$ & Bulirsch & \(3.9142\) & \(0.012441\) & \(2.7293\)\\
-$g_1$ & Harmonic & \(0.034332\) & \(1.3144\) & \(0.98632\) \\
-$g_1$ & Romberg & \(-0.86887\) & \(0.37786\) & \(2.1086\)\\
-$g_1$ & Bulirsch & \(-1.3077\) & \(0.18952\) & \(2.0725\)\\
-$h_{10^{-4}}$ & Harmonic & \(12.604\) & \(11.571\) & \(0.12559\)\\
-$h_{10^{-4}}$ & Romberg & \(-1.5468\) & \(0.0040324\) & \(3.0761\)\\
-$h_{10^{-4}}$ & Bulirsch & \(0.16861\) & \(0.15206\) & \(1.4061\)\\
-$h_{10^{-2}}$ & Harmonic & \(-0.80722\) & \(0.82135\) & \(0.75792\) \\
-$h_{10^{-2}}$ & Romberg & \(-1.8118\) & \(0.030909\) & \(2.74\)\\
-$h_{10^{-2}}$ & Bulirsch & \(-2.6424\) & \(0.0083341\) & \(2.7259\)\\
-$h_1$ & Harmonic & \(-1.9642\) & \(3.3575\) & \(0.98328\)\\
-$h_1$ & Romberg & \(-5.8254\) & \(0.64611\) & \(1.9664\)\\
-$h_1$ & Bulirsch & \(-7.6558\) & \(0.48664\) & \(1.8348\)\\
-$i$ & Harmonic & \(67160\) & \(67160\) & \(3.3808\cdot 10^{-5}\)\\
-$i$ & Romberg & \(1.3857\) & \(1.3726\) & \(0.92029\)\\
-$i$ & Bulirsch & \(0.95043\) & \(1.2669\) & \(0.7645\) \\
-$j$ & Harmonic & \(1.0579\) & \(2.8215\) & \(1.1626\)\\
-$j$ & Romberg & \(-4.4762\) & \(0.69593\) & \(1.9838\)\\
-$j$ & Bulirsch & \(-5.7837\) & \(0.56594\) & \(1.8564\)\\
-    \end{tabular}
-    \caption{Optimal parameters by test case}
-    \label{tab:my_label}
-\end{table}
