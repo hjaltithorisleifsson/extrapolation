@@ -188,6 +188,8 @@ Now we will consider the following function:
 g_a: [-1, 1] \rightarrow \R, \quad g_a(x) \coloneqq \frac{1}{a^2 + x^2},\, a > 0
 \]
 
+\subsubsection{\(a = 1\)}
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -273,6 +275,8 @@ We see that the harmonic sequence performes best, then Bulirsch and then Romberg
 
 Here we clearly have exponential convergence in the number of evaluations for the Harmonic sequence and hence also in the number of steps. We do not have exponential convergence in the number of evaluations for Romberg and Bulirsch but the model for exponential convergence in the number of steps fits moderately well for those sequences. 
 
+\subsubsection{\(a = 10^{-1}\)}
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -355,6 +359,8 @@ Bulirsch & \(32.46\) & \(2.026\) & \(0.01381\) & \(0.7483\) & \(2.764\) & \(0.00
 \end{table}
 
 Here we get divergence for the harmonic sequence, but convergence for the other sequences, fastest for Bulirsch. In standard double precision arithmetic, we get down to machine level precision using Romberg or Bulirsch. The model for exponential convergence in number of evaluations does not fit for Bulirsch nor Romberg but it is hard to tell whether we have exponential convergence in the number of steps.
+
+\subsubsection{\(a = 10^{-2}\)}
 
 \begin{figure}[H]
 \centering
@@ -447,6 +453,8 @@ h_a: [0, 1] \rightarrow \R, \quad h_a(x) \coloneqq \ln(a + x),\, a > 0.
 \]
 This function is analytic on neighbourhood about the interval but we have a singularity at the horizontal ray from \(-a\) to \(-\infty\).
 
+\subsubsection{\(a = 1\)}
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -532,6 +540,8 @@ We see that the harmonic sequence performes best, then Bulirsch and then Romberg
 
 Here we clearly have exponential convergence in the number of evaluations for the harmonic sequence and hence also in the number of steps. For Romberg and Bulirsch we seem to have exponential convergence in the number of steps though the fitting is not as nice as in the case of the harmonic sequence.
 
+\subsubsection{\(a= 10^{-2}\)}
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -616,6 +626,8 @@ Bulirsch & \(0.0214\) & \(1.016\) & \(0.00882\) & \(1.141\) & \(2.822\) & \(0.01
 We see that we can not attain high precision using the harmonic sequence and standard double precision. It is hard to tell which sequence performes best in the long run, though we can say that Bulirsch performes better than Romberg.\\
 
 For Romberg, we get a moderately goot fit for exponential convergence in the number of steps. The fitting is quite good for the harmonic sequence but it is quite unstable for Bulirsch.
+
+\subsubsection{\(a = 10^{-4}\)}
 
 \begin{figure}[H]
 \centering
