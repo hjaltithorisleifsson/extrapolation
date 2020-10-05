@@ -16,7 +16,7 @@ def emr(f, y0, a, b, n):
 
 	return y_l
 
-def emr_all(f, y0, a, b, n): 
+def emr_all(f, y0, a, b, n):
 	h = (b - a) / (2 * n)
 	y = np.zeros((2*n + 1, len(y0)))
 
@@ -50,11 +50,20 @@ def pendulum():
 	approx = [X_i[len(X_i) - 1] for X_i in X]
 	return approx
 
-def federpendel():
+def federpendel_2():
 	y0 = np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')])
 	a = mpf('0')
 	b = mpf('2')
 	seq = [2 * (i + 1) for i in range(510)]
+	X = compute(fp, y0, a, b, seq)
+	approx = [X_i[len(X_i) - 1] for X_i in X]
+	return approx
+
+def federpendel_10():
+	y0 = np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')])
+	a = mpf('0')
+	b = mpf('10')
+	seq = [100 * (i + 1) for i in range(100)]
 	X = compute(fp, y0, a, b, seq)
 	approx = [X_i[len(X_i) - 1] for X_i in X]
 	return approx
@@ -77,9 +86,8 @@ def fp(t, y):
 	return np.array([p[0], p[1], qp[0], qp[1]])
 
 def main():
-	approx = lorenz()
-	n = len(approx)
-	print(approx[n - 1])
-	print(mp.log10(np.linalg.norm(approx[n-1] - approx[n-2])))
+	approx = federpendel_10()
+	print(approx[-1])
+	print(mp.log10(np.linalg.norm(approx[-1] - approx[-2])))
 
 main()

@@ -212,7 +212,7 @@ def plot_basic_hp(results_int_seq_hp, integrands_hp):
     file1 = open(os.path.join(folder, 'all_results_evals_error_exp_conv.txt'), 'w')
     file2 = open(os.path.join(folder, 'all_results_steps_error_exp_conv.txt'), 'w')
     for results_seq_hp in results_int_seq_hp:
-        for result_hp in results_seq_hp: 
+        for result_hp in results_seq_hp:
             ln_e = result_hp.ln_e
             steps = np.array([i+1 for i in range(len(ln_e))])
             p1 = opt.curve_fit(fit_func, result_hp.evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
@@ -221,8 +221,8 @@ def plot_basic_hp(results_int_seq_hp, integrands_hp):
             rho_log_1 = get_rho_log(p1, result_hp.evals, ln_e)
             rho_lin_2 = get_rho_lin(p2, steps, ln_e)
             rho_log_2 = get_rho_log(p2, steps, ln_e)
-            file1.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p1[0], p1[1], p1[2], rho_log_1, rho_lin_1))
-            file2.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p2[0], p2[1], p2[2], rho_log_2, rho_lin_2))
+            file1.write('%s & %s & \\(%.2e\\) & \\(%.2e\\) & \\(%.2e\\) & \\(%.2e\\) & \\(%.2e\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p1[0], p1[1], p1[2], rho_log_1, rho_lin_1))
+            file2.write('%s & %s & \\(%.2e\\) & \\(%.2e\\) & \\(%.2e\\) & \\(%.2e\\) & \\(%.2e\\) \\\\\n' % (result_hp.prob_ref, result_hp.seq_ref, p2[0], p2[1], p2[2], rho_log_2, rho_lin_2))
 
     file1.close()
     file2.close()
@@ -252,7 +252,7 @@ def plot_strange_results(results_int_seq_hp, integrands_hp):
             x = np.linspace(ln_evals[0], ln_evals[-1])
             k,c = np.polyfit(ln_evals, ln_e, 1)
             rho = np.sum((ln_e - k * ln_evals - c)**2) / np.sum(ln_e**2)
-            file.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\)\\\\\n' % (result.prob_ref, result.seq_ref, k, c, rho))
+            file.write('%s & %s & \\(%.2e\\) & \\(%.2e\\) & \\(%.2e\\)\\\\\n' % (result.prob_ref, result.seq_ref, k, c, rho))
 
     file.close()
 

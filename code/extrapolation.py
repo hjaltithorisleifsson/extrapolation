@@ -104,6 +104,7 @@ def extrapolate(sc, prob, seq, hp):
 	#X[i][j] = T_ij
 	for i in range(n):
 		X[i][0] = sc.apply(prob, seq[i])
+		print("done computing %d // %d" % (i + 1, n))
 		for j in range(1, i + 1):
 			#r = h_{i-j} / h_i = seq[i] / seq[i-j]
 			#rp = r^p.

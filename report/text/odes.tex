@@ -6,7 +6,7 @@ Let \(f: \R\times \R^n \rightarrow \R^n\) be a smooth mapping and consider the i
 \begin{equation}\label{ivp}
 y'(t) = f(t, y(t)), \quad y(a) = y_a, \quad t\in [a,b].
 \end{equation}
-The explicit midpoint methods is a method for computing an approximation to the solution of (\ref{ivp}), and it goes as follows: Let \(n\geq 1\) be an integer and \(h\coloneqq (b-a)/2n\). We then define recursively
+The {\it explicit midpoint method} (see e.g. section 4.3.3 in \cite{db})  is a method for computing an approximation to the solution of (\ref{ivp}), and it goes as follows: Let \(n\geq 1\) be an integer and \(h\coloneqq (b-a)/2n\). We then define recursively
 \[
 \xi_h(a) \coloneqq y_a, \quad \xi_h(a+h) \coloneqq \xi_h(a) + hf(a, \xi_h(a))
 \]
@@ -14,7 +14,7 @@ and
 \[
 \xi_h(a + (i+1)h) \coloneqq \xi_h(a+(i-1)h) + 2hf(a+ih, \xi(a+ih)).
 \]
-Then \(\xi_h\) is an approximate solution to (\ref{ivp}) defined at \(a, a+h,\ldots ,b\). We are interested in the value \(X_f(h)\coloneqq \xi_h(b)\). It is possible to show that \(X_f(h)\) has an asymptotic expansion in \(h^2\). We have the following implementation in Python of the explicit midpoint rule for computing \(X_f(h)\).
+Then \(\xi_h\) is an approximate solution to (\ref{ivp}) defined at \(a, a+h,\ldots ,b\). We are interested in the value \(X_f(h)\coloneqq \xi_h(b)\). It is shown in section 4.3.3. in \cite{db} that \(X_f(h)\) has an asymptotic expansion in \(h^2\). We have the following implementation in Python of the explicit midpoint rule for computing \(X_f(h)\).
 
 \begin{minted}[tabsize=2, fontsize=\footnotesize]{python}
 class ExplicitMidpointRule(Scheme):
@@ -38,8 +38,6 @@ class ExplicitMidpointRule(Scheme):
 \section{Numerical experiments}
 
 In this section we are going to extrapolate the explicit midpoint rule and analyze the convergence of the approximations as we extrapolate more often. Consider the initial value problem (\ref{ivp}). Let \(n_1 < n_2 < \cdots\) be some sequence of integers and \(h_i \coloneqq (b-a) / n_i\). Let \(X_{ij}\) the extrapolation table which we get from extrapolating in \(h^2\), using the points \((h_i,X_f(h_i))\). Let \(\varepsilon_i \coloneqq |X_{ii} - y(b)|\) be the absolute error. We are going to do the same convergence and efficency analysis as in the two previous chapters. We will both do the computations using high precision arithmetic with \(500\) correct digits and also in standard double precision.\\
-
-%If \((a_n)\) is the sequence we use then the number of \(f\)-evaluations is %\(N_n = \sum_{k=1}^n 2\cdot a_n\). Thus for the harmonic sequence we have %\(N_n = n(n+1) \approx n^2\) for \(n\) large so if \(\varepsilon_n \sim %A\exp (-cN_n^q)\) then \(\varepsilon_n \sim A\exp(-cn^{2q})\) for large %\(n\). For the Romberg sequence then \(N_n = 2^{n+1} - 1\) so if %\(\varepsilon_n\sim A\exp(-cN_n^q)\) then \(\varepsilon_n \sim %A\exp(-c2^{nq})\) for large \(n\).\\
 
 In those cases where we do not have an analytic solution to the equations, we computed a reference solution up to high precision. We did that by using extrapolation with the harmonic sequence and estimating the error as the difference between successive terms in the sequence of approximations.\\
 

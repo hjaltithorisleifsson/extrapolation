@@ -85,18 +85,17 @@ def plot_basic():
 	file = open(os.path.join(folder, 'all_results.txt'), 'w')
 
 	for hp_results_seq in hp_results_quot_seq:
-		for hp_result in hp_results_seq: 
+		for hp_result in hp_results_seq:
 			ln_e = hp_result.ln_e
 			p = opt.curve_fit(fit_func, hp_result.evals, ln_e, [0, 1.0, 1.0], maxfev = 10000)[0]
 			rho_lin = get_rho_lin(p, hp_result.evals, ln_e)
 			rho_log = get_rho_log(p, hp_result.evals, ln_e)
-			file.write('%s & %s & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) & \\(%.5g\\) \\\\\n' % (hp_result.prob_ref, hp_result.seq_ref, p[0], p[1], p[2], rho_lin, rho_log))
+			file.write('%s & %s & \\(%.2e\\) & \\(%.2e\\) & \\(%.2e\\) & \\(%.2e\\) & \\(%.2e\\) \\\\\n' % (hp_result.prob_ref, hp_result.seq_ref, p[0], p[1], p[2], rho_lin, rho_log))
 
 	file.close()
 
 seqs = []
 seqs.append(romberg_seq(35))
-seqs.append(bulirsch_seq(35))
 seqs.append(harmonic_seq(35))
 
 sdq = SymmetricDifference()
