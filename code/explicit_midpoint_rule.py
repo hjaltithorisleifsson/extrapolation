@@ -24,26 +24,28 @@ class ExplicitMidpointRule(Scheme):
 		super(ExplicitMidpointRule, self).__init__(2)
 
 	def apply(self, ivp, n):
-		h = (ivp.b - ivp.a) / (2 * n)
+		m = ivp.m
+		h = (ivp.b - ivp.a) / (2 * n * m)
 		y_sl = ivp.y0
 		y_l = ivp.y0 + h * ivp.f(ivp.a, ivp.y0)
 
-		for i in range(1, 2 * n):
+		for i in range(1, 2 * n * m):
 			tmp = y_l
 			y_l = y_sl + 2 * h * ivp.f(ivp.a + i * h, y_l)
 			y_sl = tmp
 
 		return y_l
 
-	def get_evals(self, n):
-		return 2 * n
+	def get_evals(self, n, m):
+		return 2 * n * m
 
 class InitialValueProblem:
-	def __init__(self, f, y0, a, b, ans, tex, ref):
+	def __init__(self, f, y0, a, b, m, ans, tex, ref):
 		self.f = f
 		self.y0 = y0
 		self.a = a
 		self.b = b
+		self.m = m
 		self.ans = ans
 		self.tex = tex
 		self.ref = ref
@@ -84,80 +86,73 @@ lorenz_solution_02_hp = np.array([mpf('6.542527555892368111267646380056566685378
 	mpf('13.731186714070480190374714284158841878594661610595311014469689966976896343663093836396509776621991038051032934348812977347635925174724221848484379339253863581590167495693816436416308289206971555435930516675387827399537475997651106549034781332158230394710600862732045511648678958208435238125082323000251989675436150952185873499040005119332913118555026745114821205022173383642749554643779775134222517073775971616436789506307773942016101601285406869561868000908825550106619337472683999868442735310930247'),
 	mpf('4.1801974119705221144245450826488465324310770319261171975583143107979753221724745884037621935930278861777190487037628826799748162631355962391921895983484491046620054963551710955899267326161536257916806757114930837898595890021663616185509933482198645452430122343692020291628624750667278596518629281978764354821368536865928139426390330320669682519491942998235038729282304018512768544537018297200855640225897140156635015228342712441697781109673946849246057668282385528851111258164560565690957394559826368')])
 
-def fp(t, y): 
-	q = y[0:2]
-	p = y[2:4]
-	q_n = np.linalg.norm(q)
-	qp = -(q_n - 1) * q / q_n - np.array([mpf('0'), mpf('1')])
-	return np.array([p[0], p[1], qp[0], qp[1]])
-
 def process_examples():
 	results_ivp_seq = []
 	ivps = []
 
-	ivp = InitialValueProblem(lambda t,y: y, 1.0, 0.0, 1.0, math.e, '$y\'=y$, $y(0) = 0$', 'exp_growth')
+	ivp = InitialValueProblem(lambda t,y: y, 1.0, 0.0, 1.0, 1, math.e, '$y\'=y$, $y(0) = 0$', 'exp_growth')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: y * (1 - y), 0.5, 0.0, 1.0, 1.0 / (1.0 + math.exp(-1.0)), '$y\' = y(1-y)$, $y(0) = 1/2$', 'logistic')
+	ivp = InitialValueProblem(lambda t,y: y * (1 - y), 0.5, 0.0, 1.0, 1, 1.0 / (1.0 + math.exp(-1.0)), '$y\' = y(1-y)$, $y(0) = 1/2$', 'logistic')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: 1.0 + y*y, 0.0, 0.0, 1.0, math.tan(1.0), '$y\' = 1 + y^2$, $y(0) = 0$', 'tangens')
+	ivp = InitialValueProblem(lambda t,y: 1.0 + y*y, 0.0, 0.0, 1.0, 1, math.tan(1.0), '$y\' = 1 + y^2$, $y(0) = 0$', 'tangens')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: np.array([-y[1], y[0]]), np.array([1.0,0.0]), 0.0, math.pi / 2, np.array([0.0, 1.0]), '$(y_1,y_2)\' = (-y_2,y_1)$, $y(0) = (1,0)$', 'rotation') 
+	ivp = InitialValueProblem(lambda t,y: np.array([-y[1], y[0]]), np.array([1.0,0.0]), 0.0, math.pi / 2, 1, np.array([0.0, 1.0]), '$(y_1,y_2)\' = (-y_2,y_1)$, $y(0) = (1,0)$', 'rotation') 
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: math.exp(-y), 0.0, 0.0, 1.0, math.log(2.0), '$y\'= exp(-y)$, $y(0) = 0$', 'ln_e0')
+	ivp = InitialValueProblem(lambda t,y: math.exp(-y), 0.0, 0.0, 1.0, 1, math.log(2.0), '$y\'= exp(-y)$, $y(0) = 0$', 'ln_e0')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: math.exp(-y), -1.0, 0.0, 1.0, math.log(1.0 + math.e) - 1, '$y\'= exp(-y)$, $y(0) = -1$', 'ln_em1')
+	ivp = InitialValueProblem(lambda t,y: math.exp(-y), -1.0, 0.0, 1.0, 1, math.log(1.0 + math.e) - 1, '$y\'= exp(-y)$, $y(0) = -1$', 'ln_em1')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: math.exp(-y), -2.0, 0.0, 1.0, math.log(1.0 + math.exp(2.0)) - 2, '$y\'= exp(-y)$, $y(0) = -2$', 'ln_em2')
+	ivp = InitialValueProblem(lambda t,y: math.exp(-y), -2.0, 0.0, 1.0, 1, math.log(1.0 + math.exp(2.0)) - 2, '$y\'= exp(-y)$, $y(0) = -2$', 'ln_em2')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: math.exp(-y), -4.0, 0.0, 1.0, math.log(1.0 + math.exp(4.0)) - 4, '$y\'= exp(-y)$, $y(0) = -4$', 'ln_em4')
+	ivp = InitialValueProblem(lambda t,y: math.exp(-y), -4.0, 0.0, 1.0, 1, math.log(1.0 + math.exp(4.0)) - 4, '$y\'= exp(-y)$, $y(0) = -4$', 'ln_em4')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: math.exp(-y), -6.0, 0.0, 1.0, math.log(1.0 + math.exp(6.0)) - 6, '$y\'= exp(-y)$, $y(0) = -6$', 'ln_em6')
+	ivp = InitialValueProblem(lambda t,y: math.exp(-y), -6.0, 0.0, 1.0, 1, math.log(1.0 + math.exp(6.0)) - 6, '$y\'= exp(-y)$, $y(0) = -6$', 'ln_em6')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: y * y, 0.5, 0.0, 1.0, 1.0, '$y\' = y^2$, $y(0) = 1/2$', 'singularity_0')
+	ivp = InitialValueProblem(lambda t,y: y * y, 0.5, 0.0, 1.0, 1, 1.0, '$y\' = y^2$, $y(0) = 1/2$', 'singularity_0')
 	ivps.append(ivp)
 
 	a2 = 10.0 ** (-2)
-	ivp = InitialValueProblem(lambda t,y: y * y, 1.0 / (1.0 + a2), 0.0, 1.0, 1 / a2, '$y\'=y^2$, $y(0) = 1/(1+10^{-2})$', 'singularity_2')
+	ivp = InitialValueProblem(lambda t,y: y * y, 1.0 / (1.0 + a2), 0.0, 1.0, 1, 1 / a2, '$y\'=y^2$, $y(0) = 1/(1+10^{-2})$', 'singularity_2')
 	ivps.append(ivp)
 
 	a4 = 10.0 ** (-4)
-	ivp = InitialValueProblem(lambda t,y: y * y, 1.0 / (1.0 + a4), 0.0, 1.0, 1 / a4, '$y\'=y^2$, $y(0) = 1/(1+10^{-4})$', 'singularity_4')
+	ivp = InitialValueProblem(lambda t,y: y * y, 1.0 / (1.0 + a4), 0.0, 1.0, 1, 1 / a4, '$y\'=y^2$, $y(0) = 1/(1+10^{-4})$', 'singularity_4')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: -0.5 / y, math.sqrt(2.0), 0.0, 1.0, 1.0, '$y\' = -1/2y$, $y(0) = \sqrt{2}$', 'quad_sing_0')
+	ivp = InitialValueProblem(lambda t,y: -0.5 / y, math.sqrt(2.0), 0.0, 1.0, 1, 1.0, '$y\' = -1/2y$, $y(0) = \sqrt{2}$', 'quad_sing_0')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: -0.5 / y, math.sqrt(1.0 + a2), 0.0, 1.0, math.sqrt(a2), '$y\' = -1/2y$, $y(0) = \sqrt{1+10^{-2}}$', 'quad_sing_2')
+	ivp = InitialValueProblem(lambda t,y: -0.5 / y, math.sqrt(1.0 + a2), 0.0, 1.0, 1, math.sqrt(a2), '$y\' = -1/2y$, $y(0) = \sqrt{1+10^{-2}}$', 'quad_sing_2')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: -0.5 / y, math.sqrt(1.0 + a4), 0.0, 1.0, math.sqrt(a4), '$y\' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$', 'quad_sing_4')
+	ivp = InitialValueProblem(lambda t,y: -0.5 / y, math.sqrt(1.0 + a4), 0.0, 1.0, 1, math.sqrt(a4), '$y\' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$', 'quad_sing_4')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: np.array([y[1], -math.sin(y[0])]), np.array([0.0, 1.0]), 0.0, 1.0, oscillation_solution, '$y\'\' + sin(y) = 0$', 'oscillation')
-	ivps.append(ivp)
-	
-	ivp = InitialValueProblem(fp, np.array([1.0, 0.0, 0.0, 1.0]), 0.0, 1.0, federpendel_solution_1, 'Federpendel, est. at t = 1.', 'federpendel')
+	ivp = InitialValueProblem(lambda t,y: np.array([y[1], -math.sin(y[0])]), np.array([0.0, 1.0]), 0.0, 1.0, 1, oscillation_solution, '$y\'\' + sin(y) = 0$', 'oscillation')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(fp, np.array([1.0, 0.0, 0.0, 1.0]), 0.0, 2.0, federpendel_solution_2, 'Federpendel, est. at t = 2.', 'federpendel_2')
+	ivp = InitialValueProblem(fp, np.array([1.0, 0.0, 0.0, 1.0]), 0.0, 1.0, 1, federpendel_solution_1, 'Federpendel, est. at t = 1.', 'federpendel')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(fp, np.array([1.0, 0.0, 0.0, 1.0]), 0.0, 10.0, federpendel_solution_10, 'Federpendel, est. at t = 10.', 'federpendel_10')
+	ivp = InitialValueProblem(fp, np.array([1.0, 0.0, 0.0, 1.0]), 0.0, 2.0, 2, federpendel_solution_2, 'Federpendel, est. at t = 2.', 'federpendel_2')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: np.array([10.0 * (y[1] - y[0]), y[0] * (28.0 - y[2]) - y[1], y[0] * y[1] - 8.0/3.0 * y[2]]), np.array([1.0, 1.0, 1.0]), 0.0, 0.1, lorenz_solution, 'Lorenz, est. at t = 0.1.', 'lorenz')
+	ivp = InitialValueProblem(fp, np.array([1.0, 0.0, 0.0, 1.0]), 0.0, 10.0, 10, federpendel_solution_10, 'Federpendel, est. at t = 10.', 'federpendel_10')
 	ivps.append(ivp)
 
-	ivp = InitialValueProblem(lambda t,y: np.array([10.0 * (y[1] - y[0]), y[0] * (28.0 - y[2]) - y[1], y[0] * y[1] - 8.0/3.0 * y[2]]), np.array([1.0, 1.0, 1.0]), 0.0, 0.2, lorenz_solution_02, 'Lorenz, est. at t = 0.2.', 'lorenz_02')
+	ivp = InitialValueProblem(lambda t,y: np.array([10.0 * (y[1] - y[0]), y[0] * (28.0 - y[2]) - y[1], y[0] * y[1] - 8.0/3.0 * y[2]]), np.array([1.0, 1.0, 1.0]), 0.0, 0.1, 1, lorenz_solution, 'Lorenz, est. at t = 0.1.', 'lorenz')
+	ivps.append(ivp)
+
+	ivp = InitialValueProblem(lambda t,y: np.array([10.0 * (y[1] - y[0]), y[0] * (28.0 - y[2]) - y[1], y[0] * y[1] - 8.0/3.0 * y[2]]), np.array([1.0, 1.0, 1.0]), 0.0, 0.2, 2, lorenz_solution_02, 'Lorenz, est. at t = 0.2.', 'lorenz_02')
 	ivps.append(ivp)
 
 	for ivp in ivps:
@@ -196,6 +191,33 @@ def quad_sing(t,y):
 def oscillation_hp(t,y):
 	return np.array([y[1], -mp.sin(y[0])])
 
+
+#def fp(t, y): 
+#	q0 = y[0]
+#	q1 = y[1]
+#	p0 = y[2]
+#	p1 = y[3]
+#	q_n = np.sqrt(q0 * q0 + q1 * q1)
+#	scale = mpf('1') / q_n - 1
+#	y[0] = p0
+#	y[1] = p1
+#	y[2] = scale * q0
+#	y[3] = scale * q1 - mpf('1')
+#	return y
+
+one_hp = mpf('1')
+
+def fp(t, y): 
+	q0 = y[0]
+	q1 = y[1]
+	p0 = y[2]
+	p1 = y[3]
+	q_n = np.sqrt(q0 * q0 + q1 * q1)
+	scale = one_hp / q_n - one_hp
+	qp0 = scale * q0
+	qp1 = scale * q1 - one_hp
+	return np.array([p0, p1, qp0, qp1])
+
 def lorenz_hp(t,y):
 	return np.array([mpf('10') * (y[1] - y[0]), y[0] * (mpf('28') - y[2]) - y[1], y[0] * y[1] - mpf('8') / mpf('3') * y[2]])
 
@@ -207,67 +229,67 @@ def process_hp_ivp(ivp):
 def process_examples_hp():
 	ivps_hp = []
 
-	ivp_hp = InitialValueProblem(exp_growth_hp, mpf('1'), mpf('0'), mpf('1'), e_hp, '$y\'=y$, $y(0) = 0$', 'exp_growth_hp')
+	ivp_hp = InitialValueProblem(exp_growth_hp, mpf('1'), mpf('0'), mpf('1'), 1, e_hp, '$y\'=y$, $y(0) = 0$', 'exp_growth_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(logistic_hp, mpf('0.5'), mpf('0'), mpf('1'), mpf('1') / (mpf('1') + mp.exp(mpf('-1'))), '$y\' = y(1-y)$', 'logistic_hp')
+	ivp_hp = InitialValueProblem(logistic_hp, mpf('0.5'), mpf('0'), mpf('1'), 1, mpf('1') / (mpf('1') + mp.exp(mpf('-1'))), '$y\' = y(1-y)$', 'logistic_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(tangens_hp, mpf('0'), mpf('0'), mpf('1'), mp.tan(1), '$y\' = 1 + y^2$, $y(0) = 0$', 'tangens_hp')
+	ivp_hp = InitialValueProblem(tangens_hp, mpf('0'), mpf('0'), mpf('1'), 1, mp.tan(1), '$y\' = 1 + y^2$, $y(0) = 0$', 'tangens_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(rotation_hp, np.array([mpf('1'),mpf('0')]), mpf('0'), pi_hp / 2, np.array([mpf('0'), mpf('1')]), '$(y_1,y_2)\' = (-y_2,y_1)$, $y(0) = (1,0)$', 'rotation_hp')
+	ivp_hp = InitialValueProblem(rotation_hp, np.array([mpf('1'),mpf('0')]), mpf('0'), pi_hp / 2, 1, np.array([mpf('0'), mpf('1')]), '$(y_1,y_2)\' = (-y_2,y_1)$, $y(0) = (1,0)$', 'rotation_hp')
 	ivps_hp.append(ivp_hp)
 	
-	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('0'), mpf('0'), mpf('1'), mp.log(mpf('2')), '$y\'= exp(-y)$, $y(0) = 0$', 'ln_e0_hp')
+	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('0'), mpf('0'), mpf('1'), 1, mp.log(mpf('2')), '$y\'= exp(-y)$, $y(0) = 0$', 'ln_e0_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('-1'), mpf('0'), mpf('1'), mp.log(mpf('1') + mp.exp(mpf('-1'))), '$y\'= exp(-y)$, $y(0) = -1$', 'ln_em1_hp')
+	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('-1'), mpf('0'), mpf('1'), 1, mp.log(mpf('1') + mp.exp(mpf('-1'))), '$y\'= exp(-y)$, $y(0) = -1$', 'ln_em1_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('-2'), mpf('0'), mpf('1'), mp.log(mpf('1') + mp.exp(mpf('-2'))), '$y\'= exp(-y)$, $y(0) = -2$', 'ln_em2_hp')
+	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('-2'), mpf('0'), mpf('1'), 1, mp.log(mpf('1') + mp.exp(mpf('-2'))), '$y\'= exp(-y)$, $y(0) = -2$', 'ln_em2_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('-4'), mpf('0'), mpf('1'), mp.log(mpf('1') + mp.exp(mpf('-4'))), '$y\'= exp(-y)$, $y(0) = -4$', 'ln_em4_hp')
+	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('-4'), mpf('0'), mpf('1'), 1, mp.log(mpf('1') + mp.exp(mpf('-4'))), '$y\'= exp(-y)$, $y(0) = -4$', 'ln_em4_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('-6'), mpf('0'), mpf('1'), mp.log(mpf('1') + mp.exp(mpf('-6'))), '$y\'= exp(-y)$, $y(0) = -6$', 'ln_em6_hp')
+	ivp_hp = InitialValueProblem(ln_eq_hp, mpf('-6'), mpf('0'), mpf('1'), 1, mp.log(mpf('1') + mp.exp(mpf('-6'))), '$y\'= exp(-y)$, $y(0) = -6$', 'ln_em6_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(sing, mpf('0.5'), mpf('0'), mpf('1'), mpf('1'), '$y\' = y^2$, $y(0) = 1/2$', 'singularity_0_hp')
+	ivp_hp = InitialValueProblem(sing, mpf('0.5'), mpf('0'), mpf('1'), 1, mpf('1'), '$y\' = y^2$, $y(0) = 1/2$', 'singularity_0_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(sing, 1.0 / (1.0 + one_hundredth_hp), mpf('0'), mpf('1'), 1 / one_hundredth_hp, '$y\'=y^2$, $y(0) = 1/(1+10^{-2})$', 'singularity_2_hp')
+	ivp_hp = InitialValueProblem(sing, 1.0 / (1.0 + one_hundredth_hp), mpf('0'), mpf('1'), 1, 1 / one_hundredth_hp, '$y\'=y^2$, $y(0) = 1/(1+10^{-2})$', 'singularity_2_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(sing, 1.0 / (1.0 + one_tenthousandth_hp), mpf('0'), mpf('1'), 1 / one_tenthousandth_hp, '$y\'=y^2$, $y(0) = 1/(1+10^{-4})$', 'singularity_4_hp')
+	ivp_hp = InitialValueProblem(sing, 1.0 / (1.0 + one_tenthousandth_hp), mpf('0'), mpf('1'), 1, 1 / one_tenthousandth_hp, '$y\'=y^2$, $y(0) = 1/(1+10^{-4})$', 'singularity_4_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(quad_sing, mp.sqrt(2.0), mpf('0'), mpf('1'), mpf('1'), '$y\' = -1/2y$, $y(0) = \sqrt{2}$', 'quad_sing_0_hp')
+	ivp_hp = InitialValueProblem(quad_sing, mp.sqrt(2.0), mpf('0'), mpf('1'), 1, mpf('1'), '$y\' = -1/2y$, $y(0) = \sqrt{2}$', 'quad_sing_0_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(quad_sing, mp.sqrt(1.0 + one_hundredth_hp), mpf('0'), mpf('1'), mp.sqrt(one_hundredth_hp), '$y\' = -1/2y$, $y(0) = \sqrt{1+10^{-2}}$', 'quad_sing_2_hp')
+	ivp_hp = InitialValueProblem(quad_sing, mp.sqrt(1.0 + one_hundredth_hp), mpf('0'), mpf('1'), 1, mp.sqrt(one_hundredth_hp), '$y\' = -1/2y$, $y(0) = \sqrt{1+10^{-2}}$', 'quad_sing_2_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(quad_sing, mp.sqrt(1.0 + one_tenthousandth_hp), mpf('0'), mpf('1'), mp.sqrt(one_tenthousandth_hp), '$y\' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$', 'quad_sing_4_hp')
+	ivp_hp = InitialValueProblem(quad_sing, mp.sqrt(1.0 + one_tenthousandth_hp), mpf('0'), mpf('1'), 1, mp.sqrt(one_tenthousandth_hp), '$y\' = -1/2y$, $y(0) = \sqrt{1+10^{-4}}$', 'quad_sing_4_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(oscillation_hp, np.array([mpf('0'), mpf('1')]), mpf('0'), mpf('1'), oscillation_solution_hp, '$y\'\' + sin(y) = 0$', 'oscillation_hp')
+	ivp_hp = InitialValueProblem(oscillation_hp, np.array([mpf('0'), mpf('1')]), mpf('0'), mpf('1'), 1, oscillation_solution_hp, '$y\'\' + sin(y) = 0$', 'oscillation_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(fp, np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')]), mpf('0'), mpf('1'), federpendel_solution_1_hp, 'Federpendel, est. at t = 1.', 'federpendel_1_hp')
+	ivp_hp = InitialValueProblem(fp, np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')]), mpf('0'), mpf('1'), 1, federpendel_solution_1_hp, 'Federpendel, est. at t = 1.', 'federpendel_1_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(fp, np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')]), mpf('0'), mpf('2'), federpendel_solution_2_hp, 'Federpendel, est. at t = 2.', 'federpendel_2_hp')
+	ivp_hp = InitialValueProblem(fp, np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')]), mpf('0'), mpf('2'), 2, federpendel_solution_2_hp, 'Federpendel, est. at t = 2.', 'federpendel_2_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(fp, np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')]), mpf('0'), mpf('10'), federpendel_solution_10_hp, 'Federpendel, est. at t = 10.', 'federpendel_10_hp')
+	ivp_hp = InitialValueProblem(fp, np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')]), mpf('0'), mpf('10'), 10, federpendel_solution_10_hp, 'Federpendel, est. at t = 10.', 'federpendel_10_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(lorenz_hp, np.array([mpf('1'), mpf('1'), mpf('1')]), mpf('0'), mpf('0.1'), lorenz_solution_hp, 'Lorenz, est. at t = 0.1.', 'lorenz_hp')
+	ivp_hp = InitialValueProblem(lorenz_hp, np.array([mpf('1'), mpf('1'), mpf('1')]), mpf('0'), mpf('0.1'), 1, lorenz_solution_hp, 'Lorenz, est. at t = 0.1.', 'lorenz_hp')
 	ivps_hp.append(ivp_hp)
 
-	ivp_hp = InitialValueProblem(lorenz_hp, np.array([mpf('1'), mpf('1'), mpf('1')]), mpf('0'), mpf('0.2'), lorenz_solution_02_hp, 'Lorenz, est at t = 0.2.', 'lorenz_02_hp')
+	ivp_hp = InitialValueProblem(lorenz_hp, np.array([mpf('1'), mpf('1'), mpf('1')]), mpf('0'), mpf('0.2'), 2, lorenz_solution_02_hp, 'Lorenz, est at t = 0.2.', 'lorenz_02_hp')
 	ivps_hp.append(ivp_hp)
 
 	pool = multiprocessing.Pool(max(1, multiprocessing.cpu_count() - 2))
@@ -275,12 +297,6 @@ def process_examples_hp():
 	pool.close()
 
 	return (results_ivp_seq_hp, ivps_hp)
-
-def process_edge_examples():
-	ivp_hp = InitialValueProblem(fp, np.array([mpf('1'), mpf('0'), mpf('0'), mpf('1')]), mpf('0'), mpf('10'), federpendel_solution_10_hp, 'Federpendel, est. at t = 10.', 'federpendel_10_hp')
-
-	result = analyze(ivp_hp, emr, harmonic_10, True, ivp_hp.ref + "_" + romberg.ref.lower(), cache_folder)
-	return ([[result]], [ivp_hp])
 
 def plot_basic(results_ivp_seq, ivps):
 	for (results_seq, ivp) in zip(results_ivp_seq, ivps):
@@ -328,10 +344,8 @@ emr = ExplicitMidpointRule()
 def main():
 	(results_ivp_seq, ivps) = process_examples()
 	(results_ivp_seq_hp, ivps_hp) = process_examples_hp()
-	(edge_results_ivp_seq, edge_ivps_hp) = process_edge_examples()
 
 	plot_basic(results_ivp_seq, ivps)
 	plot_basic_hp(results_ivp_seq_hp, ivps_hp)
-	plot_basic_hp(edge_results_ivp_seq, edge_ivps_hp)
 
 main()

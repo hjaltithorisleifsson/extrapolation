@@ -33,8 +33,8 @@ class TrapezoidalRule(Scheme):
 
         return I * h
 
-    def get_evals(self, n):
-        return n + 1
+    def get_evals(self, n, m):
+        return n * m + 1
 
 class Integration:
 
@@ -42,6 +42,7 @@ class Integration:
         self.f = f 
         self.ans = F(b) - F(a)
         self.interval = (a,b)
+        self.m = 1
         self.tex = tex
         self.ref = ref
 

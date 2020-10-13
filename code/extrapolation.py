@@ -4,6 +4,7 @@ import scipy.optimize as opt
 import math
 from mpmath import *
 import os
+import time
 
 mp.dps = 500
 
@@ -104,7 +105,9 @@ def extrapolate(sc, prob, seq, hp):
 	#X[i][j] = T_ij
 	for i in range(n):
 		X[i][0] = sc.apply(prob, seq[i])
-		print("done computing %d // %d" % (i + 1, n))
+		t = time.localtime()
+		current_time = time.strftime("%H:%M:%S", t)
+		print("done computing %d / %d. Thread: %s. Time: %s." % (i + 1, n, os.getpid(), current_time))
 		for j in range(1, i + 1):
 			#r = h_{i-j} / h_i = seq[i] / seq[i-j]
 			#rp = r^p.
@@ -135,7 +138,7 @@ def analyze(problem, scheme, seq, hp, ref = None, folder = None):
 
 		ln_error = np.array([float(mp.log(x)) for x in error_all[0:upTo]])
 		log_error = ln_error / math.log(10)
-		evals = np.cumsum([scheme.get_evals(seq_i) for seq_i in seq.seq[0:upTo]])
+		evals = np.cumsum([scheme.get_evals(seq_i, problem.m) for seq_i in seq.seq[0:upTo]])
 		result = Result(problem.tex, seq.ref, evals, ln_error, log_error, ref)
 		if hp:
 			result.write(folder)
@@ -225,7 +228,7 @@ def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 		p_by_result.append(p)
 		acq_vars = get_fit_variance(steps_all, ln_e, *p)
 		acq_vars_by_result.append(acq_vars)
-		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
+		plt.plot(x, fit_func(x, *p), label = 'b = %.2e, c = %.2e, q = %.2e' % (p[0], p[1], p[2]))
 		plt.legend()
 
 	plt.xlabel(xlabel)
@@ -245,7 +248,7 @@ def plot_steps_error(results, title, ref, by_seq, max_points, folder):
 			rho_lin = get_rho_lin(p, steps_all, ln_e)
 			rho_log = get_rho_log(p, steps_all, ln_e)
 			plot_stack(steps_all, ln_e, bcq_mat, p, stack_title, stack_ref, xlabel, ylabel)
-			file.write('%s & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) \\\\\n' % (result.seq_ref, a_mean, a_var, c_mean, c_var, q_mean, q_var, rho_lin, rho_log))
+			file.write('%s & \\(%.1e\\) & \\(%.1e\\) & \\(%.1e\\) & \\(%.1e\\) & \\(%.1e\\) & \\(%.1e\\) & \\(%.1e\\) & \\(%.1e\\) \\\\\n' % (result.seq_ref, a_mean, a_var, c_mean, c_var, q_mean, q_var, rho_lin, rho_log))
 		else:
 			file.write('%s & . & . & . & . & . & . & . & .\\\\\n' % (result.seq_ref))
 
@@ -272,7 +275,7 @@ def plot_trend(results, title, ref, by_seq, folder):
 		acq_vars_by_result.append(acq_vars)
 		end_val = evals[number_of_points- 1]
 		x = np.linspace(1, end_val, min(10 * (end_val - 1), 1000))
-		plt.plot(x, fit_func(x, *p), label = 'b = %.4g, c = %.4g, q = %.4g' % (p[0], p[1], p[2]))
+		plt.plot(x, fit_func(x, *p), label = 'b = %.2e, c = %.2e, q = %.2e' % (p[0], p[1], p[2]))
 		plt.legend()
 
 	plt.xlabel(xlabel)
@@ -292,7 +295,7 @@ def plot_trend(results, title, ref, by_seq, folder):
 			rho_lin = get_rho_lin(p, evals, ln_e)
 			rho_log = get_rho_log(p, evals, ln_e)
 			plot_stack(evals, ln_e, bcq_mat, p, stack_title, stack_ref, xlabel, ylabel)
-			file.write('%s & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) & \\(%.4g\\) \\\\\n' % (result.seq_ref, a_mean, a_var, c_mean, c_var, q_mean, q_var, rho_lin, rho_log))
+			file.write('%s & \\(%.1e\\) & \\(%.1e\\) & \\(%.1e\\) & \\(%.1e\\) & \\(%.1e\\) & \\(%.1e\\) & \\(%.1e\\) & \\(%.1e\\) \\\\\n' % (result.seq_ref, a_mean, a_var, c_mean, c_var, q_mean, q_var, rho_lin, rho_log))
 		else:
 			file.write('%s & . & . & . & . & . & . & . & .\\\\\n' % result.seq_ref)
 

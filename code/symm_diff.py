@@ -26,13 +26,14 @@ class SymmetricDifference(Scheme):
 		h = quot.h0 / n
 		return (quot.f(quot.x + h) - quot.f(quot.x - h)) / (2 * h)
 
-	def get_evals(self, n):
+	def get_evals(self, n, m):
 		return 2
 
 class Quotient:
 	def __init__(self, f, x, h0, dfx, tex, ref):
 		self.f = f
 		self.x = x
+		self.m = 1
 		self.h0 = h0
 		self.ans = dfx
 		self.tex = tex

@@ -8,11 +8,14 @@
 \PYG{c+c1}{\PYGZsh{}returns: The extrapolation table as an np.array of np.arrays.}
 \PYG{k}{def} \PYG{n+nf}{extrapolate}\PYG{p}{(}\PYG{n}{sc}\PYG{p}{,} \PYG{n}{prob}\PYG{p}{,} \PYG{n}{seq}\PYG{p}{,} \PYG{n}{hp}\PYG{p}{):}
 	\PYG{n}{n} \PYG{o}{=} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{seq}\PYG{p}{)}
-	\PYG{n}{X} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{n}{mpf}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{k}{if} \PYG{n}{hp} \PYG{k}{else} \PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{*} \PYG{p}{(}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{))} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)])}
+	\PYG{n}{X} \PYG{o}{=} \PYG{p}{[[}\PYG{n+nb+bp}{None}\PYG{p}{]} \PYG{o}{*} \PYG{p}{(}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)]}
 
 	\PYG{c+c1}{\PYGZsh{}X[i][j] = T\PYGZus{}ij}
 	\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
 		\PYG{n}{X}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n}{sc}\PYG{o}{.}\PYG{n}{apply}\PYG{p}{(}\PYG{n}{prob}\PYG{p}{,} \PYG{n}{seq}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])}
+		\PYG{n}{t} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{localtime}\PYG{p}{()}
+		\PYG{n}{current\PYGZus{}time} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{strftime}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZpc{}H:\PYGZpc{}M:\PYGZpc{}S\PYGZdq{}}\PYG{p}{,} \PYG{n}{t}\PYG{p}{)}
+		\PYG{k}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}done computing }\PYG{l+s+si}{\PYGZpc{}d}\PYG{l+s+s2}{ / }\PYG{l+s+si}{\PYGZpc{}d}\PYG{l+s+s2}{. Thread: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{. Time: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{.\PYGZdq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{n}\PYG{p}{,} \PYG{n}{os}\PYG{o}{.}\PYG{n}{getpid}\PYG{p}{(),} \PYG{n}{current\PYGZus{}time}\PYG{p}{))}
 		\PYG{k}{for} \PYG{n}{j} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{):}
 			\PYG{c+c1}{\PYGZsh{}r = h\PYGZus{}\PYGZob{}i\PYGZhy{}j\PYGZcb{} / h\PYGZus{}i = seq[i] / seq[i\PYGZhy{}j]}
 			\PYG{c+c1}{\PYGZsh{}rp = r\PYGZca{}p.}
@@ -20,5 +23,5 @@
 			\PYG{n}{rp} \PYG{o}{=} \PYG{p}{((}\PYG{n}{mpf}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{)} \PYG{o}{*} \PYG{n}{seq}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])} \PYG{o}{/} \PYG{p}{(}\PYG{n}{mpf}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{)} \PYG{o}{*} \PYG{n}{seq}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{n}{j}\PYG{p}{])} \PYG{k}{if} \PYG{n}{hp} \PYG{k}{else} \PYG{n}{seq}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{/} \PYG{n}{seq}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{n}{j}\PYG{p}{])} \PYG{o}{**} \PYG{n}{sc}\PYG{o}{.}\PYG{n}{p}
 			\PYG{n}{X}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{n}{rp} \PYG{o}{*} \PYG{n}{X}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{X}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{j}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{])} \PYG{o}{/} \PYG{p}{(}\PYG{n}{rp} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)}
 
-	\PYG{k}{return} \PYG{n}{X}
+	\PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{X\PYGZus{}i}\PYG{p}{)} \PYG{k}{for} \PYG{n}{X\PYGZus{}i} \PYG{o+ow}{in} \PYG{n}{X}\PYG{p}{])}
 \end{Verbatim}
