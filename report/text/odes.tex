@@ -46,7 +46,7 @@ Now we will consider the results of the experiments.
 \subsection{Exponential growth}
 First we will consider the following initial value problem:
 \begin{equation}\label{42}
-y'(x) = y(x),\quad y(0) = 0, \quad x\in [0,1]
+y'(x) = y(x),\quad y(0) = 1, \quad x\in [0,1]
 \end{equation}
 whose solution is the analytic function \(y(x) = e^x\).
 
@@ -629,6 +629,7 @@ Here we get much slower convergence than in the previous cases and the model doe
 \begin{table}[H]
     \centering
     \small
+     \begin{tabular}{c||c|c|c|c|c|c|c|c}
 Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var & \(\rho_{\operatorname{lin}}\) & \(\rho_{\ln}\)\\\hline
 \rowcolor{red}
 RS-evals & \(1.1[+04]\) & \(5.8[+00]\) & \(1.7[-01]\) & \(2.5[+00]\) & \(6.3[-01]\) & \(1.7[-01]\) & \(6.6[+00]\) & \(6.1[-03]\) \\
@@ -1160,11 +1161,11 @@ which is entire.
 Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var & \(\rho_{\operatorname{lin}}\) & \(\rho_{\ln}\)\\\hline
 \rowcolor{red}
 RS-evals & \(1.2[+60]\) & \(6.0[+00]\) & \(6.1[+01]\) & \(1.4[-01]\) & \(1.3[-01]\) & \(3.5[-02]\) & \(2.3[+08]\) & \(8.6[-04]\) \\
-\rowcolor{yellow}
+\rowcolor{green}
 HS-evals & \(9.0[+09]\) & \(6.8[+00]\) & \(2.6[+00]\) & \(7.9[-03]\) & \(6.2[-01]\) & \(2.5[-04]\) & \(4.4[+05]\) & \(8.9[-06]\) \\
 \rowcolor{green}
 RS-steps & \(1.1[+00]\) & \(1.0[-04]\) & \(6.7[-01]\) & \(5.0[-07]\) & \(2.0[+00]\) & \(1.5[-08]\) & \(2.9[-03]\) & \(2.0[-08]\) \\
-\rowcolor{yellow}
+\rowcolor{green}
 HS-steps & \(4.3[+08]\) & \(6.5[+00]\) & \(2.7[+00]\) & \(6.9[-03]\) & \(1.2[+00]\) & \(2.2[-04]\) & \(9.5[+04]\) & \(7.5[-06]\) \\
     \end{tabular}
     \label{tab:my_label}
@@ -1172,7 +1173,7 @@ HS-steps & \(4.3[+08]\) & \(6.5[+00]\) & \(2.7[+00]\) & \(6.9[-03]\) & \(1.2[+00
 
 The harmonic sequence works better then Romberg and we get down to machine level precision using either sequence when using standard floating point arithmetic.\\
 
-We clearly have exponential convergence in the number of steps for the Romberg sequence. For the harmonic sequence, we seem to have exponential convergence, but though we must note that the mean value of the \(A\) coefficient is suspiciously large.
+We clearly have exponential convergence in the number of steps for the Romberg sequence. For the harmonic sequence, we seem to have exponential convergence, but though we must note that the mean value of the \(A\) coefficient is quite large.
 
 \subsection{Mathematical pendulum}
 
@@ -1347,6 +1348,8 @@ We have nice fit for exponential convergence in the number of steps for the Romb
 
 \subsubsection{\(t = 2\)}
 
+Here we use \(1\) as initial step length.
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -1418,6 +1421,8 @@ We seem to have very nice fit for exponential convergence in the number of steps
 
 \subsubsection{\(t = 10\)}
 
+Here we use \(1\) as initial step length. When too big initial step length was used, the convergence failed. Hence the results are dependent upon the initial step length. 
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -1471,13 +1476,19 @@ We seem to have very nice fit for exponential convergence in the number of steps
     \small
     \begin{tabular}{c||c|c|c|c|c|c|c|c}
 Plot & \(A\)-mean & \(A\)-var & \(c\)-mean & \(c\)-var & \(q\)-mean & \(q\)-var & \(\rho_{\operatorname{lin}}\) & \(\rho_{\ln}\)\\\hline
+\rowcolor{red}
 RS-evals & \(1.9[+50]\) & \(6.0[+00]\) & \(4.3[+01]\) & \(2.0[-01]\) & \(1.4[-01]\) & \(3.0[-02]\) & \(6.4[+05]\) & \(7.4[-04]\) \\
+\rowcolor{green}
 HS-evals & \(3.9[+00]\) & \(3.9[+00]\) & \(1.9[+00]\) & \(1.1[-02]\) & \(4.9[-01]\) & \(4.6[-04]\) & \(6.0[-01]\) & \(1.2[-05]\) \\
+\rowcolor{green}
 RS-steps & \(9.7[-01]\) & \(4.8[+00]\) & \(4.4[-01]\) & \(4.0[-02]\) & \(2.1[+00]\) & \(1.1[-03]\) & \(4.4[-01]\) & \(2.7[-05]\) \\
+\rowcolor{green}
 HS-steps & \(1.6[+00]\) & \(3.9[+00]\) & \(1.9[+00]\) & \(1.1[-02]\) & \(9.8[-01]\) & \(4.6[-04]\) & \(6.3[-01]\) & \(1.2[-05]\) \\
     \end{tabular}
     \label{tab:my_label}
 \end{table}
+
+Here we still have exponential convergence in the number of steps for both sequences.
 
 \subsection{Lorenz equations}
 
@@ -1561,6 +1572,8 @@ The model for exponential convergence in the number of steps fits moderately wel
 
 \subsubsection{\(t = 0.2\)}
 
+Here we use \(0.1\) as initial step length. 
+
 \begin{figure}[H]
 \centering
 \begin{minipage}{0.45\textwidth}
@@ -1629,3 +1642,11 @@ HS-steps & \(7.3[+07]\) & \(7.5[+00]\) & \(4.0[+00]\) & \(1.5[-02]\) & \(1.0[+00
 Here we also get down to machine level precision in standard double precision floating point arithmetic. The harmonic sequence performes better.\\
 
 The model for exponential convergence in the number of steps fits moderately well for the Romberg sequence. We get moderate fit for exponential convergence for the harmonic sequence.
+
+\section{Summary}
+
+When the solutions are entire we seem to have exponential convergence in the number of steps for both the Romberg sequence and the harmonic sequence. The same holds when the solutions are analytic and we are not too close to a singularity. When we move closer to the singularities, the fitting becomes worse and the convergence begins to fail.\\
+
+It is interesting how fast convergence we get with the harmonic sequence when computing nicely behaved solutions.\\
+
+It would be interesting to analyze further how the convergence depends on the initial step size.\\

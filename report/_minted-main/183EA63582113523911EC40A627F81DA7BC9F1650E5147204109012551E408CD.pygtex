@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}sc (Scheme): The scheme to extrapolate}
+\PYG{c+c1}{\PYGZsh{}prob: The problem to apply the scheme to. We assume that sch is an}
+\PYG{c+c1}{\PYGZsh{}      implementation of Scheme which can be applied to prob.}
+\PYG{c+c1}{\PYGZsh{}seq (Sequence): The sequence to use in the extrapolation}
+\PYG{c+c1}{\PYGZsh{}hp (bool): Indicates whether to use high precision arithmetic (true)}
+\PYG{c+c1}{\PYGZsh{}           or standard double precision (false).}
+\PYG{c+c1}{\PYGZsh{}returns: The extrapolation table as an np.array of np.arrays.}
+\PYG{k}{def} \PYG{n+nf}{extrapolate}\PYG{p}{(}\PYG{n}{sc}\PYG{p}{,} \PYG{n}{prob}\PYG{p}{,} \PYG{n}{seq}\PYG{p}{,} \PYG{n}{hp}\PYG{p}{):}
+	\PYG{n}{n} \PYG{o}{=} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{seq}\PYG{p}{)}
+	\PYG{n}{X} \PYG{o}{=} \PYG{p}{[[}\PYG{n+nb+bp}{None}\PYG{p}{]} \PYG{o}{*} \PYG{p}{(}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)]}
+
+	\PYG{c+c1}{\PYGZsh{}X[i][j] = T\PYGZus{}ij}
+	\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
+		\PYG{n}{X}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n}{sc}\PYG{o}{.}\PYG{n}{apply}\PYG{p}{(}\PYG{n}{prob}\PYG{p}{,} \PYG{n}{seq}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])}
+		\PYG{k}{for} \PYG{n}{j} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{):}
+			\PYG{c+c1}{\PYGZsh{}r = h\PYGZus{}\PYGZob{}i\PYGZhy{}j\PYGZcb{} / h\PYGZus{}i = seq[i] / seq[i\PYGZhy{}j]}
+			\PYG{c+c1}{\PYGZsh{}rp = r\PYGZca{}p.}
+			\PYG{c+c1}{\PYGZsh{}Must cast the elements of seq to hp numbers if in hp mode.}
+			\PYG{n}{rp} \PYG{o}{=} \PYG{p}{((}\PYG{n}{mpf}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{)} \PYG{o}{*} \PYG{n}{seq}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])} \PYG{o}{/} \PYG{p}{(}\PYG{n}{mpf}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{)} \PYG{o}{*} \PYG{n}{seq}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{n}{j}\PYG{p}{])} \PYG{k}{if} \PYG{n}{hp} \PYG{k}{else} \PYG{n}{seq}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{/} \PYG{n}{seq}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{n}{j}\PYG{p}{])} \PYG{o}{**} \PYG{n}{sc}\PYG{o}{.}\PYG{n}{p}
+			\PYG{n}{X}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{n}{rp} \PYG{o}{*} \PYG{n}{X}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{X}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{][}\PYG{n}{j}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{])} \PYG{o}{/} \PYG{p}{(}\PYG{n}{rp} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)}
+
+	\PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{X\PYGZus{}i}\PYG{p}{)} \PYG{k}{for} \PYG{n}{X\PYGZus{}i} \PYG{o+ow}{in} \PYG{n}{X}\PYG{p}{])}
+\end{Verbatim}
