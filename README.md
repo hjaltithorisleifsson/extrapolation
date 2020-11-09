@@ -9,3 +9,5 @@ from the corresponding numerical experiments. Under each subfolder there is a fo
 The code for the numerical experiments is under the code folder. To run the code, write "python3 runner.py" within in the code folder.
 If the cache folders are empty, then it may take several hours to run the code. Else it only takes a minute or so. The cache folders must be cleared 
 manually in order to run the experiments from scratch.
+
+The final version of the report is "report_final.pdf" which is stored under the report folder.
