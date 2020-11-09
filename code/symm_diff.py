@@ -103,5 +103,3 @@ sdq = SymmetricDifference()
 
 def main():
 	plot_basic()
-
-main()

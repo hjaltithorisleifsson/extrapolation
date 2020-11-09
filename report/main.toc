@@ -1,60 +1,61 @@
-\contentsline {chapter}{\numberline {1}Extrapolation to zero}{1}
-\contentsline {section}{\numberline {1.1}Motivation}{1}
-\contentsline {section}{\numberline {1.2}The extrapolation table}{1}
-\contentsline {section}{\numberline {1.3}Convergence}{2}
-\contentsline {section}{\numberline {1.4}Code}{3}
-\contentsline {chapter}{\numberline {2}Romberg quadrature}{5}
-\contentsline {section}{\numberline {2.1}The algorithm}{5}
-\contentsline {section}{\numberline {2.2}Numerical experiments}{6}
-\contentsline {subsection}{\numberline {2.2.1}Cosine squared}{7}
-\contentsline {subsection}{\numberline {2.2.2}Function with poles}{9}
-\contentsline {subsubsection}{\(a = 1\)}{9}
-\contentsline {subsubsection}{\(a = 10^{-1}\)}{11}
-\contentsline {subsubsection}{\(a = 10^{-2}\)}{13}
-\contentsline {subsection}{\numberline {2.2.3}Logarithm}{14}
-\contentsline {subsubsection}{\(a = 1\)}{14}
-\contentsline {subsubsection}{\(a= 10^{-2}\)}{16}
-\contentsline {subsubsection}{\(a = 10^{-4}\)}{18}
-\contentsline {subsection}{\numberline {2.2.4}Area of half circle}{19}
-\contentsline {subsection}{\numberline {2.2.5}Gaussian}{21}
-\contentsline {section}{\numberline {2.3}Summary}{23}
-\contentsline {chapter}{\numberline {3}Extrapolation of difference quotients}{25}
-\contentsline {section}{\numberline {3.1}The algorithm}{25}
-\contentsline {section}{\numberline {3.2}Numerical experiments}{26}
-\contentsline {subsection}{\numberline {3.2.1}The exponential function}{26}
-\contentsline {subsection}{\numberline {3.2.2}Logarithm}{27}
-\contentsline {subsection}{\numberline {3.2.3}Square root}{28}
-\contentsline {subsection}{\numberline {3.2.4}Smooth but not analytic function}{29}
-\contentsline {subsection}{\numberline {3.2.5}Another smooth but not analytic function}{30}
-\contentsline {subsection}{\numberline {3.2.6}Only once differentiable function}{31}
-\contentsline {section}{\numberline {3.3}Summary}{32}
-\contentsline {chapter}{\numberline {4}Initial Value Problems}{33}
-\contentsline {section}{\numberline {4.1}The explicit midpoint rule}{33}
-\contentsline {section}{\numberline {4.2}Numerical experiments}{33}
-\contentsline {subsection}{\numberline {4.2.1}Exponential growth}{34}
-\contentsline {subsection}{\numberline {4.2.2}Logistic curve}{35}
-\contentsline {subsection}{\numberline {4.2.3}Tangens}{37}
-\contentsline {subsection}{\numberline {4.2.4}The logarithm}{38}
-\contentsline {subsubsection}{\(a = 1\)}{39}
-\contentsline {subsubsection}{\(a = e^{-1}\)}{40}
-\contentsline {subsubsection}{\(a = e^{-2}\)}{41}
-\contentsline {subsubsection}{\(a = e^{-4}\)}{42}
-\contentsline {subsubsection}{\(a = e^{-6}\)}{44}
-\contentsline {subsection}{\numberline {4.2.5}Equation with singularity}{45}
-\contentsline {subsubsection}{\(a = 1\)}{45}
-\contentsline {subsubsection}{\(a = 10^{-2}\)}{46}
-\contentsline {subsubsection}{\(a = 10^{-4}\)}{48}
-\contentsline {subsection}{\numberline {4.2.6}Equation with moderate singularity}{49}
-\contentsline {subsubsection}{\(a = 1\)}{49}
-\contentsline {subsubsection}{\(a = 10^{-2}\)}{50}
-\contentsline {subsubsection}{\(a = 10^{-4}\)}{52}
-\contentsline {subsection}{\numberline {4.2.7}Circular rotation}{53}
-\contentsline {subsection}{\numberline {4.2.8}Mathematical pendulum}{54}
-\contentsline {subsection}{\numberline {4.2.9}Federpendel}{56}
-\contentsline {subsubsection}{\(t = 1\)}{57}
-\contentsline {subsubsection}{\(t = 2\)}{58}
-\contentsline {subsubsection}{\(t = 10\)}{60}
-\contentsline {subsection}{\numberline {4.2.10}Lorenz equations}{61}
-\contentsline {subsubsection}{\(t = 0.1\)}{61}
-\contentsline {subsubsection}{\(t = 0.2\)}{63}
-\contentsline {section}{\numberline {4.3}Summary}{64}
+\contentsline {chapter}{\numberline {1}Extrapolation to zero}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}The extrapolation table}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}Convergence}{2}{section.1.3}
+\contentsline {section}{\numberline {1.4}Code}{3}{section.1.4}
+\contentsline {chapter}{\numberline {2}Romberg quadrature}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}The algorithm}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Numerical experiments}{6}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Cosine squared}{7}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Function with poles}{9}{subsection.2.2.2}
+\contentsline {subsubsection}{\(a = 1\)}{9}{section*.8}
+\contentsline {subsubsection}{\(a = 10^{-1}\)}{11}{section*.15}
+\contentsline {subsubsection}{\(a = 10^{-2}\)}{13}{section*.22}
+\contentsline {subsection}{\numberline {2.2.3}Logarithm}{14}{subsection.2.2.3}
+\contentsline {subsubsection}{\(a = 1\)}{14}{section*.29}
+\contentsline {subsubsection}{\(a= 10^{-2}\)}{16}{section*.36}
+\contentsline {subsubsection}{\(a = 10^{-4}\)}{18}{section*.43}
+\contentsline {subsection}{\numberline {2.2.4}Area of half circle}{19}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Gaussian}{21}{subsection.2.2.5}
+\contentsline {section}{\numberline {2.3}Summary}{23}{section.2.3}
+\contentsline {chapter}{\numberline {3}Extrapolation of difference quotients}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}The algorithm}{25}{section.3.1}
+\contentsline {section}{\numberline {3.2}Numerical experiments}{26}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}The exponential function}{26}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Logarithm}{27}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Square root}{28}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Smooth but not analytic function}{29}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Another smooth but not analytic function}{30}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Only once differentiable function}{31}{subsection.3.2.6}
+\contentsline {section}{\numberline {3.3}Summary}{32}{section.3.3}
+\contentsline {chapter}{\numberline {4}Initial Value Problems}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}The explicit midpoint rule}{33}{section.4.1}
+\contentsline {section}{\numberline {4.2}Numerical experiments}{33}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Exponential growth}{34}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Logistic curve}{35}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Tangens}{37}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}The logarithm}{38}{subsection.4.2.4}
+\contentsline {subsubsection}{\(a = 1\)}{39}{section*.101}
+\contentsline {subsubsection}{\(a = e^{-1}\)}{40}{section*.107}
+\contentsline {subsubsection}{\(a = e^{-2}\)}{41}{section*.113}
+\contentsline {subsubsection}{\(a = e^{-4}\)}{42}{section*.119}
+\contentsline {subsubsection}{\(a = e^{-6}\)}{44}{section*.125}
+\contentsline {subsection}{\numberline {4.2.5}Equation with singularity}{45}{subsection.4.2.5}
+\contentsline {subsubsection}{\(a = 1\)}{45}{section*.131}
+\contentsline {subsubsection}{\(a = 10^{-2}\)}{46}{section*.137}
+\contentsline {subsubsection}{\(a = 10^{-4}\)}{48}{section*.143}
+\contentsline {subsection}{\numberline {4.2.6}Equation with moderate singularity}{49}{subsection.4.2.6}
+\contentsline {subsubsection}{\(a = 1\)}{49}{section*.149}
+\contentsline {subsubsection}{\(a = 10^{-2}\)}{50}{section*.155}
+\contentsline {subsubsection}{\(a = 10^{-4}\)}{52}{section*.161}
+\contentsline {subsection}{\numberline {4.2.7}Circular rotation}{53}{subsection.4.2.7}
+\contentsline {subsection}{\numberline {4.2.8}Mathematical pendulum}{54}{subsection.4.2.8}
+\contentsline {subsection}{\numberline {4.2.9}Federpendel}{56}{subsection.4.2.9}
+\contentsline {subsubsection}{\(t = 1\)}{57}{section*.179}
+\contentsline {subsubsection}{\(t = 2\)}{58}{section*.185}
+\contentsline {subsubsection}{\(t = 10\)}{60}{section*.191}
+\contentsline {subsection}{\numberline {4.2.10}Lorenz equations}{61}{subsection.4.2.10}
+\contentsline {subsubsection}{\(t = 0.1\)}{61}{section*.197}
+\contentsline {subsubsection}{\(t = 0.2\)}{63}{section*.203}
+\contentsline {section}{\numberline {4.3}Summary}{64}{section.4.3}
+\contentsline {chapter}{\numberline {A}Code}{65}{Appendix.a.A}

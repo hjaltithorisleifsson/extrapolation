@@ -1,7 +1,12 @@
-import explicit_midpoint_rule
 import romberg
+
+romberg.main()
+
 import symm_diff
 
-explicit_midpoint_rule.main()
-romberg.main()
 symm_diff.main()
+
+import explicit_midpoint_rule
+
+explicit_midpoint_rule.main()
+

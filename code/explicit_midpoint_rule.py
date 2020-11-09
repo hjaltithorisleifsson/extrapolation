@@ -348,4 +348,3 @@ def main():
 	plot_basic(results_ivp_seq, ivps)
 	plot_basic_hp(results_ivp_seq_hp, ivps_hp)
 
-main()

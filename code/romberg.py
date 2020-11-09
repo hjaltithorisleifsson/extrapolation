@@ -276,5 +276,3 @@ def main():
     plot_basic(results_int_seq, integrands)
     plot_basic_hp(results_int_seq_hp, integrands_hp)
     plot_strange_results(strange_results_int_seq, strange_integrands)
-
-main()
